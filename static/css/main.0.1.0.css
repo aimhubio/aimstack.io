@@ -85,8 +85,8 @@
     color: #AEC6F7;
 }
 .HomeLogo {
-    width: 70px;
-    height: 70px;
+    width: 4.5em;
+    height: 4.5em;
     margin: var(--component-spacing-lg) auto;
 }
 .HomeCommunity {
@@ -108,7 +108,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30px;
+    height: 2em;
     width: 120px;
     margin: 0 var(--component-spacing-md);
     padding: var(--component-spacing-xs) var(--component-spacing-md);
@@ -136,10 +136,10 @@
     width: 100%;
 }
 .HomeCommunity__item__logo.gh {
-    height: calc(2 * 1em);
+    height: 2em;
 }
 .HomeCommunity__item__logo.slack {
-    height: calc(2.5 * 1em);
+    height: 2.5em;
 }
 .HomeAbout {
     width: 500px;
