@@ -136,10 +136,10 @@
     width: 100%;
 }
 .HomeCommunity__item__logo.gh {
-    height: 30px;
+    height: calc(2 * 1em);
 }
 .HomeCommunity__item__logo.slack {
-    height: 40px;
+    height: calc(2.5 * 1em);
 }
 .HomeAbout {
     width: 500px;
