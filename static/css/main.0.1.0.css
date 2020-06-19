@@ -1,0 +1,258 @@
+/* --------------------------------
+|  Main styles
+-------------------------------- */
+
+/* component: Header */
+.Header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: var(--component-spacing-md);
+    z-index: 9999;
+}
+.Header__items {
+    display: flex;
+    flex-direction: row;
+}
+.Header__items__item {
+    margin-left: var(--component-spacing-md);
+    padding: var(--component-spacing-xs) var(--component-spacing-md);
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 110ms ease;
+}
+.Header__items__item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+.Header__items__item:active {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+.Header__items__item small {
+    color: var(--primary-lighter) !important;
+}
+
+/* component: Footer */
+.Footer {
+    margin: var(--space-xl) 0 var(--space-xxl);
+    background-color: var(--primary-bg);
+    font-family: monospace;
+}
+.Footer__cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--component-spacing-lg) 0;
+}
+.Footer p {
+    color: var(--grey-light) !important;
+    font-size: var(--text-sm);
+}
+
+/* component: Code */
+.Code {
+    font-family: monospace;
+    font-size: 0.9em;
+    margin: 0;
+    padding: 0;
+}
+
+/* screen: Home */
+.Home {
+    z-index: 9;
+    clip-path: ellipse(200% 100% at 50% 0%);
+    padding-bottom: calc(100px + var(--space-xl)) !important;
+    background-color: #001B3B;
+    background-image: linear-gradient(45deg, #2B4277 0%, var(--primary-darker) 74%);
+}
+.HomeJumbotron {
+    text-align: center;
+    margin: var(--space-xl) 0 0;
+}
+.HomeJumbotron__block {
+    margin: var(--component-spacing-lg) 0;
+}
+.HomeJumbotron__divider {
+    height: 4px;
+    width: 80px;
+    margin: auto;
+    background-color: var(--primary);
+}
+.HomeDescription {
+    color: #AEC6F7;
+}
+.HomeLogo {
+    width: 70px;
+    height: 70px;
+    margin: var(--component-spacing-lg) auto;
+}
+.HomeCommunity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: var(--component-spacing-xl) 0;
+}
+.HomeCommunity__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 120px;
+    margin: 0 var(--component-spacing-md);
+    padding: var(--component-spacing-xs) var(--component-spacing-md);
+    background-color: #FFF;
+    box-shadow: 0 10px 25px -20px rgba(0, 0, 0, 0.75);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+.HomeCommunity__item:hover {
+    transform: translateY(-2px);
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0 25px 30px -20px rgba(0, 0, 0, 0.8);
+}
+.HomeCommunity__item:active {
+    transform: translateY(-3px);
+    background-color: var(--grey-lighter);
+}
+.HomeCommunity__item__logo {
+    width: 100%;
+}
+.HomeCommunity__item__logo.gh {
+    height: 30px;
+}
+.HomeCommunity__item__logo.slack {
+    height: 40px;
+}
+.HomeAbout {
+    width: 500px;
+    margin: auto;
+}
+@media (max-width: 500px) {
+    .HomeAbout {
+        width: 100%;
+    }
+}
+.HomeAbout__learn {
+    color: var(--primary-lighter) !important;
+}
+
+/* screen: Product */
+.Product {
+    z-index: 99;
+    margin: -100px 0 var(--space-xl);
+}
+.ProductGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: var(--space-xxl);
+    margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+    .ProductGrid {
+        margin: 0 auto 0;
+        width: 400px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: var(--component-spacing-xl);
+    }
+}
+@media (max-width: 500px) {
+    .ProductGrid {
+        margin: auto;
+        width: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+.ProductGrid__item {
+    min-height: 150px;
+    margin-bottom: 50px;
+    /*background: #FFF;*/
+    /*box-shadow: 0 50px 90px -40px rgba(0, 0, 0, 0.12), 0 0 1px rgba(200, 200, 200, 0.5);*/
+    background: linear-gradient(#FFF, var(--primary-bg));
+    box-shadow: 0 -50px 90px -40px rgba(0, 0, 0, 0.5);
+    border-radius: var( --border-radius);
+}
+@media (max-width: 768px) {
+    .ProductGrid__item {
+        margin-bottom: 0;
+        background: #FFF;
+        box-shadow: 0 50px 90px -40px rgba(0, 0, 0, 0.12), 0 0 1px rgba(200, 200, 200, 0.5);
+    }
+}
+.ProductGrid__item__header {
+    padding: var(--component-spacing-md);
+}
+.ProductGrid__item__divider__dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--grey-light);
+    margin: 5px auto;
+}
+.ProductGrid__item__body {
+    position: relative;
+    height: 100px;
+}
+@media (max-width: 768px) {
+    .ProductGrid__item__body {
+        height: auto;
+    }
+}
+.ProductGrid__item__body__ill {
+    margin-top: 30px;
+    height: 200px;
+}
+.ProductGrid__item__body.vc .ProductGrid__item__body__ill {
+    height: 180px;
+    margin-top: 40px;
+}
+@media (max-width: 768px) {
+    .ProductGrid__item__body__ill {
+        margin-top: 0 !important;
+        margin-bottom: var(--component-spacing-md) !important;
+        height: 130px !important;
+    }
+}
+
+/* Atomic utils */
+.screen {
+    position: relative;
+    padding: var(--component-spacing-md) 0;
+}
+
+.img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.primary-dark {
+    color: var(--primary-dark) !important;
+}
+.primary-darker {
+    color: var(--primary-darker) !important;
+}
+.primary-darkest {
+    color: var(--primary-darkest) !important;
+}
+.primary-light {
+    color: var(--primary-light) !important;
+}
+.primary-lighter {
+    color: var(--primary-lighter) !important;
+}
+
+/* Other */
+html, body {
+    background-color: var(--primary-bg);
+}
+body {
+    min-height: calc(100vh - 150px);
+    overflow-x: hidden;
+}
