@@ -21,14 +21,13 @@
     border-radius: var(--border-radius);
     cursor: pointer;
     transition: all 110ms ease;
+    user-select: none;
 }
 .Header__items__item:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-1px);
 }
 .Header__items__item:active {
     background-color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
 }
 .Header__items__item small {
     color: var(--primary-lighter) !important;
