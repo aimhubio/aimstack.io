@@ -78,6 +78,7 @@
 .HomeJumbotron__divider {
     height: 4px;
     width: 80px;
+    border-radius: 10px;
     margin: auto;
     background-color: var(--primary);
 }
@@ -203,10 +204,10 @@
     padding: var(--component-spacing-md);
 }
 .ProductGrid__item__divider__dot {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background-color: var(--grey-light);
+    width: 30px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: var(--grey-lighter);
     margin: 5px auto;
 }
 .ProductGrid__item__body {
