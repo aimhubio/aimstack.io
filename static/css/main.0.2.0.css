@@ -20,7 +20,7 @@
     background-color: rgba(255, 255, 255, 0.12);
     border-radius: var(--border-radius);
     cursor: pointer;
-    transition: all 110ms ease;
+    transition: background-color 110ms ease;
     user-select: none;
 }
 .Header__items__item:hover {
@@ -117,7 +117,7 @@
     box-shadow: 0 10px 25px -20px rgba(0, 0, 0, 0.75);
     border-radius: var(--border-radius);
     cursor: pointer;
-    transition: all 200ms ease;
+    transition: background-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
 }
 @media (max-width: 400px) {
     .HomeCommunity__item {

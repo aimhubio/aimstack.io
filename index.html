@@ -23,15 +23,17 @@
 
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
   <link href="static/css/aim-theme.0.2.0.min.css" rel="stylesheet">
-  <link href="static/css/main.0.1.0.css" rel="stylesheet">
+  <link href="static/css/main.0.2.0.css" rel="stylesheet">
 </head>
 <body>
   <div id="root">
     <div class="Header">
       <div class="Header__items">
-        <div class="Header__items__item">
-          <small class="Text no_spacing_top no_spacing">Documentation</small>
-        </div>
+        <a href="https://docs.aimstack.io/" target="_blank">
+          <div class="Header__items__item">
+            <small class="Text no_spacing_top no_spacing">Documentation</small>
+          </div>
+        </a>
       </div>
     </div>
     <div class="Home screen">
@@ -69,7 +71,12 @@
                 We aim to accelerate AI development and adoption through community driven tools
                 for AI engineers. On that journey we also hope to help advance open data science.
               </p>
-              <a class="HomeAbout__learn link">Learn more..</a>
+              <a class="HomeAbout__learn link"
+                 href="https://medium.com/@gevorg_s/launching-aim-an-open-ai-development-environment-b0b69d5b8ff2"
+                 target="_blank"
+              >
+                  Learn more..
+              </a>
             </div>
           </div>
         </div>
@@ -125,20 +132,5 @@
       </div>
     </div>
   </div>
-  <script>
-    function handleSubscription() {
-      setTimeout(function () {
-        document.getElementById("s-form").reset();
-      }, 5000);
-      return true;
-    }
-  </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-108474435-1');
-  </script>
 </body>
 </html>
