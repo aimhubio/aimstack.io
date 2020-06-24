@@ -32,6 +32,9 @@
 .Header__items__item small {
     color: var(--primary-lighter) !important;
 }
+.Header__items__item__link {
+    text-decoration: none !important;
+}
 
 /* component: Footer */
 .Footer {
