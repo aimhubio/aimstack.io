@@ -146,7 +146,7 @@
     height: 2.5em;
 }
 .HomeAbout {
-    width: 500px;
+    width: 450px;
     margin: auto;
 }
 @media (max-width: 500px) {
@@ -165,10 +165,9 @@
 }
 .ProductGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-gap: var(--space-xxl);
-    margin-bottom: 50px;
 }
 @media (max-width: 768px) {
     .ProductGrid {
@@ -189,53 +188,85 @@
 }
 .ProductGrid__item {
     min-height: 150px;
-    margin-bottom: 50px;
     /*background: #FFF;*/
     /*box-shadow: 0 50px 90px -40px rgba(0, 0, 0, 0.12), 0 0 1px rgba(200, 200, 200, 0.5);*/
     background: linear-gradient(#FFF, var(--primary-bg));
     box-shadow: 0 -50px 90px -40px rgba(0, 0, 0, 0.5);
     border-radius: var( --border-radius);
+    cursor: pointer;
+}
+.ProductGrid__item a:hover {
+    text-decoration: none;
 }
 @media (max-width: 768px) {
     .ProductGrid__item {
-        margin-bottom: 0;
         background: #FFF;
         box-shadow: 0 50px 90px -40px rgba(0, 0, 0, 0.12), 0 0 1px rgba(200, 200, 200, 0.5);
     }
 }
 .ProductGrid__item__header {
     padding: var(--component-spacing-md);
+    padding-bottom: 0;
 }
 .ProductGrid__item__divider__dot {
     width: 30px;
     height: 3px;
     border-radius: 10px;
     background-color: var(--grey-lighter);
-    margin: 5px auto;
+    margin: var(--component-spacing-sm) auto var(--component-spacing-md);
 }
 .ProductGrid__item__body {
     position: relative;
-    height: 100px;
+    margin-bottom: var(--component-spacing-md);
 }
 @media (max-width: 768px) {
     .ProductGrid__item__body {
         height: auto;
     }
 }
-.ProductGrid__item__body__ill {
-    margin-top: 30px;
-    height: 200px;
-}
-.ProductGrid__item__body.vc .ProductGrid__item__body__ill {
-    height: 180px;
-    margin-top: 40px;
+.ProductGrid__item__body__img {
+    display: block;
+    height: 380px;
+    margin: auto;
+    border: 3px solid var(--grey-lighter);
+    border-radius: var(--border-radius);
+    background-color: var(--grey-dark);
+    box-sizing: border-box;
 }
 @media (max-width: 768px) {
-    .ProductGrid__item__body__ill {
-        margin-top: 0 !important;
-        margin-bottom: var(--component-spacing-md) !important;
-        height: 130px !important;
+    .ProductGrid__item__body__img {
+        width: 90% !important;
+        height: auto !important;
     }
+}
+.ProductGrid__play__btn {
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--grey-light-x);
+    transition: all 120ms ease;
+}
+.ProductGrid__item:hover .ProductGrid__play__btn {
+    background-color: var(--primary);
+    width: 90px;
+    height: 90px;
+    top: calc(50% - 45px);
+    left: calc(50% - 45px);
+}
+.ProductGrid__play__btn:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 35px solid #FFF;
+    transform: translateX(3px);
 }
 
 /* Atomic utils */
