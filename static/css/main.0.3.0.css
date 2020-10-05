@@ -230,7 +230,7 @@
     margin: auto;
     border: 3px solid var(--grey-lighter);
     border-radius: var(--border-radius);
-    background-color: var(--grey-dark);
+    background-color: var(--grey-lighter);
     box-sizing: border-box;
 }
 @media (max-width: 768px) {
