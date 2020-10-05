@@ -213,7 +213,7 @@
     height: 3px;
     border-radius: 10px;
     background-color: var(--grey-lighter);
-    margin: var(--component-spacing-sm) auto var(--component-spacing-md);
+    margin: var(--component-spacing-sm) auto;
 }
 .ProductGrid__item__body {
     position: relative;
