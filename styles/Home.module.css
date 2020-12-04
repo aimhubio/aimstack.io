@@ -144,7 +144,7 @@
     0 0,
     100% 0,
     100% 40%,
-    0 60%
+    0 65%
   );
   background-color: #3C5896;
   z-index: -1;
@@ -178,14 +178,16 @@
 
 .separator {
   width: 60vw;
-  border-top: 1px solid #eaeaea;
+  height: 1px;
+  background-color: #eaeaea;
+  border: none;
 }
 
 .moto {
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
-  margin-top: -3rem;
+  margin-top: -10rem;
 }
 
 .moto h1 {
@@ -227,7 +229,7 @@
 
 .logoContainer img {
   max-width: 50vw;
-  transform: translateX(10%);
+  transform: translate(10%, -10%);
 }
 
 .aimDescription {
