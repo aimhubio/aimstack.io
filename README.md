@@ -1,3 +1,3 @@
 # AimStack
 
-[AimStack](aimstack.io) - Version Control and Development Environment for AI
+[AimStack](aimstack.io) - Dev tools for AI engineers.
