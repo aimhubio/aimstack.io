@@ -61,7 +61,7 @@ export default function Home() {
         <meta name='twitter:image' content=' ' />
 
         <meta name='theme-color' content='#142447' />
-        <title>AimStack - Version Control and Development Environment for AI</title>
+        <title>AimStack - Dev tools for AI engineers.</title>
         <link rel='icon' href='/favicon.ico' />
 
         <script async src='https://www.googletagmanager.com/gtag/js?id=UA-108474435-1'></script>
