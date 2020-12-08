@@ -133,7 +133,6 @@ export default function Home() {
                   <li>Split metric dashboards by any param</li>
                   <li>High level comparison on Parallel Coordinates Dashboard</li>
                   <li>Holistic experiments dashboard</li>
-
                 </ul>
                 <p>
                   And we keep adding more!
