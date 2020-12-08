@@ -135,7 +135,7 @@ export default function Home() {
           </div>
           <div className={styles.example}>
             <SyntaxHighlighter language='python' style={prism}>
-              pip instal aim
+              pip install aim
             </SyntaxHighlighter>
             <SyntaxHighlighter language='python' style={prism}>
               {
