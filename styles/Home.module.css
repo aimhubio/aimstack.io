@@ -236,7 +236,7 @@
 .whatisaim {
   max-width: 1080px !important;
   min-width: 1080px !important;
-  padding: 48px 0;
+  padding: 48px 0 0 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -489,6 +489,8 @@
   .whatisaim {
     max-width: 540px !important;
     min-width: unset !important;
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
   }
 
   .aimDescriptionCntr {
@@ -526,6 +528,14 @@
   .section h2 {
     font-size: 24px;
     line-height: 32px;
+  }
+
+  .whatisaim {
+    max-width: 350px !important;
+  }
+
+  .aimDescription {
+    padding: 0;
   }
 
   .moto h1 {

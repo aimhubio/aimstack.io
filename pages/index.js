@@ -121,7 +121,7 @@ export default function Home() {
             <div className={styles.aimDescriptionCntr}>
               <div className={styles.aimDescription}>
                 <h2>
-                  Aim is an experiment logger packed with superpowers
+                  Aim is an experiment logger packed with superpowers.
                 </h2>
                 <p>
                   Especially for researchers who run lots of experiments:
@@ -169,9 +169,9 @@ export default function Home() {
 
         <section id='learn' className={styles.section}>
           <div className={styles.learn}>
-            <h5>what can you do with aim?</h5>
+            <h5>Learn More</h5>
             <h2>
-              With Aim you can compare 100s of experiments in minutes
+              Use Aim standalone or with your favorite experiment tracker
             </h2>
             <div className={styles.blog}>
               <a
@@ -234,12 +234,12 @@ export default function Home() {
         <hr className={styles.separator} />
         <section id='slack' className={styles.section}>
           <div>
-            <h5>let's connect</h5>
+            <h5>Let's Connect</h5>
             <h2>
-              Join Aim community on Slack
+              Join the Aim community on Slack
             </h2>
             <p>
-              Our growing slack community is a great environment for AI researchers to hang out and share their projects with each other. All things AI.
+              Our growing Slack community is a great environment for AI researchers to hang out and share their projects with each other. All things AI.
               Also you are welcome to ask your #questions, share your #ideas and #jokes with the amazing Aim community.
             </p>
             <a
