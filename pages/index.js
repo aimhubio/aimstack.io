@@ -105,7 +105,7 @@ export default function Home() {
               A super-easy way to record, search and compare AI experiments
             </h1>
             <p>
-              The most advanced AI dev tool for comparing 100s of experiments
+              Aim will help you easily handle 100s of experiments.
             </p>
           </div>
           <div className={styles.logoContainer}>
@@ -114,50 +114,60 @@ export default function Home() {
           <div className={styles.polygon} />
         </section>
         <div className={styles.polygon} />
+
         <section id='about' className={styles.section}>
-          <div className={styles.aimDescription}>
-            <h5>what is aim?</h5>
-            <h2>
-              Aim makes it easy to search and compare 100s of AI experiments
-            </h2>
-            <p>
-              If you are an NLP or Reinforcement Learning Researcher or just run lots of experiments, then Aim is the most appropriate tool for you.
-              Spend more time on doing the math, analyzing your data pipeline.
-              Aim makes it easy to search and compare 100s of AI experiments.
-              For NLP, Reinforcement Learning and other experiment-heavy research
-              projects, Aim will help you to manage your experiments with ease.
-            </p>
-            <ul role='list'>
-              <li>Only two functions to integrate</li>
-              <li>High level experiment dashboard</li>
-              <li>Most advanced comparison features</li>
-            </ul>
-          </div>
-          <div className={styles.example}>
-            <SyntaxHighlighter language='python' style={prism}>
-              pip instal aim
-            </SyntaxHighlighter>
-            <SyntaxHighlighter language='python' style={prism}>
-              {
-`import aim
+          <div className={`${styles.whatisaim}`}>
+            <h5> What is Aim </h5>
+            <div className={styles.aimDescriptionCntr}>
+              <div className={styles.aimDescription}>
+                <h2>
+                  Aim is an experiment logger packed with superpowers
+                </h2>
+                <p>
+                  Especially for researchers who run lots of experiments:
+                </p>
+                <ul role='list'>
+                  <li>Only two functions to integrate</li>
+                  <li>Search and load 100s of experiment metrics on Explore</li>
+                  <li>Group and aggregate metrics by any param</li>
+                  <li>Split metric dashboards by any param</li>
+                  <li>High level comparison on Parallel Coordinates Dashboard</li>
+                  <li>Holistic experiments dashboard</li>
 
-# Save inputs, hparams or any other 'key: value' pairs
-aim.set_params(hyperparam_dict, name='hparams')
-# Passing name argument is optional
+                </ul>
+                <p>
+                  And we keep adding more!
+                </p>
+              </div>
+              <div className={styles.example}>
+                <SyntaxHighlighter language='python' style={prism}>
+                  pip install aim
+                </SyntaxHighlighter>
+                <SyntaxHighlighter language='python' style={prism}>
+                  {
+  `import aim
 
-...
-for step in range(10):
-  # Log metrics to visualize performance
-  aim.track(metric_value, name='metric_name', epoch=epoch_number)
-...`
-              }
-            </SyntaxHighlighter>
-            <SyntaxHighlighter language='python' style={prism}>
-              aim up
-            </SyntaxHighlighter>
+  # Save inputs, hparams or any other 'key: value' pairs
+  aim.set_params(hyperparam_dict, name='hparams')
+  # Passing name argument is optional
+
+  ...
+  for step in range(10):
+    # Log metrics to visualize performance
+    aim.track(metric_value, name='metric_name', epoch=epoch_number)
+  ...`
+                  }
+                </SyntaxHighlighter>
+                <SyntaxHighlighter language='python' style={prism}>
+                  aim up
+                </SyntaxHighlighter>
+              </div>
+            </div>
           </div>
         </section>
+
         <hr className={styles.separator} />
+
         <section id='learn' className={styles.section}>
           <div className={styles.learn}>
             <h5>what can you do with aim?</h5>
@@ -186,7 +196,7 @@ for step in range(10):
                   Aim
                 </a> */}
               </a>
-              <a 
+              <a
                 className={styles.card}
                 href='https://www.youtube.com/watch?v=s1dLlqik3j0'
                 target='_blank'
@@ -231,7 +241,7 @@ for step in range(10):
             </h2>
             <p>
               Our growing slack community is a great environment for AI researchers to hang out and share their projects with each other. All things AI.
-              Also ask your #questions, share your #ideas and #jokes with the amazing Aim community.
+              Also you are welcome to ask your #questions, share your #ideas and #jokes with the amazing Aim community.
             </p>
             <a
               className={styles.slackButton}
@@ -290,31 +300,31 @@ function Nav() {
   return (
     <>
       <a href='/#about'>
-        about
+        About
       </a>
       <a href='/#learn'>
-        learn
+        Learn
       </a>
       <a
         href='https://github.com/aimhubio/aim/wiki/contributing'
         target='_blank'
         rel='noreferrer noopener'
       >
-        contribute
+        Contribute
       </a>
       <a
         href='https://github.com/aimhubio/aim#contents'
         target='_blank'
         rel='noreferrer noopener'
       >
-        docs
+        Docs
       </a>
       <a
         href='https://github.com/aimhubio/aim'
         target='_blank'
         rel='noreferrer noopener'
       >
-        github
+        GitHub
       </a>
     </>
   );
