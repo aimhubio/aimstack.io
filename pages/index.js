@@ -107,7 +107,7 @@ export default function Home() {
             <p>
               Aim will help you easily handle 100s of experiments.
             </p>
-            <p className={styles.motoCTA}>
+            <div className={styles.motoCTA}>
               <a
                 href='https://github.com/aimhubio/aim#getting-started-in-three-steps'
                 target='_blank'
@@ -125,7 +125,7 @@ export default function Home() {
                 height="30"
                 title="GitHub"
               />
-            </p>
+            </div>
           </div>
           <div className={styles.logoContainer}>
             <img alt='Aim UI' src='/aim-ui.png' draggable={false} />
