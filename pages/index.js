@@ -107,6 +107,25 @@ export default function Home() {
             <p>
               Aim will help you easily handle 100s of experiments.
             </p>
+            <div className={styles.motoCTA}>
+              <a
+                href='https://github.com/aimhubio/aim#getting-started-in-three-steps'
+                target='_blank'
+                rel='noreferrer noopener'
+              >
+                <button>
+                  Get Started
+                </button>
+              </a>
+              <iframe
+                src="https://ghbtns.com/github-btn.html?user=aimhubio&repo=aim&type=star&count=true&size=large"
+                frameBorder="0"
+                scrolling="0"
+                width="170"
+                height="30"
+                title="GitHub"
+              />
+            </div>
           </div>
           <div className={styles.logoContainer}>
             <img alt='Aim UI' src='/aim-ui.png' draggable={false} />
