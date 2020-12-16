@@ -9,7 +9,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: transparent;
   width: 100vw;
   padding: 0 5rem;
   z-index: 1;
@@ -203,24 +202,37 @@
   line-height: unset;
 }
 
-.moto button {
-  position: relative;
-  width: fit-content;
-  background: #ffffff;
-  border: none;
-  outline: none;
-  padding: .8rem 2rem .8rem 3rem;
-  color: #3C5896;
-  font-size: 16px;
-  cursor: pointer;
-  font-family: 'Roboto Mono', monospace;
+.motoCTA {
   display: flex;
   align-items: center;
 }
 
-.moto button i {
-  position: absolute;
-  left: 10px;
+.moto button {
+  display: block;
+  flex-shrink: 0;
+  background: #ffffff;
+  outline: none;
+  padding: .8rem 2rem;
+  margin-right: 2rem;
+  color: #3C5896;
+  font-size: 18px;
+  letter-spacing: .4px;
+  font-weight: 700;
+  box-shadow: 0 10px 25px -20px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  border: 1px solid #3C5896;
+  cursor: pointer;
+  transition: background-color 180ms ease-out, transform 180ms ease-out, box-shadow 180ms ease-out;
+}
+
+.moto button:hover {
+  background-color: #EEE;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.moto button:active {
+  background-color: #E0E0E0;
+  box-shadow: none;
 }
 
 .logoContainer {
@@ -540,5 +552,17 @@
 
   .moto h1 {
     font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .motoCTA {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .moto button {
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
 }
