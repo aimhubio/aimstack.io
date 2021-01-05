@@ -263,7 +263,7 @@ export default function Home() {
             </p>
             <a
               className={styles.slackButton}
-              href='https://join.slack.com/t/aimstack/shared_invite/zt-jhlp5og5-jw5TnkWBfjVrrGXLsdMOBw'
+              href='https://slack.aimstack.io'
               target='_blank'
               rel='noreferrer noopener'
             >
