@@ -79,7 +79,7 @@
 .main {
   --home-blue: #2980b9; /*2B6ABC, 3359cc*/
   --home-white: #FFF;
-  --home-dark: #232323;
+  --home-dark: #202020;
   --home-darker: #020202;
 }
 
@@ -91,7 +91,6 @@
   background-color: var(--home-dark);
   padding: 0;
 }
-
 
 .Hero .container {
   padding: 0;

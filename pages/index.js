@@ -75,7 +75,7 @@ export default function Home() {
         <meta name='twitter:description' content='' />
         <meta name='twitter:image' content=' ' />
 
-        <meta name='theme-color' content='#142447' />
+        <meta name='theme-color' content='#343434' />
         <title>AimStack - Dev tools for AI engineers.</title>
         <link rel='icon' href='/favicon.ico' />
 
