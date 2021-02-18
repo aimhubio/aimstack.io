@@ -1,8 +1,23 @@
+import styles from '../styles/Home.module.css';
+
 import Head from 'next/head';
 import React, { useState, useEffect, useRef } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { prism } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import styles from '../styles/Home.module.css';
+import atomDark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
+
+const highlighterStyle = {
+  ...atomDark,
+  "pre[class*=\"language-\"]": {
+    ...atomDark["pre[class*=\"language-\"]"],
+    "borderRadius": "0em",
+    "background": "#020202",
+  },
+  ":not(pre) > code[class*=\"language-\"]": {
+    ...atomDark[":not(pre) > code[class*=\"language-\"]"],
+    "borderRadius": "0em",
+    "background": "#020202",
+  },
+};
 
 export default function Home() {
   let [scrolled, setScrolled] = useState(false);
@@ -45,9 +60,9 @@ export default function Home() {
   }, [copied]);
 
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+        <meta httpEquiv='Content-Type' content='text/html; charset=UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <meta name='description' content='' />
 
@@ -64,31 +79,20 @@ export default function Home() {
         <title>AimStack - Dev tools for AI engineers.</title>
         <link rel='icon' href='/favicon.ico' />
 
-        <script async src='https://www.googletagmanager.com/gtag/js?id=UA-108474435-1'></script>
+        <script async src='https://www.googletagmanager.com/gtag/js?id=UA-108474435-1'/>
 
         <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet" />
         <link href='https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap' rel='stylesheet' />
         <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet' />
       </Head>
-      <header className={`${styles.header} ${scrolled ? styles.coloredHeader : ''}`}>
-        <a href='/#hero'>
-          <img alt='Aim logo' src='/aimhub.png' draggable={false} />
-          <h2>Aim</h2>
-        </a>
-        <nav className={styles.nav}>
+
+      <header className={`${styles.header} ${styles.headerShadow}`}>
+        <nav className={styles.headerNav}>
           <Nav />
         </nav>
-        <button
-          className={styles.menuButton}
-          onClick={evt => setSidebarOpened(true)}
-        >
-          <i className='material-icons'>menu</i>
-        </button>
       </header>
-      <aside className={`${styles.aside} ${sidebarOpened ? styles.asideOpened : ''}`}>
-        <Nav />
-      </aside>
+
       <div
         className={`${styles.backdrop} ${sidebarOpened ? styles.backdropVisible : ''}`}
         onClick={evt => setSidebarOpened(false)}
@@ -98,218 +102,248 @@ export default function Home() {
       >
         <h2>Copied!</h2>
       </div>
-      <main className={styles.main}>
-        <section id='hero' className={styles.section}>
-          <div className={styles.moto}>
-            <h1>
-              A super-easy way to record, search and compare AI experiments
-            </h1>
-            <p>
-              Aim will help you easily handle 100s of experiments.
-            </p>
-            <div className={styles.motoCTA}>
-              <a
-                href='https://github.com/aimhubio/aim#getting-started-in-three-steps'
-                target='_blank'
-                rel='noreferrer noopener'
-              >
-                <button>
-                  Get Started
-                </button>
-              </a>
-              <iframe
-                src="https://ghbtns.com/github-btn.html?user=aimhubio&repo=aim&type=star&count=true&size=large"
-                frameBorder="0"
-                scrolling="0"
-                width="170"
-                height="30"
-                title="GitHub"
-              />
+
+      <main id="aim" className={styles.main}>
+        <section className={`${styles.section} ${styles.Hero}`}>
+          <div className={styles.container}>
+            <div className={styles.HeroHeader}>
+              <div className={styles.HeroHeaderTitle}>
+                <div>
+                  <div className={styles.HeroHeaderTitleRow}>
+                    <h2 className={styles.TextLG}>
+                      Aim
+                    </h2>
+                    <div className={styles.HeroHeaderGHStars}>
+                      <iframe
+                        className={styles.HeroHeaderGHStarsSmall}
+                        src="https://ghbtns.com/github-btn.html?user=aimhubio&repo=aim&type=star&count=true&size=small"
+                        frameBorder="0"
+                        scrolling="0"
+                        width="90"
+                        height="20"
+                        title="GitHub"
+                      />
+                      <iframe
+                        className={styles.HeroHeaderGHStarsLarge}
+                        src="https://ghbtns.com/github-btn.html?user=aimhubio&repo=aim&type=star&count=true&size=large"
+                        frameBorder="0"
+                        scrolling="0"
+                        width="140"
+                        height="30"
+                        title="GitHub"
+                      />
+                    </div>
+                  </div>
+                  <h2 className={styles.TextLG}>
+                    Compare 1000s of AI experiments at once
+                  </h2>
+                </div>
+              </div>
+              <div className={styles.HeroHeaderCTAs}>
+                <h2 className={styles.TextLG}>
+                  <a href='/#about'>
+                    > Get started
+                  </a>
+                </h2>
+                <h2 className={styles.TextLG}>
+                  <a href='/#get-involved'>
+                    > Get involved
+                  </a>
+                </h2>
+              </div>
+              <div className={styles.HeroHeaderImg}>
+                <img alt='Aim' src='/aim-ui.gif' draggable={false} />
+              </div>
             </div>
           </div>
-          <div className={styles.logoContainer}>
-            <img alt='Aim UI' src='/aim-ui.png' draggable={false} />
-          </div>
-          <div className={styles.polygon} />
         </section>
-        <div className={styles.polygon} />
-
-        <section id='about' className={styles.section}>
-          <div className={`${styles.whatisaim}`}>
-            <h5> What is Aim </h5>
-            <div className={styles.aimDescriptionCntr}>
-              <div className={styles.aimDescription}>
-                <h2>
-                  Aim is an experiment logger packed with superpowers.
+        <section className={`${styles.section} ${styles.HeroFeaturesWrapper}`}>
+          <div className={styles.container}>
+            <div className={styles.HeroFeatures}>
+              <div className={styles.HeroFeaturesItem}>
+                <h2 className={styles.TextLG}>
+                  Open-source
+                  <br />
+                  ---
                 </h2>
-                <p>
-                  Especially for researchers who run lots of experiments:
-                </p>
-                <ul role='list'>
-                  <li>Only two functions to integrate</li>
-                  <li>Search and load 100s of experiment metrics on Explore</li>
-                  <li>Group and aggregate metrics by any param</li>
-                  <li>Split metric dashboards by any param</li>
-                  <li>High level comparison on Parallel Coordinates Dashboard</li>
-                  <li>Holistic experiments dashboard</li>
-                </ul>
-                <p>
-                  And we keep adding more!
+                <p className={`${styles.HeroFeaturesItemDesc} ${styles.TextMD}`}>
+                  Community-driven.
+                  <br />
+                  Self-hosted and full metadata access.
                 </p>
               </div>
-              <div className={styles.example}>
-                <SyntaxHighlighter language='python' style={prism}>
+              <div className={styles.HeroFeaturesItem}>
+                <h2 className={styles.TextLG}>
+                  Explore & Compare
+                  <br />
+                  ---
+                </h2>
+                <p className={`${styles.HeroFeaturesItemDesc} ${styles.TextMD}`}>
+                  Easily search, group and aggregate metrics by any hyperparameter.
+                </p>
+              </div>
+              <div className={styles.HeroFeaturesItem}>
+                <h2 className={styles.TextLG}>
+                  Dashboard
+                  <br />
+                  ---
+                </h2>
+                <p className={`${styles.HeroFeaturesItemDesc} ${styles.TextMD}`}>
+                  Activity view and full experiments dashboard for all experiments.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="about" className={`${styles.section} ${styles.HowItWorks}`}>
+          <div className={styles.container}>
+            <div className={styles.HowItWorksBody}>
+              <div className={styles.HowItWorksList}>
+                <h2 className={styles.TextLG}>
+                  How it works?
+                </h2>
+                <br />
+                <br />
+                <p className={`${styles.TextMD} ${styles.HowItWorksBullet}`}>
+                  - Aim is a python package.
+                  <br />
+                  - Use it to track any dictionaries and metrics.
+                  <br />
+                  - Only two functions to integrate with your training code.
+                  <br />
+                  - Works with any python script and ML framework.
+                  <br />
+                  - Stores metadata logs locally.
+                  <br />
+                  - Comes with the most powerful experiment comparison UI.
+                </p>
+              </div>
+              <div className={styles.HowItWorksCode}>
+                <SyntaxHighlighter language='bash' style={highlighterStyle}>
                   pip install aim
                 </SyntaxHighlighter>
-                <SyntaxHighlighter language='python' style={prism}>
+                <SyntaxHighlighter language='python' style={Object.assign({}, highlighterStyle)}>
                   {
-  `import aim
+                    `import aim
 
-  # Save inputs, hparams or any other 'key: value' pairs
-  aim.set_params(hyperparam_dict, name='hparams')
-  # Passing name argument is optional
+# Save inputs, hparams or any other 'key: value' pairs
+aim.set_params(hyperparam_dict, name='hparams')
 
-  ...
-  for step in range(10):
-    # Log metrics to visualize performance
-    aim.track(metric_value, name='metric_name', epoch=epoch_number)
-  ...`
+for step in range(10):
+  # Log metrics to visualize performance
+  aim.track(metric_value, name='metric_name', epoch=epoch_number)`
                   }
                 </SyntaxHighlighter>
-                <SyntaxHighlighter language='python' style={prism}>
+                <SyntaxHighlighter language='bash' style={highlighterStyle}>
                   aim up
                 </SyntaxHighlighter>
               </div>
             </div>
           </div>
         </section>
-
-        <hr className={styles.separator} />
-
-        <section id='learn' className={styles.section}>
-          <div className={styles.learn}>
-            <h5>Learn More</h5>
-            <h2>
-              Use Aim standalone or with your favorite experiment tracker
-            </h2>
-            <div className={styles.blog}>
-              <a
-                className={styles.card}
-                href='https://www.youtube.com/watch?v=TeAkyRIMxx4'
-                target='_blank'
-                rel='noreferrer noopener'
-              >
-                <img alt='Aim video tutorial 1' src='/aim-vid-1.jpg' draggable={false}  />
-                <div className={styles.playButton} />
-                <p>
-                  Sep 21, 2020 <span>•</span> 2:38 Min
+        <section className={`${styles.section} ${styles.FeatureBlocks}`}>
+          <div className={styles.container}>
+            <div className={styles.FeatureBlocksGrid}>
+              <div className={styles.FeatureBlocksContent}>
+                <p className={`${styles.TextMD} ${styles.FeatureBlocksOverline}`}>
+                  Features:
                 </p>
-                <h3>How to use Aim to compare 100s of experiments in minutes</h3>
-                {/* <a
-                  href='https://www.youtube.com/channel/UCDNWviOImIlaN5cdN2ob7bA'
-                  target='_blank'
-                  rel='noreferrer noopener'
-                >
-                  <img alt='Aim logo' src='/aimhub-icon.png' draggable={false}  />
-                  Aim
-                </a> */}
-              </a>
-              <a
-                className={styles.card}
-                href='https://www.youtube.com/watch?v=s1dLlqik3j0'
-                target='_blank'
-                rel='noreferrer noopener'
-              >
-                <img alt='Aim video tutorial 2' src='/aim-vid-2.jpg' draggable={false}  />
-                <div className={styles.playButton} />
-                <p>
-                  Dec 1, 2020 <span>•</span> 2:31 Min
-                </p>
-                <h3>Analyzing 60+ experiments using Parallel Coordinates in Aim</h3>
-                {/* <a
-                  href='https://www.youtube.com/channel/UCDNWviOImIlaN5cdN2ob7bA'
-                  target='_blank'
-                  rel='noreferrer noopener'
-                >
-                  <img alt='' src='/aimhub-icon.png' draggable={false}  />
-                  Aim
-                </a> */}
-              </a>
-              <a
-                className={styles.card}
-                href='https://gevorg-s.medium.com/launching-aim-an-open-ai-development-environment-b0b69d5b8ff2'
-                target='_blank'
-                rel='noreferrer noopener'
-              >
-                <img alt='Aim blog post' src='/aim-blog-post-1.png' draggable={false} />
-                <p>
-                  Jun 24, 2020 <span>•</span> 3 Min Read
-                </p>
-                <h3>Launching Aim — an open AI development environment</h3>
-              </a>
+                <div className={styles.FeatureBlock}>
+                  <h2 className={styles.TextLG}>
+                    Dashboard and Explore: Full Research context at hand
+                  </h2>
+                  <p className={styles.TextMD}>
+                    Use the dashboard to see your activities, instantly search by clicking on activity slots, search by run/experiment.
+                  </p>
+                  <div className={styles.FeatureBlockDemo}>
+                    <div className={styles.FeatureBlockDemoArea}>
+                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/image5.gif' draggable={false} />
+                    </div>
+                  </div>
+                  <p className={styles.TextMD}>
+                    Use Explore to view groups of experiments, compare and play with the runs/metrics.
+                  </p>
+                  <div className={styles.FeatureBlockDemo}>
+                    <div className={styles.FeatureBlockDemoArea}>
+                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/image4.gif' draggable={false} />
+                    </div>
+                  </div>
+                  <p className={styles.TextMD}>
+                    <strong>Explore is the most advanced open source AI experiment comparison tool available!</strong>
+                  </p>
+                </div>
+                <div className={styles.FeatureBlock}>
+                  <h2 className={styles.TextLG}>
+                    Search, Group and Aggregate
+                  </h2>
+                  <p className={styles.TextMD}>
+                    Search through everything you have tracked using the Aim pythonic query language. Super easy to use.
+                  </p>
+                  <div className={styles.FeatureBlockDemo}>
+                    <div className={styles.FeatureBlockDemoArea}>
+                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/image3.gif' draggable={false} />
+                    </div>
+                  </div>
+                  <p className={styles.TextMD}>
+                    Group and Aggregate 1000s of metrics to quickly see the trends for hyperparameter sensitive runs.
+                  </p>
+                  <div className={styles.FeatureBlockDemo}>
+                    <div className={styles.FeatureBlockDemoArea}>
+                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/image1.gif' draggable={false} />
+                    </div>
+                  </div>
+                </div>
+                <div className={styles.FeatureBlock}>
+                  <h2 className={styles.TextLG}>
+                    Use subplots to compare different metrics of the same runs
+                  </h2>
+                  <p className={styles.TextMD}>
+                    Divide into subplots and monitor metrics from different perspectives.
+                  </p>
+                  <div className={styles.FeatureBlockDemo}>
+                    <div className={styles.FeatureBlockDemoArea}>
+                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/image2.gif' draggable={false} />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
-        <hr className={styles.separator} />
-        <section id='slack' className={styles.section}>
-          <div>
-            <h5>Let's Connect</h5>
-            <h2>
-              Join the Aim community on Slack
-            </h2>
-            <p>
-              Our growing Slack community is a great environment for AI researchers to hang out and share their projects with each other. All things AI.
-              Also you are welcome to ask your #questions, share your #ideas and #jokes with the amazing Aim community.
-            </p>
-            <a
-              className={styles.slackButton}
-              href='https://slack.aimstack.io'
-              target='_blank'
-              rel='noreferrer noopener'
-            >
-              Join our Slack
-            </a>
-          </div>
-          <div className={styles.logos}>
-            <img alt='Slack logo' src='/slack.svg' draggable={false} />
-            <h2>+</h2>
-            <img alt='Aim logo' src='/aimhub-icon.png' draggable={false} />
+        <section id="get-involved" className={`${styles.section} ${styles.GetInvolved}`}>
+          <div className={styles.container}>
+            <div className={styles.GetInvolvedGrid}>
+              <div className={styles.GetInvolvedContent}>
+                <p className={`${styles.TextMD} ${styles.GetInvolvedOverline}`}>
+                  Let's build Aim together
+                </p>
+                <p className={`${styles.TextMD} ${styles.GetInvolvedAbout}`}>
+                  We need your help to constantly improve Aim for the community. If you are already using Aim or just getting started, join us to help build beautiful and effective open source tools for you.            </p>
+                <br />
+                <br />
+                <h2 className={styles.TextLG}>
+                  <a href='https://slack.aimstack.io' target='_blank'>
+                    > Join our Slack
+                  </a>
+                </h2>
+                <h2 className={styles.TextLG}>
+                  <a href='https://github.com/aimhubio/aim/issues' target='_blank'>
+                    > Get involved on GitHub
+                  </a>
+                </h2>
+              </div>
+            </div>
           </div>
         </section>
+        <footer className={`${styles.section} ${styles.footer}`}>
+          <div className={styles.container}>
+            <p className={styles.TextMD}>
+              {/*<img alt='Aim logo' src='/aimhub.png' draggable={false} />*/}
+              © AimStack, {new Date().getFullYear()}
+            </p>
+          </div>
+        </footer>
       </main>
-      <footer className={styles.footer}>
-        <img alt='Aim logo' src='/aimhub.png' draggable={false} />
-        © {new Date().getFullYear()}, AimHub
-        <div className={styles.socialMedia}>
-          <a
-            href='https://twitter.com/aimstackio'
-            target='_blank'
-            rel='noreferrer noopener'
-          >
-            <svg style={{ width: 24, height: 24 }} viewBox='0 0 24 24'>
-              <path fill='currentColor' d='M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z' />
-            </svg>
-          </a>
-          <a
-            href='https://www.facebook.com/aimhubio'
-            target='_blank'
-            rel='noreferrer noopener'
-          >
-            <svg style={{ width: 24, height: 24 }} viewBox='0 0 24 24'>
-              <path fill='currentColor' d='M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z' />
-            </svg>
-          </a>
-          <a
-            href='https://www.linkedin.com/company/aimhubio'
-            target='_blank'
-            rel='noreferrer noopener'
-          >
-            <svg style={{ width: 24, height: 24 }} viewBox='0 0 24 24'>
-              <path fill='currentColor' d='M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z' />
-            </svg>
-          </a>
-        </div>
-      </footer>
     </div>
   )
 }
@@ -317,11 +351,11 @@ export default function Home() {
 function Nav() {
   return (
     <>
+      <a href='/#aim'>
+        Aim
+      </a>
       <a href='/#about'>
         About
-      </a>
-      <a href='/#learn'>
-        Learn
       </a>
       <a
         href='https://github.com/aimhubio/aim/wiki/contributing'

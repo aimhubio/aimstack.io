@@ -1,46 +1,12 @@
-html,
-body {
-  padding: 0;
+html, body {
+  font-family: monospace;
+}
+
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-img {
-  user-select: none;
-}
-
-.material-icons {
-  font-family: 'Material Icons';
   font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
+}
 
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
+a, a:hover, a:active, a:visited {
+  color: inherit;
 }
