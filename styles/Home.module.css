@@ -79,7 +79,7 @@
 .main {
   --home-blue: #2980b9; /*2B6ABC, 3359cc*/
   --home-white: #FFF;
-  --home-dark: #141414;
+  --home-dark: #232323;
   --home-darker: #020202;
 }
 
@@ -163,7 +163,7 @@
 .HeroHeaderImg {
   position: relative;
   grid-area: img;
-  border-left: 3px solid #323232;
+  border-left: 3px solid #424242;
 }
 
 /*.HeroHeaderImg:before {*/
@@ -188,6 +188,7 @@
 .HeroFeaturesWrapper {
   background-color: var(--home-darker);
   border-bottom: 10px dashed var(--home-blue);
+  border-top: 3px solid #424242;
   /*padding: calc(1 * var(--component-spacing-lg)) 0;*/
   /*border-top: 4px dashed #333;*/
 }
@@ -507,6 +508,7 @@
   .HeroHeaderTitleRow {
     align-items: center;
     justify-content: center;
+    margin-bottom: var(--component-spacing-sm);
   }
 
   .HeroHeaderImg {
