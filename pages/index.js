@@ -4,6 +4,7 @@ import Head from 'next/head';
 import React, { useState, useEffect, useRef } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import atomDark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
+import GoogleAnalytics from "../components/googleAnalytics.js"
 
 const highlighterStyle = {
   ...atomDark,
@@ -61,6 +62,8 @@ export default function Home() {
 
   return (
     <div>
+      <GoogleAnalytics />
+
       <Head>
         <meta httpEquiv='Content-Type' content='text/html; charset=UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
