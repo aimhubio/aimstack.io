@@ -69,17 +69,19 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <meta name='description' content='' />
 
-        <meta property='og:title' content='Super-easy way to record, search and compare AI experiments' />
-        <meta property='og:description' content='' />
+        <meta property='og:title' content='Compare 1000s of AI experiments at once' />
+        <meta property='og:description' content='Aim - a super-easy way to record, search and compare AI experiments at scale' />
         <meta property='og:url' content='https://aimstack.io' />
-        <meta property='og:image' content='' />
+        <meta property='og:image' content='https://aimstack.io/aim-preview.png' />
+        <meta property='og:image:width' content='1920' />
+        <meta property='og:image:height' content='905' />
 
-        <meta name='twitter:title' content='Super-easy way to record, search and compare AI experiments' />
-        <meta name='twitter:description' content='' />
-        <meta name='twitter:image' content=' ' />
+        <meta name='twitter:title' content='Compare 1000s of AI experiments at once' />
+        <meta name='twitter:description' content='Aim - a super-easy way to record, search and compare AI experiments at scale' />
+        <meta name='twitter:image' content='https://aimstack.io/aim-preview.png' />
 
         <meta name='theme-color' content='#343434' />
-        <title>AimStack - Dev tools for AI engineers.</title>
+        <title>AimStack - Dev tools for AI engineers</title>
         <link rel='icon' href='/favicon.ico' />
 
         <script async src='https://www.googletagmanager.com/gtag/js?id=UA-108474435-1'/>
