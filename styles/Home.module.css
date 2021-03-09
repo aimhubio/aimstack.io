@@ -209,7 +209,6 @@
   /*cyperpunk linear-gradient(90deg, #ff00a0 0%, #8200ff 44%, #00ffff 83%)*/
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   background-attachment: fixed;
 }
 
@@ -361,7 +360,7 @@
 
 .GetInvolvedContent {
   grid-area: content;
-  padding: 0 0 var(--component-spacing-md);
+  padding: 0;
 }
 
 .GetInvolvedOverline {
@@ -515,9 +514,9 @@
   }
 
   .HeroHeaderImg > img {
-    margin: var(--component-spacing-lg);
-    margin-top: 0;
-    width: calc(100% - 2 * var(--component-spacing-lg));
+    /*margin: var(--component-spacing-lg);*/
+    /*margin-top: 0;*/
+    /*width: calc(100% - 2 * var(--component-spacing-lg));*/
   }
 
   .HeroHeaderTitle {

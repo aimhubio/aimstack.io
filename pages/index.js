@@ -4,7 +4,8 @@ import Head from 'next/head';
 import React, { useState, useEffect, useRef } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import atomDark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
-import GoogleAnalytics from "../components/googleAnalytics.js"
+import GoogleAnalytics from "../components/GoogleAnalytics.js"
+import NewsletterSubscriptionForm from "../components/NewsletterSubscriptionForm.js"
 
 const highlighterStyle = {
   ...atomDark,
@@ -90,6 +91,8 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet" />
         <link href='https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap' rel='stylesheet' />
         <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet' />
+
+        <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"/>
       </Head>
 
       <header className={`${styles.header} ${styles.headerShadow}`}>
@@ -262,7 +265,7 @@ for step in range(10):
                   </p>
                   <div className={styles.FeatureBlockDemo}>
                     <div className={styles.FeatureBlockDemoArea}>
-                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/image5.gif' draggable={false} />
+                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/dashboard.png' draggable={false} />
                     </div>
                   </div>
                   <p className={styles.TextMD}>
@@ -270,7 +273,7 @@ for step in range(10):
                   </p>
                   <div className={styles.FeatureBlockDemo}>
                     <div className={styles.FeatureBlockDemoArea}>
-                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/image4.gif' draggable={false} />
+                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/explore.png' draggable={false} />
                     </div>
                   </div>
                   <p className={styles.TextMD}>
@@ -284,17 +287,12 @@ for step in range(10):
                   <p className={styles.TextMD}>
                     Search through everything you have tracked using the Aim pythonic query language. Super easy to use.
                   </p>
-                  <div className={styles.FeatureBlockDemo}>
-                    <div className={styles.FeatureBlockDemoArea}>
-                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/image3.gif' draggable={false} />
-                    </div>
-                  </div>
                   <p className={styles.TextMD}>
                     Group and Aggregate 1000s of metrics to quickly see the trends for hyperparameter sensitive runs.
                   </p>
                   <div className={styles.FeatureBlockDemo}>
                     <div className={styles.FeatureBlockDemoArea}>
-                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/image1.gif' draggable={false} />
+                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/group.png' draggable={false} />
                     </div>
                   </div>
                 </div>
@@ -307,7 +305,7 @@ for step in range(10):
                   </p>
                   <div className={styles.FeatureBlockDemo}>
                     <div className={styles.FeatureBlockDemoArea}>
-                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/image2.gif' draggable={false} />
+                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/subplots.png' draggable={false} />
                     </div>
                   </div>
                 </div>
@@ -336,6 +334,8 @@ for step in range(10):
                     > Get involved on GitHub
                   </a>
                 </h2>
+
+                <NewsletterSubscriptionForm />
               </div>
             </div>
           </div>
