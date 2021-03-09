@@ -56,7 +56,7 @@ function NewsletterSubscriptionForm() {
             <form
               id="sib-form"
               method="POST"
-              action="https://bcc8d9d1.sibforms.com/serve/MUIEAGfBW-Hqo0trXa-Kngh8lgizFYZdbdn1hvItG8rH4QcSiTeXl1HczJQWsEr_RhEUpNAwwIPtSA0opwLAds8FCn1HjBqJCAJsjXC_UPJwIrsyIO_WN631__E6rnBUuNU_tQqofeAaR4Rs3M_oN0pOwRaDuuZv-kvpvmK6-3cBb1rfWbKZXssmw4tHABgcE4_ERFenKAvc-w4V"
+              action="https://bcc8d9d1.sibforms.com/serve/MUIEAOy_lOF_Y7cBvRUiwl5_G8OuWBzVFYbko8kpN-As-mcRcVflAXI1KSud3N2h4drl9eCp7JwncTaisIAsimN4-uhKhi3hZjOsVbfGSp3jzGghmpsIbJHKN4S2gEbsM-yFwwiXQWkRDkrnmCQTjxYfu9KuF5PGAeDkZxInC-iFEnuQmaBOMIr8mQ8x4LGhwb8gK9DY6rK6QWy5"
               dataType="subscription"
             >
               <div>
@@ -105,8 +105,8 @@ function NewsletterSubscriptionForm() {
                         }`
                       }} />
                       <div className="g-recaptcha sib-visible-recaptcha" id="sib-captcha"
-                           data-sitekey="6Ldez3IaAAAAAMEh6gZ6jalBw54nLIyzchqRPwQm"
-                           data-callback="handleCaptchaResponse" />
+                         data-sitekey="6Ld9tHgaAAAAAAp37yrQArc5GBUVJKGyz1R2CLFz"
+                         data-callback="handleCaptchaResponse" />
                     </div>
                     <label className="entry__error entry__error--primary"/>
                   </div>
