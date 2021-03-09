@@ -64,6 +64,12 @@
     position: relative;
     z-index: 2;
     border: 1px solid var(--home-blue);
+    padding: var(--component-spacing-md) var(--component-spacing-lg) !important;
+    background-color: var(--home-white);
+}
+
+.sibFormMessagePanel {
+    margin: 0 !important;
 }
 
 .sibFormHeaderBlock {
@@ -72,10 +78,6 @@
 
 .sigFormHeader {
     color: var(--home-dark);
-}
-
-.sibContainer {
-    padding: var(--component-spacing-md) var(--component-spacing-lg) !important;
 }
 
 .sibFormBlock {
