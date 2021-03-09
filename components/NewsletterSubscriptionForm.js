@@ -52,7 +52,7 @@ function NewsletterSubscriptionForm() {
               </span>
             </div>
           </div>
-          <div id="sib-container" className={`sib-container--large sib-container--vertical`}>
+          <div id="sib-container" className={`${styles.sibContainer} sib-container--large sib-container--vertical`}>
             <form
               id="sib-form"
               method="POST"
@@ -104,9 +104,11 @@ function NewsletterSubscriptionForm() {
                           document.getElementById('sib-captcha').dispatchEvent(event);
                         }`
                       }} />
-                      <div className="g-recaptcha sib-visible-recaptcha" id="sib-captcha"
-                         data-sitekey="6Lf5u3gaAAAAAL04XQGtRctgFKJYimgAors9uppX"
-                         data-callback="handleCaptchaResponse" />
+                      <div
+                        className={`${styles.gaCaptcha} g-recaptcha sib-visible-recaptcha`}
+                        id="sib-captcha"
+                        data-sitekey="6Lf5u3gaAAAAAL04XQGtRctgFKJYimgAors9uppX"
+                        data-callback="handleCaptchaResponse" />
                     </div>
                     <label className="entry__error entry__error--primary"/>
                   </div>

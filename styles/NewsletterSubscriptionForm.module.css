@@ -57,15 +57,19 @@
     height: 100%;
     z-index: 1;
     display: block;
-    box-shadow: inset 0 0 0 2px var(--home-dark);
+    background-color: var(--home-dark);
 }
 
 .sibFormContainer {
     position: relative;
     z-index: 2;
     border: 1px solid var(--home-blue);
-    padding: var(--component-spacing-md) var(--component-spacing-lg) !important;
+    padding: var(--component-spacing-lg) var(--component-spacing-xl) !important;
     background-color: var(--home-white);
+}
+
+.sibContainer {
+    padding: 0 !important;
 }
 
 .sibFormMessagePanel {
@@ -108,4 +112,23 @@
 
 .sibFormSubmit:active, .sibFormSubmit:hover {
     text-decoration: underline !important;
+}
+
+.gaCaptcha {
+    width: 305px;
+}
+
+
+@media (max-width: 768px) {
+    .sibFormContainer {
+        padding: var(--component-spacing-lg) !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .gaCaptcha {
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: calc(100vw - 4 * var(--component-spacing-lg) - 2px);
+    }
 }
