@@ -115,7 +115,7 @@
 }
 
 .gaCaptcha {
-    width: 305px;
+    width: 315px;
 }
 
 
@@ -125,7 +125,7 @@
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 430px) {
     .gaCaptcha {
         overflow-x: auto;
         overflow-y: hidden;
