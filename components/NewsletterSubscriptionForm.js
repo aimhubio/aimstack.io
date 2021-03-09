@@ -56,7 +56,7 @@ function NewsletterSubscriptionForm() {
             <form
               id="sib-form"
               method="POST"
-              action="https://bcc8d9d1.sibforms.com/serve/MUIEAOy_lOF_Y7cBvRUiwl5_G8OuWBzVFYbko8kpN-As-mcRcVflAXI1KSud3N2h4drl9eCp7JwncTaisIAsimN4-uhKhi3hZjOsVbfGSp3jzGghmpsIbJHKN4S2gEbsM-yFwwiXQWkRDkrnmCQTjxYfu9KuF5PGAeDkZxInC-iFEnuQmaBOMIr8mQ8x4LGhwb8gK9DY6rK6QWy5"
+              action="https://bcc8d9d1.sibforms.com/serve/MUIEAMO5ggD0F065O8DT968bz9_VEpIejRAOK-rG9JmWrLnWg8-bWjOysm2gunvuiQ3appnnCZ0BHjg6Qk7TAXRBNt1-RdE3GZ4iqk2zve-iEwQdTHPWedcDRXZ6du07ViTpGDuYnpqRDVK5mhd8h9Ujevy3mYs_nGlvv33-PHuqeROWb9FRYOwS2MY4nbq5llpZgi9qQb8mvYXz"
               dataType="subscription"
             >
               <div>
@@ -105,7 +105,7 @@ function NewsletterSubscriptionForm() {
                         }`
                       }} />
                       <div className="g-recaptcha sib-visible-recaptcha" id="sib-captcha"
-                         data-sitekey="6Ld9tHgaAAAAAAp37yrQArc5GBUVJKGyz1R2CLFz"
+                         data-sitekey="6Lf5u3gaAAAAAL04XQGtRctgFKJYimgAors9uppX"
                          data-callback="handleCaptchaResponse" />
                     </div>
                     <label className="entry__error entry__error--primary"/>
@@ -133,7 +133,7 @@ function NewsletterSubscriptionForm() {
   );
 }
 
-const useScript = url => {
+const useScript = (url) => {
     useEffect(() => {
       const script = document.createElement('script');
 
