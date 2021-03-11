@@ -1,4 +1,5 @@
 import styles from '../styles/NewsletterSubscriptionForm.module.css';
+import typography from '../styles/Typography.module.css';
 
 import React, { useEffect }  from "react";
 
@@ -61,13 +62,13 @@ function NewsletterSubscriptionForm() {
             >
               <div>
                 <div className={`${styles.sibFormBlock} ${styles.sibFormHeaderBlock} sib-form-block`}>
-                  <p className={`${styles.sigFormHeader} ${styles.TextLG}`}>Aim Newsletter</p>
+                  <p className={`${styles.sigFormHeader} ${typography.TextLG}`}>Aim Newsletter</p>
                 </div>
               </div>
               <div>
                 <div className={`${styles.sibFormBlock} sib-form-block`}>
                   <div className="sib-text-form-block">
-                    <p className={`${styles.TextMD} ${styles.sibFormText}`}>
+                    <p className={`${typography.TextMD} ${styles.sibFormText}`}>
                       Subscribe to our newsletter to receive regular updates about our latest releases, tutorials and
                       blog posts!
                     </p>
@@ -117,7 +118,7 @@ function NewsletterSubscriptionForm() {
               <div>
                 <div className={`${styles.sibFormBlock} ${styles.sibFormSubmitBlock} sib-form-block`}>
                   <button
-                    className={`${styles.TextLG} ${styles.sibFormSubmit}`}
+                    className={`${typography.TextLG} ${styles.sibFormSubmit}`}
                     type="submit"
                   >
                     <svg

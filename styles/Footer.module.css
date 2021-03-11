@@ -1,0 +1,25 @@
+.section {
+    padding: var(--component-spacing-lg) 0;
+}
+
+.container {
+    padding: 0 var(--component-spacing-lg);
+}
+
+@media (min-width: 1900px) {
+    .container {
+        max-width: 1800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.footer {
+    background-color: var(--home-darker);
+    color: var(--home-white);
+    text-align: right;
+}
+
+.footer img {
+
+}
