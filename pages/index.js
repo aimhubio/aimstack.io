@@ -1,11 +1,14 @@
 import styles from '../styles/Home.module.css';
+import typography from '../styles/Typography.module.css';
 
 import Head from 'next/head';
 import React, { useState, useEffect, useRef } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import atomDark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
-import GoogleAnalytics from "../components/GoogleAnalytics.js"
-import NewsletterSubscriptionForm from "../components/NewsletterSubscriptionForm.js"
+import GoogleAnalytics from "../components/GoogleAnalytics.js";
+import NewsletterSubscriptionForm from "../components/NewsletterSubscriptionForm.js";
+import Header from "../components/Header";
+import Footer from '../components/Footer';
 
 const highlighterStyle = {
   ...atomDark,
@@ -68,7 +71,7 @@ export default function Home() {
       <Head>
         <meta httpEquiv='Content-Type' content='text/html; charset=UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <meta name='description' content='' />
+        <meta name='description' content='Aim - a super-easy way to record, search and compare AI experiments at scale' />
 
         <meta property='og:title' content='Compare 1000s of AI experiments at once' />
         <meta property='og:description' content='Aim - a super-easy way to record, search and compare AI experiments at scale' />
@@ -95,11 +98,7 @@ export default function Home() {
         <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"/>
       </Head>
 
-      <header className={`${styles.header} ${styles.headerShadow}`}>
-        <nav className={styles.headerNav}>
-          <Nav />
-        </nav>
-      </header>
+      <Header />
 
       <div
         className={`${styles.backdrop} ${sidebarOpened ? styles.backdropVisible : ''}`}
@@ -118,7 +117,7 @@ export default function Home() {
               <div className={styles.HeroHeaderTitle}>
                 <div>
                   <div className={styles.HeroHeaderTitleRow}>
-                    <h2 className={styles.TextLG}>
+                    <h2 className={typography.TextLG}>
                       Aim
                     </h2>
                     <div className={styles.HeroHeaderGHStars}>
@@ -142,18 +141,18 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <h2 className={styles.TextLG}>
+                  <h2 className={typography.TextLG}>
                     Compare 1000s of AI experiments at once
                   </h2>
                 </div>
               </div>
               <div className={styles.HeroHeaderCTAs}>
-                <h2 className={styles.TextLG}>
+                <h2 className={typography.TextLG}>
                   <a href='/#about'>
                     > Get started
                   </a>
                 </h2>
-                <h2 className={styles.TextLG}>
+                <h2 className={typography.TextLG}>
                   <a href='/#get-involved'>
                     > Get involved
                   </a>
@@ -169,34 +168,34 @@ export default function Home() {
           <div className={styles.container}>
             <div className={styles.HeroFeatures}>
               <div className={styles.HeroFeaturesItem}>
-                <h2 className={styles.TextLG}>
+                <h2 className={typography.TextLG}>
                   Open-source
                   <br />
                   ---
                 </h2>
-                <p className={`${styles.HeroFeaturesItemDesc} ${styles.TextMD}`}>
+                <p className={`${styles.HeroFeaturesItemDesc} ${typography.TextMD}`}>
                   Community-driven.
                   <br />
                   Self-hosted and full metadata access.
                 </p>
               </div>
               <div className={styles.HeroFeaturesItem}>
-                <h2 className={styles.TextLG}>
+                <h2 className={typography.TextLG}>
                   Explore & Compare
                   <br />
                   ---
                 </h2>
-                <p className={`${styles.HeroFeaturesItemDesc} ${styles.TextMD}`}>
+                <p className={`${styles.HeroFeaturesItemDesc} ${typography.TextMD}`}>
                   Easily search, group and aggregate metrics by any hyperparameter.
                 </p>
               </div>
               <div className={styles.HeroFeaturesItem}>
-                <h2 className={styles.TextLG}>
+                <h2 className={typography.TextLG}>
                   Dashboard
                   <br />
                   ---
                 </h2>
-                <p className={`${styles.HeroFeaturesItemDesc} ${styles.TextMD}`}>
+                <p className={`${styles.HeroFeaturesItemDesc} ${typography.TextMD}`}>
                   Activity view and full experiments dashboard for all experiments.
                 </p>
               </div>
@@ -207,12 +206,12 @@ export default function Home() {
           <div className={styles.container}>
             <div className={styles.HowItWorksBody}>
               <div className={styles.HowItWorksList}>
-                <h2 className={styles.TextLG}>
+                <h2 className={typography.TextLG}>
                   How it works?
                 </h2>
                 <br />
                 <br />
-                <p className={`${styles.TextMD} ${styles.HowItWorksBullet}`}>
+                <p className={`${typography.TextMD} ${styles.HowItWorksBullet}`}>
                   - Aim is a python package.
                   <br />
                   - Use it to track any dictionaries and metrics.
@@ -253,14 +252,14 @@ for step in range(10):
           <div className={styles.container}>
             <div className={styles.FeatureBlocksGrid}>
               <div className={styles.FeatureBlocksContent}>
-                <p className={`${styles.TextMD} ${styles.FeatureBlocksOverline}`}>
+                <p className={`${typography.TextMD} ${styles.FeatureBlocksOverline}`}>
                   Features:
                 </p>
                 <div className={styles.FeatureBlock}>
-                  <h2 className={styles.TextLG}>
+                  <h2 className={typography.TextLG}>
                     Dashboard and Explore: Full Research context at hand
                   </h2>
-                  <p className={styles.TextMD}>
+                  <p className={typography.TextMD}>
                     Use the dashboard to see your activities, instantly search by clicking on activity slots, search by run/experiment.
                   </p>
                   <div className={styles.FeatureBlockDemo}>
@@ -268,7 +267,7 @@ for step in range(10):
                       <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/dashboard.png' draggable={false} />
                     </div>
                   </div>
-                  <p className={styles.TextMD}>
+                  <p className={typography.TextMD}>
                     Use Explore to view groups of experiments, compare and play with the runs/metrics.
                   </p>
                   <div className={styles.FeatureBlockDemo}>
@@ -276,18 +275,18 @@ for step in range(10):
                       <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/explore.png' draggable={false} />
                     </div>
                   </div>
-                  <p className={styles.TextMD}>
+                  <p className={typography.TextMD}>
                     <strong>Explore is the most advanced open source AI experiment comparison tool available!</strong>
                   </p>
                 </div>
                 <div className={styles.FeatureBlock}>
-                  <h2 className={styles.TextLG}>
+                  <h2 className={typography.TextLG}>
                     Search, Group and Aggregate
                   </h2>
-                  <p className={styles.TextMD}>
+                  <p className={typography.TextMD}>
                     Search through everything you have tracked using the Aim pythonic query language. Super easy to use.
                   </p>
-                  <p className={styles.TextMD}>
+                  <p className={typography.TextMD}>
                     Group and Aggregate 1000s of metrics to quickly see the trends for hyperparameter sensitive runs.
                   </p>
                   <div className={styles.FeatureBlockDemo}>
@@ -297,10 +296,10 @@ for step in range(10):
                   </div>
                 </div>
                 <div className={styles.FeatureBlock}>
-                  <h2 className={styles.TextLG}>
+                  <h2 className={typography.TextLG}>
                     Use subplots to compare different metrics of the same runs
                   </h2>
-                  <p className={styles.TextMD}>
+                  <p className={typography.TextMD}>
                     Divide into subplots and monitor metrics from different perspectives.
                   </p>
                   <div className={styles.FeatureBlockDemo}>
@@ -317,19 +316,19 @@ for step in range(10):
           <div className={styles.container}>
             <div className={styles.GetInvolvedGrid}>
               <div className={styles.GetInvolvedContent}>
-                <p className={`${styles.TextMD} ${styles.GetInvolvedOverline}`}>
+                <p className={`${typography.TextMD} ${styles.GetInvolvedOverline}`}>
                   Let's build Aim together
                 </p>
-                <p className={`${styles.TextMD} ${styles.GetInvolvedAbout}`}>
+                <p className={`${typography.TextMD} ${styles.GetInvolvedAbout}`}>
                   We need your help to constantly improve Aim for the community. If you are already using Aim or just getting started, join us to help build beautiful and effective open source tools for you.            </p>
                 <br />
                 <br />
-                <h2 className={styles.TextLG}>
+                <h2 className={typography.TextLG}>
                   <a href='https://slack.aimstack.io' target='_blank'>
                     > Join our Slack
                   </a>
                 </h2>
-                <h2 className={styles.TextLG}>
+                <h2 className={typography.TextLG}>
                   <a href='https://github.com/aimhubio/aim/issues' target='_blank'>
                     > Get involved on GitHub
                   </a>
@@ -340,49 +339,8 @@ for step in range(10):
             </div>
           </div>
         </section>
-        <footer className={`${styles.section} ${styles.footer}`}>
-          <div className={styles.container}>
-            <p className={styles.TextMD}>
-              {/*<img alt='Aim logo' src='/aimhub.png' draggable={false} />*/}
-              © AimStack, {new Date().getFullYear()}
-            </p>
-          </div>
-        </footer>
+        <Footer />
       </main>
     </div>
   )
-}
-
-function Nav() {
-  return (
-    <>
-      <a href='/#aim'>
-        Aim
-      </a>
-      <a href='/#about'>
-        About
-      </a>
-      <a
-        href='https://github.com/aimhubio/aim/wiki/contributing'
-        target='_blank'
-        rel='noreferrer noopener'
-      >
-        Contribute
-      </a>
-      <a
-        href='https://github.com/aimhubio/aim#contents'
-        target='_blank'
-        rel='noreferrer noopener'
-      >
-        Docs
-      </a>
-      <a
-        href='https://github.com/aimhubio/aim'
-        target='_blank'
-        rel='noreferrer noopener'
-      >
-        GitHub
-      </a>
-    </>
-  );
 }
