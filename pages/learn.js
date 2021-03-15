@@ -51,6 +51,21 @@ export default function Learn() {
             </div>
             <div className={styles.articlesGrid}>
               <div className={styles.articleItem}>
+                <a href='https://medium.com/aimstack/how-to-tune-hyper-params-with-fixed-seeds-using-pytorch-lightning-and-aim-c61c73f75c7c' target='_blank'>
+                  <div className={styles.articleItemCover} style={{ backgroundImage: 'url("/learn/covers/tune-params.png")' }} />
+                  <p className={styles.articleItemMeta}>
+                    Mar 11, 2021 | 4 min
+                  </p>
+                  <p className={`${styles.articleItemTitle}`}>
+                    How to tune hyperparams with fixed seeds using PyTorch Lightning and Aim
+                  </p>
+                  <div className={styles.articleItemAuthor}>
+                    <div className={styles.articleItemAuthorImg} style={{ backgroundImage: 'url("/learn/authors/gev.jpeg")' }} />
+                    <p className={styles.articleItemAuthorName}>Gev Sogomonian</p>
+                  </div>
+                </a>
+              </div>
+              <div className={styles.articleItem}>
                 <a href='https://medium.com/aimstack/aim-1-3-8-enhanced-table-and-advanced-group-coloring-b7f5b42586a5' target='_blank'>
                   <div className={styles.articleItemCover} style={{ backgroundImage: 'url("/learn/covers/aim-table.png")' }} />
                   <p className={styles.articleItemMeta}>
