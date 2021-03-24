@@ -51,6 +51,24 @@ export default function Learn() {
             </div>
             <div className={styles.articlesGrid}>
               <div className={styles.articleItem}>
+                <a href='https://medium.com/aimstack/aim-v2-2-0-hugging-face-integration-57efa2eec104' target='_blank'>
+                  <div className={styles.articleItemCover} style={{
+                    backgroundImage: 'url("/learn/covers/hugging-face.png")',
+                    backgroundPosition: '50% 50%',
+                  }} />
+                  <p className={styles.articleItemMeta}>
+                    Mar 24, 2021 | 3 min
+                  </p>
+                  <p className={`${styles.articleItemTitle}`}>
+                    Aim v2.2.0 — Hugging Face integration
+                  </p>
+                  <div className={styles.articleItemAuthor}>
+                    <div className={styles.articleItemAuthorImg} style={{ backgroundImage: 'url("/learn/authors/gev.jpeg")' }} />
+                    <p className={styles.articleItemAuthorName}>Gev Sogomonian</p>
+                  </div>
+                </a>
+              </div>
+              <div className={styles.articleItem}>
                 <a href='https://medium.com/aimstack/how-to-tune-hyper-params-with-fixed-seeds-using-pytorch-lightning-and-aim-c61c73f75c7c' target='_blank'>
                   <div className={styles.articleItemCover} style={{ backgroundImage: 'url("/learn/covers/tune-params.png")' }} />
                   <p className={styles.articleItemMeta}>
