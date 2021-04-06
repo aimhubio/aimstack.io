@@ -126,7 +126,7 @@ export default function Home() {
                         src="https://ghbtns.com/github-btn.html?user=aimhubio&repo=aim&type=star&count=true&size=small"
                         frameBorder="0"
                         scrolling="0"
-                        width="90"
+                        width="110"
                         height="20"
                         title="GitHub"
                       />
@@ -135,7 +135,7 @@ export default function Home() {
                         src="https://ghbtns.com/github-btn.html?user=aimhubio&repo=aim&type=star&count=true&size=large"
                         frameBorder="0"
                         scrolling="0"
-                        width="140"
+                        width="170"
                         height="30"
                         title="GitHub"
                       />
