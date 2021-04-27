@@ -51,6 +51,24 @@ export default function Learn() {
             </div>
             <div className={styles.articlesGrid}>
               <div className={styles.articleItem}>
+                <a href='https://medium.com/aimstack/aim-v2-3-0-system-resource-usage-and-reverse-grouping-6900dd04a1ff' target='_blank'>
+                  <div className={styles.articleItemCover} style={{
+                    backgroundImage: 'url("/learn/covers/system-metrics.png")',
+                    backgroundPosition: '50% 50%',
+                  }} />
+                  <p className={styles.articleItemMeta}>
+                    Apr 20, 2021 | 2 min
+                  </p>
+                  <p className={`${styles.articleItemTitle}`}>
+                    Aim v2.3.0 — System Resource Usage and Reverse Grouping
+                  </p>
+                  <div className={styles.articleItemAuthor}>
+                    <div className={styles.articleItemAuthorImg} style={{ backgroundImage: 'url("/learn/authors/gev.jpeg")' }} />
+                    <p className={styles.articleItemAuthorName}>Gev Sogomonian</p>
+                  </div>
+                </a>
+              </div>
+              <div className={styles.articleItem}>
                 <a href='https://medium.com/aimstack/aim-v2-2-0-hugging-face-integration-57efa2eec104' target='_blank'>
                   <div className={styles.articleItemCover} style={{
                     backgroundImage: 'url("/learn/covers/hugging-face.png")',
