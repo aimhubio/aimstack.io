@@ -51,6 +51,42 @@ export default function Learn() {
             </div>
             <div className={styles.articlesGrid}>
               <div className={styles.articleItem}>
+                <a href='https://medium.com/aimstack/aim-2-4-0-xgboost-integration-6758c24f81f0' target='_blank'>
+                  <div className={styles.articleItemCover} style={{
+                    backgroundImage: 'url("/learn/covers/aggregation.png")',
+                    backgroundPosition: '50% 50%',
+                  }} />
+                  <p className={styles.articleItemMeta}>
+                    May 18 2021 | 2 min
+                  </p>
+                  <p className={`${styles.articleItemTitle}`}>
+                    Aim 2.4.0 — XGBoost Integration and Confidence Interval Aggregation
+                  </p>
+                  <div className={styles.articleItemAuthor}>
+                    <div className={styles.articleItemAuthorImg} style={{ backgroundImage: 'url("/learn/authors/gev.jpeg")' }} />
+                    <p className={styles.articleItemAuthorName}>Gev Soghomonian</p>
+                  </div>
+                </a>
+              </div>
+              <div className={styles.articleItem}>
+                <a href='https://medium.com/aimstack/an-end-to-end-example-of-aim-logger-used-with-xgboost-library-3d461f535617' target='_blank'>
+                  <div className={styles.articleItemCover} style={{
+                    backgroundImage: 'url("/learn/covers/xgboost.png")',
+                    backgroundPosition: '50% 50%',
+                  }} />
+                  <p className={styles.articleItemMeta}>
+                    May 17, 2021 | 2 min
+                  </p>
+                  <p className={`${styles.articleItemTitle}`}>
+                    An end-to-end example of Aim logger used with XGBoost library
+                  </p>
+                  <div className={styles.articleItemAuthor}>
+                    <div className={styles.articleItemAuthorImg} style={{ backgroundImage: 'url("/learn/authors/khazhak.png")' }} />
+                    <p className={styles.articleItemAuthorName}>Khazhak Galstyan</p>
+                  </div>
+                </a>
+              </div>
+              <div className={styles.articleItem}>
                 <a href='https://medium.com/aimstack/aim-v2-3-0-system-resource-usage-and-reverse-grouping-6900dd04a1ff' target='_blank'>
                   <div className={styles.articleItemCover} style={{
                     backgroundImage: 'url("/learn/covers/system-metrics.png")',
