@@ -51,6 +51,24 @@ export default function Learn() {
             </div>
             <div className={styles.articlesGrid}>
               <div className={styles.articleItem}>
+                <a href='https://medium.com/aimstack/aim-v2-6-0-docker-requirement-removed-and-metric-as-x-axis-8c3a73a890e0' target='_blank'>
+                  <div className={styles.articleItemCover} style={{
+                    backgroundImage: 'url("/learn/covers/docker.png")',
+                    backgroundPosition: '50% 50%',
+                  }} />
+                  <p className={styles.articleItemMeta}>
+                    Jun 24 2021 | 2 min
+                  </p>
+                  <p className={`${styles.articleItemTitle}`}>
+                    Aim v2.6.0 — Docker requirement removed and Metric as x-axis
+                  </p>
+                  <div className={styles.articleItemAuthor}>
+                    <div className={styles.articleItemAuthorImg} style={{ backgroundImage: 'url("/learn/authors/gev.jpeg")' }} />
+                    <p className={styles.articleItemAuthorName}>Gev Soghomonian</p>
+                  </div>
+                </a>
+              </div>
+              <div className={styles.articleItem}>
                 <a href='https://medium.com/aimstack/aim-2-4-0-xgboost-integration-6758c24f81f0' target='_blank'>
                   <div className={styles.articleItemCover} style={{
                     backgroundImage: 'url("/learn/covers/aggregation.png")',
