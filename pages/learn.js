@@ -17,13 +17,13 @@ export default function Learn() {
         <meta property='og:title' content='Compare 1000s of AI experiments at once' />
         <meta property='og:description' content='Aim - a super-easy way to record, search and compare AI experiments at scale' />
         <meta property='og:url' content='https://aimstack.io/learn' />
-        <meta property='og:image' content='https://aimstack.io/aim-preview.png' />
+        <meta property='og:image' content='https://aimstack.io/aim-preview-v3.png' />
         <meta property='og:image:width' content='1920' />
         <meta property='og:image:height' content='905' />
 
         <meta name='twitter:title' content='Compare 1000s of AI experiments at once' />
         <meta name='twitter:description' content='Aim - a super-easy way to record, search and compare AI experiments at scale' />
-        <meta name='twitter:image' content='https://aimstack.io/aim-preview.png' />
+        <meta name='twitter:image' content='https://aimstack.io/aim-preview-v3.png' />
 
         <meta name='theme-color' content='#343434' />
         <title>AimStack - Dev tools for AI engineers</title>

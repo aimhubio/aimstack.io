@@ -22,7 +22,7 @@ export default function Header() {
           Contribute
         </a>
         <a
-          href='https://github.com/aimhubio/aim#contents'
+          href='https://aimstack.readthedocs.io/en/stable/'
           target='_blank'
           rel='noreferrer noopener'
         >

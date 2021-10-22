@@ -71,22 +71,22 @@ export default function Home() {
       <Head>
         <meta httpEquiv='Content-Type' content='text/html; charset=UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <meta name='description' content='Aim - a super-easy way to record, search and compare AI experiments at scale' />
+        <meta name='description' content='Aim logs your training runs, enables a beautiful UI to compare them and an API to query them programmatically' />
 
-        <meta property='og:title' content='Compare 1000s of AI experiments at once' />
-        <meta property='og:description' content='Aim - a super-easy way to record, search and compare AI experiments at scale' />
+        <meta property='og:title' content='An open-source, self-hosted AI experiment tracking tool' />
+        <meta property='og:description' content='Aim logs your training runs, enables a beautiful UI to compare them and an API to query them programmatically' />
         <meta property='og:url' content='https://aimstack.io' />
-        <meta property='og:image' content='https://aimstack.io/aim-preview.png' />
+        <meta property='og:image' content='https://aimstack.io/aim-preview-v3.png' />
         <meta property='og:image:width' content='1920' />
         <meta property='og:image:height' content='905' />
 
-        <meta name='twitter:title' content='Compare 1000s of AI experiments at once' />
-        <meta name='twitter:description' content='Aim - a super-easy way to record, search and compare AI experiments at scale' />
-        <meta name='twitter:image' content='https://aimstack.io/aim-preview.png' />
+        <meta name='twitter:title' content='An open-source, self-hosted AI experiment tracking tool' />
+        <meta name='twitter:description' content='Aim package logs your training runs, enables a beautiful UI to compare them and an API to query them programmatically' />
+        <meta name='twitter:image' content='https://aimstack.io/aim-preview-v3.png' />
 
         <meta name='theme-color' content='#343434' />
         <title>AimStack - Dev tools for AI engineers</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/favicon-v3.ico' />
 
         <script async src='https://www.googletagmanager.com/gtag/js?id=UA-108474435-1'/>
 
@@ -142,7 +142,7 @@ export default function Home() {
                     </div>
                   </div>
                   <h2 className={typography.TextLG}>
-                    Compare 1000s of AI experiments at once
+                    The open-source tool for ML experiment comparison
                   </h2>
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default function Home() {
                 </h2>
               </div>
               <div className={styles.HeroHeaderImg}>
-                <img alt='Aim' src='/aim-ui.gif' draggable={false} />
+                <img alt='Aim' src='/aim-ui-v3.gif' draggable={false} />
               </div>
             </div>
           </div>
@@ -227,18 +227,20 @@ export default function Home() {
               </div>
               <div className={styles.HowItWorksCode}>
                 <SyntaxHighlighter language='bash' style={highlighterStyle}>
-                  pip install aim
+                  pip3 install aim
                 </SyntaxHighlighter>
                 <SyntaxHighlighter language='python' style={Object.assign({}, highlighterStyle)}>
                   {
-                    `import aim
+                    `from aim import Run
+                    
+run = Run()
 
 # Save inputs, hparams or any other 'key: value' pairs
-aim.set_params(hyperparam_dict, name='hparams')
+run['hparams'] = hyperparam_dict
 
 for step in range(10):
   # Log metrics to visualize performance
-  aim.track(metric_value, name='metric_name', epoch=epoch_number)`
+  run.track(metric_value, name='metric_name', epoch=epoch_number)`
                   }
                 </SyntaxHighlighter>
                 <SyntaxHighlighter language='bash' style={highlighterStyle}>
@@ -264,7 +266,7 @@ for step in range(10):
                   </p>
                   <div className={styles.FeatureBlockDemo}>
                     <div className={styles.FeatureBlockDemoArea}>
-                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/dashboard.png' draggable={false} />
+                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/runs-explorer.png' draggable={false} />
                     </div>
                   </div>
                   <p className={typography.TextMD}>
@@ -272,7 +274,7 @@ for step in range(10):
                   </p>
                   <div className={styles.FeatureBlockDemo}>
                     <div className={styles.FeatureBlockDemoArea}>
-                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/explore.png' draggable={false} />
+                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/metrics-explorer.png' draggable={false} />
                     </div>
                   </div>
                   <p className={typography.TextMD}>
@@ -291,7 +293,7 @@ for step in range(10):
                   </p>
                   <div className={styles.FeatureBlockDemo}>
                     <div className={styles.FeatureBlockDemoArea}>
-                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/group.png' draggable={false} />
+                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/search-group.png' draggable={false} />
                     </div>
                   </div>
                 </div>
@@ -304,7 +306,7 @@ for step in range(10):
                   </p>
                   <div className={styles.FeatureBlockDemo}>
                     <div className={styles.FeatureBlockDemoArea}>
-                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/subplots.png' draggable={false} />
+                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/metrics-subplots.png' draggable={false} />
                     </div>
                   </div>
                 </div>
