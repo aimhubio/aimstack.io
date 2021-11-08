@@ -1,26 +1,27 @@
-import styles from '../styles/Home.module.css';
-import typography from '../styles/Typography.module.css';
+import styles from "../styles/Home.module.css";
+import typography from "../styles/Typography.module.css";
 
-import Head from 'next/head';
-import React, { useState, useEffect, useRef } from 'react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import atomDark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
+import Head from "next/head";
+import React, { useState, useEffect, useRef } from "react";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import atomDark from "react-syntax-highlighter/dist/cjs/styles/prism/atom-dark";
 import GoogleAnalytics from "../components/GoogleAnalytics.js";
 import NewsletterSubscriptionForm from "../components/NewsletterSubscriptionForm.js";
 import Header from "../components/Header";
-import Footer from '../components/Footer';
+import Footer from "../components/Footer";
+import { pageView, trackEvent } from "../analytics";
 
 const highlighterStyle = {
   ...atomDark,
-  "pre[class*=\"language-\"]": {
-    ...atomDark["pre[class*=\"language-\"]"],
-    "borderRadius": "0em",
-    "background": "#020202",
+  'pre[class*="language-"]': {
+    ...atomDark['pre[class*="language-"]'],
+    borderRadius: "0em",
+    background: "#020202",
   },
-  ":not(pre) > code[class*=\"language-\"]": {
-    ...atomDark[":not(pre) > code[class*=\"language-\"]"],
-    "borderRadius": "0em",
-    "background": "#020202",
+  ':not(pre) > code[class*="language-"]': {
+    ...atomDark[':not(pre) > code[class*="language-"]'],
+    borderRadius: "0em",
+    background: "#020202",
   },
 };
 
@@ -37,23 +38,24 @@ export default function Home() {
 
   function copyToClipboard(text) {
     if (copyRef.current === null) {
-      copyRef.current = document.createElement('input');
+      copyRef.current = document.createElement("input");
       copyRef.current.value = text;
-      copyRef.current.style.position = 'fixed';
-      copyRef.current.style.left = '-9999999px';
+      copyRef.current.style.position = "fixed";
+      copyRef.current.style.left = "-9999999px";
     }
     document.body.appendChild(copyRef.current);
     copyRef.current.select();
-    copyRef.current.setSelectionRange(0, 99999)
-    document.execCommand('copy');
+    copyRef.current.setSelectionRange(0, 99999);
+    document.execCommand("copy");
     document.body.removeChild(copyRef.current);
     setCopied(true);
   }
 
   useEffect(() => {
     handleScroll();
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    pageView("[Homepage]");
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -64,48 +66,157 @@ export default function Home() {
     }
   }, [copied]);
 
+  function onClickEventTracking(name) {
+    trackEvent(`[Homepage] go to ${name}`);
+  }
+
   return (
     <div>
       <GoogleAnalytics />
 
       <Head>
-        <meta httpEquiv='Content-Type' content='text/html; charset=UTF-8' />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <meta name='description' content='Aim - a super-easy way to record, search and compare AI experiments at scale' />
+        <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="Aim - a super-easy way to record, search and compare AI experiments at scale"
+        />
 
-        <meta property='og:title' content='Compare 1000s of AI experiments at once' />
-        <meta property='og:description' content='Aim - a super-easy way to record, search and compare AI experiments at scale' />
-        <meta property='og:url' content='https://aimstack.io' />
-        <meta property='og:image' content='https://aimstack.io/aim-preview.png' />
-        <meta property='og:image:width' content='1920' />
-        <meta property='og:image:height' content='905' />
+        <meta
+          property="og:title"
+          content="Compare 1000s of AI experiments at once"
+        />
+        <meta
+          property="og:description"
+          content="Aim - a super-easy way to record, search and compare AI experiments at scale"
+        />
+        <meta property="og:url" content="https://aimstack.io" />
+        <meta
+          property="og:image"
+          content="https://aimstack.io/aim-preview.png"
+        />
+        <meta property="og:image:width" content="1920" />
+        <meta property="og:image:height" content="905" />
 
-        <meta name='twitter:title' content='Compare 1000s of AI experiments at once' />
-        <meta name='twitter:description' content='Aim - a super-easy way to record, search and compare AI experiments at scale' />
-        <meta name='twitter:image' content='https://aimstack.io/aim-preview.png' />
+        <meta
+          name="twitter:title"
+          content="Compare 1000s of AI experiments at once"
+        />
+        <meta
+          name="twitter:description"
+          content="Aim - a super-easy way to record, search and compare AI experiments at scale"
+        />
+        <meta
+          name="twitter:image"
+          content="https://aimstack.io/aim-preview.png"
+        />
 
-        <meta name='theme-color' content='#343434' />
+        <meta name="theme-color" content="#343434" />
         <title>AimStack - Dev tools for AI engineers</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
 
-        <script async src='https://www.googletagmanager.com/gtag/js?id=UA-108474435-1'/>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-108474435-1"
+        />
 
-        <link rel='preconnect' href='https://fonts.gstatic.com' />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet" />
-        <link href='https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap' rel='stylesheet' />
-        <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet' />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"
+        />
 
-        <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"/>
+        <link
+          rel="stylesheet"
+          href="https://sibforms.com/forms/end-form/build/sib-styles.css"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `!(function () {
+                var analytics = (window.analytics = window.analytics || []);
+                if (!analytics.initialize)
+                  if (analytics.invoked)
+                    window.console &&
+                      console.error &&
+                      console.error("Segment snippet included twice.");
+                  else {
+                    analytics.invoked = !0;
+                    analytics.methods = [
+                      "trackSubmit",
+                      "trackClick",
+                      "trackLink",
+                      "trackForm",
+                      "pageview",
+                      "identify",
+                      "reset",
+                      "group",
+                      "track",
+                      "ready",
+                      "alias",
+                      "debug",
+                      "page",
+                      "once",
+                      "off",
+                      "on",
+                      "addSourceMiddleware",
+                      "addIntegrationMiddleware",
+                      "setAnonymousId",
+                      "addDestinationMiddleware",
+                    ];
+                    analytics.factory = function (e) {
+                      return function () {
+                        var t = Array.prototype.slice.call(arguments);
+                        t.unshift(e);
+                        analytics.push(t);
+                        return analytics;
+                      };
+                    };
+                    for (var e = 0; e < analytics.methods.length; e++) {
+                      var key = analytics.methods[e];
+                      analytics[key] = analytics.factory(key);
+                    }
+                    analytics.load = function (key, e) {
+                      var t = document.createElement("script");
+                      t.type = "text/javascript";
+                      t.async = !0;
+                      t.src =
+                        "https://cdn.segment.com/analytics.js/v1/" +
+                        key +
+                        "/analytics.min.js";
+                      var n = document.getElementsByTagName("script")[0];
+                      n.parentNode.insertBefore(t, n);
+                      analytics._loadOptions = e;
+                    };
+                    analytics._writeKey = "yoyQudE6HDZ6UmHcnhtZFwKC7LleWQJg";
+                    analytics.SNIPPET_VERSION = "4.15.3";
+                    analytics.load("yoyQudE6HDZ6UmHcnhtZFwKC7LleWQJg");
+                    analytics.page();
+                  }
+              })()`,
+          }}
+        ></script>
       </Head>
 
       <Header />
 
       <div
-        className={`${styles.backdrop} ${sidebarOpened ? styles.backdropVisible : ''}`}
-        onClick={evt => setSidebarOpened(false)}
+        className={`${styles.backdrop} ${
+          sidebarOpened ? styles.backdropVisible : ""
+        }`}
+        onClick={(evt) => setSidebarOpened(false)}
       />
       <div
-        className={`${styles.backdrop} ${copied ? `${styles.backdropVisible} ${styles.copyBackdrop}` : ''}`}
+        className={`${styles.backdrop} ${
+          copied ? `${styles.backdropVisible} ${styles.copyBackdrop}` : ""
+        }`}
       >
         <h2>Copied!</h2>
       </div>
@@ -117,9 +228,7 @@ export default function Home() {
               <div className={styles.HeroHeaderTitle}>
                 <div>
                   <div className={styles.HeroHeaderTitleRow}>
-                    <h2 className={typography.TextLG}>
-                      Aim
-                    </h2>
+                    <h2 className={typography.TextLG}>Aim</h2>
                     <div className={styles.HeroHeaderGHStars}>
                       <iframe
                         className={styles.HeroHeaderGHStarsSmall}
@@ -148,18 +257,14 @@ export default function Home() {
               </div>
               <div className={styles.HeroHeaderCTAs}>
                 <h2 className={typography.TextLG}>
-                  <a href='/#about'>
-                    > Get started
-                  </a>
+                  <a href="/#about">> Get started</a>
                 </h2>
                 <h2 className={typography.TextLG}>
-                  <a href='/#get-involved'>
-                    > Get involved
-                  </a>
+                  <a href="/#get-involved">> Get involved</a>
                 </h2>
               </div>
               <div className={styles.HeroHeaderImg}>
-                <img alt='Aim' src='/aim-ui.gif' draggable={false} />
+                <img alt="Aim" src="/aim-ui.gif" draggable={false} />
               </div>
             </div>
           </div>
@@ -173,7 +278,9 @@ export default function Home() {
                   <br />
                   ---
                 </h2>
-                <p className={`${styles.HeroFeaturesItemDesc} ${typography.TextMD}`}>
+                <p
+                  className={`${styles.HeroFeaturesItemDesc} ${typography.TextMD}`}
+                >
                   Community-driven.
                   <br />
                   Self-hosted and full metadata access.
@@ -185,8 +292,11 @@ export default function Home() {
                   <br />
                   ---
                 </h2>
-                <p className={`${styles.HeroFeaturesItemDesc} ${typography.TextMD}`}>
-                  Easily search, group and aggregate metrics by any hyperparameter.
+                <p
+                  className={`${styles.HeroFeaturesItemDesc} ${typography.TextMD}`}
+                >
+                  Easily search, group and aggregate metrics by any
+                  hyperparameter.
                 </p>
               </div>
               <div className={styles.HeroFeaturesItem}>
@@ -195,23 +305,29 @@ export default function Home() {
                   <br />
                   ---
                 </h2>
-                <p className={`${styles.HeroFeaturesItemDesc} ${typography.TextMD}`}>
-                  Activity view and full experiments dashboard for all experiments.
+                <p
+                  className={`${styles.HeroFeaturesItemDesc} ${typography.TextMD}`}
+                >
+                  Activity view and full experiments dashboard for all
+                  experiments.
                 </p>
               </div>
             </div>
           </div>
         </section>
-        <section id="about" className={`${styles.section} ${styles.HowItWorks}`}>
+        <section
+          id="about"
+          className={`${styles.section} ${styles.HowItWorks}`}
+        >
           <div className={styles.container}>
             <div className={styles.HowItWorksBody}>
               <div className={styles.HowItWorksList}>
-                <h2 className={typography.TextLG}>
-                  How it works?
-                </h2>
+                <h2 className={typography.TextLG}>How it works?</h2>
                 <br />
                 <br />
-                <p className={`${typography.TextMD} ${styles.HowItWorksBullet}`}>
+                <p
+                  className={`${typography.TextMD} ${styles.HowItWorksBullet}`}
+                >
                   - Aim is a python package.
                   <br />
                   - Use it to track any dictionaries and metrics.
@@ -221,27 +337,27 @@ export default function Home() {
                   - Works with any python script and ML framework.
                   <br />
                   - Stores metadata logs locally.
-                  <br />
-                  - Comes with the most powerful experiment comparison UI.
+                  <br />- Comes with the most powerful experiment comparison UI.
                 </p>
               </div>
               <div className={styles.HowItWorksCode}>
-                <SyntaxHighlighter language='bash' style={highlighterStyle}>
+                <SyntaxHighlighter language="bash" style={highlighterStyle}>
                   pip install aim
                 </SyntaxHighlighter>
-                <SyntaxHighlighter language='python' style={Object.assign({}, highlighterStyle)}>
-                  {
-                    `import aim
+                <SyntaxHighlighter
+                  language="python"
+                  style={Object.assign({}, highlighterStyle)}
+                >
+                  {`import aim
 
 # Save inputs, hparams or any other 'key: value' pairs
 aim.set_params(hyperparam_dict, name='hparams')
 
 for step in range(10):
   # Log metrics to visualize performance
-  aim.track(metric_value, name='metric_name', epoch=epoch_number)`
-                  }
+  aim.track(metric_value, name='metric_name', epoch=epoch_number)`}
                 </SyntaxHighlighter>
-                <SyntaxHighlighter language='bash' style={highlighterStyle}>
+                <SyntaxHighlighter language="bash" style={highlighterStyle}>
                   aim up
                 </SyntaxHighlighter>
               </div>
@@ -252,7 +368,9 @@ for step in range(10):
           <div className={styles.container}>
             <div className={styles.FeatureBlocksGrid}>
               <div className={styles.FeatureBlocksContent}>
-                <p className={`${typography.TextMD} ${styles.FeatureBlocksOverline}`}>
+                <p
+                  className={`${typography.TextMD} ${styles.FeatureBlocksOverline}`}
+                >
                   Features:
                 </p>
                 <div className={styles.FeatureBlock}>
@@ -260,23 +378,38 @@ for step in range(10):
                     Dashboard and Explore: Full Research context at hand
                   </h2>
                   <p className={typography.TextMD}>
-                    Use the dashboard to see your activities, instantly search by clicking on activity slots, search by run/experiment.
+                    Use the dashboard to see your activities, instantly search
+                    by clicking on activity slots, search by run/experiment.
                   </p>
                   <div className={styles.FeatureBlockDemo}>
                     <div className={styles.FeatureBlockDemoArea}>
-                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/dashboard.png' draggable={false} />
+                      <img
+                        className={styles.FeatureBlockDemoAsset}
+                        alt="Aim"
+                        src="/demo/dashboard.png"
+                        draggable={false}
+                      />
                     </div>
                   </div>
                   <p className={typography.TextMD}>
-                    Use Explore to view groups of experiments, compare and play with the runs/metrics.
+                    Use Explore to view groups of experiments, compare and play
+                    with the runs/metrics.
                   </p>
                   <div className={styles.FeatureBlockDemo}>
                     <div className={styles.FeatureBlockDemoArea}>
-                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/explore.png' draggable={false} />
+                      <img
+                        className={styles.FeatureBlockDemoAsset}
+                        alt="Aim"
+                        src="/demo/explore.png"
+                        draggable={false}
+                      />
                     </div>
                   </div>
                   <p className={typography.TextMD}>
-                    <strong>Explore is the most advanced open source AI experiment comparison tool available!</strong>
+                    <strong>
+                      Explore is the most advanced open source AI experiment
+                      comparison tool available!
+                    </strong>
                   </p>
                 </div>
                 <div className={styles.FeatureBlock}>
@@ -284,14 +417,21 @@ for step in range(10):
                     Search, Group and Aggregate
                   </h2>
                   <p className={typography.TextMD}>
-                    Search through everything you have tracked using the Aim pythonic query language. Super easy to use.
+                    Search through everything you have tracked using the Aim
+                    pythonic query language. Super easy to use.
                   </p>
                   <p className={typography.TextMD}>
-                    Group and Aggregate 1000s of metrics to quickly see the trends for hyperparameter sensitive runs.
+                    Group and Aggregate 1000s of metrics to quickly see the
+                    trends for hyperparameter sensitive runs.
                   </p>
                   <div className={styles.FeatureBlockDemo}>
                     <div className={styles.FeatureBlockDemoArea}>
-                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/group.png' draggable={false} />
+                      <img
+                        className={styles.FeatureBlockDemoAsset}
+                        alt="Aim"
+                        src="/demo/group.png"
+                        draggable={false}
+                      />
                     </div>
                   </div>
                 </div>
@@ -300,11 +440,17 @@ for step in range(10):
                     Use subplots to compare different metrics of the same runs
                   </h2>
                   <p className={typography.TextMD}>
-                    Divide into subplots and monitor metrics from different perspectives.
+                    Divide into subplots and monitor metrics from different
+                    perspectives.
                   </p>
                   <div className={styles.FeatureBlockDemo}>
                     <div className={styles.FeatureBlockDemoArea}>
-                      <img className={styles.FeatureBlockDemoAsset} alt='Aim' src='/demo/subplots.png' draggable={false} />
+                      <img
+                        className={styles.FeatureBlockDemoAsset}
+                        alt="Aim"
+                        src="/demo/subplots.png"
+                        draggable={false}
+                      />
                     </div>
                   </div>
                 </div>
@@ -312,24 +458,44 @@ for step in range(10):
             </div>
           </div>
         </section>
-        <section id="get-involved" className={`${styles.section} ${styles.GetInvolved}`}>
+        <section
+          id="get-involved"
+          className={`${styles.section} ${styles.GetInvolved}`}
+        >
           <div className={styles.container}>
             <div className={styles.GetInvolvedGrid}>
               <div className={styles.GetInvolvedContent}>
-                <p className={`${typography.TextMD} ${styles.GetInvolvedOverline}`}>
+                <p
+                  className={`${typography.TextMD} ${styles.GetInvolvedOverline}`}
+                >
                   Let's build Aim together
                 </p>
-                <p className={`${typography.TextMD} ${styles.GetInvolvedAbout}`}>
-                  We need your help to constantly improve Aim for the community. If you are already using Aim or just getting started, join us to help build beautiful and effective open source tools for you.            </p>
+                <p
+                  className={`${typography.TextMD} ${styles.GetInvolvedAbout}`}
+                >
+                  We need your help to constantly improve Aim for the community.
+                  If you are already using Aim or just getting started, join us
+                  to help build beautiful and effective open source tools for
+                  you.{" "}
+                </p>
                 <br />
                 <br />
-                <h2 className={typography.TextLG}>
-                  <a href='https://slack.aimstack.io' target='_blank'>
+                <h2
+                  className={typography.TextLG}
+                  onClick={() => onClickEventTracking("slack")}
+                >
+                  <a href="https://slack.aimstack.io" target="_blank">
                     > Join our Slack
                   </a>
                 </h2>
-                <h2 className={typography.TextLG}>
-                  <a href='https://github.com/aimhubio/aim/issues' target='_blank'>
+                <h2
+                  className={typography.TextLG}
+                  onClick={() => onClickEventTracking("github")}
+                >
+                  <a
+                    href="https://github.com/aimhubio/aim/issues"
+                    target="_blank"
+                  >
                     > Get involved on GitHub
                   </a>
                 </h2>
@@ -342,5 +508,5 @@ for step in range(10):
         <Footer />
       </main>
     </div>
-  )
+  );
 }
