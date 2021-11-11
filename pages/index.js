@@ -5,10 +5,11 @@ import Head from 'next/head';
 import React, { useState, useEffect, useRef } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import atomDark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
-import GoogleAnalytics from "../components/GoogleAnalytics.js";
+import SegmentAnalytics from "../components/SegmentAnalytics.js";
 import NewsletterSubscriptionForm from "../components/NewsletterSubscriptionForm.js";
 import Header from "../components/Header";
 import Footer from '../components/Footer';
+import { trackEvent } from '../analytics';
 
 const highlighterStyle = {
   ...atomDark,
@@ -50,6 +51,10 @@ export default function Home() {
     setCopied(true);
   }
 
+  function onClickEventTracking(name) {
+    trackEvent(`[Homepage] go to ${name}`);
+  }
+
   useEffect(() => {
     handleScroll();
     window.addEventListener('scroll', handleScroll);
@@ -66,7 +71,7 @@ export default function Home() {
 
   return (
     <div>
-      <GoogleAnalytics />
+      <SegmentAnalytics />
 
       <Head>
         <meta httpEquiv='Content-Type' content='text/html; charset=UTF-8' />
@@ -88,14 +93,12 @@ export default function Home() {
         <title>AimStack - Dev tools for AI engineers</title>
         <link rel='icon' href='/favicon-v3.ico' />
 
-        <script async src='https://www.googletagmanager.com/gtag/js?id=UA-108474435-1'/>
-
         <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet" />
         <link href='https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap' rel='stylesheet' />
         <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet' />
 
-        <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"/>
+        <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" />
       </Head>
 
       <Header />
@@ -326,12 +329,12 @@ for step in range(10):
                 <br />
                 <br />
                 <h2 className={typography.TextLG}>
-                  <a href='https://slack.aimstack.io' target='_blank'>
+                  <a href='https://slack.aimstack.io' target='_blank' onClick={() => onClickEventTracking('slack')}>
                     > Join our Slack
                   </a>
                 </h2>
                 <h2 className={typography.TextLG}>
-                  <a href='https://github.com/aimhubio/aim/issues' target='_blank'>
+                  <a href='https://github.com/aimhubio/aim/issues' target='_blank' onClick={() => onClickEventTracking('GitHub issues')}>
                     > Get involved on GitHub
                   </a>
                 </h2>

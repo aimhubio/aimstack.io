@@ -5,10 +5,18 @@ import Head from 'next/head';
 import React, { useState, useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SegmentAnalytics from '../components/SegmentAnalytics';
+import { trackEvent } from '../analytics';
 
 export default function Learn() {
+
+  function onClickEventTracking(name) {
+    trackEvent(`[Learn] go to blogpost: ${name}`);
+  }
+
   return (
     <div className={styles.page}>
+      <SegmentAnalytics />
       <Head>
         <meta httpEquiv='Content-Type' content='text/html; charset=UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
@@ -29,14 +37,12 @@ export default function Learn() {
         <title>AimStack - Dev tools for AI engineers</title>
         <link rel='icon' href='/favicon.ico' />
 
-        <script async src='https://www.googletagmanager.com/gtag/js?id=UA-108474435-1'/>
-
         <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet" />
         <link href='https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap' rel='stylesheet' />
         <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet' />
 
-        <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"/>
+        <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" />
       </Head>
 
       <Header />
@@ -51,7 +57,11 @@ export default function Learn() {
             </div>
             <div className={styles.articlesGrid}>
               <div className={styles.articleItem}>
-                <a href='https://medium.com/aimstack/aim-v2-6-0-docker-requirement-removed-and-metric-as-x-axis-8c3a73a890e0' target='_blank'>
+                <a
+                  href='https://medium.com/aimstack/aim-v2-6-0-docker-requirement-removed-and-metric-as-x-axis-8c3a73a890e0'
+                  target='_blank'
+                  onClick={() => onClickEventTracking('removed-docker')}
+                >
                   <div className={styles.articleItemCover} style={{
                     backgroundImage: 'url("/learn/covers/docker.png")',
                     backgroundPosition: '50% 50%',
@@ -69,7 +79,11 @@ export default function Learn() {
                 </a>
               </div>
               <div className={styles.articleItem}>
-                <a href='https://medium.com/aimstack/aim-2-4-0-xgboost-integration-6758c24f81f0' target='_blank'>
+                <a
+                  href='https://medium.com/aimstack/aim-2-4-0-xgboost-integration-6758c24f81f0'
+                  target='_blank'
+                  onClick={() => onClickEventTracking('xgboost-integration-conf-int-agg')}
+                >
                   <div className={styles.articleItemCover} style={{
                     backgroundImage: 'url("/learn/covers/aggregation.png")',
                     backgroundPosition: '50% 50%',
@@ -87,7 +101,11 @@ export default function Learn() {
                 </a>
               </div>
               <div className={styles.articleItem}>
-                <a href='https://medium.com/aimstack/an-end-to-end-example-of-aim-logger-used-with-xgboost-library-3d461f535617' target='_blank'>
+                <a
+                  href='https://medium.com/aimstack/an-end-to-end-example-of-aim-logger-used-with-xgboost-library-3d461f535617'
+                  target='_blank'
+                  onClick={() => onClickEventTracking('aim-xgboost')}
+                >
                   <div className={styles.articleItemCover} style={{
                     backgroundImage: 'url("/learn/covers/xgboost.png")',
                     backgroundPosition: '50% 50%',
@@ -105,7 +123,11 @@ export default function Learn() {
                 </a>
               </div>
               <div className={styles.articleItem}>
-                <a href='https://medium.com/aimstack/aim-v2-3-0-system-resource-usage-and-reverse-grouping-6900dd04a1ff' target='_blank'>
+                <a
+                  href='https://medium.com/aimstack/aim-v2-3-0-system-resource-usage-and-reverse-grouping-6900dd04a1ff'
+                  target='_blank'
+                  onClick={() => onClickEventTracking('system-metrics')}
+                >
                   <div className={styles.articleItemCover} style={{
                     backgroundImage: 'url("/learn/covers/system-metrics.png")',
                     backgroundPosition: '50% 50%',
@@ -123,7 +145,11 @@ export default function Learn() {
                 </a>
               </div>
               <div className={styles.articleItem}>
-                <a href='https://medium.com/aimstack/aim-v2-2-0-hugging-face-integration-57efa2eec104' target='_blank'>
+                <a
+                  href='https://medium.com/aimstack/aim-v2-2-0-hugging-face-integration-57efa2eec104'
+                  target='_blank'
+                  onClick={() => onClickEventTracking('hugging-face')}
+                >
                   <div className={styles.articleItemCover} style={{
                     backgroundImage: 'url("/learn/covers/hugging-face.png")',
                     backgroundPosition: '50% 50%',
@@ -141,7 +167,11 @@ export default function Learn() {
                 </a>
               </div>
               <div className={styles.articleItem}>
-                <a href='https://medium.com/aimstack/how-to-tune-hyper-params-with-fixed-seeds-using-pytorch-lightning-and-aim-c61c73f75c7c' target='_blank'>
+                <a
+                  href='https://medium.com/aimstack/how-to-tune-hyper-params-with-fixed-seeds-using-pytorch-lightning-and-aim-c61c73f75c7c'
+                  target='_blank'
+                  onClick={() => onClickEventTracking('tune-params')}
+                >
                   <div className={styles.articleItemCover} style={{ backgroundImage: 'url("/learn/covers/tune-params.png")' }} />
                   <p className={styles.articleItemMeta}>
                     Mar 11, 2021 | 4 min
@@ -156,7 +186,11 @@ export default function Learn() {
                 </a>
               </div>
               <div className={styles.articleItem}>
-                <a href='https://medium.com/aimstack/aim-1-3-8-enhanced-table-and-advanced-group-coloring-b7f5b42586a5' target='_blank'>
+                <a
+                  href='https://medium.com/aimstack/aim-1-3-8-enhanced-table-and-advanced-group-coloring-b7f5b42586a5'
+                  target='_blank'
+                  onClick={() => onClickEventTracking('aim-table')}
+                >
                   <div className={styles.articleItemCover} style={{ backgroundImage: 'url("/learn/covers/aim-table.png")' }} />
                   <p className={styles.articleItemMeta}>
                     Mar 1, 2021 | 2 min
@@ -171,7 +205,11 @@ export default function Learn() {
                 </a>
               </div>
               <div className={styles.articleItem}>
-                <a href='https://medium.com/aimstack/aim-basics-using-context-and-subplots-to-compare-validation-and-test-metrics-f1a4d7e6b9ca' target='_blank'>
+                <a
+                  href='https://medium.com/aimstack/aim-basics-using-context-and-subplots-to-compare-validation-and-test-metrics-f1a4d7e6b9ca'
+                  target='_blank'
+                  onClick={() => onClickEventTracking('using-context')}
+                >
                   <div className={styles.articleItemCover} style={{ backgroundImage: 'url("/learn/covers/context.png")' }} />
                   <p className={styles.articleItemMeta}>
                     Feb 16, 2021 | 2 min
@@ -186,7 +224,11 @@ export default function Learn() {
                 </a>
               </div>
               <div className={styles.articleItem}>
-                <a href='https://medium.com/aimstack/aim-1-3-5-activity-view-and-x-axis-alignment-8d82e7bcfcab' target='_blank'>
+                <a
+                  href='https://medium.com/aimstack/aim-1-3-5-activity-view-and-x-axis-alignment-8d82e7bcfcab'
+                  target='_blank'
+                  onClick={() => onClickEventTracking('activity-view')}
+                >
                   <div className={styles.articleItemCover} style={{ backgroundImage: 'url("/learn/covers/activity.png")' }} />
                   <p className={styles.articleItemMeta}>
                     Feb 5, 2021 | 2 min
@@ -201,7 +243,11 @@ export default function Learn() {
                 </a>
               </div>
               <div className={styles.articleItem}>
-                <a href='https://towardsdatascience.com/3-ways-aim-can-accelerate-your-ai-research-c03643ae6558' target='_blank'>
+                <a
+                  href='https://towardsdatascience.com/3-ways-aim-can-accelerate-your-ai-research-c03643ae6558'
+                  target='_blank'
+                  onClick={() => onClickEventTracking('3-ways-aim')}
+                >
                   <div className={styles.articleItemCover} style={{ backgroundImage: 'url("/learn/covers/3-ways-aim.png")' }} />
                   <p className={styles.articleItemMeta}>
                     Dec 9, 2020 | 4 min
