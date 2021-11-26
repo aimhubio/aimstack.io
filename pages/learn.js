@@ -58,6 +58,50 @@ export default function Learn() {
             <div className={styles.articlesGrid}>
               <div className={styles.articleItem}>
                 <a
+                  href='https://medium.com/aimstack/aim-3-1-images-tracker-and-images-explorer-7172ec57c9'
+                  target='_blank'
+                  onClick={() => onClickEventTracking('images-explorer')}
+                >
+                  <div className={styles.articleItemCover} style={{
+                    backgroundImage: 'url("/learn/covers/images-explorer.png")',
+                    backgroundPosition: '50% 50%',
+                  }} />
+                  <p className={styles.articleItemMeta}>
+                    Nov 25 2021 | 3 min
+                  </p>
+                  <p className={`${styles.articleItemTitle}`}>
+                    Aim 3.1 — Images Tracker and Images Explorer
+                  </p>
+                  <div className={styles.articleItemAuthor}>
+                    <div className={styles.articleItemAuthorImg} style={{ backgroundImage: 'url("/learn/authors/gev.jpeg")' }} />
+                    <p className={styles.articleItemAuthorName}>Gev Soghomonian</p>
+                  </div>
+                </a>
+              </div>
+              <div className={styles.articleItem}>
+                <a
+                  href='https://medium.com/aimstack/aim-3-0-0-the-foundations-for-open-source-open-metadata-ml-platform-f3969755d55'
+                  target='_blank'
+                  onClick={() => onClickEventTracking('v3-announcement')}
+                >
+                  <div className={styles.articleItemCover} style={{
+                    backgroundImage: 'url("/learn/covers/aim-v3.png")',
+                    backgroundPosition: '50% 50%',
+                  }} />
+                  <p className={styles.articleItemMeta}>
+                    Oct 22 2021 | 3 min
+                  </p>
+                  <p className={`${styles.articleItemTitle}`}>
+                    Aim 3.0.0 — The foundations for open-source & open-metadata ML platform
+                  </p>
+                  <div className={styles.articleItemAuthor}>
+                    <div className={styles.articleItemAuthorImg} style={{ backgroundImage: 'url("/learn/authors/gev.jpeg")' }} />
+                    <p className={styles.articleItemAuthorName}>Gev Soghomonian</p>
+                  </div>
+                </a>
+              </div>
+              <div className={styles.articleItem}>
+                <a
                   href='https://medium.com/aimstack/aim-v2-6-0-docker-requirement-removed-and-metric-as-x-axis-8c3a73a890e0'
                   target='_blank'
                   onClick={() => onClickEventTracking('removed-docker')}
