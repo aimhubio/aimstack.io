@@ -71,7 +71,7 @@ export default function Home() {
 
   return (
     <div>
-      <SegmentAnalytics />
+      <SegmentAnalytics page='[Landing Page]' />
 
       <Head>
         <meta httpEquiv='Content-Type' content='text/html; charset=UTF-8' />

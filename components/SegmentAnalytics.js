@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { isProd } from "../analytics";
 
-function SegmentAnalytics() {
+function SegmentAnalytics({ page }) {
   return (
     <>
       {isProd() ? (
@@ -67,7 +67,8 @@ function SegmentAnalytics() {
                     analytics._writeKey = "yoyQudE6HDZ6UmHcnhtZFwKC7LleWQJg";
                     analytics.SNIPPET_VERSION = "4.15.3";
                     analytics.load("yoyQudE6HDZ6UmHcnhtZFwKC7LleWQJg");
-                    analytics.page();
+                    analytics.identify();
+                    analytics.page(null, '${page}');
                   }
               })()`,
             }}
