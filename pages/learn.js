@@ -20,17 +20,18 @@ export default function Learn() {
       <Head>
         <meta httpEquiv='Content-Type' content='text/html; charset=UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <meta name='description' content='Aim - a super-easy way to record, search and compare AI experiments at scale' />
+        <meta name='description' content='Aim logs your training runs, enables a beautiful UI to compare them and an API to query them programmatically' />
+        <meta name='facebook-domain-verification' content='ebwbb96izw2ae0cwg0eza2lzmqhj0e' />
 
-        <meta property='og:title' content='Compare 1000s of AI experiments at once' />
-        <meta property='og:description' content='Aim - a super-easy way to record, search and compare AI experiments at scale' />
-        <meta property='og:url' content='https://aimstack.io/learn' />
+        <meta property='og:title' content='An open-source, self-hosted AI experiment tracking tool' />
+        <meta property='og:description' content='Aim logs your training runs, enables a beautiful UI to compare them and an API to query them programmatically' />
+        <meta property='og:url' content='https://aimstack.io' />
         <meta property='og:image' content='https://aimstack.io/aim-preview-v3.png' />
         <meta property='og:image:width' content='1920' />
         <meta property='og:image:height' content='905' />
 
-        <meta name='twitter:title' content='Compare 1000s of AI experiments at once' />
-        <meta name='twitter:description' content='Aim - a super-easy way to record, search and compare AI experiments at scale' />
+        <meta name='twitter:title' content='An open-source, self-hosted AI experiment tracking tool' />
+        <meta name='twitter:description' content='Aim logs your training runs, enables a beautiful UI to compare them and an API to query them programmatically' />
         <meta name='twitter:image' content='https://aimstack.io/aim-preview-v3.png' />
 
         <meta name='theme-color' content='#343434' />
