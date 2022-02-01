@@ -23,14 +23,14 @@ export default function Learn() {
         <meta name='description' content='Aim logs your training runs, enables a beautiful UI to compare them and an API to query them programmatically' />
         <meta name='facebook-domain-verification' content='ebwbb96izw2ae0cwg0eza2lzmqhj0e' />
 
-        <meta property='og:title' content='An open-source, self-hosted AI experiment tracking tool' />
+        <meta property='og:title' content='Track, compare and visualize your ML experiments' />
         <meta property='og:description' content='Aim logs your training runs, enables a beautiful UI to compare them and an API to query them programmatically' />
         <meta property='og:url' content='https://aimstack.io' />
         <meta property='og:image' content='https://aimstack.io/aim-preview-v3.png' />
         <meta property='og:image:width' content='1920' />
         <meta property='og:image:height' content='905' />
 
-        <meta name='twitter:title' content='An open-source, self-hosted AI experiment tracking tool' />
+        <meta name='twitter:title' content='Track, compare and visualize your ML experiments' />
         <meta name='twitter:description' content='Aim logs your training runs, enables a beautiful UI to compare them and an API to query them programmatically' />
         <meta name='twitter:image' content='https://aimstack.io/aim-preview-v3.png' />
 
