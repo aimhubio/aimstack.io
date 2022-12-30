@@ -1,0 +1,8 @@
+# Ignore artifacts:
+.next
+.contentlayer
+public
+posts
+
+# Ignore all HTML files:
+*.html
