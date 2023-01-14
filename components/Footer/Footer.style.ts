@@ -27,11 +27,15 @@ const FooterList = styled('ul', {
   display: 'flex',
 
   li: {
-    cursor: 'pointer',
     marginRight: '$9',
 
     '@bp0': {
       marginRight: '$4',
+    },
+
+    transition: '$main',
+    '&:hover': {
+      opacity: '.6',
     },
   },
 
@@ -65,10 +69,16 @@ const FooterSocial = styled('ul', {
   marginLeft: 'auto',
 
   li: {
-    cursor: 'pointer',
     '&:not(:last-child)': {
       marginRight: '$6',
     },
+
+    a: {
+      transition: '$main',
+      '&:hover': {
+        opacity: '.6',
+      },
+    }
   },
 
   '@bp2': {

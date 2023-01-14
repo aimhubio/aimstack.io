@@ -65,6 +65,10 @@ const JoinTeamButton = styled('a', {
   border: '2px solid $black',
   borderRadius: '$1',
   padding: '14px 26px',
+  transition: '$main',
+  '&:hover': {
+    backgroundColor: '$black003',
+  },
 
   span: {
     display: 'block',

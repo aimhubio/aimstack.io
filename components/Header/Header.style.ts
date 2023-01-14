@@ -1,26 +1,17 @@
 import { styled, keyframes } from 'styles';
 
-const fixedHeader = keyframes({
-  '0%': { top: '-72px' },
-  '100%': { top: '0' },
-});
-
 const HeaderStyle = styled('header', {
   height: '72px',
+  position: 'fixed',
+  top: '0px',
+  left: '0px',
+  right: '0px',
+  zIndex: 99,
+  transition: '$main',
 
   '&.fixed': {
-    backgroundColor: '$white',
-    position: 'fixed',
-    top: '0px',
-    left: '0px',
-    right: '0px',
-    zIndex: 99,
     boxShadow: '$3',
-
-    '&.animated': {
-      top: '-72px',
-      animation: `${fixedHeader} 0.3s ease forwards`,
-    }
+    backgroundColor: '$white',
   },
 });
 const HeaderContent = styled('div', {
@@ -45,9 +36,12 @@ const HeaderNav = styled('nav', {
       },
 
       a: {
+        transition: '$main',
+        backfaceVisibility: 'hidden',
         '&:hover': {
-          opacity: '.8',
+          opacity: '.6',
         },
+
       },
     },
   },
@@ -74,7 +68,7 @@ const HeaderNav = styled('nav', {
       flexDirection: 'column',
       alignItems: 'inherit',
       justifyContent: 'space-between',
-      padding: '16px 20px 0',
+      paddingTop: '16px',
     },
     '.nav-list': {
       flexDirection: 'column',
@@ -87,7 +81,11 @@ const HeaderNav = styled('nav', {
 
         a: {
           display: 'block',
-          py: '$3'
+          padding: '$3 $5',
+
+          '&.active': {
+            backgroundColor: '$primaryLight'
+          }
         },
 
         '&:not(:last-child)': {

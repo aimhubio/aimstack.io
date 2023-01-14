@@ -60,6 +60,11 @@ const HighlightWrapper = styled('div', {
     background: 'none',
     border: 'none',
     cursor: 'pointer',
+
+    transition: '$main',
+    '&:hover': {
+      opacity: '.6',
+    },
   },
 
   '.copied': {
