@@ -1,9 +1,8 @@
 import React from 'react';
 import { Text, Container } from 'styles/foundations';
-import { NextSeo } from 'next-seo';
 import BlogList from 'components/BlogList/BlogList';
 import Seo from 'components/SEO/SEO';
-import { sortByDate, ImageUrl, pageCount } from '../utils';
+import { sortByDate, pageCount } from '../utils';
 import { allPosts } from 'contentlayer/generated';
 import { pick } from '@contentlayer/client';
 import Pagination from '../components/Pagination/Pagnation';
@@ -24,7 +23,6 @@ export default function Blog() {
       'description',
       'draft',
       'image',
-      'tags',
       'categories',
     ])
   );

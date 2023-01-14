@@ -10,6 +10,39 @@ const ImageWrapper = styled('div', {
   },
 });
 
+const ShareSocial = styled('div', {
+  display: 'flex',
+  justifyContent: 'flex-end',
+  marginBottom: '$10',
+
+  button: {
+    height: '40px',
+    width: '40px',
+    backgroundColor: '$lightGrey !important',
+    borderRadius: '$1',
+    marginLeft: '$3',
+    transition: '$main',
+
+    '&:hover': {
+      '&[aria-label=twitter]': {
+        backgroundColor: '#43b1ff !important'
+      },
+      '&[aria-label=facebook]': {
+        backgroundColor: '#6e8dd0 !important'
+      },
+      '&[aria-label=reddit]': {
+        backgroundColor: '#fb411c !important'
+      },
+
+      '.icon': {
+        fill: '$white'
+      }
+    }
+  }
+});
+
+
+
 const PostNavigation = styled('div', {
   padding: '50px 0',
   borderTop: '2px solid $lightGrey',
@@ -56,11 +89,6 @@ const Next = styled('div', {
   textAlign: 'right',
   paddingLeft: '$3',
 
-  '@bp2': {
-    // textAlign: 'left',
-    // paddingLeft: '0',
-  },
-
   a: {
     '&:hover': {
       '.chevron-text': {
@@ -73,4 +101,4 @@ const Next = styled('div', {
   },
 });
 
-export { BlogSingleStyle, ImageWrapper, PostNavigation, Prev, Next };
+export { BlogSingleStyle, ImageWrapper, PostNavigation, Prev, Next, ShareSocial };

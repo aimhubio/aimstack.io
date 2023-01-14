@@ -17,17 +17,26 @@ const Category = styled('div', {
   display: 'flex',
   alignItems: 'center',
   color: '$grey',
+  transition: '$main',
 
   '.icon': {
     marginRight: '$1',
     fill: '$grey',
+    transition: '$main',
   },
+
+  '&:hover': {
+    color: '$darkGray',
+    '.icon': {
+      fill: '$darkGray',
+    },
+  }
 });
 
 const CardFooter = styled('div', {
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'space-between',
+  justifyContent: 'flex-end',
 
   '.icon': {
     marginRight: '$1',

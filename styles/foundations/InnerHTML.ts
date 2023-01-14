@@ -29,6 +29,7 @@ export const InnerHTML = styled('div', {
     marginBottom: '$5',
     fontSize: '$4',
     fontFamily: '$Lora',
+    color: '$black800'
   },
 
   ul: {

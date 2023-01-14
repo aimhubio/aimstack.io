@@ -4,7 +4,7 @@ import {
   CardContent,
   Category,
   CardFooter,
-  ImageWrapper,
+  ImageWrapper
 } from './Card.style';
 import { Text } from 'styles/foundations';
 import Image from 'next/image';
@@ -19,43 +19,40 @@ const Card = (props) => {
           <Image
             src={props.image}
             alt={props.title}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="top"
+            layout='fill'
+            objectFit='cover'
+            objectPosition='top'
           />
         </Link>
       </ImageWrapper>
 
       <CardContent>
         <Category>
-          <Icon name="folder" size={14} />
-          <Text size={1}>
-            <Link href={`/category/${props.categories[0].toLowerCase()}`}>
+          <Link href={`/category/${props.categories[0].toLowerCase()}`}>
+            <Text size={1} css={{display: 'flex', alignItems: 'center'}}>
+              <Icon name='folder' size={14} />
               {props.categories[0]}
-            </Link>
-          </Text>
-          {/*TODO change array to string*/}
+            </Text>
+          </Link>
         </Category>
-        <Text as="h3" size={6} className="title" truncate>
+        <Text as='h3' size={6} className='title' truncate>
           <Link href={`/blog/${props.slug}`}>{props.title}</Link>
         </Text>
         <Text
           size={2}
-          className="title"
+          className='title'
           lineClamp
           css={{ my: '$6', $$lineClamp: 3, fontFamily: '$Lora' }}
         >
-          {props.description}
+          <Link href={`/blog/${props.slug}`}>
+            {props.description}
+          </Link>
         </Text>
         <CardFooter>
-          <Text size={1} link="secondary">
-            <Link href={`/blog/${props.slug}`}>Read More</Link>
-          </Text>
-
-          {!!props.views && (
-            <Text size={1} link="secondary">
+          {props.views && (
+            <Text size={1} link='secondary'>
               <Link href={`/blog/${props.slug}`}>
-                <Icon name="eye" size={14} />
+                <Icon name='eye' size={14} />
                 {props.views}K
               </Link>
             </Text>
