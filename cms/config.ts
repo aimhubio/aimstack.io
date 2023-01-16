@@ -3,7 +3,7 @@ import SITE_URL from '../config';
 export default {
   backend: {
     name: 'github',
-    repo: 'AshotSimonyan/ashotsimonyan.github.io',
+    repo: 'aimhubio/aimstack.io',
     branch: 'main',
     site_domain: SITE_URL,
     base_url: 'https://github.com',
