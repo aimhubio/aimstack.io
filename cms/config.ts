@@ -5,7 +5,7 @@ export default {
     name: 'github',
     repo: 'aimhubio/aimstack.io',
     branch: 'main',
-    site_domain: 'v4.aimstack.io'
+    site_domain: 'boisterous-salamander-b3e4d6.netlify.app'
     // base_url: 'https://github.com',
     // auth_endpoint: 'api/auth'
   },
