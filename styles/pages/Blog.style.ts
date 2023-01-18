@@ -27,6 +27,9 @@ const ShareSocial = styled('div', {
       '&[aria-label=twitter]': {
         backgroundColor: '#43b1ff !important'
       },
+      '&[aria-label=linkedin]': {
+        backgroundColor: '#0A66C2 !important'
+      },
       '&[aria-label=facebook]': {
         backgroundColor: '#6e8dd0 !important'
       },

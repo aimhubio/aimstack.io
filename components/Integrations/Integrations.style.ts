@@ -13,7 +13,7 @@ const SliderItem = styled('a', {
   overflow: 'visible !important',
 
   img: {
-    width: '65px !important',
+    width: '95px !important',
   },
 });
 

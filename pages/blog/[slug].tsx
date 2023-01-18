@@ -4,7 +4,7 @@ import {
   TwitterShareButton,
   FacebookShareButton,
   RedditShareButton,
-  RedditIcon
+  LinkedinShareButton
 } from 'next-share';
 import { Text, Container, Flex, InnerHTML } from 'styles/foundations';
 import {
@@ -95,6 +95,12 @@ export default function PostPage({ post, posts }) {
           >
             <Icon size={16} name='twitter' />
           </TwitterShareButton>
+          <LinkedinShareButton
+            url={url}
+            title={post.title}
+          >
+            <Icon size={16} name='linkedIn' />
+          </LinkedinShareButton>
           <FacebookShareButton
             url={url}
             title={post.title}

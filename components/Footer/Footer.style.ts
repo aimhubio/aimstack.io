@@ -7,6 +7,7 @@ const FooterStyle = styled('footer', {
 const FooterTop = styled('div', {
   display: 'flex',
   alignItems: 'center',
+  justifyContent: 'space-between',
   flexWrap: 'wrap',
   color: '$white',
   py: '27px',
@@ -15,6 +16,9 @@ const FooterTop = styled('div', {
 
 const Logo = styled('div', {
   marginRight: '$9',
+  '@bp0': {
+    marginRight: '$6',
+  },
   '@bp2': {
     width: '100%',
     marginRight: '0',
@@ -27,11 +31,15 @@ const FooterList = styled('ul', {
   display: 'flex',
 
   li: {
-    marginRight: '$9',
+    '&:not(:last-child)': {
+      marginRight: '$9',
 
-    '@bp0': {
-      marginRight: '$4',
+      '@bp0': {
+        marginRight: '$4',
+      },
     },
+
+
 
     transition: '$main',
     '&:hover': {
@@ -59,14 +67,15 @@ const FooterList = styled('ul', {
     textAlign: 'center',
     li: {
       marginBottom: '$6',
-      marginRight: '0',
+      '&:not(:last-child)': {
+        marginRight: '0',
+      },
     },
   },
 });
 
 const FooterSocial = styled('ul', {
   display: 'flex',
-  marginLeft: 'auto',
 
   li: {
     '&:not(:last-child)': {
@@ -82,7 +91,7 @@ const FooterSocial = styled('ul', {
   },
 
   '@bp2': {
-    marginRight: 'auto',
+    margin: '0 auto',
     order: '3',
   },
 });

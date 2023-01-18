@@ -41,7 +41,6 @@ const HeaderNav = styled('nav', {
         '&:hover': {
           opacity: '.6',
         },
-
       },
     },
   },
@@ -83,7 +82,7 @@ const HeaderNav = styled('nav', {
           display: 'block',
           padding: '$3 $5',
 
-          '&.active': {
+          '&:active': {
             backgroundColor: '$primaryLight'
           }
         },

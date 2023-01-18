@@ -97,7 +97,7 @@ const About = () => {
         </Container>
       </Culture>
       <Team team={teamList} />
-      <JoinTeam>
+      {/*<JoinTeam>
         <Container>
           <Text as="h2" size={9} css={{ marginBottom: '$6' }}>
             Join Our Team
@@ -113,7 +113,7 @@ const About = () => {
             <span>Open position on Notion</span>
           </JoinTeamButton>
         </Container>
-      </JoinTeam>
+      </JoinTeam>*/}
     </>
   );
 };
