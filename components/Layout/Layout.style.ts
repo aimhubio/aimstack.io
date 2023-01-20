@@ -28,6 +28,7 @@ const Wrapper = styled('div', {
 
 const Content = styled('div', {
   flex: '1',
+  paddingTop: '72px'
 });
 
 export { LayoutStyle, Wrapper, Content };

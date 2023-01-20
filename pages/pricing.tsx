@@ -10,7 +10,7 @@ const Pricing = () => {
     <>
       <Seo {...pricingSeo}/>
       <Container>
-        <Flex align="center" direction="column" css={{ py: '80px' }}>
+        <Flex direction="column" className='text-center' css={{ py: '80px' }}>
           <Text as="h1" size={10} css={{ marginBottom: '$6' }}>
             Aim support options
           </Text>

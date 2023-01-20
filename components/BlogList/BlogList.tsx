@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { BlogListStyle, BlogItem } from './BlogList.style';
 import Card from 'components/Card/Card';
 
@@ -10,7 +10,6 @@ interface IBlog {
   image: string;
   slug: string;
   title: string;
-  tags: string[]; //TODO remove tag
 }
 
 interface IBlogList {

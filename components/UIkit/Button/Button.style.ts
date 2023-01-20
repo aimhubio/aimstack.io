@@ -9,6 +9,7 @@ const ButtonStyle = styled('button', {
   cursor: 'pointer',
   borderRadius: '$1',
   display: 'inline-block',
+  transition: '$main',
 
   variants: {
     size: {
@@ -35,14 +36,14 @@ const ButtonStyle = styled('button', {
         backgroundColor: '$primary',
         color: '$white',
         '&:hover': {
-          // backgroundColor: "$primaryDark"
+          backgroundColor: "$primaryHover"
         },
       },
       secondary: {
         backgroundColor: '$primaryLight',
         color: '$primary',
         '&:hover': {
-          // backgroundColor: "$primaryDark"
+          backgroundColor: "$primaryLightHover"
         },
       },
       outline: {
@@ -50,7 +51,7 @@ const ButtonStyle = styled('button', {
         color: '$textColor',
         border: '1px solid $grey',
         '&:hover': {
-          // backgroundColor: "$primaryDark"
+          borderColor: "$primaryHover"
         },
       },
     },

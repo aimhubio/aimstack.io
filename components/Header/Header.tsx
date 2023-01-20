@@ -15,11 +15,16 @@ import Image from 'next/image';
 import { navList, socialList, INavList, ISocialList } from '../Layout/config';
 import { useLockedBody } from 'hooks/useLockedBody';
 import { Icon } from 'components/UIkit';
+import { useRouter } from 'next/router';
 
 const Header = () => {
   const [drawerOpened, setDrawerOpened] = useState<boolean>(false);
   const [locked, setLocked] = useLockedBody();
   const [fixedHeader, setFixedHeader] = useState(false);
+  const router = useRouter();
+  const currentRoute = router.asPath;
+
+  console.log(router);
 
   const handleDrawerToggle = () => {
     setDrawerOpened(!drawerOpened);
@@ -31,31 +36,26 @@ const Header = () => {
   };
 
   useEffect(() => {
-    let lastScrollY = window.pageYOffset;
-
-    const updateScrollDirection = () => {
-      const scrollY = window.pageYOffset;
-      const fixed = scrollY <= lastScrollY && scrollY > 620;
-      const mouseWheel = (scrollY - lastScrollY) < -10 || (scrollY - lastScrollY) > 10
-      if (fixed !== fixedHeader && mouseWheel) {
-        setFixedHeader(!fixedHeader);
+    const fixedHeader = () => {
+      if (window.scrollY > 0) {
+        setFixedHeader(true)
+      } else {
+        setFixedHeader(false)
       }
-      lastScrollY = scrollY > 10 ? scrollY : 0;
-    };
-    window.addEventListener('scroll', updateScrollDirection, {passive: true}); // add event listener
-    return () => {
-      window.removeEventListener('scroll', updateScrollDirection); // clean up
-    };
+    }
+    window.addEventListener('scroll', fixedHeader)
   }, [fixedHeader]);
 
+
+  console.log(currentRoute);
   return (
     <HeaderStyle
-      className={`${drawerOpened ? 'open fixed' : ''} ${fixedHeader ? 'fixed animated' : ''}`}
+      className={`${drawerOpened ? 'open fixed' : ''} ${fixedHeader ? 'fixed' : ''}`}
     >
       <Container css={{ height: '100%' }}>
         <HeaderContent>
           <Logo>
-            <Link href="/" className="logo">
+            <Link href="/" onClick={handleDrawerClose} className="logo">
               <Image
                 src="/images/static/main/logo.svg"
                 alt="AimStack"
@@ -74,6 +74,7 @@ const Header = () => {
                         onClick={handleDrawerClose}
                         href={to}
                         target={external ? '_blank' : '_self'}
+                        className={currentRoute.includes(to) ? 'active' : ''}
                       >
                         {title}
                       </Link>
@@ -82,7 +83,7 @@ const Header = () => {
                 })}
               </ul>
               <HeaderButton
-                css={{ display: 'none', '@bp1': { display: 'block' } }}
+                css={{ display: 'none', '@bp1': { display: 'block', padding: '$5' } }}
               >
                 <GitHubButton
                   href="https://github.com/aimhubio/aim"

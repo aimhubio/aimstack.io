@@ -17,6 +17,7 @@ const InputStyle = styled('div', {
     border: 'none',
     borderRadius: '$1',
     width: '100%',
+    transition: '$main',
   },
 
   variants: {
@@ -26,6 +27,9 @@ const InputStyle = styled('div', {
           padding: '17px 24px',
           fontSize: '$2',
           backgroundColor: '$lightGrey',
+          '&:hover': {
+            backgroundColor: "$lightGreyHover"
+          },
         },
       },
     },

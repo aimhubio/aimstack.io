@@ -56,10 +56,16 @@ const HighlightWrapper = styled('div', {
   button: {
     position: 'absolute',
     right: '0',
-    top: '16px',
+    top: '6px',
     background: 'none',
     border: 'none',
     cursor: 'pointer',
+    height: '42px',
+    width: '42px',
+    transition: '$main',
+    '&:hover': {
+      opacity: '.6',
+    },
   },
 
   '.copied': {

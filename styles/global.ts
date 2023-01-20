@@ -2,9 +2,6 @@ import { reset } from './reset';
 
 const global = {
   ...reset,
-  html: {
-    scrollBehavior: 'smooth',
-  },
   body: {
     background: '$white',
     color: '$textColor',
@@ -24,6 +21,9 @@ const global = {
       fontWeight: '$4',
     },
   },
+  '.text-center': {
+    textAlign: 'center'
+  }
 };
 
 export default global;

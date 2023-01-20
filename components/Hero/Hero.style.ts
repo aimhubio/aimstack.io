@@ -16,6 +16,14 @@ const HeroContent = styled('div', {
   maxWidth: '948px',
   width: '100%',
   mx: 'auto',
+  position: 'relative',
+
+  '.github-btn': {
+    position: 'absolute',
+    bottom: '0',
+    left: '50%',
+    translate: '-50% 0'
+  }
 });
 
 export { HeroStyle, HeroContent };

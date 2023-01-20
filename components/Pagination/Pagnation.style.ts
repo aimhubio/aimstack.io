@@ -20,6 +20,7 @@ const PaginationList = styled('ul', {
     a: {
       display: 'block',
       lineHeight: '44px',
+      transition: '$main',
 
       '&.active': {
         backgroundColor: '$primary',

@@ -68,25 +68,11 @@ const teamList = [
     shape: '/images/static/about-us/shapes/3.svg',
   },
   {
-    fullName: 'Ruben Aprikyan',
-    jobTitle: 'Core contributor - UI',
-    description: 'Previously worked on web-based games.',
-    image: '/images/static/about-us/team/Ruben_Aprikyan.jpg',
-    shape: '/images/static/about-us/shapes/4.svg',
-  },
-  {
     fullName: 'Vardges Hovhannisyan',
     jobTitle: 'Core contributor - UI',
     description: 'Previously worked on web-based games.',
     image: '/images/static/about-us/team/Vardges_Hovhannisyan.jpg',
     shape: '/images/static/about-us/shapes/1.svg',
-  },
-  {
-    fullName: 'Hovhannes Tamoyan',
-    jobTitle: 'Core contributor - Backend',
-    description: 'Previously worked on web-based games.???',
-    image: '/images/static/about-us/team/Hovhannes_Tamoyan.jpg',
-    shape: '/images/static/about-us/shapes/2.svg',
   },
   {
     fullName: 'Tatyana Manaseryan',
