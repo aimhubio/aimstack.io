@@ -14,6 +14,8 @@ const Pagination = ({ currentPage, totalPostCount, pathname }) => {
 
   let pageIntoArray = Array.from(Array(totalPostCount).keys());
 
+  if(pageIntoArray.length <= 1) return null
+
   return (
     <PaginationStyle>
       <PaginationList>

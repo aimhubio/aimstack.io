@@ -27,7 +27,7 @@ const teamList = [
     jobTitle: 'Primary maintainer - UI',
     description: 'Previously built web-based video editor at Bynder.',
     image: '/images/static/about-us/team/Ruben_Karapetyan.jpg',
-    shape: '/images/static/about-us/shapes/4.svg',
+    shape: '/images/static/about-us/shapes/1.svg',
   },
   {
     fullName: 'Karen Hambardzumyan',
@@ -60,6 +60,13 @@ const teamList = [
     shape: '/images/static/about-us/shapes/6.svg',
   },
   {
+    fullName: 'Vardges Hovhannisyan',
+    jobTitle: 'Core contributor - UI',
+    description: 'Previously worked on web-based games.',
+    image: '/images/static/about-us/team/Vardges_Hovhannisyan.jpg',
+    shape: '/images/static/about-us/shapes/1.svg',
+  },
+  {
     fullName: 'Mihran Vanyan',
     jobTitle: 'Core contributor - Backend',
     description:
@@ -68,17 +75,9 @@ const teamList = [
     shape: '/images/static/about-us/shapes/3.svg',
   },
   {
-    fullName: 'Vardges Hovhannisyan',
-    jobTitle: 'Core contributor - UI',
-    description: 'Previously worked on web-based games.',
-    image: '/images/static/about-us/team/Vardges_Hovhannisyan.jpg',
-    shape: '/images/static/about-us/shapes/1.svg',
-  },
-  {
     fullName: 'Tatyana Manaseryan',
     jobTitle: 'Operations manager',
-    description:
-      'Previously Senior Backend engineer at Teamable (acqu. by TalkDesk).)))))?????',
+    description: 'AI Enthusiast and Operations',
     image: '/images/static/about-us/team/Tatyana_Manaseryan.jpg',
     shape: '/images/static/about-us/shapes/5.svg',
   },

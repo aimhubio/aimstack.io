@@ -67,7 +67,7 @@ const Header = () => {
           <HeaderNav>
             <div className="nav-inner">
               <ul className="nav-list">
-                {navList.map(({ to, title, external }: INavList) => {
+                {navList.map(({ to, title, external, badge }: INavList) => {
                   return (
                     <li key={to}>
                       <Link
@@ -76,7 +76,10 @@ const Header = () => {
                         target={external ? '_blank' : '_self'}
                         className={currentRoute.includes(to) ? 'active' : ''}
                       >
-                        {title}
+                        <span className='text'>
+                          {title}
+                        </span>
+                        {!!badge && <span className='badge'>{badge}</span>}
                       </Link>
                     </li>
                   );

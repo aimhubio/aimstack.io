@@ -40,3 +40,30 @@ export function formattedDate(date) {
     year: 'numeric',
   });
 }
+
+export function getTotalPosts(posts, page) {
+  // sort article base on  date
+  let postSortByDate = posts.sort(sortByDate);
+
+  // filter publish posts
+  const publish = postSortByDate.filter((post, i) => {
+    // return post.draft === false;
+    return !post.draft;
+  });
+
+  //  get only first ten post
+  let totalPosts = publish.slice(0, show_per_page);
+
+  if (page === 2) {
+    totalPosts = publish.slice(show_per_page, show_per_page * page);
+  }
+
+  if (page > 2) {
+    totalPosts = publish.slice(
+      show_per_page * page - show_per_page,
+      show_per_page * page
+    );
+  }
+
+  return totalPosts
+}

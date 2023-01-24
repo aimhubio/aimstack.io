@@ -7,19 +7,15 @@ export interface INavList {
   title: string;
   to: string;
   external: boolean;
+  badge?: string
 }
 
 export const navList: INavList[] = [
-  {
-    title: 'About Us',
-    to: '/about-us',
-    external: false,
-  },
-  {
-    title: 'GitHub',
-    to: 'https://github.com/aimhubio/aim',
-    external: true,
-  },
+  // {
+  //   title: 'GitHub',
+  //   to: 'https://github.com/aimhubio/aim',
+  //   external: true,
+  // },
   {
     title: 'Quick start',
     to: '/#quick-start',
@@ -41,9 +37,9 @@ export const navList: INavList[] = [
     external: true,
   },
   {
-    title: 'Roadmap',
-    to: 'https://github.com/aimhubio/aim#roadmap',
-    external: true,
+    title: 'Pricing',
+    to: '/pricing',
+    external: false,
   },
   {
     title: 'Blog',
@@ -51,9 +47,15 @@ export const navList: INavList[] = [
     external: false,
   },
   {
-    title: 'Pricing',
-    to: '/pricing',
+    title: 'About Us',
+    to: '/about-us',
     external: false,
+  },
+  {
+    title: 'Career',
+    to: '#',
+    external: true,
+    badge: 'Hiring'
   },
 ];
 

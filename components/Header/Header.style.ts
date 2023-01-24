@@ -11,13 +11,13 @@ const HeaderStyle = styled('header', {
 
   '&.fixed': {
     boxShadow: '$3',
-    backgroundColor: '$white',
-  },
+    backgroundColor: '$white'
+  }
 });
 const HeaderContent = styled('div', {
   display: 'flex',
   alignItems: 'center',
-  height: '100%',
+  height: '100%'
 });
 const HeaderNav = styled('nav', {
   display: 'flex',
@@ -31,18 +31,37 @@ const HeaderNav = styled('nav', {
         marginRight: '$6',
 
         '@bp0': {
-          marginRight: '$4',
-        },
+          marginRight: '$4'
+        }
       },
 
       a: {
-        transition: '$main',
         backfaceVisibility: 'hidden',
-        '&:hover': {
-          opacity: '.6',
+        display: 'inline-flex',
+
+        '.text': {
+          transition: '$main',
         },
-      },
-    },
+        '.badge': {
+          // position: 'absolute',
+          display: 'inline-block',
+          height: '18px',
+          lineHeight: '18px',
+          padding: '0 4px',
+          borderRadius: '2px',
+          backgroundColor: '$primary',
+          color: '$white',
+          fontWeight: '700',
+          fontSize: '10px',
+          marginLeft: '6px'
+        },
+        '&:hover': {
+          '.text': {
+            opacity: '.6'
+          },
+        }
+      }
+    }
   },
 
   '@bp1': {
@@ -60,19 +79,19 @@ const HeaderNav = styled('nav', {
     justifyContent: 'space-between',
 
     '.open &': {
-      height: 'calc(100% - 72px)',
+      height: 'calc(100% - 72px)'
     },
     '.nav-inner': {
       width: '100%',
       flexDirection: 'column',
       alignItems: 'inherit',
       justifyContent: 'space-between',
-      paddingTop: '16px',
+      paddingTop: '16px'
     },
     '.nav-list': {
       flexDirection: 'column',
-
       alignItems: 'flex-start',
+
       '> li': {
         fontSize: '$2',
         fontWeight: '$3',
@@ -88,24 +107,24 @@ const HeaderNav = styled('nav', {
         },
 
         '&:not(:last-child)': {
-          marginRight: '0',
-        },
-      },
-    },
-  },
+          marginRight: '0'
+        }
+      }
+    }
+  }
 });
 const Logo = styled('div', {
   marginRight: '50px',
   '& .logo': {
     maxWidth: '158px',
     width: '100%',
-    display: 'block',
+    display: 'block'
   },
 
   '@bp1': {
     position: 'relative',
-    zIndex: 11,
-  },
+    zIndex: 11
+  }
 });
 
 const HeaderButton = styled('div', {
@@ -114,16 +133,16 @@ const HeaderButton = styled('div', {
   span: {
     span: {
       display: 'flex',
-      alignItems: 'center',
-    },
+      alignItems: 'center'
+    }
   },
   '&.desktop-btn': {
     span: {
       span: {
-        justifyContent: 'flex-end',
-      },
-    },
-  },
+        justifyContent: 'flex-end'
+      }
+    }
+  }
 });
 
 const ButtonMenu = styled('button', {
@@ -137,8 +156,8 @@ const ButtonMenu = styled('button', {
     border: 'none',
     backgroundColor: 'transparent',
     lineHeight: 1,
-    cursor: 'pointer',
-  },
+    cursor: 'pointer'
+  }
 });
 
 const MobileSocial = styled('ul', {
@@ -150,9 +169,9 @@ const MobileSocial = styled('ul', {
     py: '$6',
 
     '> li': {
-      marginRight: '$6',
-    },
-  },
+      marginRight: '$6'
+    }
+  }
 });
 
 export {
@@ -162,5 +181,5 @@ export {
   HeaderNav,
   HeaderButton,
   ButtonMenu,
-  MobileSocial,
+  MobileSocial
 };
