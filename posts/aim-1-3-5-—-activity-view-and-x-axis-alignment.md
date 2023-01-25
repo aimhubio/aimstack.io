@@ -10,10 +10,9 @@ description: Aim v1.3.5 is now available. Thanks to the incredible Aim community
   Check out the new features […]
 draft: false
 ---
-\
-\
 
-# Aim Release — Activity View and X-axis alignment
+
+## Aim Release — Activity View and X-axis alignment
 
 [Aim](https://github.com/aimhubio/aim) v1.3.5 is now available. Thanks to the incredible [Aim community](https://discord.com/invite/zXq2NfVdtF) for the feedback and support on building democratized open source AI dev tools.
 
@@ -29,13 +28,13 @@ The **Activity View** shows the daily experiment runs. With one click you can se
 
 ![](/images/dynamic/1st.gif "The new dashboard in action!")
 
-# **X-axis alignment by epoch**
+## **X-axis alignment by epoch**
 
 X-axis alignment adds another layer of superpower for metric comparison. If you have tracked metrics in different time-frequencies (e.g. train loss — 1000 steps, validation loss — 15 steps) then you can align them by epoch, relative time or absolute time.
 
 ![](/images/dynamic/2nd.gif "No more misaligned metrics!")
 
-# **Ordering runs both on Explore and on Dashboard**
+## **Ordering runs both on Explore and on Dashboard**
 
 
 
