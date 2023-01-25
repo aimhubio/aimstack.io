@@ -10,8 +10,6 @@ description: Validation and test metrics comparison is a crucial step in ML
   validation and test so they can test their model
 draft: false
 ---
-
-
 Researchers divide datasets into three subsets — train, validation and test so they can test their model performance at different levels.
 
 The model is trained on the train subset and subsequent metrics are collected to evaluate how well the training is going. Loss, accuracy and other metrics are computed.
@@ -54,8 +52,6 @@ Let’s go step-by-step on how to break down lots of experiments using subplots.
 Not it’s easy and straightforward to simultaneously compare both 4 metrics and find the best version of the model.
 
 # Summary
-
-
 
 Here is a full summary video on how to do it on the UI.
 
