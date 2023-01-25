@@ -10,8 +10,8 @@ export default {
     // auth_endpoint: 'api/auth'
   },
   load_config_file: false,
-  media_folder: 'public/images',
-  public_folder: '/images',
+  media_folder: 'public/images/dynamic',
+  public_folder: '/images/dynamic',
   collections: [
     {
       label: 'Blog',

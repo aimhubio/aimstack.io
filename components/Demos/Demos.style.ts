@@ -1,12 +1,12 @@
 import { styled } from 'styles';
 
 const DemosStyle = styled('section', {
-  padding: '44px 0 100px',
+  padding: '60px 0 100px',
   backgroundColor: '$darkBlue',
   color: '$white',
 
   '@bp1': {
-    padding: '44px 0 26px',
+    padding: '60px 0 26px',
   },
 });
 

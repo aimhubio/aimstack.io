@@ -1,10 +1,11 @@
-import { slugify, ImageUrl, titleCase } from 'utils';
+import React, { useCallback } from 'react';
 import { NextSeo } from 'next-seo';
+import { pick } from '@contentlayer/client';
+import { slugify, ImageUrl, titleCase, getTotalPosts, pageCount } from 'utils';
 import { Text, Container } from 'styles/foundations';
 import { allPosts } from 'contentlayer/generated';
 import BlogList from 'components/BlogList/BlogList';
 import Pagination from 'components/Pagination/Pagnation';
-import React from 'react';
 import { useRouter } from 'next/router';
 
 export default function Category({ posts }) {
@@ -12,6 +13,25 @@ export default function Category({ posts }) {
   const params = router.query;
   const pathname = '/category/' + router.query.slug;
   const page = Number(params.page) || 1;
+
+  const pickedPosts = posts.map((post) =>
+    pick(post, [
+      'title',
+      'date',
+      'slug',
+      'description',
+      'draft',
+      'image',
+      'categories',
+    ])
+  );
+
+  const totalPostCount = pageCount(posts.length);
+
+  const totalPosts = useCallback(
+    () => getTotalPosts(pickedPosts, page),
+    [page, pickedPosts]
+  );
   return (
     <>
       <NextSeo
@@ -45,11 +65,11 @@ export default function Category({ posts }) {
           Category: {titleCase(router.query.slug)}
         </Text>
 
-        <BlogList blogList={posts} />
+        <BlogList blogList={totalPosts()} />
         <Pagination
           currentPage={page}
           pathname={pathname}
-          totalPostCount={posts}
+          totalPostCount={totalPostCount}
         />
       </Container>
     </>
