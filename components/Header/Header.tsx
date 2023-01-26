@@ -8,8 +8,7 @@ import {
   HeaderNav,
   HeaderButton,
   ButtonMenu,
-  MobileSocial,
-  Badge
+  MobileSocial, Badge
 } from './Header.style';
 import { Container } from 'styles/foundations';
 import Image from 'next/image';
@@ -48,8 +47,8 @@ const Header: FC<IHeader> = ({dark}) => {
     window.addEventListener('scroll', fixedHeader)
   }, [fixedHeader]);
 
-  const darkMode = dark && !drawerOpened && !fixedHeader
 
+  const darkMode = dark && !drawerOpened && !fixedHeader
   return (
     <HeaderStyle
       className={`${drawerOpened ? 'open fixed' : ''} ${fixedHeader ? 'fixed' : ''} ${dark && !drawerOpened ? 'dark' : ''}`}
@@ -59,7 +58,7 @@ const Header: FC<IHeader> = ({dark}) => {
           <Logo>
             <Link href="/" onClick={handleDrawerClose} className="logo">
               <Image
-                src="/images/static/main/logo.svg"
+                src={`/images/static/main/${darkMode ? 'logo-white' : 'logo'}.svg`}
                 alt="AimStack"
                 width="156"
                 height="37"
