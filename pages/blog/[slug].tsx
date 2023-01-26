@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Markdown from 'markdown-to-jsx';
 import {
   TwitterShareButton,
   FacebookShareButton,
@@ -87,7 +88,11 @@ export default function PostPage({ post, posts }) {
         </ImageWrapper>
       </Container>
       <Container css={{ maxWidth: '848px' }}>
-        <InnerHTML dangerouslySetInnerHTML={{ __html: post.body.html }} />
+        <InnerHTML>
+          <Markdown>
+            {post.body.raw}
+          </Markdown>
+        </InnerHTML>
         <ShareSocial>
           <TwitterShareButton
             url={url}

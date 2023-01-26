@@ -23,7 +23,7 @@ const Pagination = ({ currentPage, totalPostCount, pathname }) => {
           <li>
             <Link
               href={{
-                pathname: `/${pathname}`,
+                pathname: `${pathname}`,
                 query: { page: currentPage - 1 },
               }}
             >
@@ -36,7 +36,7 @@ const Pagination = ({ currentPage, totalPostCount, pathname }) => {
           return (
             <li key={page}>
               <Link
-                href={{ pathname: `/${pathname}`, query: { page: page + 1 } }}
+                href={{ pathname: `${pathname}`, query: { page: page + 1 } }}
                 className={currentPage === page + 1 ? 'active' : ''}
               >
                 {page + 1}
@@ -48,7 +48,7 @@ const Pagination = ({ currentPage, totalPostCount, pathname }) => {
           <li>
             <Link
               href={{
-                pathname: `/${pathname}`,
+                pathname: `${pathname}`,
                 query: { page: currentPage + 1 },
               }}
             >

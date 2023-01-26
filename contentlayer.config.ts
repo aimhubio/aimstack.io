@@ -20,39 +20,33 @@ const Categories = defineNestedType(() => ({
 
 const Post = defineDocumentType(() => ({
   name: 'Post',
-  filePathPattern: `**/*.md`,
+  filePathPattern: `posts/**/*.md`,
   contentType: 'markdown',
   fields: {
     title: {
       type: 'string',
-      required: true,
     },
     date: {
       type: 'date',
-      required: true,
     },
     author: {
       type: 'string',
-      required: true,
     },
 
     description: {
       type: 'string',
-      required: true,
     },
     slug: {
       type: 'string',
     },
     id: {
       type: 'number',
-      required: false,
     },
     image: {
       type: 'string',
     },
     draft: {
       type: 'string',
-      required: true,
     },
     tags: {
       type: 'list',
@@ -71,7 +65,51 @@ const Post = defineDocumentType(() => ({
   },
 }));
 
+const Package = defineDocumentType(() => ({
+  name: 'Package',
+  filePathPattern: `subpackages/**/*.md`,
+  contentType: 'markdown',
+  fields: {
+    title: {
+      type: 'string',
+    },
+    author: {
+      type: 'string',
+    },
+    logo: {
+      type: 'string',
+    },
+    org_name: {
+      type: 'string',
+    },
+    org_link: {
+      type: 'string',
+    },
+    repo_name: {
+      type: 'string',
+    },
+    repo_link: {
+      type: 'string',
+    },
+    installation: {
+      type: 'string',
+    },
+    about: {
+      type: 'string',
+    },
+    badges_body: {
+      type: 'string',
+    },
+  },
+  computedFields: {
+    slug: {
+      type: 'string',
+      resolve: (doc) => doc._raw.sourceFileName.replace(/\.md/, ''),
+    },
+  },
+}));
 export default makeSource({
-  contentDirPath: 'posts',
-  documentTypes: [Post],
+  contentDirPath: '.',
+  contentDirInclude: [],
+  documentTypes: [Post, Package],
 });

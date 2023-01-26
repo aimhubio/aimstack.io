@@ -9,6 +9,19 @@ const HeaderStyle = styled('header', {
   zIndex: 99,
   transition: '$main',
 
+  '&.dark': {
+    backgroundColor: '$darkBlue',
+    a: {
+      color: '$white',
+    },
+
+    '&.fixed': {
+      a: {
+        color: '$textColor',
+      },
+    }
+  },
+
   '&.fixed': {
     boxShadow: '$3',
     backgroundColor: '$white'
@@ -42,19 +55,7 @@ const HeaderNav = styled('nav', {
         '.text': {
           transition: '$main',
         },
-        '.badge': {
-          // position: 'absolute',
-          display: 'inline-block',
-          height: '18px',
-          lineHeight: '18px',
-          padding: '0 4px',
-          borderRadius: '2px',
-          backgroundColor: '$primary',
-          color: '$white',
-          fontWeight: '700',
-          fontSize: '10px',
-          marginLeft: '6px'
-        },
+
         '&:hover': {
           '.text': {
             opacity: '.6'
@@ -145,6 +146,19 @@ const HeaderButton = styled('div', {
   }
 });
 
+const Badge = styled('span', {
+  display: 'inline-block',
+  height: '18px',
+  lineHeight: '18px',
+  padding: '0 4px',
+  borderRadius: '2px',
+  backgroundColor: '$primary',
+  color: '$white',
+  fontWeight: '700',
+  fontSize: '10px',
+  marginLeft: '6px'
+});
+
 const ButtonMenu = styled('button', {
   display: 'none',
 
@@ -181,5 +195,6 @@ export {
   HeaderNav,
   HeaderButton,
   ButtonMenu,
-  MobileSocial
+  MobileSocial,
+  Badge
 };
