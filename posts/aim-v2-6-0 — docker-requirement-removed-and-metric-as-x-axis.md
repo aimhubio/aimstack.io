@@ -2,7 +2,7 @@
 author: Gev Soghomonian
 categories:
   - New Releases
-date: 2023-01-27T14:25:34.071Z
+date: 2021-06-24T14:25:34.071Z
 title: Aim v2.6.0 — Docker requirement removed and Metric as x-axis
 image: https://aimstack.io/wp-content/uploads/2021/06/2.6.0.png
 description: Before and after Aim v2.5.0
