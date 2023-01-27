@@ -18,7 +18,7 @@ In the fateful summer of 2020, our friend [mahnerak](https://twitter.com/mahner
 
 By fall 2020, [Aim 2.0](https://aimstack.io/aim-v2-2-0-hugging-face-integration/) launched as a free, open-source and self-hosted alternative to Weights and Biases, Tensorboard and MLflow. To our surprise even [r/MachineLearning loved it](https://www.reddit.com/r/MachineLearning/comments/jfgbij/project_aim_a_supereasy_way_to_record_search_and/).
 
-By spring 2021, mahnerak co-authoerd a paper [WARP](https://aclanthology.org/2021.acl-long.381/) ([code](https://github.com/yerevann/warp)): Word-level Adverserial ReProgramming on his ACL-published work. At that point Aim users had contributed over 100 feature requests already.
+ By spring 2021, mahnerak co-authoerd a paper [WARP](https://aclanthology.org/2021.acl-long.381/) ([code](https://github.com/yerevann/warp)): Word-level Adverserial ReProgramming on his ACL-published work. At that point Aim users had contributed over 100 feature requests already.
 
 ## A scale problem
 
@@ -90,8 +90,6 @@ MLflow is an end-to-end ML Lifecycle tool. Aim is focused on training tracking. 
 
 ### [](https://github.com/aimhubio/aim#weights-and-biases)Weights and Biases
 
-
-
 **Hosted vs self-hosted**
 
 * Weights and Biases is a hosted closed-source MLOps platform.
@@ -106,8 +104,6 @@ This is a living document and we hope that the community will help us shape it t
 We are also [inviting community contributors](https://github.com/aimhubio/aim#community) to help us get there faster!
 
 ## Why are we building Aim?
-
-
 
 We have started to work on Aim with strong belief that the open-source is in the DNA of AI software (2.0) development.
 
@@ -130,11 +126,7 @@ Aim’s mission is to democratize AI dev tools. We believe that the best AI tool
 * performant both on UI and data
 * extensible — enable ways to build around for so many use-cases
 
-
-
 ## Thanks to
-
-
 
 [Ruben Karapetyan](https://twitter.com/roubkar) for being the first to believe in this project and spending lots of his time and setting the foundations for the beautiful UI.
 
