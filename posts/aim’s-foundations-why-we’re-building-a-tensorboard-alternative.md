@@ -2,7 +2,7 @@
 author: Gev Soghomonian
 categories:
   - New Releases
-date: 2022-10-22T14:48:48.452Z
+date: 2021-10-22T14:48:48.452Z
 title: Aim’s foundations & why we’re building a Tensorboard alternative
 image: https://aimstack.io/wp-content/uploads/2021/08/3.0.png
 description: The origins of Aim In the fateful summer of 2020, our friend
