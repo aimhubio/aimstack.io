@@ -6,6 +6,7 @@ import {
   Logo,
   FooterSocial,
 } from './Footer.style';
+import { Badge } from 'components/Header/Header.style';
 import { Container, Text } from 'styles/foundations';
 import Link from 'next/link';
 import { Icon } from 'components/UIkit';
@@ -35,14 +36,17 @@ const Footer = () => {
             </Link>
           </Logo>
           <FooterList>
-            {navList.map(({ to, title, external }: INavList) => {
+            {navList.map(({ to, title, external, badge }: INavList) => {
               return (
                 <li key={to} onClick={() => {}}>
                   <Link
                     href={to}
                     target={external ? '_blank' : '_self'}
                   >
-                    {title}
+                    <span className='text'>
+                      {title}
+                    </span>
+                    {!!badge && <Badge>{badge}</Badge>}
                   </Link>
                 </li>
               );

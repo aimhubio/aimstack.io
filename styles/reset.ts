@@ -18,7 +18,7 @@ export const reset = {
   '*': {
     boxSizing: 'border-box',
   },
-  'ol, ul': {
+  'ul': {
     listStyle: 'none',
   },
   'blockquote, q': {

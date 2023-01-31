@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import GitHubButton from 'react-github-btn';
 import Link from 'next/link';
 import {
@@ -8,7 +8,7 @@ import {
   HeaderNav,
   HeaderButton,
   ButtonMenu,
-  MobileSocial,
+  MobileSocial, Badge
 } from './Header.style';
 import { Container } from 'styles/foundations';
 import Image from 'next/image';
@@ -17,14 +17,15 @@ import { useLockedBody } from 'hooks/useLockedBody';
 import { Icon } from 'components/UIkit';
 import { useRouter } from 'next/router';
 
-const Header = () => {
+interface IHeader {
+  dark: boolean
+}
+const Header: FC<IHeader> = ({dark}) => {
   const [drawerOpened, setDrawerOpened] = useState<boolean>(false);
   const [locked, setLocked] = useLockedBody();
   const [fixedHeader, setFixedHeader] = useState(false);
   const router = useRouter();
   const currentRoute = router.asPath;
-
-  console.log(router);
 
   const handleDrawerToggle = () => {
     setDrawerOpened(!drawerOpened);
@@ -47,17 +48,17 @@ const Header = () => {
   }, [fixedHeader]);
 
 
-  console.log(currentRoute);
+  const darkMode = dark && !drawerOpened && !fixedHeader
   return (
     <HeaderStyle
-      className={`${drawerOpened ? 'open fixed' : ''} ${fixedHeader ? 'fixed' : ''}`}
+      className={`${drawerOpened ? 'open fixed' : ''} ${fixedHeader ? 'fixed' : ''} ${dark && !drawerOpened ? 'dark' : ''}`}
     >
       <Container css={{ height: '100%' }}>
         <HeaderContent>
           <Logo>
             <Link href="/" onClick={handleDrawerClose} className="logo">
               <Image
-                src="/images/static/main/logo.svg"
+                src={`/images/static/main/${darkMode ? 'logo-white' : 'logo'}.svg`}
                 alt="AimStack"
                 width="156"
                 height="37"
@@ -79,7 +80,7 @@ const Header = () => {
                         <span className='text'>
                           {title}
                         </span>
-                        {!!badge && <span className='badge'>{badge}</span>}
+                        {!!badge && <Badge>{badge}</Badge>}
                       </Link>
                     </li>
                   );
@@ -132,7 +133,7 @@ const Header = () => {
             onClick={handleDrawerToggle}
             aria-label='menu'
           >
-            <Icon name={drawerOpened ? 'close' : 'burger'} size={20} />
+            <Icon color={darkMode ? 'white' :'black'} name={drawerOpened ? 'close' : 'burger'} size={20} />
           </ButtonMenu>
         </HeaderContent>
       </Container>

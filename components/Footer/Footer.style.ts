@@ -39,12 +39,20 @@ const FooterList = styled('ul', {
       },
     },
 
+    a: {
+      backfaceVisibility: 'hidden',
+      display: 'inline-flex',
 
+      '.text': {
+        transition: '$main',
+      },
 
-    transition: '$main',
-    '&:hover': {
-      opacity: '.6',
-    },
+      '&:hover': {
+        '.text': {
+          opacity: '.6'
+        },
+      }
+    }
   },
 
   '@bp1': {

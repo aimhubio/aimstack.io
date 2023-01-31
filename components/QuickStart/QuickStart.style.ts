@@ -53,6 +53,13 @@ const CodeBlockStyle = styled('div', {
 const HighlightWrapper = styled('div', {
   position: 'relative',
 
+  '&.light': {
+    '.hljs': {
+      backgroundColor: '$white',
+      color: '$textColor'
+    },
+  },
+
   button: {
     position: 'absolute',
     right: '0',

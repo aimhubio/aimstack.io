@@ -9,6 +9,15 @@ export const InnerHTML = styled('div', {
     marginBottom: '$5',
   },
 
+  h1: {
+    fontSize: '$8',
+    fontWeight: '$3',
+    borderBottom: '1px solid $grey',
+    '@bp2': {
+      fontSize: '$7',
+    },
+  },
+
   h2: {
     fontSize: '$7',
     fontWeight: '$3',
@@ -32,17 +41,28 @@ export const InnerHTML = styled('div', {
     color: '$black800'
   },
 
-  ul: {
+  'ol, ul': {
     marginBottom: '$5',
     paddingLeft: '$10',
-    listStyleType: 'disc',
     fontSize: '$3',
     fontFamily: '$Lora',
+
+
     li: {
+      '>ul': {
+        listStyleType: 'circle',
+      },
       '&:not(:last-child)': {
         marginBottom: '$2',
       },
     },
+  },
+  ul: {
+    listStyleType: 'disc',
+
+    ':has(input)': {
+      listStyleType: 'none',
+    }
   },
 
   a: {
@@ -56,7 +76,7 @@ export const InnerHTML = styled('div', {
   },
 
   img: {
-    width: '100%',
+    maxWidth: '100%',
     height: 'auto',
   },
   strong: {
@@ -91,6 +111,19 @@ export const InnerHTML = styled('div', {
   code: {
     whiteSpace: 'pre-wrap',
   },
+
+  table: {
+    marginBottom: '$4'
+  },
+  'table, th, td': {
+    border: '1px solid $grey',
+  },
+  'th, td': {
+    padding: '6px 13px'
+  },
+  iframe: {
+    maxWidth: '100%'
+  }
 });
 
 export default InnerHTML;
