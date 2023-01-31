@@ -1,9 +1,9 @@
 import { styled } from 'styles';
 
-const Subpackeges = styled('div', {
+const Subpackages = styled('div', {
 
 });
-const SubpackegesHeader = styled('section', {
+const SubpackagesHeader = styled('section', {
   color: '$white',
   backgroundColor: '$darkBlue',
   py: '60px',
@@ -92,4 +92,4 @@ const Badges = styled('div', {
   }
 });
 
-export { Subpackeges, SubpackegesHeader, MainContent, SideBar, Badges };
+export { Subpackages, SubpackagesHeader, MainContent, SideBar, Badges };

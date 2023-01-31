@@ -4,7 +4,7 @@ import Markdown from 'markdown-to-jsx';
 import { Icon } from 'components/UIkit';
 import { allPackages } from 'contentlayer/generated';
 import Link from 'next/link';
-import { Subpackeges, SubpackegesHeader, MainContent, SideBar, Badges } from '../styles/pages/Subpackeges.style';
+import { Subpackages, SubpackagesHeader, MainContent, SideBar, Badges } from '../styles/pages/Subpackages.style';
 import Image from 'next/image';
 import { HighlightWrapper } from '../components/QuickStart/QuickStart.style';
 import Highlight from 'react-highlight';
@@ -20,8 +20,8 @@ export default function PostPage({ post }) {
   };
 
   return (
-    <Subpackeges>
-      <SubpackegesHeader>
+    <Subpackages>
+      <SubpackagesHeader>
         <Container>
           <Flex justify='between' direction={{ '@bp1': 'column' }}>
             <Flex align='center'>
@@ -55,7 +55,7 @@ export default function PostPage({ post }) {
             </HighlightWrapper>
           </Flex>
         </Container>
-      </SubpackegesHeader>
+      </SubpackagesHeader>
       <Container>
         <Flex direction={{ '@bp1': 'columnReverse' }}>
           <MainContent>
@@ -80,7 +80,7 @@ export default function PostPage({ post }) {
 
       </Container>
 
-    </Subpackeges>
+    </Subpackages>
   );
 }
 
