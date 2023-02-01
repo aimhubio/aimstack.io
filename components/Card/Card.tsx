@@ -10,8 +10,10 @@ import { Text } from 'styles/foundations';
 import Image from 'next/image';
 import { Icon } from 'components/UIkit';
 import Link from 'next/link';
+import {slugify} from 'utils'
 
 const Card = (props) => {
+
   return (
     <CardStyle>
       <ImageWrapper>
@@ -27,14 +29,18 @@ const Card = (props) => {
       </ImageWrapper>
 
       <CardContent>
-        <Category>
-          <Link href={`/category/${props.categories[0].toLowerCase()}`}>
-            <Text size={1} css={{display: 'flex', alignItems: 'center'}}>
-              <Icon name='folder' size={14} />
-              {props.categories[0]}
-            </Text>
-          </Link>
-        </Category>
+        {
+          Array.isArray(props.categories) &&
+          <Category>
+            <Link href={`/category/${slugify(props.categories[0])}`}>
+              <Text size={1} css={{display: 'flex', alignItems: 'center'}}>
+                <Icon name='folder' size={14} />
+                {props.categories[0]}
+              </Text>
+            </Link>
+          </Category>
+        }
+
         <Text as='h3' size={6} className='title' truncate>
           <Link href={`/blog/${props.slug}`}>{props.title}</Link>
         </Text>

@@ -59,7 +59,7 @@ export default function PostPage({ post }) {
       <Container>
         <Flex direction={{ '@bp1': 'columnReverse' }}>
           <MainContent>
-            <InnerHTML>
+            <InnerHTML className='inner'>
               <Markdown>
                 {post.body.raw}
               </Markdown>

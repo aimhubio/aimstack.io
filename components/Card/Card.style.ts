@@ -9,7 +9,8 @@ const ImageWrapper = styled('div', {
 });
 
 const CardContent = styled('div', {
-  paddingTop: '$6',
+  paddingTop: '50px',
+  position: 'relative',
 });
 
 const Category = styled('div', {
@@ -18,6 +19,8 @@ const Category = styled('div', {
   alignItems: 'center',
   color: '$grey',
   transition: '$main',
+  position: 'absolute',
+  top: '$6',
 
   '.icon': {
     marginRight: '$1',

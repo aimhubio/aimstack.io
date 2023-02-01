@@ -76,14 +76,6 @@ const About = () => {
                   }
                 )}
               </CultureList>
-              <Button
-                as="a"
-                href="#"
-                target="_blank"
-                css={{fontSize: '$2'}}
-              >
-                More about Aim culture
-              </Button>
             </CultureLeft>
             <CultureRight>
               <Image

@@ -88,7 +88,7 @@ export default function PostPage({ post, posts }) {
         </ImageWrapper>
       </Container>
       <Container css={{ maxWidth: '848px' }}>
-        <InnerHTML>
+        <InnerHTML className='blog-inner'>
           <Markdown>
             {post.body.raw}
           </Markdown>

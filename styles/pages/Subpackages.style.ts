@@ -61,6 +61,10 @@ const MainContent = styled('section', {
   borderLeft: '1px solid $grey',
   borderRight: '1px solid $grey',
 
+  '.inner': {
+    margin: '30px auto',
+  },
+
   '@bp1': {
     width: '100%',
     border: 'none',

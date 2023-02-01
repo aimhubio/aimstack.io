@@ -11,9 +11,9 @@ interface ILayout {
 
 const Layout: FC<ILayout> = ({ children }) => {
   const router = useRouter();
-  const admin = router?.pathname.includes('/admin');
   const home = router?.pathname === '/';
-  const blog = router?.pathname.includes('/blog');
+  const admin = /\/admin/.test(router?.pathname);
+  const blog = /\/blog|\/category/.test(router?.pathname);
   const currentPath = router.route;
   const subpackage = currentPath === '/[slug]'
 

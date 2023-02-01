@@ -91,6 +91,9 @@ const Package = defineDocumentType(() => ({
     repo_link: {
       type: 'string',
     },
+    version: {
+      type: 'string',
+    },
     installation: {
       type: 'string',
     },

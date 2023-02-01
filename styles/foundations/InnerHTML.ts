@@ -9,6 +9,12 @@ export const InnerHTML = styled('div', {
     marginBottom: '$5',
   },
 
+  '&.blog-inner': {
+    'p, ol, ul, a': {
+      fontFamily: '$Lora',
+    },
+  },
+
   h1: {
     fontSize: '$8',
     fontWeight: '$3',
@@ -37,7 +43,6 @@ export const InnerHTML = styled('div', {
   p: {
     marginBottom: '$5',
     fontSize: '$4',
-    fontFamily: '$Lora',
     color: '$black800'
   },
 
@@ -45,7 +50,6 @@ export const InnerHTML = styled('div', {
     marginBottom: '$5',
     paddingLeft: '$10',
     fontSize: '$3',
-    fontFamily: '$Lora',
 
 
     li: {
@@ -68,7 +72,6 @@ export const InnerHTML = styled('div', {
   a: {
     textDecoration: 'underline',
     wordBreak: 'break-all',
-    fontFamily: '$Lora',
 
     '&:hover': {
       color: '$primary',

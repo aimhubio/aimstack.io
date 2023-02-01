@@ -16,6 +16,11 @@ const FooterTop = styled('div', {
 
 const Logo = styled('div', {
   marginRight: '$9',
+
+  img: {
+    display: 'block'
+  },
+
   '@bp0': {
     marginRight: '$6',
   },
@@ -39,20 +44,12 @@ const FooterList = styled('ul', {
       },
     },
 
-    a: {
-      backfaceVisibility: 'hidden',
-      display: 'inline-flex',
 
-      '.text': {
-        transition: '$main',
-      },
 
-      '&:hover': {
-        '.text': {
-          opacity: '.6'
-        },
-      }
-    }
+    transition: '$main',
+    '&:hover': {
+      opacity: '.6',
+    },
   },
 
   '@bp1': {
