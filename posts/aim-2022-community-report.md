@@ -1,9 +1,11 @@
 ---
 author: Gev Soghomonian
+categories:
+  - New Releases
 date: 2023-01-05T21:48:26.367Z
 title: Aim 2022 community report
 image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*OvP3KCeUaBbqWj_jq4c5xg.png
-description: It’s time to review the 2022. Happy New Year! 🎆
+description: "It’s time to review the 2022. Happy New Year! 🎆 "
 draft: false
 ---
 Hey lovely Aimers, Happy New Year! 🎆
