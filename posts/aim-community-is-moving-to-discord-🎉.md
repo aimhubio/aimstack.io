@@ -1,5 +1,7 @@
 ---
 author: Gev Soghomonian
+categories:
+  - New Releases
 date: 2022-12-21T21:45:47.434Z
 title: Aim Community is Moving to Discord!! 🎉
 image: https://miro.medium.com/max/1400/1*c_ovadkKTTkZOokR3WiUTg.webp
@@ -20,7 +22,7 @@ In this new space we are going to
 
 ***The slack workspace is going to become deprecated by the end of 2022.***
 
-I also asked a friend on the technical reasons for moving to Discord. Here is what he responded.
+I also asked a friend on the technical reasons for moving to Discord. Here is what he responded. 
 
 ![](https://miro.medium.com/max/1400/1*TyjpfDg_-GabhaZ2cm76SA.webp)
 
