@@ -53,7 +53,7 @@ export const navList: INavList[] = [
   },
   {
     title: 'Career',
-    to: '#',
+    to: 'https://aimstack.notion.site/Working-at-AimStack-7f5d93e04f0645129dd314d5f077511b',
     external: true,
     badge: 'Hiring'
   },

@@ -8,6 +8,7 @@ const global = {
     fontFamily: '$base',
     fontSize: '$baseSize',
     lineHeight: '1.35',
+    overscrollBehavior: 'none',
   },
   strong: {
     fontWeight: '$5',
@@ -19,6 +20,11 @@ const global = {
     '&.link': {
       color: '$primary',
       fontWeight: '$4',
+      transition: '$main',
+
+      '&:hover': {
+        color: '$primaryHover'
+      }
     },
   },
   '.text-center': {

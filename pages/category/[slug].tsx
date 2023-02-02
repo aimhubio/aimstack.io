@@ -82,7 +82,7 @@ export async function getStaticPaths() {
   // get all category paths
   allPosts.map((post) => {
     if (!!post.draft === false) {
-      post.categories.map((category) => {
+      post.categories?.map((category) => {
         const slug = slugify(category);
         paths.push({ params: { slug } });
       });
@@ -101,7 +101,7 @@ export async function getStaticProps({ params: { slug } }) {
   // get all category posts base on slug
   const post = allPosts.map((post) => {
     if (!!post.draft === false) {
-      post.categories.filter((category) => {
+      post.categories?.filter((category) => {
         const categorySlug = slugify(category);
         if (categorySlug === slug) {
           posts.push(post);
