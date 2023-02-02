@@ -38,7 +38,7 @@ const Footer = () => {
           <FooterList>
             {navList.map(({ to, title, external, badge }: INavList) => {
               return (
-                <li key={to} onClick={() => {}}>
+                <li key={to}>
                   <Link
                     href={to}
                     target={external ? '_blank' : '_self'}
