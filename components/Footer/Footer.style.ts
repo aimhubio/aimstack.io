@@ -18,7 +18,11 @@ const Logo = styled('div', {
   marginRight: '$9',
 
   img: {
-    display: 'block'
+    display: 'block',
+
+    '@bp2': {
+      margin: '0 auto',
+    },
   },
 
   '@bp0': {
@@ -34,6 +38,7 @@ const Logo = styled('div', {
 
 const FooterList = styled('ul', {
   display: 'flex',
+  marginRight: 'auto',
 
   li: {
     '&:not(:last-child)': {
