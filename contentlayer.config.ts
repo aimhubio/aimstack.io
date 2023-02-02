@@ -67,7 +67,7 @@ const Post = defineDocumentType(() => ({
 
 const Package = defineDocumentType(() => ({
   name: 'Package',
-  filePathPattern: `subpackages/**/*.md`,
+  filePathPattern: `packages/**/*.md`,
   contentType: 'markdown',
   fields: {
     title: {

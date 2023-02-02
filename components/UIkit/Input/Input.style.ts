@@ -9,8 +9,7 @@ const InputStyle = styled('div', {
     top: '100%',
     transform: 'translateY(2px)',
     color: '$danger',
-    fontSize: '20px',
-    paddingLeft: ' 12px',
+    fontSize: '$1',
   },
 
   input: {
