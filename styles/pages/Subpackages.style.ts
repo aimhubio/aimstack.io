@@ -1,8 +1,5 @@
 import { styled } from 'styles';
 
-const Subpackages = styled('div', {
-
-});
 const SubpackagesHeader = styled('section', {
   color: '$white',
   backgroundColor: '$darkBlue',

@@ -39,7 +39,7 @@ export default {
     {
       label: 'Package',
       name: 'package',
-      folder: 'subpackages',
+      folder: 'packages',
       create: true,
       fields: [
         { label: 'Title', name: 'title', widget: 'string' },
