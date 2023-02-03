@@ -12,6 +12,8 @@ const VideoGuideStyle = styled('section', {
 });
 const VideoWrapper = styled('div', {
   position: 'relative',
+  boxShadow: '0 96px 45px -65px rgba(0, 0, 0, 0.2)',
+  borderRadius: '$2',
 
   '.yt-lite': {
     borderRadius: '$2',

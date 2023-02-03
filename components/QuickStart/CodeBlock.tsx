@@ -28,7 +28,7 @@ const CodeBlock = () => {
             Copied!
           </span>
         )}
-        <Highlight ref={firstCode}>{`pip install aim`}</Highlight>
+        <Highlight ref={firstCode} className={'bash'}>{`pip install aim`}</Highlight>
       </HighlightWrapper>
 
       <HighlightWrapper>
@@ -43,18 +43,23 @@ const CodeBlock = () => {
             Copied!
           </span>
         )}
-        <Highlight ref={secondCode}>
-          {`from aim import Run
+        <Highlight ref={secondCode} className={'python'}>
+          {`import aim
+import math
 
-run = Run()
+# Initialize a new run
+run = aim.Run()
 
-# Save inputs, hparams or any other 'key: value' pairs
-run['hparams'] = hyperparam_dict
+# Log hyper-parameters
+run["hparams"] = {
+    "learning_rate": 0.001,
+    "batch_size": 32,
+}
 
-for step in range(10):
-# Log metrics to visualize performance
-    run.track(metric_value, name='metric_name',
-    epoch=epoch_number)`}
+# Log metrics
+for step in range(100):
+    run.track(math.sin(step), name='sine')
+    run.track(math.cos(step), name='cosine')`}
         </Highlight>
       </HighlightWrapper>
 
@@ -70,7 +75,7 @@ for step in range(10):
             Copied!
           </span>
         )}
-        <Highlight ref={thirdCode}>{`aim up`}</Highlight>
+        <Highlight ref={thirdCode} className={'bash'}>{`aim up`}</Highlight>
       </HighlightWrapper>
     </CodeBlockStyle>
   );

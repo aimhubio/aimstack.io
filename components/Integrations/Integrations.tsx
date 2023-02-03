@@ -9,7 +9,7 @@ const Integrations = () => {
   const [state, setState] = useState(false);
 
   const animation = useMemo(() => {
-    return { duration: 10000, easing: (t: number) => t };
+    return { duration: 15000, easing: (t: number) => t };
   }, []);
 
   const [ref] = useKeenSlider<HTMLDivElement>({

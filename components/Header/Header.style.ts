@@ -116,9 +116,14 @@ const HeaderNav = styled('nav', {
 });
 const Logo = styled('div', {
   marginRight: '50px',
+
   '& .logo': {
     maxWidth: '158px',
     width: '100%',
+    display: 'block'
+  },
+
+  '& .logo-image': {
     display: 'block'
   },
 

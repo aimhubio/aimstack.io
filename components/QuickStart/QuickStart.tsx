@@ -43,6 +43,8 @@ const QuickStart = () => {
             <a
               className="link"
               href="https://aimstack.readthedocs.io/en/latest/"
+              target="_blank"
+              rel="noreferrer noopener"
             >
               documentation
             </a>{' '}
