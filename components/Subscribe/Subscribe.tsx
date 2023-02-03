@@ -17,9 +17,9 @@ const Subscribe = () => {
 
   const requestOptions = {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json; charset=UTF-8' },
     body: JSON.stringify({
-      EMAIL: email
+      email: email,
     })
   };
 

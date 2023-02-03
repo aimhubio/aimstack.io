@@ -17,14 +17,12 @@ const Category = styled('div', {
   marginBottom: '$2',
   display: 'flex',
   alignItems: 'center',
-  color: '$grey',
+  color: '$darkGrey',
   transition: '$main',
-  position: 'absolute',
-  top: '$6',
 
   '.icon': {
     marginRight: '$1',
-    fill: '$grey',
+    fill: '$darkGrey',
     transition: '$main',
   },
 

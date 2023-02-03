@@ -62,6 +62,7 @@ const Header: FC<IHeader> = ({dark}) => {
                 alt="AimStack"
                 width="156"
                 height="37"
+                className='logo-image'
               />
             </Link>
           </Logo>

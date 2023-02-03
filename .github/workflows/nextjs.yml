@@ -71,7 +71,7 @@ jobs:
       - name: Export
         run: npm run export
       - run: touch ./out/.nojekyll
-      - run: echo 'v4.aimstack.io' > ./out/CNAME
+      - run: echo 'aimstack.io' > ./out/CNAME
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4

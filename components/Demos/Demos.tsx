@@ -9,7 +9,7 @@ const Demos = () => {
   return (
     <DemosStyle id="demos">
       <Container>
-        <Text as="h2" size={9} css={{ textAlign: 'center' }}>
+        <Text as="h2" size={9}  css={{ textAlign: 'center', marginBottom: '$5' }}>
           Demos
         </Text>
         <Text

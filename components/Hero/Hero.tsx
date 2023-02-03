@@ -47,7 +47,7 @@ const Hero = () => {
               as='a'
               variant='outline'
               size={2}
-              href='https://aimstack.io/aim-3-10-release-catboost-integration/'
+              href='/blog/aim-3-15-—-callbacks-logging-and-notifications-line-chart-legends-experiment-page-audios-explorer'
               target='_blank'
             >
               Aim release <strong>{release}</strong>

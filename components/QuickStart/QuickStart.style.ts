@@ -52,6 +52,11 @@ const CodeBlockStyle = styled('div', {
 
 const HighlightWrapper = styled('div', {
   position: 'relative',
+  width: '500px',
+
+  '@bp0': {
+    width: 'unset',
+  },
 
   '&.light': {
     '.hljs': {
