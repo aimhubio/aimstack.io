@@ -23,11 +23,9 @@ Here is what’s new:
 
 ## Notes on the training runs
 
-
-
 Now there is an ability to add rich metadata edit (similar to notion) over the runs. It’s been a highly requested feature to be able to leave relevant code, result-related notes, next steps etc on the runs.
 
-![](https://aimstack.io/wp-content/uploads/2022/05/notes-on-the-training-runs.png)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ghbd3OrbVatbwSwnwpIm-A.png)
 
 ## Upgrade to Pytorch Lightning 1.6
 
