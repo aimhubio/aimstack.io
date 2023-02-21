@@ -5,7 +5,7 @@ import {
   TwitterShareButton,
   FacebookShareButton,
   RedditShareButton,
-  LinkedinShareButton
+  LinkedinShareButton,
 } from 'next-share';
 import { Text, Container, Flex, InnerHTML } from 'styles/foundations';
 import {
@@ -14,7 +14,7 @@ import {
   PostNavigation,
   Prev,
   Next,
-  ShareSocial
+  ShareSocial,
 } from 'styles/pages/Blog.style';
 import { formattedDate } from 'utils';
 
@@ -30,7 +30,7 @@ export default function PostPage({ post, posts }) {
     return object.slug === post.slug;
   });
 
-  const url = `${SITE_URL}/blog/${post.slug}`
+  const url = `${SITE_URL}/blog/${post.slug}`;
 
   return (
     <BlogSingleStyle>
@@ -42,9 +42,9 @@ export default function PostPage({ post, posts }) {
         path={`blog/${post.slug}`}
       />
       <Container>
-        <Link href='/blog'>
-          <Flex align='center' css={{ marginTop: '$10' }}>
-            <Icon name='back' size={20} />
+        <Link href="/blog">
+          <Flex align="center" css={{ marginTop: '$10' }}>
+            <Icon name="back" size={20} />
             <Text size={3} css={{ fontWeight: '$3' }}>
               Go Back
             </Text>
@@ -52,26 +52,27 @@ export default function PostPage({ post, posts }) {
         </Link>
       </Container>
       <Container css={{ maxWidth: '848px' }}>
-        <Flex
-          gap={5}
-          justify={'between'}
-          css={{marginTop: '$6'}}
-        >
+        <Flex gap={5} justify={'between'} css={{ marginTop: '$6' }}>
           <Category>
             <Link href={`/category/${post.categories[0].toLowerCase()}`}>
-              <Text size={1} css={{display: 'flex', alignItems: 'center'}}>
-                <Icon name='folder' size={14} />
+              <Text size={1} css={{ display: 'flex', alignItems: 'center' }}>
+                <Icon name="folder" size={14} />
                 {post.categories[0]}
               </Text>
             </Link>
           </Category>
-          <Flex gap={2} align='center'>
-            <Icon name='clock' size={14} />
+          <Flex gap={2} align="center">
+            <Icon name="clock" size={14} />
             <Text size={1}>{formattedDate(post.date)}</Text>
           </Flex>
         </Flex>
 
-        <Text as='h1' size={7} className='title' css={{ my: '$6', fontWeight: '$4' }}>
+        <Text
+          as="h1"
+          size={7}
+          className="title"
+          css={{ my: '$6', fontWeight: '$4' }}
+        >
           {post.title}
         </Text>
       </Container>
@@ -79,44 +80,45 @@ export default function PostPage({ post, posts }) {
         <ImageWrapper>
           <Image
             src={post.image}
-            className='card-img-top'
+            className="card-img-top"
             alt={post.title}
             title={post.title}
-            layout='fill'
-            objectFit='contain'
+            style={{ objectFit: 'contain' }}
+            fill
           />
         </ImageWrapper>
       </Container>
       <Container css={{ maxWidth: '848px' }}>
-        <InnerHTML className='blog-inner'>
-          <Markdown>
+        <InnerHTML className="blog-inner">
+          <Markdown
+            options={{
+              overrides: {
+                img: {
+                  component: Image,
+                  props: {
+                    fill: true,
+                    style: { objectFit: 'contain' },
+                    className: 'blog-image',
+                  },
+                },
+              },
+            }}
+          >
             {post.body.raw}
           </Markdown>
         </InnerHTML>
         <ShareSocial>
-          <TwitterShareButton
-            url={url}
-            title={post.title}
-          >
-            <Icon size={16} name='twitter' />
+          <TwitterShareButton url={url} title={post.title}>
+            <Icon size={16} name="twitter" />
           </TwitterShareButton>
-          <LinkedinShareButton
-            url={url}
-            title={post.title}
-          >
-            <Icon size={16} name='linkedIn' />
+          <LinkedinShareButton url={url} title={post.title}>
+            <Icon size={16} name="linkedIn" />
           </LinkedinShareButton>
-          <FacebookShareButton
-            url={url}
-            title={post.title}
-          >
-            <Icon size={16} name='fb' />
+          <FacebookShareButton url={url} title={post.title}>
+            <Icon size={16} name="fb" />
           </FacebookShareButton>
-          <RedditShareButton
-            url={url}
-            title={post.title}
-          >
-            <Icon size={16} name='reddit' />
+          <RedditShareButton url={url} title={post.title}>
+            <Icon size={16} name="reddit" />
           </RedditShareButton>
         </ShareSocial>
       </Container>
@@ -127,17 +129,22 @@ export default function PostPage({ post, posts }) {
             <Prev>
               {!!index && (
                 <Link href={`/blog/${posts[index - 1]?.slug}`}>
-                  <Flex align='center'>
-                    <Icon name='chevron-left' />
+                  <Flex align="center">
+                    <Icon name="chevron-left" />
                     <Text
-                      className='chevron-text'
+                      className="chevron-text"
                       size={1}
                       css={{ fontWeight: '$3' }}
                     >
                       PREVIOUS POST
                     </Text>
                   </Flex>
-                  <Text className='text' size={1} lineClamp css={{ marginTop: '$3', $$lineClamp: 2 }}>
+                  <Text
+                    className="text"
+                    size={1}
+                    lineClamp
+                    css={{ marginTop: '$3', $$lineClamp: 2 }}
+                  >
                     {posts[index - 1]?.title}
                   </Text>
                 </Link>
@@ -146,20 +153,22 @@ export default function PostPage({ post, posts }) {
             <Next>
               {index < posts.length - 1 && (
                 <Link href={`/blog/${posts[index + 1]?.slug}`}>
-                  <Flex
-                    align='center'
-                    justify='end'
-                  >
+                  <Flex align="center" justify="end">
                     <Text
-                      className='chevron-text'
+                      className="chevron-text"
                       size={1}
                       css={{ fontWeight: '$3' }}
                     >
                       NEXT POST
                     </Text>
-                    <Icon name='chevron-right' />
+                    <Icon name="chevron-right" />
                   </Flex>
-                  <Text className='text' size={1} lineClamp css={{ marginTop: '$3', $$lineClamp: 2 }}>
+                  <Text
+                    className="text"
+                    size={1}
+                    lineClamp
+                    css={{ marginTop: '$3', $$lineClamp: 2 }}
+                  >
                     {posts[index + 1]?.title}
                   </Text>
                 </Link>
@@ -183,7 +192,7 @@ export async function getStaticPaths() {
 
   return {
     paths: publish,
-    fallback: false
+    fallback: false,
   };
 }
 
