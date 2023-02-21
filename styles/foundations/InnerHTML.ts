@@ -13,6 +13,9 @@ export const InnerHTML = styled('div', {
     'p, ol, ul, a': {
       fontFamily: '$Lora',
     },
+    '.blog-image': {
+      position: 'static !important',
+    },
   },
 
   h1: {
@@ -43,14 +46,13 @@ export const InnerHTML = styled('div', {
   p: {
     marginBottom: '$5',
     fontSize: '$4',
-    color: '$black800'
+    color: '$black800',
   },
 
   'ol, ul': {
     marginBottom: '$5',
     paddingLeft: '$10',
     fontSize: '$3',
-
 
     li: {
       '>ul': {
@@ -66,7 +68,7 @@ export const InnerHTML = styled('div', {
 
     ':has(input)': {
       listStyleType: 'none',
-    }
+    },
   },
 
   a: {
@@ -116,17 +118,17 @@ export const InnerHTML = styled('div', {
   },
 
   table: {
-    marginBottom: '$4'
+    marginBottom: '$4',
   },
   'table, th, td': {
     border: '1px solid $grey',
   },
   'th, td': {
-    padding: '6px 13px'
+    padding: '6px 13px',
   },
   iframe: {
-    maxWidth: '100%'
-  }
+    maxWidth: '100%',
+  },
 });
 
 export default InnerHTML;
