@@ -5,7 +5,7 @@ categories:
 date: 2022-02-10T16:15:32.942Z
 title: Aim 3.5 — TensorBoard logs support, Matplotlib integration & System
   Params logging
-image: https://aimstack.io/wp-content/uploads/2022/02/1_8xQnlTBk3BmsoMgsaE_0oQ.png
+image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*8xQnlTBk3BmsoMgsaE_0oQ.png
 description: "Hey team, Aim 3.5 featuring TensorBoard logs support is now
   available!! We are on a mission to democratize MLOps tools. "
 draft: false
@@ -68,7 +68,7 @@ Starting Aim 3.5 you can also track [Matplotlib](https://matplotlib.org/) figu
 
 Now you can track all such figures on Aim (both as Matplotlib figure and as an image). When tracking as an image, you can query and compare them too at scale on the [Images Explorer.](https://aimstack.io/blog/new-releases/aim3-1-images-tracker-and-images-explorer/)
 
-![](https://aimstack.io/wp-content/uploads/2022/02/images-explorer.png)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*zYdPka8XdPLAOxLdITESAw.png)
 
 [Here are the docs for more details](https://aimstack.readthedocs.io/en/latest/guides/basic_aim_matplotlib.html).
 
@@ -80,15 +80,12 @@ This will allow to easily move your best runs from a draft scratch project to yo
 
 ```
 im mv --destination /new/path/to/.aim <my_run_hash_1> ...
-
 ```
 
 \
 For more info, check the runs subcommand docs [here](https://aimstack.readthedocs.io/en/latest/refs/cli.html#runs).
 
 ## Learn more
-
-
 
 [Aim is on a mission to democratize AI dev tools.](https://aimstack.readthedocs.io/en/latest/overview.html)
 
