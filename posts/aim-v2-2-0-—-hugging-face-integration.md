@@ -4,7 +4,7 @@ categories:
   - New Releases
 date: 2021-03-24T13:20:24.937Z
 title: Aim v2.2.0 — Hugging Face integration
-image: https://aimstack.io/wp-content/uploads/2022/02/HF.png
+image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*MqbllMOE307ZvLLuH0MhvA.png
 description: Aim 2.2.0 featuring Hugging Face integration is out! Thanks to the
   incredible Aim community for the feedback and support on building democratized
   open-source AI dev tools.
@@ -47,41 +47,33 @@ When dealing with lots of experiments some metrics may need hide (while still be
 
 A toggle is now available both for each metric/row as well as for global on/off. Check out the demo below:
 
-![](https://aimstack.io/wp-content/uploads/2022/02/demo.gif "Hide individual metrics as well as collectively")
+![](https://miro.medium.com/v2/resize:fit:1400/1*yZAWw55lUWVCa35zptdCrA.gif "Hide individual metrics as well as collectively")
 
 ## Column resize
 
-
-
 With lots of params tracked, some of them are too wide for table and take over the whole screen real estate. Column resize will allow to fully control data width on the table. Resize is available both on Explore and Dashboard tables.Here is a quick demo:
 
-![](https://aimstack.io/wp-content/uploads/2022/02/demo2.gif "Drag column edges back-and-forth to resize")
+![](https://miro.medium.com/v2/resize:fit:1400/1*KFUs6pmpqOCVhfdWMO6CVg.gif "Drag column edges back-and-forth to resize")
 
 ## Hide columns with similar values
-
-
 
 More often than not params have lots of repetition. Especially when tracking 100s of them. In that case the explore table becomes super-noisy.
 
 This feature allows showing only the relevant info. This has been certainly the missing piece of the column management that many had requested. Here is a quick demo:
 
-![](https://aimstack.io/wp-content/uploads/2022/02/demo3.gif "Leave only different columns with a button click, if needed customize afterwards")
+![](https://miro.medium.com/v2/resize:fit:1400/1*klN4dR6T8nSHLqyvqIUjOg.gif "Leave only different columns with a button click, if needed customize afterwards")
 
 ## Logscale
 
-
-
 One of the must-have features that we hadn’t had a chance to work on. Finally it’s available!!
 
-![](https://aimstack.io/wp-content/uploads/2022/02/demo4.gif "log-scale on Aim")
+![](https://miro.medium.com/v2/resize:fit:1400/1*cin-2u7a14bj9fB46WmZJw.gif "log-scale on Aim")
 
 ## New methods for aggregation
 
-
-
 Now you can select different types of aggregations as well as whether to see the whole area or just the aggregated lines.
 
-![](https://aimstack.io/wp-content/uploads/2022/02/demo5.gif)
+![](https://miro.medium.com/v2/resize:fit:1400/1*xfp0OtVsz6s4vhIdQ1nLIw.gif)
 
 ## Learn More
 
