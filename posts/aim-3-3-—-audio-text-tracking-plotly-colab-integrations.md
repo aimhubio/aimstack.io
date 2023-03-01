@@ -4,7 +4,7 @@ categories:
   - New Releases
 date: 2022-01-13T15:33:59.865Z
 title: Aim 3.3 — Audio & Text tracking, Plotly & Colab integrations
-image: https://aimstack.io/wp-content/uploads/2021/08/aim-3.3.png
+image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*300ZXHcgylKBit_O2KDeMA.png
 description: "Hey community, Aim 3.3 is now available! 😊 We are on a mission to
   democratize AI dev tools.  "
 draft: false
@@ -26,13 +26,9 @@ New Demo: [play.aimstack.io:10004](http://play.aimstack.io:10004/runs/d9e89aa78
 
 Demo Code: [github.com/osoblanco/FastSpeech2](https://github.com/osoblanco/FastSpeech2/blob/master/train.py)
 
-
-
 Special thanks to Erik Arakelyan (osoblanco), Krystian Pavzkowski (krstp), Flaviu Vadan, SSamDav and AminSlk for their contributions and feedback.
 
 ## Audio tracking and exploration
-
-
 
 Now you can track audio files with Aim during your speech-to-text or other audio-involving experiments.
 
@@ -53,12 +49,11 @@ for step in range(1000):
             'subset': 'train',
         },
     )
-
 ```
 
 Here is how it looks like on the UI.
 
-![](https://aimstack.io/wp-content/uploads/2022/02/1_LkeFigHPnQM1drADXJ3yZQ-1.gif)
+![](https://miro.medium.com/v2/resize:fit:1400/1*LkeFigHPnQM1drADXJ3yZQ.gif)
 
 ## **Text tracking and visualization**
 
@@ -85,7 +80,7 @@ for step in range(1000):
 
 This is the end result on the UI.
 
-![](https://aimstack.io/wp-content/uploads/2022/02/1_nkqUz9DecxaMmJoCUe_8Rw.gif "Training info tracked as a text")
+![](https://miro.medium.com/v2/resize:fit:1400/1*nkqUz9DecxaMmJoCUe_8Rw.gif "Training info tracked as a text")
 
 ## Colab integration
 
@@ -99,11 +94,9 @@ Here is an example [colab to get started with](https://colab.research.google.co
 
 So this is how it looks on your browser:
 
-![](https://aimstack.io/wp-content/uploads/2021/08/Run-Aim.gif)
+![](https://miro.medium.com/v2/resize:fit:1400/1*SjYF_Kq4WzWOodVzsjemvA.gif)
 
 ## Plotly integration
-
-
 
 Now you can track your custom plotly charts and visualize them on Aim with full native plotly interactive capabilities baked in.
 
@@ -126,7 +119,7 @@ for step in range(1000):
 
 The end-result on the Aim Web UI.
 
-![](https://aimstack.io/wp-content/uploads/2022/02/1_8xn3PH_Hzk6fotyZQqy-AQ.gif)
+![](https://miro.medium.com/v2/resize:fit:1400/1*8xn3PH_Hzk6fotyZQqy-AQ.gif)
 
 ## Images visualization on run details page
 
@@ -134,11 +127,9 @@ As we had launched the images tracking and visualization in[ 3.1](https://aimst
 
 Here is how it looks on the UI
 
-![](https://aimstack.io/wp-content/uploads/2022/02/1_jnUogPgbzwX6GOmDaXHKMg.gif)
+![](https://miro.medium.com/v2/resize:fit:1400/1*jnUogPgbzwX6GOmDaXHKMg.gif)
 
 ## Learn More
-
-
 
 [Aim is on a mission to democratize AI dev tools.](https://aimstack.readthedocs.io/en/latest/overview.html)
 
