@@ -4,7 +4,7 @@ categories:
   - New Releases
 date: 2021-11-25T14:57:05.232Z
 title: Aim 3.1 — Images Tracker and Images Explorer
-image: https://aimstack.io/wp-content/uploads/2021/08/aim-scaled.jpeg
+image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*3IkmtAOLGy-e3eJneuv2bA.png
 description: Excited to share with you the Aim 3.1! 😊 A huge milestone on our
   journey towards democratizing AI dev tools. Thanks to the awesome Aim
   community
@@ -45,11 +45,11 @@ On Images Explorer you can filter and group by the images all the params availab
 
 Here is a quick promo video of what it can do. The rest of the details can be found in the docs[ here](https://aimstack.readthedocs.io/en/latest/ui/pages/explorers.html).
 
-![](https://aimstack.io/wp-content/uploads/2021/08/1_3IkmtAOLGy-e3eJneuv2bA.png)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*3IkmtAOLGy-e3eJneuv2bA.png)
 
 A quick demo video.
 
-<https://www.youtube.com/watch?v=4mtUFV8yG_o&feature=youtu.be>
+![](https://youtu.be/4mtUFV8yG_o)
 
 The Images view on the single run page is coming soon …
 
@@ -57,7 +57,7 @@ The Images view on the single run page is coming soon …
 
 One of the regressions from the Aim 2.x to [3.0.0](https://aimstack.io/aim-foundations-why-we-re-building-a-tensorboard-alternative/) was the ability to navigate between the runs of the same experiment from the single run page.
 
-![](https://aimstack.io/wp-content/uploads/2021/08/111.png)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*63UGGl2EDquqGHIY03VpQQ.png)
 
 We have added that back as the top-most dropdown with the list of all experiments and their corresponding runs for easy navigation.
 
@@ -71,7 +71,7 @@ Two groups of performance improvements have been made— on the UI and on the SD
 
 The ability to smoothly navigate through metrics and be able to interact with a table is surely the ultimate experience we aim to provide.
 
-We are really proud of our craft and aim to make the best possible usage experience for the experiment comparison problem — and this is a key step towards it. 
+We are really proud of our craft and aim to make the best possible usage experience for the experiment comparison problem — and this is a key step towards  it. 🍻
 
 ### **Storage performance tests**
 
