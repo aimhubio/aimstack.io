@@ -25,9 +25,33 @@ Here is how to do that on [Aim](https://github.com/aimhubio/aim)
 
 # Using context to track for different subsets?
 
+
+
 Use the [aim.track](https://github.com/aimhubio/aim#track) context arguments to pass additional information about the metrics. All context parameters can be used to query, group and do other operations on top of the metrics.
 
-![](<script src="https://gist.github.com/SGevorg/e08524b3538d3f71d14bf1857a7bc6e9.js"></script> "Here is how it looks like on the code")
+```
+import aim
+
+# train loop
+for epoch in range(num_epochs):
+  for i, (images, labels) in enumerate(train_loader):
+    if i % 30 == 0:
+      aim.track(loss.item(), name='loss', epoch=epoch, subset='train')
+      aim.track(acc.item(), name='accuracy', epoch=epoch, subset='train')
+    
+  # calculate validation metrics at the end of each epoch
+  # ...
+  aim.track(loss.item(), name='loss', epoch=epoch, subset='val')
+  aim.track(acc.item(), name='acc', epoch=epoch, subset='val')
+  # ...
+  
+  # calculate test metrics 
+  # ...
+  aim.track(loss.item(), name='loss', subset='test')
+  aim.track(acc.item(), name='loss', subset='test')
+   
+  
+```
 
 Once the training is ran, execute `aim up` in your terminal and start the Aim UI.
 
@@ -55,7 +79,7 @@ Not it’s easy and straightforward to simultaneously compare both 4 metrics and
 
 Here is a full summary video on how to do it on the UI.
 
-![](https://www.youtube.com/watch?v=DGI8S7SUfEk)
+![](https://youtu.be/jPNZ7JVkA-c)
 
 # Learn More
 
