@@ -4,7 +4,7 @@ categories:
   - Tutorials
 date: 2021-05-17T14:12:33.016Z
 title: An end-to-end example of Aim logger used with XGBoost library
-image: https://aimstack.io/wp-content/uploads/2022/02/xgboost.png
+image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*R0oLJAp9haSFzb92CSSyAg.png
 description: " Thanks to the community for feedback and support on our journey
   towards democratizing MLOps tools. Check out […]  Read More 122  0
   XGBoost  Tutorials An end-to-end example of Aim logger used… What is Aim? Aim
@@ -87,7 +87,7 @@ As you can see on line 49, AimCallback is imported from `aim.xgboost` and pa
 
 After you run the experiment and the `aim up` command in the `aim_logs`directory, Aim UI will be running. When first opened, the dashboard page will come up.
 
-![](https://aimstack.io/wp-content/uploads/2021/05/dashboard.png "Aim UI dashboard page")
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*3Sli50uagUeSumna_K0Aow.png "Aim UI dashboard page")
 
 To explore the run, we should:
 
@@ -97,14 +97,14 @@ To explore the run, we should:
 
 For example, the gif below illustrates the steps above.
 
-![](https://aimstack.io/wp-content/uploads/2021/05/1.gif)
+![](https://miro.medium.com/v2/resize:fit:1400/1*l1b8Fz49JItkl0aSHzhQfA.gif)
 
 \
  So this is what the final result looks like.
 
-![](https://aimstack.io/wp-content/uploads/2021/05/2.png)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*rVUZa089vNTRvpiZ5okWag.png)
 
-In short, we can easily analyze the runs and the system usage.
+As easy as that, we can analyze the runs and the system usage.
 
 ## Learn More
 
