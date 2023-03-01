@@ -4,7 +4,7 @@ categories:
   - New Releases
 date: 2021-06-24T14:25:34.071Z
 title: Aim v2.6.0 — Docker requirement removed and Metric as x-axis
-image: https://aimstack.io/wp-content/uploads/2021/06/2.6.0.png
+image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*W8Nw162Czv6_lzfQeh2m9A.png
 description: Before and after Aim v2.5.0
 draft: false
 ---
@@ -16,7 +16,7 @@ For instance in the quick demo below, we are looking at a Neural Machine Transla
 
 Just plotting them besides each other sometimes isn’t enough to see how they correlate. In this case we use `loss` as the x-axis to directly see the correlation between the `loss`and the`bleu` metrics for two groups of runs ( `max_k==3`and `max_k == 1`).
 
-![](https://aimstack.io/wp-content/uploads/2022/02/1_Y0wAL9nZ7IhgLOUr-cCRRQ.gif "Demo for metric as alternative x-axis")
+![](https://miro.medium.com/v2/resize:fit:1400/1*Y0wAL9nZ7IhgLOUr-cCRRQ.gif "Demo for metric as alternative x-axis")
 
 Using a different metric as the x-axis helps to see the correlation between two metrics of training runs better.
 
