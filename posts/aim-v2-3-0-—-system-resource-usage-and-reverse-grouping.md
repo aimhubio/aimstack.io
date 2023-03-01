@@ -18,43 +18,35 @@ Below are the highlight features of the update. Find the full list of changes [
 
 ## System Resource Usage
 
-
-
 Now you can use automatic tracking of your system resources (GPU, CPU, Memory, etc). In order to disable system tracking, just initialize the session with `system_tracking_interval==0`.
 
 Once you run the training, you will see the following. Here is a demo:
 
-![](https://aimstack.io/wp-content/uploads/2022/02/demo-1.gif "Aim automatic system resource tracking demo")
+![](https://miro.medium.com/v2/resize:fit:1400/1*pOMxDdOpUDIOedrNIM53pQ.gif "Aim automatic system resource tracking demo")
 
 Of course you can also [query all those new metrics](https://aimstack.io/wp-admin/post.php?post=706&action=edit) in the Explore page and compare, group, aggregate with the rest of the metrics!
 
 ## Reverse grouping (“against” the param)
 
-
-
 As much as grouping is needed to divide pile of metrics by param values into manageable clusters for comparison, there are cases when the metrics need to be divided by everything BUT one param (yes, I am looking at you seed!). We have called it a Reverse Grouping. Here is how it works:
 
-![](https://aimstack.io/wp-content/uploads/2021/04/reverse-grouping-1024x566.gif "Aim Reverse grouping demo")
+![](https://miro.medium.com/v2/resize:fit:1400/1*txmn1LOXJ7nGift0T82lng.gif "Aim Reverse grouping demo")
 
 Use the toggle next to switch between grouping modes.
 
 ## Line Chart Smoothing
 
-
-
 Now you can apply smoothing on metrics. Here is how it works:
 
-![](https://aimstack.io/wp-content/uploads/2022/02/metric-smoothing.gif "Aim metric smoothing")
+![](https://miro.medium.com/v2/resize:fit:1400/1*MgNuAaH6gzm7u-H2QUh15g.gif "Aim metric smoothing")
 
 There are two type of smoothing options available: `Exponential Moving Average` and `Central Moving Average`. Further info of [how](https://en.wikipedia.org/wiki/Moving_average) it’s calculated.
 
 ## New aggregation modes
 
-
-
 We have additionally added two more aggregation modes: `standard error` and `standard deviation` . Here is how it works:
 
-![](https://aimstack.io/wp-content/uploads/2022/02/aggr-modes.gif)
+![](https://miro.medium.com/v2/resize:fit:1400/1*LS17WlLey5aJfMyJbtgtBg.gif)
 
 ## Learn More
 
