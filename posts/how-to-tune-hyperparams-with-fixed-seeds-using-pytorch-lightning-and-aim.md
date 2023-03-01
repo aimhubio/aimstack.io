@@ -25,8 +25,6 @@ Later in this tutorial, I will show you how to effectively fix a seed for tuning
 
 ## **How to fix the seed in PyTorch Lightning**
 
-
-
 Fixing the seed for all imported modules is not as easy as it may seem. The way to fix the random seed for vanilla, non-framework code is to use standard Python`random.seed(seed)`, but it is not enough for PL.
 
 Pytorch Lightning, like other frameworks, uses its own generated seeds. There are several ways to fix the seed manually. For PL, we use `pl.seed_everything(seed)` . See the docs [here](https://pytorch-lightning.readthedocs.io/en/0.7.6/api/pytorch_lightning.trainer.seed.html).
@@ -34,8 +32,6 @@ Pytorch Lightning, like other frameworks, uses its own generated seeds. There ar
 > Note: in other libraries you would use something like: `np.random.seed()` or `torch.manual_seed()` 
 
 ## **Implementation**
-
-
 
 Find the full code for this and other tutorials [here](https://github.com/aimhubio/tutorials/tree/main/fixed-seed).
 
@@ -159,8 +155,6 @@ if __name__ == "__main__":
                 # training the model
 ```
 
-
-
 ## Analyzing the Training Runs
 
 After each set of training runs you need to analyze the results/logs. Use Aim to group the runs by metrics/hyper-parameters (this can be done both on Explore and Dashboard after [Aim 1.3.5 release](https://aimstack.io/mlops-tools-aim-1-3-5-activity-view-and-x-axis-alignment/)) and have multiple charts of different metrics on the same screen.
@@ -174,11 +168,13 @@ Do the following steps to see the different effects of the optimizers
 
 Here is how it looks on Aim:
 
-![](https://aimstack.io/wp-content/uploads/2022/02/10.gif)
-
-![](https://aimstack.io/wp-content/uploads/2022/02/11.png)
+![](https://miro.medium.com/v2/resize:fit:1400/1*cKgeMrtWMPyz4tm801DQXQ.gif)
 
 
+
+
+
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*UPKt9pkOD5weJVlHQ8j1sA.png)
 
 From the final result it is clear that the SGD (broken lines) optimizer has achieved higher accuracy and lower loss during the training.
 
@@ -186,14 +182,12 @@ If you apply the same settings to the learning rate, this is the result:
 
 ## For the next step to analyze how learning rate affects the experiments, do the following steps:
 
-
-
 * Remove both previous groupings
 * Group by color by learning rate
 
-![](https://aimstack.io/wp-content/uploads/2022/02/12.gif)
+![](https://miro.medium.com/v2/resize:fit:1400/1*RmwmBReVr378QfA-VHx0yQ.gif)
 
-![](https://aimstack.io/wp-content/uploads/2022/02/13.png)
+![](https://miro.medium.com/v2/resize:fit:1400/1*RmwmBReVr378QfA-VHx0yQ.gif)
 
 As you can see, the purple lines (lr = 0.01) represent significantly lower loss and higher accuracy.
 
