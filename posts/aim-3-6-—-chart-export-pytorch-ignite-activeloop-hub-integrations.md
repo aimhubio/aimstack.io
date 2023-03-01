@@ -4,7 +4,7 @@ categories:
   - New Releases
 date: 2022-02-24T16:27:07.254Z
 title: Aim 3.6 — Chart export, PyTorch Ignite & Activeloop Hub integrations
-image: https://aimstack.io/wp-content/uploads/2022/02/3.6.0-banner.png
+image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*4-4kxMg5kF4ntVhW5889Xw.png
 description: Hey team, Aim 3.6 featuring Mlflow logs converter, Chart export,
   PyTorch Ignite & Activeloop Hub integrations is now available!
 draft: false
@@ -29,7 +29,7 @@ Hey awesome Aim community, sorry for shipping [this feature](https://github.com
 
 Now the images export is here! You can export charts as JPEG, PNG and SVG so you can include the awesome Aim visuals in your reports and research papers.
 
-![](https://aimstack.io/wp-content/uploads/2022/02/3.6.png)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Z_0-dHK5OoYjUAWhyKfBWA.png)
 
 You can control the width, height, the format of the downloadable image.
 
@@ -38,8 +38,6 @@ You can control the width, height, the format of the downloadable image.
 Would still love to hear feedback on how would you like us to tune this feature.
 
 ## MLflow to Aim logs converter
-
-
 
 Its been also [requested](https://github.com/aimhubio/aim/issues/409) across the board by many users. Now you can convert your MLflow logs to Aim so you can compare all of them regardless on where it was tracked.
 
@@ -52,7 +50,7 @@ $ aim convert mlflow --tracking_uri 'file:///Users/aim_user/mlruns'
 
 Besides the metrics, You can convert Images, Texts and Sound/Audios. More on that in [here](https://aimstack.readthedocs.io/en/latest/quick_start/convert_data.html#show-mlflow-logs-in-aim).
 
-![](https://aimstack.io/wp-content/uploads/2022/02/mlflow.png)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*idkzKK4Ua8N3ATiokIx_rQ.png)
 
 ## Pytorch Ignite integration
 
@@ -82,11 +80,9 @@ aim_logger.attach_output_handler(
 )
 ```
 
-![](https://aimstack.io/wp-content/uploads/2022/02/pytorch.png)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*TKznHJq6W2XxmzyYpF17og.png)
 
 ## Activeloop Hub integration
-
-
 
 Excited to share that thanks to [an integration with Activeloop](https://activeloop.ai/), starting Aim 3.6 you can add your [Hub dataset](https://github.com/activeloopai/Hub) info as a run param and use them to search and compare your runs across all Explorers.
 
@@ -117,7 +113,7 @@ run.hub_ds.tensors.compression_type
 
 Hub is an awesome tool to build, manage, query & visualize datasets for deep learning, as well as stream data real-time to PyTorch/TensorFlow & version-control it. Check out the [Hub docs](https://docs.activeloop.ai/).
 
-![](https://aimstack.io/wp-content/uploads/2022/02/hub.png)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*8XlJrxPe3g9RYdqkvMaVUg.png)
 
 Wildcard support for the \`aim runs\` command
 
@@ -139,4 +135,4 @@ We have been incredibly lucky to get help and contributions from the amazing Aim
 
 Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](https://join.slack.com/t/aimstack/shared_invite/zt-193hk43nr-vmi7zQkLwoxQXn8LW9CQWQ), share your feedback, open issues for new features, bugs.
 
-And don’t forget to leave [Aim](http://github.com/aimhubio/aim) a star on GitHub for support.
+And don’t forget to leave [Aim](http://github.com/aimhubio/aim) a star on GitHub for support 🙌.
