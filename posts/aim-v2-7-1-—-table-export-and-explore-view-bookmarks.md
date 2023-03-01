@@ -4,7 +4,7 @@ categories:
   - New Releases
 date: 2021-07-15T14:31:32.317Z
 title: Aim v2.7.1 — Table export and Explore view bookmarks
-image: https://aimstack.io/wp-content/uploads/2021/07/v2.7.1.gif
+image: https://miro.medium.com/v2/resize:fit:1400/1*Xp8sY5HA6DUjRPXVAboB3A.gif
 description: Aim v2.7.1 is out! We are on a journey to democratize MLOps tools.
   Thanks to the community for continuous support and feedback! Check out the
   updated
@@ -20,7 +20,7 @@ Below are the two main highlights of Aim v2.7.1.
 
 Now you can export both tables from Explore and Dashboard to a CSV file. Afterwards feel free to use the exported CSV file to import in your spreadsheets for reports or just import in your notebook and explore further in other ways (e.g. with [Pandas](https://pandas.pydata.org/)) for your MLOps needs.
 
-![](https://aimstack.io/wp-content/uploads/2021/07/csv-export.gif "Exporting CSV from the Explore table")
+![](https://miro.medium.com/v2/resize:fit:1400/1*Xp8sY5HA6DUjRPXVAboB3A.gif "Exporting CSV from the Explore table")
 
 ## Bookmark/Save the Explore State \[experimental]
 
@@ -28,7 +28,7 @@ This new feature helps to save/bookmark the Explore state for future access. The
 
 In the future [releases](https://aimstack.io/aim-foundations-why-we-re-building-a-tensorboard-alternative/), we will build on top of this feature to potentially add notes, fully manage and share them. *For now, this feature is in experimental mode*. Please feel free to share more feedback and how we can improve its experience.
 
-![](https://aimstack.io/wp-content/uploads/2021/07/bookmark.gif "Use bookmarks to save important explore states")
+![](https://miro.medium.com/v2/resize:fit:1400/1*U5a36lDx7-xgSONKh1-D0A.gif "Use bookmarks to save important explore states")
 
 ## Learn More
 
