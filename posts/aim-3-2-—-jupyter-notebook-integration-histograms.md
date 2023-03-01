@@ -4,7 +4,7 @@ categories:
   - New Releases
 date: 2021-12-08T15:09:19.264Z
 title: Aim 3.2 — Jupyter Notebook integration & Histograms
-image: https://aimstack.io/wp-content/uploads/2021/08/3.2.0.png
+image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*fQCHweFLuEHppnFsQOaUnw.png
 description: "Aim 3.2 featuring Jupyter notebook integration is now available!
   😊 We are on a mission to democratize AI dev tools. "
 draft: false
@@ -22,14 +22,12 @@ Within a week after the [v3.1](https://aimstack.io/aim3-1-images-tracker-and-im
 
 ## Aim & Jupyter notebook
 
-
-
 Now you can use Aim fully from your Jupyter notebook. We have built an Aim Jupyter notebook extension that comes along with the `aim` package.
 
 You don’t need to install anything other than Aim. Here are the [docs](https://aimstack.readthedocs.io/en/latest/index.html).\
 A quick demo of integrating Aim & Jupyter Notebook::
 
-![](https://aimstack.io/wp-content/uploads/2022/02/1-3.gif "It’s that easy to use Aim on your Jupyter notebook!")
+![](https://miro.medium.com/v2/resize:fit:1400/1*7Xqp7esswOPWZpRoDqSawg.gif "It’s that easy to use Aim on your Jupyter notebook!")
 
 ## Histogram tracking and Visualization
 
@@ -56,27 +54,25 @@ The [demo](http://play.aimstack.io:10003/runs/426032ad2d7e4b0385bc6c51), [docs
 
 And this is how it looks on the UI. Aim lets you visualize the distributions every layer at every tracked step. Super powerful!
 
-![](https://aimstack.io/wp-content/uploads/2022/02/0.gif "Visualize every layer and every tracked step.")
+![](https://miro.medium.com/v2/resize:fit:1400/1*Il1FjcQVpYHyuKHUVAtS0A.gif "Visualize every layer and every tracked step.")
 
 ## Full-size images, images resize and render modes
-
-
 
 Now you can resize the tracked images size using the images resize tool available on the right hand tool-pain on the Images Explorer.
 
 Here is how it works:
 
-![](https://aimstack.io/wp-content/uploads/2022/02/2.gif "Easily resize the queried images")
+![](https://miro.medium.com/v2/resize:fit:1400/1*zYuodUJ1ykDhrFD9rdYC_w.gif "Easily resize the queried images")
 
 We have also enabled smooth and pixelated images render modes. Especially for sensitive type of images, this allows to see the detailed version of the image without any filter etc.
 
-![](https://aimstack.io/wp-content/uploads/2022/02/3.gif "Toggle between pixelated and smooth images render modes")
+![](https://miro.medium.com/v2/resize:fit:1400/1*pTG1Z34twqOOo7x6yoo1YQ.gif "Toggle between pixelated and smooth images render modes")
 
 You can also view full-size images by clicking on the top right corner magnifier on each images.
 
 BTW the smooth / pixelated config also translates to the full-size images.
 
-![](https://aimstack.io/wp-content/uploads/2022/02/4.gif "full-size images: easy!")
+![](https://miro.medium.com/v2/resize:fit:1400/1*qvhjgoBWWCaT0Hm_6eXzOw.gif "full-size images: easy!")
 
 ## Query Language autosuggest editor
 
@@ -86,7 +82,7 @@ Now there is a QL autosuggest on all query inputs on the Aim UI. You will have a
 
 Hopefully this makes it much easier to get started with Aim.Here is a quick demo:
 
-![](https://aimstack.io/wp-content/uploads/2022/02/5.gif)
+![](https://miro.medium.com/v2/resize:fit:1400/1*eHTlgK8CdxpUsWC_edw1rw.gif)
 
 ## Learn More
 
