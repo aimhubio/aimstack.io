@@ -4,8 +4,8 @@ categories:
   - New Releases
 date: 2021-10-22T14:48:48.452Z
 title: Aim’s foundations & why we’re building a Tensorboard alternative
-image: https://aimstack.io/wp-content/uploads/2021/08/3.0.png
-description: The origins of Aim In the fateful summer of 2020, our friend
+image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Bd5FbXnYnB3fbELmRLTPwA.png
+description: The origins of Aim. In the fateful summer of 2020, our friend
   mahnerak – a researcher at a non-profit lab was hitting the limits of
   Tensorboard. He wasn’t
 draft: false
@@ -47,7 +47,7 @@ As a result, the most important changes include:
 
 Enjoy the changes!
 
-![](https://aimstack.io/wp-content/uploads/2021/08/changes.gif)
+![](https://miro.medium.com/v2/resize:fit:1400/1*xbg148dzileheVdOALBMBg.gif)
 
 ## Performance improvements
 
