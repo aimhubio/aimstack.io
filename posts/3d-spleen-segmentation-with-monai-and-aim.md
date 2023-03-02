@@ -138,7 +138,7 @@ track_gradients_dists(model, aim_run)
 
 Distributions can be accessed from the Single Run Page as well.
 
-![]()
+![](/images/dynamic/image-6-.png)
 
 ## ***The curtain falls***
 
