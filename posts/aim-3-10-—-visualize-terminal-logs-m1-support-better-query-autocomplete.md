@@ -4,7 +4,7 @@ categories:
   - New Releases
 date: 2022-05-25T20:49:49.499Z
 title: Aim 3.10 — Visualize terminal logs, M1 support & better query autocomplete
-image: https://aimstack.io/wp-content/uploads/2022/05/Twitter-7.png
+image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*z5HbX-z8qa0ORFDRKArmFw.png
 description: Hey team, Aim 3.10 is now available! We are on a mission to
   democratize AI dev tools.
 draft: false
@@ -40,7 +40,7 @@ aim_run = Run(capture_terminal_logs=False)
 
 Check out more about this feature [in Aim docs](https://aimstack.readthedocs.io/en/latest/using/configure_runs.html?highlight=terminal%20logs#capturing-terminal-logs).
 
-![](https://aimstack.io/wp-content/uploads/2022/05/3.10.png)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*K60XrQq0iH6NlO0NFz44EQ.png)
 
 ## M1 support
 
@@ -48,23 +48,21 @@ Check out more about this feature [in Aim docs](https://aimstack.readthedocs.io
 
 Aim now supports M1 too. Now you can use Aim with [PyTorch](https://pytorch.org/blog/introducing-accelerated-pytorch-training-on-mac/) on Mac to track and deeply compare your experiments.
 
-![](https://aimstack.io/wp-content/uploads/2022/05/m1-support.png)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Mp5LKw55RgE4gnPXC1cWIg.png)
 
 ## Better autocomplete experience
 
-
-
 We have integrated a rich code autocomplete system as the Aim community loves to deeply query their training runs. This has been a highly requested improvement and a huge productivity booster. Expect more improvements here.
 
-![](https://aimstack.io/wp-content/uploads/2022/05/gif10.gif)
+![](https://miro.medium.com/v2/resize:fit:1400/1*vEQnAJSks5YGNCXHllDnNA.gif)
 
 ## Aim citation available
 
 Now you can cite Aim from your paper if you are using Aim to compare your experiments. [The citation file](https://github.com/aimhubio/aim/blob/main/CITATION.cff).
 
-![](https://aimstack.io/wp-content/uploads/2022/05/aim-citation-1-1.png)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*HLHweR2at8tbpHiTkelbfA.png)
 
-[Thanks to the researchers from Meta AI Research for the incentive and initiative.](https://arxiv.org/abs/2205.10770) 
+[Thanks to the researchers from Meta AI Research for the incentive and initiative.](https://arxiv.org/abs/2205.10770)  🙌
 
 ## CatBoost integration
 
