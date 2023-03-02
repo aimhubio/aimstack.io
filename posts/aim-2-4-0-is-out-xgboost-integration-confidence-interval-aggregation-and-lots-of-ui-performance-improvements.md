@@ -5,7 +5,7 @@ categories:
 date: 2021-05-18T13:58:29.035Z
 title: Aim 2.4.0 is out! XGBoost integration, Confidence interval aggregation
   and lots of UI performance improvements!
-image: https://aimstack.io/wp-content/uploads/2022/02/xgboost.png
+image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*R0oLJAp9haSFzb92CSSyAg.png
 description: Aim 2.4.0 is out! XGBoost integration, Confidence interval
   aggregation and lots of UI performance improvements!
 draft: false
@@ -18,21 +18,17 @@ For this release, there have been lots of performance updates and small tweaks t
 
 ## XGBoost Inegration
 
-
-
 To begin with,  `aim.callback` is now available that exports `AimCallback` to be passed to the `xgb.train` as a callback to log the experiments.
 
 Check out this [blogpost](https://aimstack.io/blog/tutorials/an-end-to-end-example-of-aim-logger-used-with-xgboost-library/) for additional details on how to integrate Aim to your XGBoost code.
 
 ## Confidence Interval as the aggregation method
 
-![](https://aimstack.io/wp-content/uploads/2022/02/confidence_interval.png)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*LyjcE9k4-cZGl5g03F3Mjg.png)
 
 Now you can use confidence intervals for aggregation. The community has been requesting this feature, since it completes the list of necessary aggregation methods. As a result, if you have outlier metrics in your group, confidence interval will show logical aggregation and get better comparison of the groups. 
 
 ## Learn More
-
-
 
 [Aim is on a mission to democratize AI dev tools.](https://github.com/aimhubio/aim#democratizing-ai-dev-tools)
 
