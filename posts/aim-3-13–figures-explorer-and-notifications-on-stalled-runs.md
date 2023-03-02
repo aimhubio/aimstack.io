@@ -2,7 +2,7 @@
 author: Gev Soghomonian
 categories:
   - New Releases
-date: 2022-04-24T21:08:50.210Z
+date: 2022-08-24T21:08:50.210Z
 title: Aim 3.13–Figures Explorer and notifications on stalled runs
 image: https://miro.medium.com/max/1400/1*5hUcOciwufupoI4-nBbcyA.webp
 description: "In this blogpost I will share the improvements Aim 3.13. We had
