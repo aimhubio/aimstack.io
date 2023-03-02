@@ -4,7 +4,7 @@ categories:
   - New Releases
 date: 2022-04-04T20:27:53.206Z
 title: Aim 3.8 — DVC integration & Extensible HuggingFace callbacks
-image: https://aimstack.io/wp-content/uploads/2022/04/1_CIfbNRqB72W36j8gooKi4Q.png
+image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*CIfbNRqB72W36j8gooKi4Q.png
 description: "Aim 3.8 featuring extensible HuggingFace trainer callbacks is out
   ! We are on a mission to democratize AI dev tools. "
 draft: false
@@ -30,11 +30,9 @@ Now you can color-code the aggregated metric values on the Runs Explorer. The hi
 
 We are surely going to iterate over this feature. Further feedbacks are welcome!
 
-![](https://aimstack.io/wp-content/uploads/2022/04/1_LOgBqVnIeq3fc_EduNAAfw.png "Aimstack: Color scale of numeric values")
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*LOgBqVnIeq3fc_EduNAAfw.png "Aimstack: Color scale of numeric values")
 
 ## DVC integration
-
-
 
 Now you can track the info about your DVC tracked files and datasets on Aim. With this we are iterating towards easy connection between Aim and DVC so you can connect your tracked artifacts with experiment tracking.
 
@@ -53,8 +51,6 @@ run['dvc_info'] = DvcData(path_to_dvc_repo)
 ```
 
 ## Extensible HuggingFace and XGBoost callbacks
-
-
 
 When using Aim with your favorite frameworks, the metadata is logged through `AimCallback` which is limited as it allows only specific group of logged metrics per framework.
 
