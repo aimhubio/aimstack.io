@@ -4,7 +4,7 @@ categories:
   - Testimonials
 date: 2022-05-24T20:38:42.407Z
 title: How new YerevaNN researchers use Aim to compare 100s of models
-image: https://aimstack.io/wp-content/uploads/2022/05/Medium-2-1.png
+image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*lnmBXL_nhBGxOvjNO56-Rw.png
 description: YerevaNN is a non-profit computer science and mathematics research
   lab based in Yerevan, Armenia. The lab’s main research interests are focused
   around machine learning algorithms […]
@@ -17,8 +17,6 @@ YerevaNN collaborates with USC on DARPA grant projects — focused on low-re
 We traditionally onboard new teammates with a task to reproduce a well-known paper. This allows us to both introduce our internal systems, codebase, resources as well as a great leeway into the problems they are going to focus on as part of their research. This is a story about how Knarik Mheryan has gotten started at YerevaNN and how [Aim](https://github.com/aimhubio/aim) has helped her in the process.
 
 ## The challenges
-
-
 
 ### Model selection for cross-lingual transfer
 
@@ -38,8 +36,6 @@ The dimensionality of these experiments is high. So analyzing several 100 models
 
 ## The solution
 
-
-
 ### Using Params Explorer to compare models
 
 Params explorer allows us to directly compare the models with one view and with a few clicks. We have tracked the F1 scores for all models, languages. Using Aim’s [context](https://aimstack.readthedocs.io/en/latest/understanding/concepts.html?highlight=context#sequence-context) makes it easy to add additional metadata to the metrics (such as lang=”fr”) so there is no need to bake that data into the name. 
@@ -48,7 +44,7 @@ We have selected two hyperparameters of interest and F1 scores of 5 languages of
 
 More importantly, the plot below shows that the best performing model on English data (F1 lang=”en”) certainly doesn’t perform well on German, Spanish, Dutch and Chinese. The red bold curve represents the best model on the English dataset. 
 
-![](https://aimstack.io/wp-content/uploads/2022/06/Figure-1-.png "Figure 1:  Aim’s Params plot for hundreds of fine-tuned models. Each curve corresponds to a single model with some hyperparameters and random seeds. Each vertical axis shows the model’s hyperparameters or the F1 scores for some language (German, Spanish, Dutch, Chinese, English).")
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*jMiTQD1jlsycSLCgPV0hfw.png "Figure 1:  Aim’s Params plot for hundreds of fine-tuned models. Each curve corresponds to a single model with some hyperparameters and random seeds. Each vertical axis shows the model’s hyperparameters or the F1 scores for some language (German, Spanish, Dutch, Chinese, English).")
 
 It took us only a few clicks to see this key insight. 
 
@@ -56,11 +52,7 @@ And this makes a couple of hours of work into something that’s less than a min
 
 ### Qualitative metrics comparison with Metrics Explorer
 
-
-
 #### Catastrophic Forgetting on the best Eng-based model
-
-
 
 In our pursuit of understanding why models behave that way, we have tracked F1 scores across 60 epochs for the model that performs best on the English dataset. So, the Figure 2 below shows the behavior of F1 scores for 5 different languages (German, Spanish, Dutch, Chinese and English).
 
@@ -68,7 +60,7 @@ The red line on Figure 2 represents the evaluation on English data. Therefore, t
 
 Notably, the Chinese (orange) gets worse faster than the other languages. Possibly because there are major linguistic differences between Chinese and the rest of the languages.
 
-![](https://aimstack.io/wp-content/uploads/2022/06/figure-2.png "Figure 2: Visualization of the Catastrophic forgetting phenomenon. Evaluations on 5 languages development datasets for 60 epochs after fine-tuning the model on the English training data. The languages are English (red), Dutch (blue), German (green), Spanish (violet), and Chinese (orange).")
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*jTYunp3onfPgzAorAUed9A.png "Figure 2: Visualization of the Catastrophic forgetting phenomenon. Evaluations on 5 languages development datasets for 60 epochs after fine-tuning the model on the English training data. The languages are English (red), Dutch (blue), German (green), Spanish (violet), and Chinese (orange).")
 
 #### Proposed model selection algorithm analysis
 
@@ -83,23 +75,21 @@ Aim’s [Metric Explorer ](https://aimstack.io/aim3-1-images-tracker-and-image
 
 With Aim we frequently group runs into different charts. In this case we have grouped the metrics into charts by language . This allows us to visualize the fine-tuning with different learning rates per language.
 
-![](https://aimstack.io/wp-content/uploads/2022/06/Figure-3.png "Figure 3: Visualization of the fine-tuning process with different learning rates and random seeds for Spanish, German, Chinese, Dutch and English languages.")
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ab3o77BJ0R8hbEezh7NrcA.png "Figure 3: Visualization of the fine-tuning process with different learning rates and random seeds for Spanish, German, Chinese, Dutch and English languages.")
 
 With one more click, we aggregate runs of the same group (grouped by learning rate through all seeds). The aggregation helps us to see the trends of the F1 metrics collected across epochs. 
 
 From Figure 4 it is clear that all models with very small learning rates (red) barely learn anything in 20 epochs.
 
-![](https://aimstack.io/wp-content/uploads/2022/06/Figure-4.png "Figure 4: Visualization of the fine-tuning process aggregated by learning rates through different random seeds. Lines through highlighted intervals are medians from runs with different seeds. Each chart plots the fine-tuning process for a particular language (Spanish, German, Chinese, Dutch and English)")
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*jiam-hSc66ISC3deKgMoUg.png "Figure 4: Visualization of the fine-tuning process aggregated by learning rates through different random seeds. Lines through highlighted intervals are medians from runs with different seeds. Each chart plots the fine-tuning process for a particular language (Spanish, German, Chinese, Dutch and English)")
 
 ## Learned Model Selection
-
-
 
 In this paper the authors suggest an alternative strategy for model selection named Learned Model Selection (LMS). LMS is a neural network based model that learns to score the compatibility between a fine-tuned model and a target language. According to the paper, this method consistently selects better models than English development data across the 4 target languages.
 
 For this final step we have also calculated the LMS scores for each model and have used Aim Params Explorer to compare the new and old methods for their efficiency. By just selecting the params and metrics we have produced the Figure 5 on Aim. Each highlighted curve in Figure 5 corresponds to one of the model candidates. With the old method (with the English axis) the best candidate F1 on the English axis is 0.699. On the other hand, if we select by the new algorithm (with LMS score axis), the F1 score would be 0.71, which is indeed higher than with the English candidate model.
 
-![](https://aimstack.io/wp-content/uploads/2022/06/Figure-5.png "Figure 5: Visualization of the final process of model selection. The most left axis is the model number (like id) from 0 to 59. ‘F1 lang=”English”‘ is the F1 score on the English development data. ‘F1 lang=”German”‘ is the F1 score on the German test data. ‘LMS score’ is the ranking score provided by LMS, the algorithm proposed in the paper, the higher the better.")
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*G7Jpwdraw_XlSji_GTk2yA.png "Figure 5: Visualization of the final process of model selection. The most left axis is the model number (like id) from 0 to 59. ‘F1 lang=”English”‘ is the F1 score on the English development data. ‘F1 lang=”German”‘ is the F1 score on the German test data. ‘LMS score’ is the ranking score provided by LMS, the algorithm proposed in the paper, the higher the better.")
 
 With [Aim](https://github.com/aimhubio/aim/) our experiments analysis at YerevaNN has become order of magnitude faster due to intuitive, beautiful and fast UI and the Aim explorers. The team at YerevaNN uses Aim on a daily basis.
 
