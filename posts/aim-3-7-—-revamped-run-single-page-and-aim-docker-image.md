@@ -4,7 +4,7 @@ categories:
   - New Releases
 date: 2022-03-16T16:59:53.238Z
 title: Aim 3.7 — Revamped Run Single Page and Aim Docker Image
-image: https://aimstack.io/wp-content/uploads/2022/03/FB-3.png
+image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*INjZ3YZMiIgIc3EhLos_sw.png
 description: Hey team, Aim 3.7 featuring Aim Docker Image is now available! We
   are on a mission to democratize MLOps tools.
 draft: false
@@ -34,7 +34,7 @@ We have created an overview section on the Run Single page to quickly observe th
 * Overview information about your run
 * Tracked reproducibility fields (env and git info, etc)
 
-![](https://aimstack.io/wp-content/uploads/2022/03/3.7.png)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*VsQXh2J_Clq2SE1EDq_ooQ.png)
 
 Aim Docker Image
 
@@ -44,7 +44,7 @@ For the users who are trying to set up Aim on their clusters or server infrastru
 
 The Aim docker container is pre-packaged Aim that can be mounted on `.aim` directory and UI could be ran.
 
-![](https://aimstack.io/wp-content/uploads/2022/03/1_cjSOM1o9Dk4WNHgDEcE64w.png "Aimstack docker image")
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*cjSOM1o9Dk4WNHgDEcE64w.png "Aimstack docker image")
 
 ## Learn More
 
