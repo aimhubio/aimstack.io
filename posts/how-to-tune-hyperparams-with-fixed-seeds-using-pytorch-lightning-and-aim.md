@@ -4,7 +4,7 @@ categories:
   - Tutorials
 date: 2021-03-11T12:46:00.000Z
 title: How to tune hyperparams with fixed seeds using PyTorch Lightning and Aim
-image: https://aimstack.io/wp-content/uploads/2021/03/pytorch.png
+image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*UjdL4A9rAdF2X6C6tEhScw.png
 description: What is a random seed and how is it important? The random seed is a
   number for initializing the pseudorandom number generator. It can have...
 draft: false
@@ -170,10 +170,6 @@ Here is how it looks on Aim:
 
 ![](https://miro.medium.com/v2/resize:fit:1400/1*cKgeMrtWMPyz4tm801DQXQ.gif)
 
-
-
-
-
 ![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*UPKt9pkOD5weJVlHQ8j1sA.png)
 
 From the final result it is clear that the SGD (broken lines) optimizer has achieved higher accuracy and lower loss during the training.
@@ -195,16 +191,14 @@ We showed that in this case, the choice of the optimizer and learning rate is no
 
 On top of this, if we also add grouping by style by optimizer:
 
-![](https://aimstack.io/wp-content/uploads/2022/02/24.gif)
+![](https://miro.medium.com/v2/resize:fit:1400/1*Nrc-Z1aq71y9IO0bh-480Q.gif)
 
-![](https://aimstack.io/wp-content/uploads/2022/02/25.png)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*UjdL4A9rAdF2X6C6tEhScw.png)
 
 Now, it is obvious that the the runs with SGD optimizer and `lr=0.01` (green, broken lines) are the best choices for all the seeds we have tried.
 
 Fixing random seeds is a useful technique that can help step-up your hyper-parameter tuning. This is how to use Aim and PyTorch Lightning to tune hyper-parameters with a fixed seed.
 
 ## Learn More
-
-
 
 If you find Aim useful, support us and [star the project](https://github.com/aimhubio/aim) on GitHub. Join the [Aim community](https://aimstack.slack.com/?redir=%2Fssb%2Fredirect) and share more about your use-cases and how we can improve Aim to suit them.
