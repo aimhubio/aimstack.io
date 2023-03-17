@@ -11,7 +11,7 @@ import { useRouter } from 'next/router';
 export default function Category({ posts }) {
   const router = useRouter();
   const params = router.query;
-  const pathname = '/category/' + router.query.slug;
+  const pathname = '/blog/' + params.category;
   const page = Number(params.page) || 1;
 
   const pickedPosts = posts.map((post) =>
@@ -23,15 +23,16 @@ export default function Category({ posts }) {
       'draft',
       'image',
       'categories',
+      'new-releases',
     ])
   );
-
   const totalPostCount = pageCount(posts.length);
 
   const totalPosts = useCallback(
     () => getTotalPosts(pickedPosts, page),
     [page, pickedPosts]
   );
+
   return (
     <>
       <NextSeo
@@ -54,7 +55,6 @@ export default function Category({ posts }) {
           site_name: 'Aimstack',
         }}
       />
-
       <Container>
         <Text
           as="h1"
@@ -62,7 +62,7 @@ export default function Category({ posts }) {
           className="title"
           css={{ textAlign: 'center', my: '$10' }}
         >
-          Category: {titleCase(router.query.slug)}
+          Category: {titleCase(params.category)}
         </Text>
 
         <BlogList blogList={totalPosts()} />
@@ -83,8 +83,7 @@ export async function getStaticPaths() {
   allPosts.map((post) => {
     if (!!post.draft === false) {
       post.categories?.map((category) => {
-        const slug = slugify(category);
-        paths.push({ params: { slug } });
+        paths.push({ params: { category: slugify(category) } });
       });
     }
   });
@@ -95,19 +94,17 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params: { slug } }) {
+export async function getStaticProps({ params: { category } }) {
   let posts = [];
 
   // get all category posts base on slug
-  const post = allPosts.map((post) => {
+  allPosts.forEach((post) => {
     if (!!post.draft === false) {
-      post.categories?.filter((category) => {
-        const categorySlug = slugify(category);
-        if (categorySlug === slug) {
+      post.categories?.filter((categoryName) => {
+        if (slugify(categoryName) === category) {
           posts.push(post);
         }
       });
-      return posts;
     }
   });
 

@@ -4,62 +4,61 @@ import {
   CardContent,
   Category,
   CardFooter,
-  ImageWrapper
+  ImageWrapper,
 } from './Card.style';
 import { Text } from 'styles/foundations';
 import Image from 'next/image';
 import { Icon } from 'components/UIkit';
 import Link from 'next/link';
-import {slugify} from 'utils'
+import { slugify } from 'utils';
 
-const Card = (props) => {
-
+const Card = ({ categories, description, image, slug, title, views }) => {
+  const category = slugify(categories[0]);
+  const blogUrl = `/blog/${category}/${slug}`;
   return (
     <CardStyle>
       <ImageWrapper>
-        <Link href={`/blog/${props.slug}`}>
+        <Link href={blogUrl}>
           <Image
-            src={props.image}
-            alt={props.title}
-            layout='fill'
-            objectFit='cover'
-            objectPosition='top'
+            key={slug}
+            src={image}
+            alt={title}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="top"
           />
         </Link>
       </ImageWrapper>
 
       <CardContent>
-        {
-          Array.isArray(props.categories) &&
+        {Array.isArray(categories) && (
           <Category>
-            <Link href={`/category/${slugify(props.categories[0])}`}>
-              <Text size={1} css={{display: 'flex', alignItems: 'center'}}>
-                <Icon name='folder' size={14} />
-                {props.categories[0]}
+            <Link href={`/blog/${category}`}>
+              <Text size={1} css={{ display: 'flex', alignItems: 'center' }}>
+                <Icon name="folder" size={14} />
+                {categories[0]}
               </Text>
             </Link>
           </Category>
-        }
+        )}
 
-        <Text as='h3' size={6} className='title' truncate>
-          <Link href={`/blog/${props.slug}`}>{props.title}</Link>
+        <Text as="h3" size={6} className="title" truncate>
+          <Link href={blogUrl}>{title}</Link>
         </Text>
         <Text
           size={2}
-          className='title'
+          className="title"
           lineClamp
           css={{ my: '$6', $$lineClamp: 3, fontFamily: '$Lora' }}
         >
-          <Link href={`/blog/${props.slug}`}>
-            {props.description}
-          </Link>
+          <Link href={blogUrl}>{description}</Link>
         </Text>
         <CardFooter>
-          {props.views && (
-            <Text size={1} link='secondary'>
-              <Link href={`/blog/${props.slug}`}>
-                <Icon name='eye' size={14} />
-                {props.views}K
+          {views && (
+            <Text size={1} link="secondary">
+              <Link href={blogUrl}>
+                <Icon name="eye" size={14} />
+                {views}K
               </Link>
             </Text>
           )}
