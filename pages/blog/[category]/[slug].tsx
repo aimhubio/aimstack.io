@@ -16,22 +16,31 @@ import {
   Next,
   ShareSocial,
 } from 'styles/pages/Blog.style';
-import { formattedDate } from 'utils';
+import { formattedDate, slugify } from 'utils';
 
+import { useRouter } from 'next/router';
 import { Icon } from 'components/UIkit';
 import { allPosts } from 'contentlayer/generated';
 import Image from 'next/image';
-import Seo from '../../components/SEO/SEO';
-import { Category } from '../../components/Card/Card.style';
+import Seo from '../../../components/SEO/SEO';
+import { Category } from '../../../components/Card/Card.style';
 import SITE_URL from 'config';
 
 export default function PostPage({ post, posts }) {
+  const router = useRouter();
+  const params = router.query;
+  const { slug, category } = params;
   const index = posts.findIndex((object) => {
-    return object.slug === post.slug;
+    return object.slug === slug;
   });
+  const path = `/blog/${category}/${post.slug}`;
+  const url = `${SITE_URL}/${path}`;
 
-  const url = `${SITE_URL}/blog/${post.slug}`;
-
+  function getNeighborPostUrl(index: number) {
+    const { categories, slug } = posts[index];
+    const category = slugify(categories[0]);
+    return `/blog/${category}/${slug}`;
+  }
   return (
     <BlogSingleStyle>
       <Seo
@@ -39,7 +48,7 @@ export default function PostPage({ post, posts }) {
         description={post.description}
         date={post.date}
         image={post.image}
-        path={`blog/${post.slug}`}
+        path={path}
       />
       <Container>
         <Link href="/blog">
@@ -54,7 +63,7 @@ export default function PostPage({ post, posts }) {
       <Container css={{ maxWidth: '848px' }}>
         <Flex gap={5} justify={'between'} css={{ marginTop: '$6' }}>
           <Category>
-            <Link href={`/category/${post.categories[0].toLowerCase()}`}>
+            <Link href={`/blog/${category}`}>
               <Text size={1} css={{ display: 'flex', alignItems: 'center' }}>
                 <Icon name="folder" size={14} />
                 {post.categories[0]}
@@ -80,6 +89,7 @@ export default function PostPage({ post, posts }) {
         <ImageWrapper>
           <Image
             src={post.image}
+            key={path}
             className="card-img-top"
             alt={post.title}
             title={post.title}
@@ -97,8 +107,10 @@ export default function PostPage({ post, posts }) {
                   component: Image,
                   props: {
                     fill: true,
+                    alt: 'blog image',
                     style: { objectFit: 'contain' },
                     className: 'blog-image',
+                    key: slug,
                   },
                 },
               },
@@ -128,7 +140,7 @@ export default function PostPage({ post, posts }) {
           <Flex>
             <Prev>
               {!!index && (
-                <Link href={`/blog/${posts[index - 1]?.slug}`}>
+                <Link href={getNeighborPostUrl(index - 1)}>
                   <Flex align="center">
                     <Icon name="chevron-left" />
                     <Text
@@ -152,7 +164,7 @@ export default function PostPage({ post, posts }) {
             </Prev>
             <Next>
               {index < posts.length - 1 && (
-                <Link href={`/blog/${posts[index + 1]?.slug}`}>
+                <Link href={getNeighborPostUrl(index + 1)}>
                   <Flex align="center" justify="end">
                     <Text
                       className="chevron-text"
@@ -188,7 +200,9 @@ export async function getStaticPaths() {
   });
 
   // get all the post slug
-  const publish = posts.map((post) => ({ params: { slug: post.slug } }));
+  const publish = posts.map((post) => ({
+    params: { slug: post.slug, category: slugify(post.categories[0]) },
+  }));
 
   return {
     paths: publish,
