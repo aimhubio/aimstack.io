@@ -18,6 +18,18 @@ const Features = () => {
         <Text as="h2" size={9} className="title">
           Why use Aim?
         </Text>
+        <Text as="p" css={{ textAlign: 'center' }}>
+          Aim is an open-source, self-hosted AI Metadata tracking tool designed
+          to handle 100,000s of tracked metadata sequences.
+        </Text>
+        <Text as="p" css={{ margin: '12px 0', textAlign: 'center' }}>
+          Two most famous AI metadata applications are: experiment tracking and
+          prompt engineering.
+        </Text>
+        <Text as="p" css={{ marginBottom: '24px', textAlign: 'center' }}>
+          Aim provides a performant and beautiful UI for exploring and comparing
+          training runs, prompt sessions.
+        </Text>
         {stepsList.map(({ name, title, list }) => {
           return (
             <StepRow key={name}>
