@@ -33,7 +33,7 @@ const Hero = () => {
             <Text as="span" css={{ fontWeight: 700 }}>
               experiments, prompts, etc
             </Text>
-            ) enables a UI to compare & observe them and and SDK to query them
+            ) enables a UI to compare & observe them and SDK to query them
             programmatically.
           </Text>
           <Button
