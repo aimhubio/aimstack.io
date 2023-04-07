@@ -2,15 +2,14 @@ import React from 'react';
 import { NextSeo, NextSeoProps } from 'next-seo';
 import SITE_URL from 'config';
 
-
 interface ICustomSeoProps {
-  image: string,
-  date?: string,
-  type?: string,
-  path: string
+  image: string;
+  date?: string;
+  type?: string;
+  path: string;
 }
 
-type SeoProps = ICustomSeoProps & NextSeoProps
+type SeoProps = ICustomSeoProps & NextSeoProps;
 
 const Seo = (props: SeoProps) => {
   return (
@@ -25,7 +24,7 @@ const Seo = (props: SeoProps) => {
         locale: 'en_US',
         article: {
           publishedTime: props.date,
-          authors: [`${SITE_URL}about-us`]
+          authors: [`${SITE_URL}about-us`],
         },
         images: [
           {
@@ -33,13 +32,15 @@ const Seo = (props: SeoProps) => {
             width: 1224,
             height: 724,
             alt: props.title,
-            type: 'image/jpeg'
-          }
+            type: 'image/jpeg',
+          },
         ],
-        site_name: 'Aimstack'
+        site_name: 'Aimstack',
       }}
       twitter={{
-        cardType: 'summary_large_image'
+        cardType: 'summary_large_image',
+        site: '@aimstackio',
+        handle: '@aimstackio',
       }}
     />
   );
