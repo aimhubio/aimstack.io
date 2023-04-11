@@ -8,12 +8,14 @@ import QuickStart from 'components/QuickStart/QuickStart';
 import Subscribe from 'components/Subscribe/Subscribe';
 import homeSeo from 'content/SeoData/homepage';
 import Seo from '../components/SEO/SEO';
+import TrustedCompanies from '../components/TrustedCompanies';
 
 const Index = () => {
   return (
     <>
       <Seo {...homeSeo} />
       <Hero />
+      <TrustedCompanies />
       <Integrations />
       <VideoGuide />
       <QuickStart />
