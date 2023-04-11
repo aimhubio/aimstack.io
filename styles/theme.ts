@@ -82,7 +82,9 @@ const theme: Theme = {
     2: '0px 96px 66px -65px rgba(11, 47, 97, 0.2)',
     3: '1px 1px 10px 3px  rgb(0, 0, 0, 10%)',
     4: '0px 10px 24px -10px rgba(11, 47, 97, 0.4)',
+    5: '0px 10px 32px -10px rgba(11, 47, 97, 0.2)',
   },
+
   radii: {
     1: '6px',
     2: '8px',

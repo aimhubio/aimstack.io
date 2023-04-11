@@ -1,81 +1,49 @@
-import { IntegrationsStyle, Slider, SliderItem } from './Integrations.style';
-import { useKeenSlider } from 'keen-slider/react';
 import Image from 'next/image';
-import 'keen-slider/keen-slider.min.css';
-import integrationsList from './inetgrationsList';
-import { useMemo, useState } from 'react';
+import {
+  IntegrationsContainer,
+  IntegrationsList,
+  IntegrationsContainerLeft,
+} from './Integrations.style';
+import { Button } from 'components/UIkit';
+import { Text } from 'styles/foundations';
 
 const Integrations = () => {
-  const [state, setState] = useState(false);
-
-  const animation = useMemo(() => {
-    return { duration: 15000, easing: (t: number) => t };
-  }, []);
-
-  const [ref] = useKeenSlider<HTMLDivElement>({
-    loop: true,
-    mode: 'free',
-    slides: {
-      perView: 8,
-      spacing: 220,
-    },
-    created(s) {
-      setState(true);
-      s.moveToIdx(5, true, animation);
-    },
-    updated(s) {
-      s.moveToIdx(s.track.details.abs + 5, true, animation);
-    },
-    animationEnded(s) {
-      s.moveToIdx(s.track.details.abs + 5, true, animation);
-    },
-    breakpoints: {
-      '(max-width: 1920px)': {
-        slides: { perView: 8, spacing: 120 },
-      },
-      '(max-width: 1439px)': {
-        slides: { perView: 8, spacing: 96 },
-      },
-      '(max-width: 1199px)': {
-        slides: { perView: 7, spacing: 80 },
-      },
-      '(max-width: 743px)': {
-        slides: { perView: 5, spacing: 60 },
-      },
-      '(max-width: 575px)': {
-        slides: { perView: 4, spacing: 60 },
-      },
-    },
-  });
-
   return (
-    <IntegrationsStyle>
-      <Slider
-        ref={ref}
-        className="keen-slider"
-        css={{ opacity: state ? 1 : 0, transition: '$main' }}
-      >
-        {integrationsList.map(({ name, url }) => {
-          return (
-            <SliderItem
-              key={name}
-              className="keen-slider__slide"
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src={`/images/static/integrations/${name}.png`}
-                alt={name}
-                width={100}
-                height={100}
-                layout="responsive"
-              />
-            </SliderItem>
-          );
-        })}
-      </Slider>
-    </IntegrationsStyle>
+    <IntegrationsContainer>
+      <IntegrationsContainerLeft>
+        <Text
+          as="h3"
+          className="title"
+          size="8"
+          css={{ marginBottom: '$6', lineHeight: 1.3 }}
+        >
+          Seamless integrations with your favorite tools
+        </Text>
+        <Text css={{ lineHeight: '32px' }}>
+          Aim is tightly integrated with the ML ecosystem. Aim comes with
+          built-in callbacks for the most of ML tools and frameworks. It allows
+          to track metadata (metrics, hparams, etc.) with just a few lines of
+          code!
+        </Text>
+        <Button
+          css={{ marginTop: '$8' }}
+          as="a"
+          href="https://github.com/aimhubio/aim"
+          target="_blank"
+        >
+          Learn more
+        </Button>
+      </IntegrationsContainerLeft>
+      <IntegrationsList>
+        <Image
+          src={`/images/static/integrations/integrations.png`}
+          alt="integrations image"
+          width={200}
+          height={150}
+          layout="responsive"
+        />
+      </IntegrationsList>
+    </IntegrationsContainer>
   );
 };
 
