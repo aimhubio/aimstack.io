@@ -38,7 +38,6 @@ const Seo = (props: SeoProps) => {
         site_name: 'Aimstack',
       }}
       twitter={{
-        cardType: 'summary_large_image',
         site: '@aimstackio',
         handle: '@aimstackio',
       }}
