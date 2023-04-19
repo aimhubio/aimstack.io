@@ -12,14 +12,14 @@ We are excited to announce the launch of Aim on Hugging Face Spaces! 🚀
 
 With just a few clicks, you can now deploy Aim on the Hugging Face Hub and seamlessly share your training results with anyone.
 
-> Aim is an open-source, self-hosted AI Metadata tracking tool.\
-> It provides a performant and powerful UI for exploring and comparing metadata, such as training runs or AI agents executions. Additionally, its SDK enables programmatic access to tracked metadata — perfect for automations and Jupyter Notebook analysis.\
-> \
-> Learn more about Aim on the GitHub repository: **[github.com/aimhubio/aim](https://github.com/aimhubio/aim)**
-
 ![](/images/dynamic/hf_space_me.png)
 
+Aim is an open-source, self-hosted AI Metadata tracking tool.\
+It provides a performant and powerful UI for exploring and comparing metadata, such as training runs or AI agents executions. Additionally, its SDK enables programmatic access to tracked metadata — perfect for automations and Jupyter Notebook analysis.
+
 In this article, you will learn how to deploy and share your own Aim Space. Also, we will have a quick tour over Aim and learn how it can help to explore and compare your training logs with ease. Let’s dive in and get started!
+
+Learn more about Aim on the GitHub repository: **[github.com/aimhubio/aim](https://github.com/aimhubio/aim)**
 
 ## Deploy Aim on Hugging Face Spaces within seconds using the Docker template
 
@@ -119,9 +119,9 @@ Much more coming soon... stay tuned for the updates!
 
 ## Learn more
 
-Aim repo on GitHub: [github.com/aimhubio/aim](http://github.com/aimhubio/aim)
+Check out Aim Space documentation [here](https://aimstack.readthedocs.io/en/latest/using/huggingface_spaces.html)
 
-Aim official docs: [aimstack.readthedocs.io/en/latest](http://aimstack.readthedocs.io/en/latest)
+Aim repo on GitHub: [github.com/aimhubio/aim](http://github.com/aimhubio/aim)
 
 If you have questions, join the [Aim community](https://community.aimstack.io/), share your feedback, open issues for new features and bugs. You’re most welcome! 🙌
 
