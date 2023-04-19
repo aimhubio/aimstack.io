@@ -24,8 +24,15 @@ import { allPosts } from 'contentlayer/generated';
 import Image from 'next/image';
 import Seo from '../../../components/SEO/SEO';
 import { Category } from '../../../components/Card/Card.style';
-import SITE_URL from 'config';
+
 import Head from 'next/head';
+
+function getBaseURL() {
+  if (typeof window !== 'undefined') {
+    return `https://${window.location.host}`;
+  }
+  return null;
+}
 
 export default function PostPage({ post, posts }) {
   const router = useRouter();
@@ -34,170 +41,173 @@ export default function PostPage({ post, posts }) {
   const index = posts.findIndex((object) => {
     return object.slug === slug;
   });
-  const path = `/blog/${category}/${post.slug}`;
-  const url = `${SITE_URL}/${path}`;
+  const baseURL = getBaseURL();
+  const path = `blog/${category}/${post.slug}`;
+  const url = `${baseURL}${path}`;
+  const imageUrl: string = post.image.startsWith('http')
+    ? post.image
+    : `${baseURL}${post.image}`;
 
   function getNeighborPostUrl(index: number) {
     const { categories, slug } = posts[index];
     const category = slugify(categories[0]);
-    return `/blog/${category}/${slug}`;
+    return `blog/${category}/${slug}`;
   }
   return (
-    <>
+    <BlogSingleStyle>
       <Head>
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.description} />
-        <meta name="twitter:image" content={post.image} />
+        <meta name="twitter:image:src" content={imageUrl} />
+        <meta name="twitter:image" content={imageUrl} />
       </Head>
-      <BlogSingleStyle>
-        <Seo
-          title={post.title}
-          description={post.description}
-          date={post.date}
-          image={post.image}
-          path={path}
-        />
-        <Container>
-          <Link href="/blog">
-            <Flex align="center" css={{ marginTop: '$10' }}>
-              <Icon name="back" size={20} />
-              <Text size={3} css={{ fontWeight: '$3' }}>
-                Go Back
-              </Text>
-            </Flex>
-          </Link>
-        </Container>
-        <Container css={{ maxWidth: '848px' }}>
-          <Flex gap={5} justify={'between'} css={{ marginTop: '$6' }}>
-            <Category>
-              <Link href={`/blog/${category}`}>
-                <Text size={1} css={{ display: 'flex', alignItems: 'center' }}>
-                  <Icon name="folder" size={14} />
-                  {post.categories[0]}
-                </Text>
-              </Link>
-            </Category>
-            <Flex gap={2} align="center">
-              <Icon name="clock" size={14} />
-              <Text size={1}>{formattedDate(post.date)}</Text>
-            </Flex>
+      <Seo
+        title={post.title}
+        description={post.description}
+        date={post.date}
+        image={post.image}
+        path={path}
+      />
+      <Container>
+        <Link href="/blog">
+          <Flex align="center" css={{ marginTop: '$10' }}>
+            <Icon name="back" size={20} />
+            <Text size={3} css={{ fontWeight: '$3' }}>
+              Go Back
+            </Text>
           </Flex>
+        </Link>
+      </Container>
+      <Container css={{ maxWidth: '848px' }}>
+        <Flex gap={5} justify={'between'} css={{ marginTop: '$6' }}>
+          <Category>
+            <Link href={`/blog/${category}`}>
+              <Text size={1} css={{ display: 'flex', alignItems: 'center' }}>
+                <Icon name="folder" size={14} />
+                {post.categories[0]}
+              </Text>
+            </Link>
+          </Category>
+          <Flex gap={2} align="center">
+            <Icon name="clock" size={14} />
+            <Text size={1}>{formattedDate(post.date)}</Text>
+          </Flex>
+        </Flex>
 
-          <Text
-            as="h1"
-            size={7}
-            className="title"
-            css={{ my: '$6', fontWeight: '$4' }}
-          >
-            {post.title}
-          </Text>
-        </Container>
-        <Container>
-          <ImageWrapper>
-            <Image
-              src={post.image}
-              key={path}
-              className="card-img-top"
-              alt={post.title}
-              title={post.title}
-              style={{ objectFit: 'contain' }}
-              fill
-            />
-          </ImageWrapper>
-        </Container>
-        <Container css={{ maxWidth: '848px' }}>
-          <InnerHTML className="blog-inner">
-            <Markdown
-              options={{
-                overrides: {
-                  img: {
-                    component: Image,
-                    props: {
-                      fill: true,
-                      alt: 'blog image',
-                      style: { objectFit: 'contain' },
-                      className: 'blog-image',
-                      key: slug,
-                    },
+        <Text
+          as="h1"
+          size={7}
+          className="title"
+          css={{ my: '$6', fontWeight: '$4' }}
+        >
+          {post.title}
+        </Text>
+      </Container>
+      <Container>
+        <ImageWrapper>
+          <Image
+            src={post.image}
+            key={path}
+            className="card-img-top"
+            alt={post.title}
+            title={post.title}
+            style={{ objectFit: 'contain' }}
+            fill
+          />
+        </ImageWrapper>
+      </Container>
+      <Container css={{ maxWidth: '848px' }}>
+        <InnerHTML className="blog-inner">
+          <Markdown
+            options={{
+              overrides: {
+                img: {
+                  component: Image,
+                  props: {
+                    fill: true,
+                    alt: 'blog image',
+                    style: { objectFit: 'contain' },
+                    className: 'blog-image',
+                    key: slug,
                   },
                 },
-              }}
-            >
-              {post.body.raw}
-            </Markdown>
-          </InnerHTML>
-          <ShareSocial>
-            <TwitterShareButton url={url} title={post.title}>
-              <Icon size={16} name="twitter" />
-            </TwitterShareButton>
-            <LinkedinShareButton url={url} title={post.title}>
-              <Icon size={16} name="linkedIn" />
-            </LinkedinShareButton>
-            <FacebookShareButton url={url} title={post.title}>
-              <Icon size={16} name="fb" />
-            </FacebookShareButton>
-            <RedditShareButton url={url} title={post.title}>
-              <Icon size={16} name="reddit" />
-            </RedditShareButton>
-          </ShareSocial>
+              },
+            }}
+          >
+            {post.body.raw}
+          </Markdown>
+        </InnerHTML>
+        <ShareSocial>
+          <TwitterShareButton url={url} title={post.title}>
+            <Icon size={16} name="twitter" />
+          </TwitterShareButton>
+          <LinkedinShareButton url={url} title={post.title}>
+            <Icon size={16} name="linkedIn" />
+          </LinkedinShareButton>
+          <FacebookShareButton url={url} title={post.title}>
+            <Icon size={16} name="fb" />
+          </FacebookShareButton>
+          <RedditShareButton url={url} title={post.title}>
+            <Icon size={16} name="reddit" />
+          </RedditShareButton>
+        </ShareSocial>
+      </Container>
+      <PostNavigation>
+        <Container css={{ maxWidth: '848px' }}>
+          <Flex>
+            <Prev>
+              {!!index && (
+                <Link href={getNeighborPostUrl(index - 1)}>
+                  <Flex align="center">
+                    <Icon name="chevron-left" />
+                    <Text
+                      className="chevron-text"
+                      size={1}
+                      css={{ fontWeight: '$3' }}
+                    >
+                      PREVIOUS POST
+                    </Text>
+                  </Flex>
+                  <Text
+                    className="text"
+                    size={1}
+                    lineClamp
+                    css={{ marginTop: '$3', $$lineClamp: 2 }}
+                  >
+                    {posts[index - 1]?.title}
+                  </Text>
+                </Link>
+              )}
+            </Prev>
+            <Next>
+              {index < posts.length - 1 && (
+                <Link href={getNeighborPostUrl(index + 1)}>
+                  <Flex align="center" justify="end">
+                    <Text
+                      className="chevron-text"
+                      size={1}
+                      css={{ fontWeight: '$3' }}
+                    >
+                      NEXT POST
+                    </Text>
+                    <Icon name="chevron-right" />
+                  </Flex>
+                  <Text
+                    className="text"
+                    size={1}
+                    lineClamp
+                    css={{ marginTop: '$3', $$lineClamp: 2 }}
+                  >
+                    {posts[index + 1]?.title}
+                  </Text>
+                </Link>
+              )}
+            </Next>
+          </Flex>
         </Container>
-
-        <PostNavigation>
-          <Container css={{ maxWidth: '848px' }}>
-            <Flex>
-              <Prev>
-                {!!index && (
-                  <Link href={getNeighborPostUrl(index - 1)}>
-                    <Flex align="center">
-                      <Icon name="chevron-left" />
-                      <Text
-                        className="chevron-text"
-                        size={1}
-                        css={{ fontWeight: '$3' }}
-                      >
-                        PREVIOUS POST
-                      </Text>
-                    </Flex>
-                    <Text
-                      className="text"
-                      size={1}
-                      lineClamp
-                      css={{ marginTop: '$3', $$lineClamp: 2 }}
-                    >
-                      {posts[index - 1]?.title}
-                    </Text>
-                  </Link>
-                )}
-              </Prev>
-              <Next>
-                {index < posts.length - 1 && (
-                  <Link href={getNeighborPostUrl(index + 1)}>
-                    <Flex align="center" justify="end">
-                      <Text
-                        className="chevron-text"
-                        size={1}
-                        css={{ fontWeight: '$3' }}
-                      >
-                        NEXT POST
-                      </Text>
-                      <Icon name="chevron-right" />
-                    </Flex>
-                    <Text
-                      className="text"
-                      size={1}
-                      lineClamp
-                      css={{ marginTop: '$3', $$lineClamp: 2 }}
-                    >
-                      {posts[index + 1]?.title}
-                    </Text>
-                  </Link>
-                )}
-              </Next>
-            </Flex>
-          </Container>
-        </PostNavigation>
-      </BlogSingleStyle>
-    </>
+      </PostNavigation>
+    </BlogSingleStyle>
   );
 }
 
