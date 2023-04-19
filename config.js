@@ -1,4 +1,4 @@
-const SITE_URL = 'https://aimstack.io/';
+const SITE_URL = 'https://aimstack.io';
 export const GITHUB_API = 'https://api.github.com/repos/aimhubio/aim/';
 export const SUBSCRIBE_API = 'https://formspree.io/f/xeqvdval';
 // const SITE_URL= 'http://localhost:3000'
