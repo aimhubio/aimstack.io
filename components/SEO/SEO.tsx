@@ -17,14 +17,14 @@ const Seo = (props: SeoProps) => {
       title={props.title}
       description={props.description}
       openGraph={{
-        url: `${SITE_URL}${props.path}`,
+        url: `${SITE_URL}/${props.path}`,
         title: props.title,
         description: props.description,
         type: props.type || 'website',
         locale: 'en_US',
         article: {
           publishedTime: props.date,
-          authors: [`${SITE_URL}about-us`],
+          authors: [`${SITE_URL}/about-us`],
         },
         images: [
           {
@@ -36,10 +36,6 @@ const Seo = (props: SeoProps) => {
           },
         ],
         site_name: 'Aimstack',
-      }}
-      twitter={{
-        site: '@aimstackio',
-        handle: '@aimstackio',
       }}
     />
   );

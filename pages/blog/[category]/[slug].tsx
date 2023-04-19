@@ -25,7 +25,15 @@ import Image from 'next/image';
 import Seo from '../../../components/SEO/SEO';
 import { Category } from '../../../components/Card/Card.style';
 import SITE_URL from 'config';
+
 import Head from 'next/head';
+
+function getBaseURL() {
+  if (typeof window !== 'undefined') {
+    return `https://${window.location.host}`;
+  }
+  return SITE_URL;
+}
 
 export default function PostPage({ post, posts }) {
   const router = useRouter();
@@ -34,11 +42,12 @@ export default function PostPage({ post, posts }) {
   const index = posts.findIndex((object) => {
     return object.slug === slug;
   });
-  const path = `/blog/${category}/${post.slug}`;
-  const url = `${SITE_URL}/${path}`;
+  const baseURL = getBaseURL();
+  const path = `blog/${category}/${post.slug}`;
+  const url = `${baseURL}/${path}`;
   const imageUrl: string = post.image.startsWith('http')
     ? post.image
-    : `${url}${post.image}`;
+    : `${baseURL}${post.image}`;
 
   function getNeighborPostUrl(index: number) {
     const { categories, slug } = posts[index];
@@ -52,8 +61,9 @@ export default function PostPage({ post, posts }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.description} />
-        <meta name="twitter:image:src" content={imageUrl} />
         <meta name="twitter:image" content={imageUrl} />
+        <meta name="twitter:site" content="@aimstack" />
+        <meta name="twitter:creator" content="@aimstack" />
       </Head>
       <Seo
         title={post.title}
