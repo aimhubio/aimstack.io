@@ -48,6 +48,9 @@ const Right = styled('div', {
 
 const CodeBlockStyle = styled('div', {
   paddingTop: '$5',
+  code: {
+    fontFamily: '$Inconsolata',
+  },
 });
 
 const HighlightWrapper = styled('div', {
@@ -61,7 +64,7 @@ const HighlightWrapper = styled('div', {
   '&.light': {
     '.hljs': {
       backgroundColor: '$white',
-      color: '$textColor'
+      color: '$textColor',
     },
   },
 
@@ -94,36 +97,38 @@ const HighlightWrapper = styled('div', {
     zIndex: 10,
   },
 
-
   //highlighter plugin code
-  ".hljs": {
-    display: "block",
-    overflowX: "auto",
-    color: "#abb2bf",
-    background: "#282c34",
+  '.hljs': {
+    display: 'block',
+    overflowX: 'auto',
+    color: '#abb2bf',
+    background: '#282c34',
     marginBottom: '20px',
     borderRadius: '$1',
     padding: '$4',
   },
-  ".hljs-comment,.hljs-quote": { color: "#5c6370", fontStyle: "italic" },
-  ".hljs-doctag,.hljs-keyword,.hljs-formula": { color: "#c678dd" },
-  ".hljs-section,.hljs-name,.hljs-selector-tag,.hljs-deletion,.hljs-subst": {
-    color: "#e06c75"
+  '.hljs-comment,.hljs-quote': { color: '#5c6370', fontStyle: 'italic' },
+  '.hljs-doctag,.hljs-keyword,.hljs-formula': { color: '#c678dd' },
+  '.hljs-section,.hljs-name,.hljs-selector-tag,.hljs-deletion,.hljs-subst': {
+    color: '#e06c75',
   },
-  ".hljs-literal": { color: "#56b6c2" },
-  ".hljs-string,.hljs-regexp,.hljs-addition,.hljs-attribute,.hljs-meta-string": {
-    color: "#98c379"
-  },
-  ".hljs-built_in,.hljs-class .hljs-title": { color: "#e6c07b" },
-  ".hljs-attr,.hljs-variable,.hljs-template-variable,.hljs-type,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-number": {
-    color: "#d19a66"
-  },
-  ".hljs-symbol,.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-title": {
-    color: "#61aeee"
-  },
-  ".hljs-emphasis": { fontStyle: "italic" },
-  ".hljs-strong": { fontWeight: "bold" },
-  ".hljs-link": { textDecoration: "underline" }
+  '.hljs-literal': { color: '#56b6c2' },
+  '.hljs-string,.hljs-regexp,.hljs-addition,.hljs-attribute,.hljs-meta-string':
+    {
+      color: '#98c379',
+    },
+  '.hljs-built_in,.hljs-class .hljs-title': { color: '#e6c07b' },
+  '.hljs-attr,.hljs-variable,.hljs-template-variable,.hljs-type,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-number':
+    {
+      color: '#d19a66',
+    },
+  '.hljs-symbol,.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-title':
+    {
+      color: '#61aeee',
+    },
+  '.hljs-emphasis': { fontStyle: 'italic' },
+  '.hljs-strong': { fontWeight: 'bold' },
+  '.hljs-link': { textDecoration: 'underline' },
 
   //end highlighter plugin code
 });
