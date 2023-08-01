@@ -32,8 +32,6 @@ In the future [releases](https://aimstack.io/blog/new-releases/aim%E2%80%99s-fo
 
 ## Learn More
 
-
-
 [Aim is on a mission to democratize MLOps tools.](https://github.com/aimhubio/aim#democratizing-ai-dev-tools)
 
 We have been incredibly lucky to get help and contributions from the amazing Aim community. It’s humbling and inspiring.
