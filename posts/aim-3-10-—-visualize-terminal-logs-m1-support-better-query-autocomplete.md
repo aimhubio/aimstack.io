@@ -11,7 +11,7 @@ draft: false
 ---
 Hey team, Aim 3.10 is now available!
 
-We are on a mission to [democratize AI dev tools](https://aimstack.io/aim-foundations-why-we-re-building-a-tensorboard-alternative/). Thanks to the awesome Aim community for the help and contributions.
+We are on a mission to [democratize AI dev tools](https://aimstack.io/blog/new-releases/aim%E2%80%99s-foundations-why-we%E2%80%99re-building-a-tensorboard-alternative). Thanks to the awesome Aim community for the help and contributions.
 
 Here is what’s new in Aim 3.10:
 
@@ -80,7 +80,7 @@ Here is a short [example](https://github.com/aimhubio/aim/blob/main/examples/ca
 
 ## Learn More
 
-[Aim is on a mission to democratize AI dev tools.](https://aimstack.readthedocs.io/en/latest/overview.html)
+[Aim is on a mission to democratize AI dev tools.](https://aimstack.io/blog/new-releases/aim%E2%80%99s-foundations-why-we%E2%80%99re-building-a-tensorboard-alternative)
 
 We have been incredibly lucky to get help and contributions from the amazing Aim community. It’s humbling and inspiring.
 
