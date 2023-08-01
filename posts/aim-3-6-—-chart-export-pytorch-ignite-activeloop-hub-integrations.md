@@ -13,7 +13,7 @@ Hey team, Aim 3.6 featuring Mlflow logs converter, Chart export, PyTorch Ignite 
 
 We are on a mission to democratize MLOps tools. Thanks to the awesome Aim community for the help and contributions.
 
-Here is what’s new in addition to [Aim 3.5](https://aimstack.io/aim-3-5-tensorboard-logs-support-matplotlib-integration-system-params-logging/).
+Here is what’s new in addition to [Aim 3.5](https://aimstack.io/blog/new-releases/aim-3-5-%E2%80%94-tensorboard-logs-support-matplotlib-integration-system-params-logging).
 
 * Export chart as image
 * MLflow to Aim logs converter
@@ -117,7 +117,7 @@ Hub is an awesome tool to build, manage, query & visualize datasets for deep lea
 
 Wildcard support for the \`aim runs\` command
 
-On [Aim 3.5](https://aimstack.io/blog/new-releases/aim-3-5-tensorboard-logs-support-matplotlib-integration-system-params-logging/) we made available the `run mv` command which allows to move single runs between folders.
+On [Aim 3.5](https://aimstack.io/blog/new-releases/aim-3-5-%E2%80%94-tensorboard-logs-support-matplotlib-integration-system-params-logging) we made available the `run mv` command which allows to move single runs between folders.
 
 Now we have also added the wildcard to move the whole folder altogether
 
