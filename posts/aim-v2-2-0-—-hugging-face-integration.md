@@ -14,7 +14,7 @@ draft: false
 
 Thanks to [siddk](https://github.com/siddk), [TommasoBendinelli](https://github.com/TommasoBendinelli) and [Khazhak](https://github.com/Khazhak) for their contribution to this release.
 
-> **Note on the Aim versioning:** The previous two release posts: [Aim 1.3.5](https://aimstack.io/blog/new-releases/mlops-tools-aim-1-3-5-activity-view-and-x-axis-alignment/) and [Aim 1.3.8](https://aimstack.io/blog/new-releases/aim-1-3-8-enhanced-context-table-and-advanced-group-coloring/) had used the version number of [AimUI](https://aimstack.readthedocs.io/en/latest/ui/overview.html) as those contained only UI changes. From now on we are going to stick to the Aim versions only regardless of the type of changes to avoid any confusion. [Check out the Aim CHANGELOG](https://github.com/aimhubio/aim/blob/main/CHANGELOG.md).
+> **Note on the Aim versioning:** The previous two release posts: [Aim 1.3.5](https://aimstack.io/blog/new-releases/aim-1-3-5-%E2%80%94-activity-view-and-x-axis-alignment) and [Aim 1.3.8](https://aimstack.io/blog/new-releases/aim-1-3-8-%E2%80%94-enhanced-context-table-and-advanced-group-coloring) had used the version number of [AimUI](https://aimstack.readthedocs.io/en/latest/ui/overview.html) as those contained only UI changes. From now on we are going to stick to the Aim versions only regardless of the type of changes to avoid any confusion. [Check out the Aim CHANGELOG](https://github.com/aimhubio/aim/blob/main/CHANGELOG.md).
 
 We have also added [milestones](https://github.com/aimhubio/aim/milestones) for each version. As well as the [Roadmap](https://github.com/aimhubio/aim#roadmap).
 
