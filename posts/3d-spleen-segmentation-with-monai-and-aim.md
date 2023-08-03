@@ -14,7 +14,7 @@ In this tutorial we will show how to use Aim and MONAI for 3d Spleen segmentatio
 
 This is a longer form of the [3D spleen segmentation tutorial](https://github.com/Project-MONAI/tutorials/blob/main/3d_segmentation/spleen_segmentation_3d_visualization_basic.ipynb) on the MONAI tutorials repo.
 
-For a complete in-depth overview of the code and the methodology please follow [this tutorial](https://github.com/osoblanco/tutorials/blob/master/3d_segmentation/spleen_segmentation_3d.ipynb) directly or our very own [Aim from Zero to Hero tutorial](https://aimstack.io/aim-from-zero-to-hero-track-machine-learning-experiments/).
+For a complete in-depth overview of the code and the methodology please follow [this tutorial](https://github.com/osoblanco/tutorials/blob/master/3d_segmentation/spleen_segmentation_3d.ipynb) directly or our very own [Aim from Zero to Hero tutorial](https://aimstack.io/blog/tutorials/aim-from-zero-to-hero).
 
 ## ***Tracking the basics***
 
@@ -88,7 +88,7 @@ Aggregating, grouping, decoupling and customizing the way you want to visualise 
 
 ## *A picture is worth a thousand words*
 
-In the context of BioMedical Imaging, particularly 3D spleen segmentation, we would like to be able to view how does the model improve over the training iterations. Previously this would have been a challenging task, however, we came up with a rather neat solution at `Aim`. You can [track images](https://aimstack.io/aim-monai-tutorial/(%3Chttps://aimstack.readthedocs.io/en/latest/quick_start/supported_types.html#%3E)) as easily as losses using our framework, meaning the predictions masks on the validation set can be tracked per slice of the 3D segmentation task.
+In the context of BioMedical Imaging, particularly 3D spleen segmentation, we would like to be able to view how does the model improve over the training iterations. Previously this would have been a challenging task, however, we came up with a rather neat solution at `Aim`. You can track images as easily as losses using our framework, meaning the predictions masks on the validation set can be tracked per slice of the 3D segmentation task.
 
 ```
 aim_run.track(aim.Image(val_inputs[0, 0, :, :, slice_to_track], \
