@@ -43,7 +43,7 @@ const Card = ({ categories, description, image, slug, title, views }) => {
         )}
 
         <Text as="h3" size={6} className="title" truncate>
-          <Link href={blogUrl}>{title}</Link>
+          <Link href={blogUrl} rel='canonical'>{title}</Link>
         </Text>
         <Text
           size={2}
