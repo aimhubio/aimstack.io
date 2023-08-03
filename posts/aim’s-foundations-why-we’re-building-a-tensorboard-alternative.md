@@ -16,7 +16,7 @@ In the fateful summer of 2020, our friend [mahnerak](https://twitter.com/mahner
 
 [Gor](https://github.com/gorarakelyan) and I started hacking on an open-source library to store metrics and hyperparameters. In a month, mahnerak was using Aim 1.0 instead of Tensorboard to track, store, search and group his metrics.
 
-By fall 2020, [Aim 2.0](https://aimstack.io/aim-v2-2-0-hugging-face-integration/) launched as a free, open-source and self-hosted alternative to Weights and Biases, Tensorboard and MLflow. To our surprise even [r/MachineLearning loved it](https://www.reddit.com/r/MachineLearning/comments/jfgbij/project_aim_a_supereasy_way_to_record_search_and/).
+By fall 2020, [Aim 2.0](https://aimstack.io/blog/new-releases/aim-v2-2-0-%E2%80%94-hugging-face-integration) launched as a free, open-source and self-hosted alternative to Weights and Biases, Tensorboard and MLflow. To our surprise even [r/MachineLearning loved it](https://www.reddit.com/r/MachineLearning/comments/jfgbij/project_aim_a_supereasy_way_to_record_search_and/).
 
  By spring 2021, mahnerak co-authoerd a paper [WARP](https://aclanthology.org/2021.acl-long.381/) ([code](https://github.com/yerevann/warp)): Word-level Adverserial ReProgramming on his ACL-published work. At that point Aim users had contributed over 100 feature requests already.
 
