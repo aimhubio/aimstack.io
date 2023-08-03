@@ -52,6 +52,6 @@ The Aim docker container is pre-packaged Aim that can be mounted on `.aim` dir
 
 We have been incredibly lucky to get help and contributions from the amazing Aim community. It’s humbling and inspiring.
 
-Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](https://join.slack.com/t/aimstack/shared_invite/zt-193hk43nr-vmi7zQkLwoxQXn8LW9CQWQ), share your feedback, open issues for new features, bugs.
+Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](community.aimstack.io), share your feedback, open issues for new features, bugs.
 
-Also check the recent blog post on [Aim 3.6](https://aimstack.io/aim-3-6-mlflow-chart-export-pytorch-ignite-activeloop-hub-integrations/) release featuring Mlflow logs converter & more!
+Also check the recent blog post on [Aim 3.6](https://aimstack.io/blog/new-releases/aim-3-6-%E2%80%94-chart-export-pytorch-ignite-activeloop-hub-integrations) release featuring Mlflow logs converter & more!
