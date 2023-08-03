@@ -147,7 +147,7 @@ You can play around with the image and single run explorers and see all the trac
 
 ***One Run to rule them all***
 
-There are times when a researcher would need to focus upon only a [single run of the experiment](https://aimstack.io/aim-3-7-revamped-run-single-page-and-aim-docker-image/), where he can iterate through a complete list of all the things he tracked. Aim has a dedicated [Single Run Page](https://aimstack.readthedocs.io/en/latest/ui/pages/run_management.html#single-run-page) for this very purpose.
+There are times when a researcher would need to focus upon only a [single run of the experiment](https://aimstack.io/blog/new-releases/aim-3-7-%E2%80%94-revamped-run-single-page-and-aim-docker-image), where he can iterate through a complete list of all the things he tracked. Aim has a dedicated [Single Run Page](https://aimstack.readthedocs.io/en/latest/ui/pages/run_management.html#single-run-page) for this very purpose.
 
 You can view all the trackables in the following Tabs:
 
@@ -185,7 +185,7 @@ aim server --repo <REPO_PATH> --host 0.0.0.0 --port some_open_port
 aim up --repo <REPO_PATH> --host 0.0.0.0 --port some_open_port
 ```
 
-Integrating this newly created [remote tracking server](https://aimstack.io/aim3-4-remote-tracking-alpha-sorting-deleting-runs/) within your experimentation is even easier.
+Integrating this newly created [remote tracking server](https://aimstack.io/blog/new-releases/aim-3-4-%E2%80%93-remote-tracking-alpha-sorting-deleting-runs) within your experimentation is even easier.
 
 ```
 # This is an example aim://ip:port
@@ -207,6 +207,6 @@ After this, you can view your experiments tracked live from the ip:port where yo
 
 We have been incredibly lucky to get help and contributions from the amazing Aim community. It’s humbling  and inspiring.
 
-Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](https://join.slack.com/t/aimstack/shared_invite/zt-193hk43nr-vmi7zQkLwoxQXn8LW9CQWQ), share your feedback, open issues for new features, bugs.
+Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community,](https://community.aimstack.io/) share your feedback, open issues for new features, bugs.
 
 And don’t forget to leave [Aim](https://github.com/aimhubio/aim) a star on GitHub for support.
