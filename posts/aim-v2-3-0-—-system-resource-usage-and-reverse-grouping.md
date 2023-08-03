@@ -12,7 +12,7 @@ draft: false
 ---
 [Aim](https://github.com/aimhubio/aim) 2.3.0 is out! Thanks to the community for feedback and support on our journey towards democratizing AI dev tools.
 
-Check out the updated Aim at [play.aimstack.io](http://play.aimstack.io:43900/explore?search=eyJjaGFydCI6eyJzZXR0aW5ncyI6eyJwZXJzaXN0ZW50Ijp7ImRpc3BsYXlPdXRsaWVycyI6ZmFsc2UsInpvb20iOm51bGwsImludGVycG9sYXRlIjp0cnVlLCJpbmRpY2F0b3IiOmZhbHNlLCJ4QWxpZ25tZW50Ijoic3RlcCIsInhTY2FsZSI6MCwieVNjYWxlIjowLCJwb2ludHNDb3VudCI6NTAsInNtb290aGluZ0FsZ29yaXRobSI6ImVtYSIsInNtb290aEZhY3RvciI6MC40NSwiYWdncmVnYXRlZCI6dHJ1ZX19LCJmb2N1c2VkIjp7ImNpcmNsZSI6eyJydW5IYXNoIjpudWxsLCJtZXRyaWNOYW1lIjpudWxsLCJ0cmFjZUNvbnRleHQiOm51bGx9fX0sInNlYXJjaCI6eyJxdWVyeSI6ImJsZXUsIGxvc3MgaWYgY29udGV4dC5zdWJzZXQgPT0gdGVzdCBhbmQgaHBhcmFtcy5sZWFybmluZ19yYXRlID4gMC4wMDAwMSIsInYiOjF9LCJjb250ZXh0RmlsdGVyIjp7Imdyb3VwQnlDb2xvciI6WyJwYXJhbXMuaHBhcmFtcy5tYXhfayJdLCJncm91cEJ5U3R5bGUiOltdLCJncm91cEJ5Q2hhcnQiOlsibWV0cmljIl0sImdyb3VwQWdhaW5zdCI6eyJjb2xvciI6ZmFsc2UsInN0eWxlIjpmYWxzZSwiY2hhcnQiOmZhbHNlfSwiYWdncmVnYXRlZEFyZWEiOiJzdGRfZGV2IiwiYWdncmVnYXRlZExpbmUiOiJtZWRpYW4iLCJzZWVkIjp7ImNvbG9yIjoxMCwic3R5bGUiOjEwfSwicGVyc2lzdCI6eyJjb2xvciI6ZmFsc2UsInN0eWxlIjpmYWxzZX0sImFnZ3JlZ2F0ZWQiOnRydWV9fQ==).
+Check out the updated Aim at [play.aimstack.io](http://play.aimstack.io:10001/).
 
 Below are the highlight features of the update. Find the full list of changes [here](https://github.com/aimhubio/aim/milestone/3?closed=1).
 
@@ -24,7 +24,7 @@ Once you run the training, you will see the following. Here is a demo:
 
 ![](https://miro.medium.com/v2/resize:fit:1400/1*pOMxDdOpUDIOedrNIM53pQ.gif "Aim automatic system resource tracking demo")
 
-Of course you can also [query all those new metrics](https://aimstack.io/wp-admin/post.php?post=706&action=edit) in the Explore page and compare, group, aggregate with the rest of the metrics!
+Of course you can also query all those new metrics in the Explore page and compare, group, aggregate with the rest of the metrics!
 
 ## Reverse grouping (“against” the param)
 
@@ -54,6 +54,6 @@ We have additionally added two more aggregation modes: `standard error` and `
 
 We have been incredibly lucky to get help and contributions from the amazing Aim community. In fact, It’s humbling and inspiring.
 
-Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](https://aimstack.slack.com/?redir=%2Fssb%2Fredirect), share your feedback, open issues for new features, bugs.
+Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](https://community.aimstack.io/), share your feedback, open issues for new features, bugs.
 
 And don’t forget to leave [Aim](https://github.com/aimhubio/aim) a star on GitHub for support.
