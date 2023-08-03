@@ -55,7 +55,7 @@ The Images view on the single run page is coming soon …
 
 ## Runs Navigation
 
-One of the regressions from the Aim 2.x to [3.0.0](https://aimstack.io/aim-foundations-why-we-re-building-a-tensorboard-alternative/) was the ability to navigate between the runs of the same experiment from the single run page.
+One of the regressions from the Aim 2.x to [3.0.0](https://aimstack.io/blog/new-releases/aim%E2%80%99s-foundations-why-we%E2%80%99re-building-a-tensorboard-alternative) was the ability to navigate between the runs of the same experiment from the single run page.
 
 ![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*63UGGl2EDquqGHIY03VpQQ.png)
 
@@ -87,6 +87,6 @@ Performance reliability is key for Aim and this is a major iteration towards tha
 
 We have been incredibly lucky to get help and contributions from the amazing Aim community. It’s humbling and inspiring.
 
-Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](https://join.slack.com/t/aimstack/shared_invite/zt-193hk43nr-vmi7zQkLwoxQXn8LW9CQWQ), share your feedback, open issues for new features, bugs.
+Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](community.aimstack.io), share your feedback, open issues for new features, bugs.
 
 And don’t forget to leave [Aim](https://github.com/aimhubio/aim) a star on GitHub for support.
