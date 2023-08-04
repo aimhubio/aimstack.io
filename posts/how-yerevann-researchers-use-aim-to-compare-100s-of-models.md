@@ -17,7 +17,6 @@ draft: false
 
 We traditionally onboard new teammates with a task to reproduce a well-known paper. This allows us to both introduce them to our internal systems, codebase, resources as well as it’s a great leeway into the problems they are going to focus on as part of their research at YerevaNN. This is a story about how Knarik Mheryan has gotten started at YerevaNN and how [Aim](https://github.com/aimhubio/aim/) has helped her in the process.
 
-# \
 The Challenges
 
 ## Model selection for cross-lingual transfer
@@ -55,9 +54,9 @@ It took us only a few clicks to see this key insight.
 
 **And this makes a couple of hours of work into something that’s less than a minute.**
 
-# Qualitative metrics comparison with Metrics Explorer
+# Qualitative metrics comparison with 
 
-<https://aimstack.io/blog/new-releases/aim-3-1-%E2%80%94-images-tracker-and-images-explorer>
+# [Metrics Explorer](<https://aimstack.io/blog/new-releases/aim-3-1-%E2%80%94-images-tracker-and-images-explorer>)
 
 ## Catastrophic Forgetting on the best Eng-based model
 
@@ -70,8 +69,6 @@ Notably, the Chinese (orange) gets worse faster than the other languages. Possib
 ![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*jTYunp3onfPgzAorAUed9A.png)
 
 Figure 2: Visualization of the Catastrophic forgetting phenomenon. Evaluations on 5 languages development datasets for 60 epochs after fine-tuning the model on the English training data. The languages are English (red), Dutch (blue), German (green), Spanish (violet), and Chinese (orange).
-
-
 
 ## Proposed model selection algorithm analysis
 
@@ -109,8 +106,6 @@ Figure 5: Visualization of the final process of model selection. The most left a
 With Aim our experiments analysis at YerevaNN has become order of magnitude faster due to intuitive, beautiful and fast UI and the Aim explorers. The team at YerevaNN uses Aim on a daily basis to analyze their experiments.
 
 # Learn More
-
-
 
 [Aim is on a mission to democratize AI dev tools.](https://aimstack.readthedocs.io/en/latest/overview.html)
 
