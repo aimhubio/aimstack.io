@@ -33,7 +33,7 @@ We have upgraded the Aim Logger for Pytorch Lightning 1.6 updates.
 
 Learn more in the following thread: <https://github.com/aimhubio/aim/issues/1619>
 
-Meanwhile, check out an earlier [tutorial](https://aimstack.io/how-to-tune-hyperparams-with-fixed-seeds-using-pytorch-lightning-and-aim/) on how to tune hyperparams with fixed seeds using PyTorch Lightning and Aim.
+Meanwhile, check out an earlier [tutorial](https://aimstack.io/blog/tutorials/how-to-tune-hyperparams-with-fixed-seeds-using-pytorch-lightning-and-aim) on how to tune hyperparams with fixed seeds using PyTorch Lightning and Aim.
 
 ## Learn More
 
@@ -41,6 +41,6 @@ Meanwhile, check out an earlier [tutorial](https://aimstack.io/how-to-tune-hype
 
 We have been incredibly lucky to get help and contributions from the amazing Aim community. It’s humbling and inspiring.
 
-Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](https://join.slack.com/t/aimstack/shared_invite/zt-193hk43nr-vmi7zQkLwoxQXn8LW9CQWQ), share your feedback, open issues for new features, bugs.
+Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](community.aimstack.io), share your feedback, open issues for new features, bugs.
 
 And don’t forget to leave Aim a star on GitHub for support
