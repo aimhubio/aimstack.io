@@ -22,7 +22,7 @@ draft: false
 
 ## How to use Aim with XGBoost?
 
-Check out end-to-end [Aim integration](https://aimstack.io/aim-2-4-0-xgboost-integration-and-confidence-interval-aggregation/) examples with multiple frameworks [here](https://github.com/aimhubio/aim/tree/main/examples). In this tutorial, we are going to show how to integrate Aim and use AimCallback in your XGBoost code.
+Check out end-to-end [Aim integration](https://aimstack.io/blog/new-releases/aim-2-4-0-is-out-xgboost-integration-confidence-interval-aggregation-and-lots-of-ui-performance-improvements) examples with multiple frameworks [here](https://github.com/aimhubio/aim/tree/main). In this tutorial, we are going to show how to integrate Aim and use AimCallback in your XGBoost code.
 
 ```
 # You should download and extract the data beforehand. Simply by doing this: 
@@ -110,4 +110,4 @@ As easy as that, we can analyze the runs and the system usage.
 
 [Aim is on a mission to democratize AI dev tools.](https://github.com/aimhubio/aim#democratizing-ai-dev-tools)
 
-If you find Aim useful, support us and star [the project](https://github.com/aimhubio/aim) on GitHub. Also, join the [Aim community](https://aimstack.slack.com/ssb/redirect) and share more about your use-cases and how we can improve Aim to suit them.
+If you find Aim useful, support us and star [the project](https://github.com/aimhubio/aim) on GitHub. Also, join the [Aim community](community.aimstack.io) and share more about your use-cases and how we can improve Aim to suit them.
