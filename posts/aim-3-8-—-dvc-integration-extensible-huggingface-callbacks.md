@@ -11,7 +11,7 @@ draft: false
 ---
 Aim 3.8 featuring extensible HuggingFace trainer callbacks is out !
 
-We are on a mission to[ democratize AI dev tools](https://aimstack.io/aim-from-zero-to-hero-track-machine-learning-experiments/). Thanks to the awesome Aim community for the help and contributions.
+We are on a mission to[ democratize AI dev tools](https://aimstack.io/blog/tutorials/aim-from-zero-to-hero). Thanks to the awesome Aim community for the help and contributions.
 
 Here is what’s new:
 
@@ -82,6 +82,6 @@ class CustomCallback(AimCallback):
 
 We have been incredibly lucky to get help and contributions from the amazing Aim community. It’s humbling and inspiring.
 
-Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](https://join.slack.com/t/aimstack/shared_invite/zt-193hk43nr-vmi7zQkLwoxQXn8LW9CQWQ), share your feedback, open issues for new features, bugs.
+Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](community.aimstack.io), share your feedback, open issues for new features, bugs.
 
 And don’t forget to leave Aim a star on GitHub for support.
