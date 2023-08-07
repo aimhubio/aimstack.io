@@ -16,7 +16,7 @@ Check out the updated Aim at [play.aimstack.io](http://play.aimstack.io:10001/)
 
 For this release, there have been lots of performance updates and small tweaks to the UI. Above all, this post highlights the two features of Aim 2.4.0. Please see the full list of changes [here](https://github.com/aimhubio/aim/milestone/6?closed=1).
 
-## XGBoost Inegration
+## XGBoost Integration
 
 To begin with,  `aim.callback` is now available that exports `AimCallback` to be passed to the `xgb.train` as a callback to log the experiments.
 
