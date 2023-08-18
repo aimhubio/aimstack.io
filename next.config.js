@@ -28,7 +28,6 @@ const nextConfig = withExportImages({
   //   //   },
   //   // ],
   // },
-  disableImportAliasWarning: true,
 });
 
 module.exports = withContentlayer(nextConfig);

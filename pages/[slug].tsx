@@ -14,7 +14,6 @@ import {
 import Image from 'next/image';
 import { HighlightWrapper } from '../components/QuickStart/QuickStart.style';
 import Highlight from 'react-highlight';
-import { slugify } from '../utils';
 
 export default function PostPage({ post }) {
   const [copied, setCopied] = useState(false);
