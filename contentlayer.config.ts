@@ -3,6 +3,7 @@ import {
   makeSource,
   defineNestedType,
 } from 'contentlayer/source-files';
+import { slugify } from './utils';
 
 const Tag = defineNestedType(() => ({
   name: 'Tag',
@@ -60,7 +61,7 @@ const Post = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: 'string',
-      resolve: (doc) => doc._raw.sourceFileName.replace(/\.md/, ''),
+      resolve: (doc) => slugify(doc._raw.sourceFileName.replace(/\.md/, '')),
     },
   },
 }));
@@ -107,7 +108,7 @@ const Package = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: 'string',
-      resolve: (doc) => doc._raw.sourceFileName.replace(/\.md/, ''),
+      resolve: (doc) => slugify(doc._raw.sourceFileName.replace(/\.md/, '')),
     },
   },
 }));

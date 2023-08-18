@@ -4,11 +4,17 @@ import Markdown from 'markdown-to-jsx';
 import { Icon } from 'components/UIkit';
 import { allPackages } from 'contentlayer/generated';
 import Link from 'next/link';
-import { Subpackages, SubpackagesHeader, MainContent, SideBar, Badges } from '../styles/pages/Subpackages.style';
+import {
+  Subpackages,
+  SubpackagesHeader,
+  MainContent,
+  SideBar,
+  Badges,
+} from '../styles/pages/Subpackages.style';
 import Image from 'next/image';
 import { HighlightWrapper } from '../components/QuickStart/QuickStart.style';
 import Highlight from 'react-highlight';
-
+import { slugify } from '../utils';
 
 export default function PostPage({ post }) {
   const [copied, setCopied] = useState(false);
@@ -16,30 +22,42 @@ export default function PostPage({ post }) {
 
   const handleCopy = async (ref) => {
     await navigator.clipboard.writeText(ref.current.props.children);
-    setCopied(true)
+    setCopied(true);
   };
 
   return (
     <Subpackages>
       <SubpackagesHeader>
         <Container>
-          <Flex justify='between' direction={{ '@bp1': 'column' }}>
-            <Flex align='center'>
+          <Flex justify="between" direction={{ '@bp1': 'column' }}>
+            <Flex align="center">
               <Image
-                className='logo'
+                className="logo"
                 src={post.logo}
                 alt="AimStack"
                 width="72"
                 height="72"
               />
-              <div className='org'>
-                <div className='org-name'>
-                  <Link href={post.org_link}><Text size={8} css={{ fontWeight: '$3' }}>{post.org_name}</Text></Link> <span>/</span> <Link href={post.repo_link}><Text size={8} css={{ fontWeight: '$5' }}>{post.repo_name}</Text></Link>
+              <div className="org">
+                <div className="org-name">
+                  <Link href={post.org_link}>
+                    <Text size={8} css={{ fontWeight: '$3' }}>
+                      {post.org_name}
+                    </Text>
+                  </Link>{' '}
+                  <span>/</span>{' '}
+                  <Link href={post.repo_link}>
+                    <Text size={8} css={{ fontWeight: '$5' }}>
+                      {post.repo_name}
+                    </Text>
+                  </Link>
                 </div>
-                <Text size={6} css={{ fontWeight: '$3' }}>{post.version}</Text>
+                <Text size={6} css={{ fontWeight: '$3' }}>
+                  {post.version}
+                </Text>
               </div>
             </Flex>
-            <HighlightWrapper className='highlight light'>
+            <HighlightWrapper className="highlight light">
               <button
                 onClick={() => handleCopy(highlightRef)}
                 aria-label="copy to clipboard"
@@ -48,8 +66,8 @@ export default function PostPage({ post }) {
               </button>
               {copied && (
                 <span className="copied" onAnimationEnd={() => setCopied(null)}>
-            Copied!
-          </span>
+                  Copied!
+                </span>
               )}
               <Highlight ref={highlightRef}>{post.installation}</Highlight>
             </HighlightWrapper>
@@ -59,47 +77,41 @@ export default function PostPage({ post }) {
       <Container>
         <Flex direction={{ '@bp1': 'columnReverse' }}>
           <MainContent>
-            <InnerHTML className='inner'>
-              <Markdown>
-                {post.body.raw}
-              </Markdown>
+            <InnerHTML className="inner">
+              <Markdown>{post.body.raw}</Markdown>
             </InnerHTML>
           </MainContent>
           <SideBar>
-            <Text as='h4' size={4} css={{ fontWeight: '$3', paddingBottom: '$3' }}>
+            <Text
+              as="h4"
+              size={4}
+              css={{ fontWeight: '$3', paddingBottom: '$3' }}
+            >
               About
             </Text>
             <Text>{post.about}</Text>
             <Badges>
-              <Markdown>
-                {post.badges_body}
-              </Markdown>
+              <Markdown>{post.badges_body}</Markdown>
             </Badges>
           </SideBar>
         </Flex>
-
       </Container>
-
     </Subpackages>
   );
 }
 
 export async function getStaticPaths() {
-
   // get all the post slug
   const publish = allPackages.map((post) => ({ params: { slug: post.slug } }));
 
   return {
     paths: publish,
-    fallback: false
+    fallback: false,
   };
 }
 
 export async function getStaticProps({ params: { slug } }) {
-
-  const post = allPackages.find((post) => {
-    return post.slug === slug;
-  });
+  const post = allPackages.find((post) => post.slug === slug);
 
   return { props: { post } };
 }

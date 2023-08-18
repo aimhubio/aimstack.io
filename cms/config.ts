@@ -18,6 +18,7 @@ export default {
       name: 'blog',
       folder: 'posts',
       create: true,
+      slug: '{{title}}',
       fields: [
         { label: 'Author', name: 'author', widget: 'string' },
         { label: 'Categories', name: 'categories', widget: 'list' },
@@ -41,6 +42,7 @@ export default {
       name: 'package',
       folder: 'packages',
       create: true,
+      slug: '{{title}}',
       fields: [
         { label: 'Title', name: 'title', widget: 'string' },
         { label: 'Author', name: 'author', widget: 'string' },
