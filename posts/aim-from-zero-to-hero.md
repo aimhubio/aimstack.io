@@ -147,7 +147,7 @@ You can play around with the image and single run explorers and see all the trac
 
 ***One Run to rule them all***
 
-There are times when a researcher would need to focus upon only a [single run of the experiment](https://aimstack.io/blog/new-releases/aim-3-7-%E2%80%94-revamped-run-single-page-and-aim-docker-image), where he can iterate through a complete list of all the things he tracked. Aim has a dedicated [Single Run Page](https://aimstack.readthedocs.io/en/latest/ui/pages/run_management.html#single-run-page) for this very purpose.
+There are times when a researcher would need to focus upon only a [single run of the experiment](https://aimstack.io/blog/new-releases/aim-3-7-revamped-run-single-page-and-aim-docker-image), where he can iterate through a complete list of all the things he tracked. Aim has a dedicated [Single Run Page](https://aimstack.readthedocs.io/en/latest/ui/pages/run_management.html#single-run-page) for this very purpose.
 
 You can view all the trackables in the following Tabs:
 
@@ -169,7 +169,7 @@ Looking through all these insights iteratively can allow for an in-depth granula
 
 ![](/images/dynamic/image-9-.png)
 
-You can look aroud the individual runs in one of our interactive Demos ([FS2](http://play.aimstack.io:10004/), [Spleen Segmentation](http://play.aimstack.io:10005/), [Lightweight GAN](http://play.aimstack.io:10002/), [Machine Translation](http://play.aimstack.io:10001/)).
+You can look around the individual runs in one of our interactive Demos ([FS2](http://play.aimstack.io:10004/), [Spleen Segmentation](http://play.aimstack.io:10005/), [Lightweight GAN](http://play.aimstack.io:10002/), [Machine Translation](http://play.aimstack.io:10001/)).
 
 - - -
 
@@ -185,7 +185,7 @@ aim server --repo <REPO_PATH> --host 0.0.0.0 --port some_open_port
 aim up --repo <REPO_PATH> --host 0.0.0.0 --port some_open_port
 ```
 
-Integrating this newly created [remote tracking server](https://aimstack.io/blog/new-releases/aim-3-4-%E2%80%93-remote-tracking-alpha-sorting-deleting-runs) within your experimentation is even easier.
+Integrating this newly created [remote tracking server](https://aimstack.io/blog/new-releases/aim-3-4-remote-tracking-alpha-sorting-deleting-runs) within your experimentation is even easier.
 
 ```
 # This is an example aim://ip:port
