@@ -11,7 +11,7 @@ draft: false
 ---
 Hey team, Aim 3.10 is now available!
 
-We are on a mission to [democratize AI dev tools](https://aimstack.io/blog/new-releases/aim%E2%80%99s-foundations-why-we%E2%80%99re-building-a-tensorboard-alternative). Thanks to the awesome Aim community for the help and contributions.
+We are on a mission to [democratize AI dev tools](https://aimstack.io/blog/new-releases/aims-foundations-why-were-building-a-tensorboard-alternative). Thanks to the awesome Aim community for the help and contributions.
 
 Here is what’s new in Aim 3.10:
 
@@ -80,10 +80,10 @@ Here is a short [example](https://github.com/aimhubio/aim/blob/main/examples/ca
 
 ## Learn More
 
-[Aim is on a mission to democratize AI dev tools.](https://aimstack.io/blog/new-releases/aim%E2%80%99s-foundations-why-we%E2%80%99re-building-a-tensorboard-alternative)
+[Aim is on a mission to democratize AI dev tools.](https://aimstack.io/blog/new-releases/aims-foundations-why-were-building-a-tensorboard-alternative)
 
 We have been incredibly lucky to get help and contributions from the amazing Aim community. It’s humbling and inspiring.
 
-Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](https://slack.aimstack.io/), share your feedback, open issues for new features, bugs.
+Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](https://community.aimstack.io/), share your feedback, open issues for new features, bugs.
 
 * [](https://twitter.com/share?url=https://aimstack.io/aim-3-10-release-catboost-integration/&text=Aim%203.10%20%E2%80%94%20Visualize%20terminal%20logs%2C%20M1%20support%20%26%23038%3B%20better%20query%20autocomplete)
