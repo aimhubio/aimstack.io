@@ -34,7 +34,7 @@ Now you can use confidence intervals for aggregation. The community has been req
 
 We have been incredibly lucky to get help and contributions from the amazing Aim community. It’s humbling and inspiring.
 
-Check out the latest [Aim integration](https://aimstack.io/blog/new-releases/aim-v2-2-0-%E2%80%94-hugging-face-integration)!
+Check out the latest [Aim integration](https://aimstack.io/blog/new-releases/aim-v2-2-0-hugging-face-integration)!
 
 Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](https://community.aimstack.io/), share your feedback, open issues for new features, bugs.
 
