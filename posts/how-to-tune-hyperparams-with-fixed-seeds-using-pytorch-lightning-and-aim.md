@@ -157,7 +157,7 @@ if __name__ == "__main__":
 
 ## Analyzing the Training Runs
 
-After each set of training runs you need to analyze the results/logs. Use Aim to group the runs by metrics/hyper-parameters (this can be done both on Explore and Dashboard after [Aim 1.3.5 release](https://aimstack.io/blog/new-releases/aim-1-3-5-%E2%80%94-activity-view-and-x-axis-alignment)) and have multiple charts of different metrics on the same screen.
+After each set of training runs you need to analyze the results/logs. Use Aim to group the runs by metrics/hyper-parameters (this can be done both on Explore and Dashboard after [Aim 1.3.5 release](https://aimstack.io/blog/new-releases/aim-1-3-5-activity-view-and-x-axis-alignment)) and have multiple charts of different metrics on the same screen.
 
 Do the following steps to see the different effects of the optimizers
 
