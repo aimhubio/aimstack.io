@@ -62,7 +62,7 @@ More on this feature find out [here](https://aimstack.readthedocs.io/en/latest/
 
 Starting Aim 3.5 you can also track [Matplotlib](https://matplotlib.org/) figures with Aim. During research (especially with Jupyter Notebooks) Matplotlib is very helpful in rendering intermediate images for analysis.
 
-Now you can track all such figures on Aim (both as Matplotlib figure and as an image). When tracking as an image, you can query and compare them too at scale on the [Images Explorer.](https://aimstack.io/blog/new-releases/aim-3-1-%E2%80%94-images-tracker-and-images-explorer)
+Now you can track all such figures on Aim (both as Matplotlib figure and as an image). When tracking as an image, you can query and compare them too at scale on the [Images Explorer.](https://aimstack.io/blog/new-releases/aim-3-1-images-tracker-and-images-explorer)
 
 ![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*zYdPka8XdPLAOxLdITESAw.png)
 
