@@ -54,9 +54,9 @@ It took us only a few clicks to see this key insight.
 
 **And this makes a couple of hours of work into something that’s less than a minute.**
 
-# Qualitative metrics comparison with 
+# Qualitative metrics comparison with
 
-# [Metrics Explorer](<https://aimstack.io/blog/new-releases/aim-3-1-%E2%80%94-images-tracker-and-images-explorer>)
+# [Metrics Explorer](https://aimstack.io/blog/new-releases/aim-3-1-images-tracker-and-images-explorer)
 
 ## Catastrophic Forgetting on the best Eng-based model
 
