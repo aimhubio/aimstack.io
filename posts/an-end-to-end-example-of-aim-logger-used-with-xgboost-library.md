@@ -108,6 +108,8 @@ As easy as that, we can analyze the runs and the system usage.
 
 ## Learn More
 
+
+
 [Aim is on a mission to democratize AI dev tools.](https://github.com/aimhubio/aim#democratizing-ai-dev-tools)
 
-If you find Aim useful, support us and star [the project](https://github.com/aimhubio/aim) on GitHub. Also, join the [Aim community](community.aimstack.io) and share more about your use-cases and how we can improve Aim to suit them.
+If you find Aim useful, support us and star [the project](https://github.com/aimhubio/aim) on GitHub. Also, join [Aim Community ](https://community.aimstack.io/)and share more about your use-cases and how we can improve Aim to suit them.
