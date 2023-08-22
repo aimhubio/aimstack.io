@@ -82,6 +82,6 @@ class CustomCallback(AimCallback):
 
 We have been incredibly lucky to get help and contributions from the amazing Aim community. It’s humbling and inspiring.
 
-Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](community.aimstack.io), share your feedback, open issues for new features, bugs.
+Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](https://community.aimstack.io/), share your feedback, open issues for new features, bugs.
 
 And don’t forget to leave Aim a star on GitHub for support.
