@@ -19,7 +19,7 @@ This is a milestone release with lots of anticipated new features and one that�
 
 * Remote tracking \[experimental]
 * Run delete and archive: batch and single
-* Ability to stack images on the [Images Explorer](https://aimstack.io/blog/new-releases/aim-3-1-%E2%80%94-images-tracker-and-images-explorer)
+* Ability to stack images on the [Images Explorer](https://aimstack.io/blog/new-releases/aim-3-1-images-tracker-and-images-explorer)
 * Text filtering via regexp
 * Trendline on scatterplots
 * More images features: display images by original size, align by width, images reordering
