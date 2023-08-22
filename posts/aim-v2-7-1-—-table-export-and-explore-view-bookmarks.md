@@ -26,7 +26,7 @@ Now you can export both tables from Explore and Dashboard to a CSV file. Aft
 
 This new feature helps to save/bookmark the Explore state for future access. The bookmarking ability is particularly helpful to save Explore views that contain certain insights you’d like to revisit.
 
-In the future [releases](https://aimstack.io/blog/new-releases/aim%E2%80%99s-foundations-why-we%E2%80%99re-building-a-tensorboard-alternative), we will build on top of this feature to potentially add notes, fully manage and share them. *For now, this feature is in experimental mode*. Please feel free to share more feedback and how we can improve its experience.
+In the future [releases](https://aimstack.io/blog/new-releases/aims-foundations-why-were-building-a-tensorboard-alternative), we will build on top of this feature to potentially add notes, fully manage and share them. *For now, this feature is in experimental mode*. Please feel free to share more feedback and how we can improve its experience.
 
 ![](https://miro.medium.com/v2/resize:fit:1400/1*U5a36lDx7-xgSONKh1-D0A.gif "Use bookmarks to save important explore states")
 
@@ -36,6 +36,6 @@ In the future [releases](https://aimstack.io/blog/new-releases/aim%E2%80%99s-fo
 
 We have been incredibly lucky to get help and contributions from the amazing Aim community. It’s humbling and inspiring.
 
-Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](https://join.slack.com/t/aimstack/shared_invite/zt-193hk43nr-vmi7zQkLwoxQXn8LW9CQWQ), share your feedback, open issues for new features, bugs.
+Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](https://community.aimstack.io/), share your feedback, open issues for new features, bugs.
 
 And don’t forget to leave [Aim](https://github.com/aimhubio/aim) a star on GitHub for support .
