@@ -84,7 +84,7 @@ This is the end result on the UI.
 
 ## Colab integration
 
-After we have integrated [Aim to Jupyter](https://aimstack.io/blog/new-releases/aim-3-2-%E2%80%94-jupyter-notebook-integration-histograms), there were many requests to enable Aim on Colab too. Now it has arrived! 
+After we have integrated [Aim to Jupyter](https://aimstack.io/blog/new-releases/aim-3-2-jupyter-notebook-integration-histograms), there were many requests to enable Aim on Colab too. Now it has arrived! 
 
 With fully embedded Aim UI, now you can track and follow your experiments live without leaving your colab environment!
 
@@ -123,7 +123,9 @@ The end-result on the Aim Web UI.
 
 ## Images visualization on run details page
 
-As we had launched the images tracking and visualization in[ 3.1](https://aimstack.io/blog/new-releases/aim-3-1-%E2%80%94-images-tracker-and-images-explorer), we haven’t enabled the images on the single run page. Besides the explorer, now you can observe and search through the images on the single run page as well.
+
+
+As we had launched the images tracking and visualization in[ 3.1](https://aimstack.io/blog/new-releases/aim-3-1-images-tracker-and-images-explorer), we haven’t enabled the images on the single run page. Besides the explorer, now you can observe and search through the images on the single run page as well.
 
 Here is how it looks on the UI
 
@@ -135,6 +137,6 @@ Here is how it looks on the UI
 
 We have been incredibly lucky to get help and contributions from the amazing Aim community. It’s humbling and inspiring.
 
-Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](community.aimstack.io), share your feedback, open issues for new features and bugs.
+Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](https://community.aimstack.io/), share your feedback, open issues for new features and bugs.
 
 And don’t forget to leave Aim a star on GitHub for support.
