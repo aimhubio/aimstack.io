@@ -5,7 +5,9 @@ categories:
 date: 2022-12-21T21:45:47.434Z
 title: Aim Community is Moving to Discord!! 🎉
 image: https://miro.medium.com/max/1400/1*c_ovadkKTTkZOokR3WiUTg.webp
-description: Aim community is officially moving to Discord!! 🎉
+description: Aim community is officially moving to Discord!! 🎉 Let's rock and
+  build great things together!! The slack workspace is going to become
+  deprecated by the end of 2022.
 draft: false
 ---
 [Aim](https://github.com/aimhubio/aim) community is officially moving to Discord!! 🎉
