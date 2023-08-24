@@ -6,8 +6,9 @@ date: 2022-05-08T20:34:11.966Z
 title: Aim 3.9 — Notes on training runs and upgrade to Pytorch Lightning 1.6
   Pytorch Lightning
 image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*eoVjVDwfOytJ-FyRqp_n0Q.png
-description: Hey team, Aim 3.9 is now available! We are on a mission to
-  democratize AI dev tools.
+description: Discover Aim 3.9's latest features! Add notes on Single Run page,
+  enhance Table component usability, and more. Read the article for full
+  details!
 draft: false
 ---
 Hey team, Aim 3.9 is now available!
