@@ -5,7 +5,9 @@ categories:
 date: 2023-01-20T06:16:21.056Z
 title: Aim 2022; Product Recap
 image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*mpgFSGReVaycf5644hM6xw.png
-description: A retrospective look at the past year!
+description: A retrospective look at the past year! Significant improvements
+  enhanced the functionality and usability of Aim for tracking machine learning
+  experiments for both small and large scale projects.
 draft: false
 ---
 # A retrospective look at the past year
