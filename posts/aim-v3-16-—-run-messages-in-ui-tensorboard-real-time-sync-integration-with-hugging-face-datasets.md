@@ -6,7 +6,9 @@ date: 2023-02-15T06:56:43.141Z
 title: Aim v3.16 — Run messages in UI, TensorBoard real-time sync, integration
   with Hugging Face Datasets
 image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*G-AzW2_QT8nvsgLUQH9JeA.png
-description: Excited to announce Aim v3.16 is out! 🚀
+description: "🚀 Aim v3.16 is out! Users will be able to view all Run messages
+  right in the UI. Integration of Aim with TensorBoard, Hugging Face Datasets,
+  Acme, Stable-Baselines3. "
 draft: false
 ---
 Hey community, excited to announce Aim v3.16 is out! 🚀 It is packed with new integrations and key enhancements.
