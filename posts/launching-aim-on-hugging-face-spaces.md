@@ -5,7 +5,9 @@ categories:
 date: 2023-04-19T13:41:34.213Z
 title: Launching Aim on Hugging Face Spaces
 image: /images/dynamic/hf_space_header.png
-description: Deploy Aim on Hugging Face Spaces within seconds using the Docker template!
+description: Deploy Aim on Hugging Face Spaces using the Docker template. Aim
+  empowers you to explore logs with interactive visualizations, easily compare
+  training runs at scale and be on top of ML development insights.
 draft: false
 ---
 We are excited to announce the launch of Aim on Hugging Face Spaces! 🚀
