@@ -5,8 +5,9 @@ categories:
 date: 2022-05-25T20:49:49.499Z
 title: Aim 3.10 — Visualize terminal logs, M1 support & better query autocomplete
 image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*z5HbX-z8qa0ORFDRKArmFw.png
-description: Hey team, Aim 3.10 is now available! We are on a mission to
-  democratize AI dev tools.
+description: Hey team, Aim 3.10 is now available! What's new? A lot! Visualize
+  terminal logs, M1 support, better autocomplete experience, integration with
+  CatBoost and LightGBM.
 draft: false
 ---
 Hey team, Aim 3.10 is now available!
