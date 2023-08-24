@@ -5,7 +5,9 @@ categories:
 date: 2022-11-03T21:31:15.756Z
 title: Aim 3.14 — Brand new Home Page!
 image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*GEJ0_GtGyXC4sv2sZrSCRA.png
-description: "Hey team, Aim 3.14 is now available! "
+description: Hey team, Aim 3.14 is now available! We're excited to introduce
+  Brand new Home Page, MXNet and FastAI loggers, new tooltip positioning modes
+  and ability to edit tags on the runs table!
 draft: false
 ---
 # Hey team, Aim 3.14 is now available!
