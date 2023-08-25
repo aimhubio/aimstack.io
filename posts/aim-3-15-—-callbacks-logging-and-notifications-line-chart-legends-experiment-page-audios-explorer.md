@@ -6,7 +6,9 @@ date: 2022-12-06T21:40:50.164Z
 title: Aim 3.15 — Callbacks, logging and notifications, line chart legends,
   experiment page, Audios Explorer
 image: https://miro.medium.com/max/1400/1*wQWwnwDeCSVQ-YbZapbHlQ.webp
-description: Aim 3.15 is out!
+description: Aim 3.15 is out! Callbacks, Logging & notifications, Line chart
+  legends, Audios Explorer, Experiment page, Robust locking mechanism,
+  PaddlePaddle & Optuna integrations.
 draft: false
 ---
 ## Hey team, get ready for a major upgrade!
