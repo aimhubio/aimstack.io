@@ -5,9 +5,9 @@ categories:
 date: 2021-02-16T12:18:06.528Z
 title: "Aim basics: using context and subplots to compare validation and test metrics"
 image: /images/dynamic/1.gif
-description: Validation and test metrics comparison is a crucial step in ML
-  experiments. ML researchers divide datasets into three subsets — train,
-  validation and test so they can test their model
+description: Discover how to leverage Aim's context and subplot features for
+  effortless comparison of validation and test metrics, enhancing your ML
+  experiment analysis.
 draft: false
 ---
 Researchers divide datasets into three subsets — train, validation and test so they can test their model performance at different levels.
