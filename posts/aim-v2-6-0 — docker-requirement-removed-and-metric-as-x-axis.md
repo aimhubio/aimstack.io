@@ -5,7 +5,9 @@ categories:
 date: 2021-06-24T14:25:34.071Z
 title: Aim v2.6.0 — Docker requirement removed and Metric as x-axis
 image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*W8Nw162Czv6_lzfQeh2m9A.png
-description: Before and after Aim v2.5.0
+description: "Explore Aim v2.6.0: No More Docker Requirement, Metric as x-axis.
+  Enhance your analysis with alternate axes, improving metric correlations.
+  Learn how!"
 draft: false
 ---
 ## Metric as an alternative x-axis
