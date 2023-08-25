@@ -5,9 +5,9 @@ categories:
 date: 2021-03-24T13:20:24.937Z
 title: Aim v2.2.0 — Hugging Face integration
 image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*MqbllMOE307ZvLLuH0MhvA.png
-description: Aim 2.2.0 featuring Hugging Face integration is out! Thanks to the
-  incredible Aim community for the feedback and support on building democratized
-  open-source AI dev tools.
+description: Aim 2.2.0 featuring Hugging Face integration is out! Hugging Face
+  integration has been one of the most requested features and we are excited to
+  finally ship it.
 draft: false
 ---
 [Aim](https://github.com/aimhubio/aim) 2.2.0 featuring Hugging Face integration is out! Thanks to the incredible Aim community for the feedback and support on building democratized open-source AI dev tools.
