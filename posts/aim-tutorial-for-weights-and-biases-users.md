@@ -5,10 +5,9 @@ categories:
 date: 2022-09-07T21:13:32.862Z
 title: Aim tutorial for Weights and Biases users
 image: https://miro.medium.com/max/1400/1*PBF_k6VevuUrquadJ86vfA.webp
-description: "Using Aim’s Explorers along with your Wandb dashboard is easy. Aim
-  allows you to convert Weights & Biases (wandb) runs into the native format and
-  explore them via Aim UI. In this blog/post we will go over the steps required
-  to migrate wandb logs to Aim. "
+description: Using Aim’s Explorers along with your Wandb dashboard is easy. Aim
+  allows you to convert Weights & Biases runs into the native format & explore
+  them via Aim UI.
 draft: false
 ---
 I am Hovhannes - ML researcher at YerevaNN. Experiment trackers are key for any researchers day-to-day and I have had my fair share of trials and turbulations with them.
