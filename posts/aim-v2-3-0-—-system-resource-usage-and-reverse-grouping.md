@@ -5,9 +5,9 @@ categories:
 date: 2021-04-20T13:39:39.516Z
 title: Aim v2.3.0 — System Resource Usage and Reverse Grouping
 image: https://miro.medium.com/v2/resize:fit:1400/1*txmn1LOXJ7nGift0T82lng.gif
-description: Aim 2.3.0 allowing System Resource Usage optimization is out!
-  Thanks to the community for feedback and support on our journey towards
-  democratizing MLOps tools. Check out...
+description: "Aim 2.3.0 allowing System Resource Usage optimization is out! Some
+  highlights: Reverse grouping, Line Chart Smoothing, New aggregation modes.
+  Check out! "
 draft: false
 ---
 [Aim](https://github.com/aimhubio/aim) 2.3.0 is out! Thanks to the community for feedback and support on our journey towards democratizing AI dev tools.
