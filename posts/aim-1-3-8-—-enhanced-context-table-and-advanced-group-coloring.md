@@ -5,8 +5,9 @@ categories:
 date: 2021-03-01T11:09:06.858Z
 title: Aim 1.3.8 — Enhanced Context Table and Advanced Group Coloring
 image: https://miro.medium.com/max/1400/1*l27Xjb6pYIMdEkABLkRBRA.webp
-description: "Aim 1.3.8 featuring Advanced Group Coloring for AI metrics  is now
-  available. "
+description: "Discover Aim 1.3.8's Exciting Features: Advanced Group Coloring &
+  Enhanced Context Table. Streamlined AI metrics visualization for efficient
+  analysis. Explore now!"
 draft: false
 ---
 
