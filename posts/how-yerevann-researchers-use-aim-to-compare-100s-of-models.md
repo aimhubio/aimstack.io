@@ -5,8 +5,9 @@ categories:
 date: 2022-05-31T16:29:36.844Z
 title: How YerevaNN researchers use Aim to compare 100s of models
 image: https://miro.medium.com/v2/resize:fit:4800/format:webp/1*lnmBXL_nhBGxOvjNO56-Rw.png
-description: YerevaNN is a non-profit computer science and mathematics research
-  lab based in Yerevan, Armenia.
+description: "Explore YerevaNN's use of Aim: Comparing 100s of models for
+  cross-lingual transfer in NLP. Reproducing studies, model selection, and
+  insights revealed. Learn more!"
 draft: false
 ---
 *Thanks to [Knarik Mheryan](https://medium.com/u/309b97b32187?source=post_page-----1a34ced2ced0--------------------------------) and [Hrant Khachatrian](https://medium.com/u/83126d4b3c1b?source=post_page-----1a34ced2ced0--------------------------------)for co-writing this blogpost.*
