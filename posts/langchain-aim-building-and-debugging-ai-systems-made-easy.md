@@ -7,7 +7,7 @@ title: "LangChain + Aim: Building and Debugging AI Systems Made EASY!"
 image: /images/dynamic/langchain_header.jpg
 description: As AI systems get increasingly complex, the ability to effectively
   debug and monitor them becomes crucial. Use Aim to easily trace complex AI
-  systems built with LangChain.
+  systems.
 draft: false
 ---
 
