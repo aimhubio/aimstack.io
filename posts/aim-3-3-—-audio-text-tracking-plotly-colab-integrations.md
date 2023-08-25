@@ -5,8 +5,9 @@ categories:
 date: 2022-01-13T15:33:59.865Z
 title: Aim 3.3 — Audio & Text tracking, Plotly & Colab integrations
 image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*300ZXHcgylKBit_O2KDeMA.png
-description: "Hey community, Aim 3.3 is now available! 😊 We are on a mission to
-  democratize AI dev tools.  "
+description: "Introducing Aim 3.3: Audio & Text Tracking, Plotly & Colab
+  Integration, Images visualization on run details page. Democratizing AI dev
+  tools with new features. Explore the enhancements now!"
 draft: false
 ---
 Hey community, Aim 3.3 is now available! 😊
