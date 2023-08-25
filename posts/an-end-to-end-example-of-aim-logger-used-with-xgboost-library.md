@@ -5,11 +5,9 @@ categories:
 date: 2021-05-17T14:12:33.016Z
 title: An end-to-end example of Aim logger used with XGBoost library
 image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*R0oLJAp9haSFzb92CSSyAg.png
-description: " Thanks to the community for feedback and support on our journey
-  towards democratizing MLOps tools. Check out […]  Read More 122  0
-  XGBoost  Tutorials An end-to-end example of Aim logger used… What is Aim? Aim
-  is an open-source tool for AI experiment comparison. With more resources and
-  complex models, more experiments are ran than ever. "
+description: "Integration: Aim Logger with XGBoost Library. Learn how to
+  seamlessly use Aim's capabilities in XGBoost experiments. Enhance analysis and
+  insights today! "
 draft: false
 ---
 ## What is Aim?
