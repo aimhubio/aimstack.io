@@ -5,9 +5,8 @@ categories:
 date: 2021-02-05T11:16:41.748Z
 title: Aim 1.3.5 — Activity View and X-axis alignment
 image: /images/dynamic/1st.gif
-description: Aim v1.3.5 is now available. Thanks to the incredible Aim community
-  for the feedback and support on building democratized open source MLOps tools.
-  Check out the new features […]
+description: Aim v1.3.5 is now available. Activity View on the Dashboard, X-axis
+  alignment by epoch, Ordering runs both on Explore and on Dashboard. Check out!
 draft: false
 ---
 
