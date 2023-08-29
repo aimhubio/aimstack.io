@@ -1,5 +1,4 @@
 import React, { useCallback } from 'react';
-import { NextSeo } from 'next-seo';
 import { pick } from '@contentlayer/client';
 import { slugify, ImageUrl, titleCase, getTotalPosts, pageCount } from 'utils';
 import { Text, Container } from 'styles/foundations';
@@ -7,6 +6,7 @@ import { allPosts } from 'contentlayer/generated';
 import BlogList from 'components/BlogList/BlogList';
 import Pagination from 'components/Pagination/Pagnation';
 import { useRouter } from 'next/router';
+import Seo from '../../components/SEO/SEO';
 
 export default function Category({ posts }) {
   const router = useRouter();
@@ -35,25 +35,11 @@ export default function Category({ posts }) {
 
   return (
     <>
-      <NextSeo
-        title="Access your category realted articles"
-        description="Access your category realted articles"
-        openGraph={{
-          url: 'https://aimstack.io/',
-          title: 'Access your category realted articles',
-          description: 'Access your category realted articles',
-
-          images: [
-            {
-              url: `${ImageUrl('banner.png')}`,
-              width: 1224,
-              height: 724,
-              alt: 'banner',
-              type: 'image/jpeg',
-            },
-          ],
-          site_name: 'Aimstack',
-        }}
+      <Seo
+        title={`${params.category} | AimStack`}
+        description='Access your category related articles'
+        image={`${ImageUrl('banner.png')}`}
+        path={`blog/${params.category}`}
       />
       <Container>
         <Text

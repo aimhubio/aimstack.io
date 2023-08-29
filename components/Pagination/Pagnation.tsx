@@ -4,17 +4,16 @@ import { PaginationStyle, PaginationList } from './Pagnation.style';
 import { Icon } from '../UIkit';
 
 const Pagination = ({ currentPage, totalPostCount, pathname }) => {
-  /*
- pages give number,base on number we create a array. base on array we map a list elements
- totalPostCount = 3
- conver into array [0,1,2]
- base on array create list in array
-
-*/
+  /**
+   pages give number,base on number we create an array. base on the array we map a list elements
+   totalPostCount = 3
+   convert into array [0,1,2]
+   base on array create list in array
+  **/
 
   let pageIntoArray = Array.from(Array(totalPostCount).keys());
 
-  if(pageIntoArray.length <= 1) return null
+  if (pageIntoArray.length <= 1) return null;
 
   return (
     <PaginationStyle>
