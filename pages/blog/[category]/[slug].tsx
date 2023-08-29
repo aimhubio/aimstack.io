@@ -161,7 +161,7 @@ export default function PostPage({ post, posts }) {
           <Flex>
             <Prev>
               {!!index && (
-                <Link rel='canonical' href={getNeighborPostUrl(index - 1)}>
+                <Link rel='prev' href={getNeighborPostUrl(index - 1)}>
                   <Flex align="center">
                     <Icon name="chevron-left" />
                     <Text
@@ -185,7 +185,7 @@ export default function PostPage({ post, posts }) {
             </Prev>
             <Next>
               {index < posts.length - 1 && (
-                <Link rel='canonical' href={getNeighborPostUrl(index + 1)} >
+                <Link rel='next' href={getNeighborPostUrl(index + 1)} >
                   <Flex align="center" justify="end">
                     <Text
                       className="chevron-text"
