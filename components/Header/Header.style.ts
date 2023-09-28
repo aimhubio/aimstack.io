@@ -8,6 +8,7 @@ const HeaderStyle = styled('header', {
   right: '0px',
   zIndex: 99,
   transition: '$main',
+  backgroundColor: 'transparent',
 
   '&.dark': {
     backgroundColor: '$darkBlue',

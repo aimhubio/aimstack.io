@@ -14,16 +14,13 @@ const Integrations = () => {
         <Text
           as="h3"
           className="title"
-          size="8"
-          css={{ marginBottom: '$6', lineHeight: 1.3 }}
+          size={9}
+          css={{ marginBottom: '$6', lineHeight: 1.3, fontWeight: 800 }}
         >
-          Seamless integrations with your favorite tools
+          Aim connects and integrates with your favorite tools
         </Text>
-        <Text css={{ lineHeight: '32px' }}>
-          Aim is tightly integrated with the ML ecosystem. Aim comes with
-          built-in callbacks for the most of ML tools and frameworks. It allows
-          to track metadata (metrics, hparams, etc.) with just a few lines of
-          code!
+        <Text size={3} css={{ lineHeight: '30px' }}>
+          The Aim standard package comes with all integrations. If you'd like to modify the integration and make it custom, create a new integration package and share with others.
         </Text>
         <Button
           css={{ marginTop: '$8' }}

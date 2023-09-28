@@ -2,6 +2,7 @@ import {
   TrustedCompaniesContainer,
   Slider,
   SliderItem,
+  TrustedCompaniesSection,
 } from './TrustedCompanies.style';
 import { useKeenSlider } from 'keen-slider/react';
 import Image from 'next/image';
@@ -54,15 +55,14 @@ const TrustedCompanies = () => {
   });
 
   return (
-    <>
+    <TrustedCompaniesContainer>
       <Text
-        align="center"
         size="7"
-        css={{ marginBottom: '$6', fontWeight: 700 }}
+        css={{ marginBottom: '$6', fontWeight: 700, textAlign: 'center' }}
       >
         Trusted by ML teams from
       </Text>
-      <TrustedCompaniesContainer>
+      <TrustedCompaniesSection>
         <Slider
           ref={ref}
           className="keen-slider"
@@ -82,8 +82,8 @@ const TrustedCompanies = () => {
             );
           })}
         </Slider>
-      </TrustedCompaniesContainer>
-    </>
+      </TrustedCompaniesSection>
+    </TrustedCompaniesContainer>
   );
 };
 

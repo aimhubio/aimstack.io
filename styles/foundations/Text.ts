@@ -55,8 +55,8 @@ const TextStyle = styled('p', {
       },
       9: {
         fontSize: '$9',
-        fontWeight: '$5',
-        lineHeight: '1.1',
+        fontWeight: '$6',
+        lineHeight: 'normal',
         '@bp1': {
           fontSize: '$8',
         },
@@ -66,7 +66,18 @@ const TextStyle = styled('p', {
       },
       10: {
         fontSize: '$10',
-        fontWeight: '$5',
+        fontWeight: '$6',
+        lineHeight: '1.25',
+        '@bp1': {
+          fontSize: '$8',
+        },
+        '@bp2': {
+          fontSize: '$7',
+        },
+      },
+      11: {
+        fontSize: '$11',
+        fontWeight: '$6',
         lineHeight: '1.25',
         '@bp1': {
           fontSize: '$8',
