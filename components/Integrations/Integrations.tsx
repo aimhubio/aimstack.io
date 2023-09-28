@@ -20,7 +20,8 @@ const Integrations = () => {
           Aim connects and integrates with your favorite tools
         </Text>
         <Text size={3} css={{ lineHeight: '30px' }}>
-          The Aim standard package comes with all integrations. If you'd like to modify the integration and make it custom, create a new integration package and share with others.
+          The Aim standard package comes with all integrations.
+          If you&apos;d like to modify the integration and make it custom, create a new integration package and share with others.
         </Text>
         <Button
           css={{ marginTop: '$8' }}
