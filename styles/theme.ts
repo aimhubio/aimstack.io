@@ -3,10 +3,10 @@ import Theme = ConfigType.Theme;
 
 const theme: Theme = {
   fonts: {
-    OpenSans: "'Open Sans', sans-serif",
-    Lora: "'Lora', serif",
-    Inconsolata: "'Inconsolata', monospace",
-    base: '$OpenSans',
+    // OpenSans: "'Open Sans', sans-serif",
+    // Lora: "'Lora', serif",
+    // Inconsolata: "'Inconsolata', monospace",
+    base: 'inherit',
   },
   colors: {
     blue: '#1093F2',
@@ -51,9 +51,9 @@ const theme: Theme = {
     6: '24px',
     7: '32px',
     8: '44px',
-    9: '64px',
-    10: '68px',
-
+    9: '56px',
+    10: '64px',
+    11: '68px',
     baseSize: '$2',
   },
   space: {
@@ -76,6 +76,7 @@ const theme: Theme = {
     3: '600',
     4: '700',
     5: '800',
+    6: '900'
   },
   shadows: {
     1: '0px 60px 66px -65px rgba(11, 47, 97, 0.2)',
@@ -84,7 +85,6 @@ const theme: Theme = {
     4: '0px 10px 24px -10px rgba(11, 47, 97, 0.4)',
     5: '0px 10px 32px -10px rgba(11, 47, 97, 0.2)',
   },
-
   radii: {
     1: '6px',
     2: '8px',

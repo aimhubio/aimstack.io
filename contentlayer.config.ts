@@ -33,7 +33,6 @@ const Post = defineDocumentType(() => ({
     author: {
       type: 'string',
     },
-
     description: {
       type: 'string',
     },

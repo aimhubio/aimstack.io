@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { HeroStyle, HeroContent } from './Hero.style';
+import { HeroStyle, HeroContentWrapper } from './Hero.style';
 import { Text, Container } from 'styles/foundations';
 import { Button } from 'components/UIkit';
 import { GITHUB_API } from 'config';
+import Image from 'next/image';
+// @ts-ignore
+import Banner from 'public/images/static/hero/banner.png';
 
 const Hero = () => {
   const [release, setRelease] = useState();
@@ -24,39 +27,51 @@ const Hero = () => {
   return (
     <HeroStyle>
       <Container>
-        <HeroContent>
-          <Text as="h1" size={10} css={{ marginBottom: '$6' }}>
-            An easy-to-use & supercharged open-source AI metadata tracker
-          </Text>
-          <Text as="p" size={4} css={{ marginBottom: '48px' }}>
-            Aim logs all your AI metadata (
-            <Text as="span" css={{ fontWeight: 700 }}>
-              experiments, prompts, etc
-            </Text>
-            ) enables a UI to compare & observe them and SDK to query them
-            programmatically.
-          </Text>
-          <Button
-            css={{ marginBottom: '$12' }}
-            as="a"
-            href="https://github.com/aimhubio/aim"
-            target="_blank"
-          >
-            Check out our Github
-          </Button>
-          {release && (
-            <Button
-              className="github-btn"
-              as="a"
-              variant="outline"
-              size={2}
-              href="/blog/aim-3-15-—-callbacks-logging-and-notifications-line-chart-legends-experiment-page-audios-explorer"
-              target="_blank"
+        <HeroContentWrapper>
+          <div className={'hero-content'}>
+            <Text
+              as="h1"
+              size={9}
+              css={{
+                marginBottom: '$6',
+                width: '100%',
+              }}
             >
-              Aim release <strong>{release}</strong>
-            </Button>
-          )}
-        </HeroContent>
+              An easy-to-use open-source developer framework for end-to-end AI
+              observability.
+            </Text>
+            <Text
+              as="p"
+              size={3}
+              css={{
+                marginBottom: '56px',
+                width: '100%',
+              }}
+            >
+              Easily create full observability and automation layer for your AI
+              Systems - from Data preprocessing to LLM monitoring.
+            </Text>
+            <div className='hero-button-container'>
+              <Button
+                variant="outline"
+                className={'hero-try-demo'}
+                as="a"
+                href="#demos"
+              >
+                Try Demo Now
+              </Button>
+              <Button
+                className={'hero-quick-start'}
+                as="a"
+                href="https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html"
+                target="_blank"
+              >
+                Quick Start
+              </Button>
+            </div>
+          </div>
+          <Image src={Banner} alt="banner" className={'hero-banner'} />
+        </HeroContentWrapper>
       </Container>
     </HeroStyle>
   );

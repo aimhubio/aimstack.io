@@ -48,10 +48,18 @@ const ButtonStyle = styled('button', {
       },
       outline: {
         backgroundColor: '$white',
-        color: '$textColor',
-        border: '1px solid $grey',
+        color: '#5865F2',
+        border: '1px solid #5865F2',
         '&:hover': {
+          backgroundColor: '#DEE0FC',
           borderColor: "$primaryHover"
+        },
+      },
+      ghost: {
+        backgroundColor: 'transparent',
+        color: '#5865F2',
+        '&:hover': {
+          backgroundColor: '#DEE0FC',
         },
       },
     },

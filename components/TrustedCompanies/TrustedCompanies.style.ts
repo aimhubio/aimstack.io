@@ -1,10 +1,14 @@
 import { styled } from 'styles';
 
-const TrustedCompaniesContainer = styled('section', {
+
+const TrustedCompaniesContainer = styled('div', {
+  paddingBlock: '80px',
+});
+
+const TrustedCompaniesSection = styled('section', {
   height: '110px',
   display: 'flex',
   backgroundColor: 'white',
-  boxShadow: '$5',
 });
 const Slider = styled('div', {
   backgroundColor: 'white',
@@ -18,4 +22,4 @@ const SliderItem = styled('div', {
   },
 });
 
-export { TrustedCompaniesContainer, Slider, SliderItem };
+export { TrustedCompaniesContainer, Slider, SliderItem, TrustedCompaniesSection };
