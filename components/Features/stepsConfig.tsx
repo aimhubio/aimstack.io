@@ -1,38 +1,84 @@
-interface ISteps {
-  title: string;
-  list: string[];
-  name: string;
+import { Text } from 'styles/foundations';
+
+interface Step {
+  key: string;
+  title: string | JSX.Element;
+  description: string | JSX.Element;
+  list: Array<string>;
+  explorationLink: string;
+  bannerImgSrc: string;
 }
-const stepsConfig: ISteps[] = [
+
+export const steps: Step[] = [
   {
-    name: 'build',
-    title: 'Compare runs easily to <strong> build models faster</strong>',
-    list: [
-      'Group and aggregate 100s of metrics',
-      'Analyze and learn correlations',
-      'Query with easy pythonic search',
-    ],
+    key: 'log-anything',
+    title: 'Log anything from everywhere',
+    description: 'Declare any python object as a loggable type',
+    list: ['Metrics', 'Images', 'Text', 'Custom Objects', 'Remote logging'],
+    explorationLink: 'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
+    bannerImgSrc: '/images/static/why-use-aim/build.png',
   },
   {
-    name: 'debugging',
-    title:
-      'Deep dive into details of each run for <strong>easy debugging</strong>',
+    key: 'low-code-ui',
+    title: 'Pythonic low-code UI',
+    description:
+      'Create custom UI for your logs using Aim’s low-code pythonic UI-builder',
     list: [
-      'Explore hparams, metrics, images, distributions, audio, text, ...',
-      'Track plotly and matplotlib plots',
-      'Analyze system resource usage',
+      'Full UI Kit',
+      'Full Data type compatibility',
+      'Extensible and customizable',
     ],
+    explorationLink: 'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
+    bannerImgSrc: '/images/static/why-use-aim/build.png',
   },
   {
-    name: 'governance',
-    title:
-      'Have all relevant information centralized for <strong>easy governance</strong>',
+    key: 'modular-ecosystem',
+    title: 'Modular ecosystem of packages',
+    description: 'Create an end-to-end custom logging app and run by Aim.',
     list: [
-      'Centralized dashboard to view all your runs',
-      'Use SDK to query/access tracked runs',
-      'You own your data - Aim is open source and self hosted.',
+      'Distributed as python packages',
+      'Composable',
+      'UI + Automations + Logging',
     ],
+    explorationLink: 'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
+    bannerImgSrc: '/images/static/why-use-aim/build.png',
   },
 ];
 
-export default stepsConfig;
+
+interface ComingSoonStep {
+  key: string;
+  title: string | JSX.Element;
+  description: string | JSX.Element;
+  list: Array<string>;
+}
+
+export const comingSoonSteps: ComingSoonStep[] = [
+  {
+    key: 'log-automations',
+    title: (
+      <>
+        Log Automations
+        <Text as="span" className="badge">
+          coming soon
+        </Text>
+      </>
+    ),
+    description:
+      'Automate over your logs and connect observability to the rest of your toolstack.',
+    list: ['Actions', 'Callbacks', 'Beats'],
+  },
+  {
+    key: 'connect-artifacts',
+    title: (
+      <>
+        Connect Artifacts
+        <Text as="span" className="badge">
+          coming soon
+        </Text>
+      </>
+    ),
+    description: 'Connect Artifacts to your logs.',
+    list: ['Versioning', 'Retrieval'],
+  },
+];

@@ -1,113 +1,159 @@
+import Image from 'next/image';
 import { styled } from 'styles';
+import { Container } from '../../styles/foundations';
 
-const FeaturesStyle = styled('section', {
-  py: '150px',
-
-  '.title': {
-    textAlign: 'center',
-    marginBottom: '100px',
-  },
-
+const FeaturesSection = styled('section', {
+  backgroundImage: 'url(/images/static/features/dots.png)',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'contain',
+  backgroundPosition: 'top',
+  overflow: 'hidden',
+  padding: '150px 0',
   '@bp1': {
-    py: '80px',
-
-    '.title': {
-      marginBottom: '64px',
+    padding: '132px 0',
+  },
+  '@bp2': {
+    padding: '80px 0 24px',
+    textAlign: 'center',
+  },
+  '.features-title': {
+    marginBottom: '$6',
+    fontWeight: 800,
+    '@bp2': {
+      textAlign: 'center',
     },
   },
-
-  '@bp2': {
-    py: '60px',
-    '.title': {
-      marginBottom: '44px',
+  '.features-subtitle': {
+    lineHeight: '30px',
+    marginBottom: '$14',
+    '@bp2': {
+      marginBottom: '$11',
     },
   },
 });
-const StepRow = styled('div', {
+
+const FeaturesContainer = styled(Container, {
+  display: 'flex',
+  alignItems: 'center',
+  flexDirection: 'column',
+});
+
+const FeaturesContainerHeader = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  maxWidth: '600px',
+  textAlign: 'center',
+  alignItems: 'center',
+});
+
+const FeaturesContainerContent = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+  width: '100%'
+});
+
+const ComingSoonContainerContent = styled('div', {
+  borderTop: '1px solid #E4E7EB',
+  display: 'flex',
+  alignItems: 'flex-start',
+  width: '100%',
+  '@bp2': {
+    flexDirection: 'column',
+  },
+  '.step-coming-soon': {
+    flex: 1,
+    maxWidth: '360px',
+    paddingRight: '40px',
+    marginRight: '60px',
+    '@bp2': {
+      paddingRight: 0,
+      marginRight: 0,
+    },
+  }
+});
+
+const Step = styled('div', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-
-  '.title-mobile': {
-    display: 'none',
-  },
-  '@bp1': {
-    flexWrap: 'wrap',
-    alignItems: 'flex-start',
-    '.title-mobile': {
-      display: 'block',
-      width: '100%',
-    },
-  },
+  padding: '60px 0',
   '@bp2': {
     flexDirection: 'column',
-    marginBottom: '60px',
-  },
+  }
 });
-const Left = styled('div', {
-  '& ul': {
-    '& li': {
-      marginBottom: '$4',
-      position: 'relative',
-      paddingLeft: '16px',
 
+const StepContent = styled('div', {
+  width: '400px',
+  '@bp2': {
+    width: '100%',
+  },
+  '.step-title': {
+    display: 'flex',
+    alignItems: 'center',
+    textAlign: 'left',
+    marginBottom: '$6',
+    '.badge': {
+      color: '$white',
+      fontSize: '10px',
+      padding: '6px 4px',
+      background: '#5865F2',
+      borderRadius: '4px',
+      marginLeft: '$4',
+    }
+  },
+  '.step-description': {
+    marginBottom: '$5',
+    '@bp2': {
+      textAlign: 'left',
+    },
+  },
+  '& ul': {
+    '@bp2': {
+      textAlign: 'left',
+    },
+    '& li': {
+      marginBottom: '$3',
+      position: 'relative',
+      paddingLeft: '24px',
       '&:before': {
         content: '•',
         position: 'absolute',
         left: '0',
         top: '-5px',
         fontSize: '24px',
-        color: '$secondary',
+        color: '#5865F2',
       },
     },
-    '@bp1': {
-      paddingTop: '$4',
-    },
   },
+});
 
-  '@bp1': {
-    maxWidth: '280px',
-    width: '100%',
-    '.title-desktop': {
-      display: 'none',
-    },
-  },
+const StepBannerImage = styled(Image, {
+  maxWidth: '600px',
+  minWidth: '400px',
+  height: 'auto',
+  display: 'block',
   '@bp2': {
-    maxWidth: '100%',
-    order: '2',
+    display: 'none',
   },
-});
-const Right = styled('div', {
-  maxWidth: '610px',
-  width: '100%',
-  position: 'relative',
-
-  img: {
-    width: '100%',
-    height: 'auto',
-  },
-
-  '@bp1': {
-    maxWidth: '396px',
-    marginLeft: '0',
-  },
-  '@bp2': {
-    maxWidth: '100%',
-    order: '1',
-  },
+  '&.step-banner-image-mobile': {
+    display: 'none',
+    '@bp2': {
+      margin: '0 auto',
+      display: 'block',
+      minWidth: 'unset',
+      width: '100%'
+    },
+  }
 });
 
-const ButtonLink = styled('a', {
-  display: 'flex',
-  alignItems: 'center',
-  color: '$primary',
-  fontFamily: '$OpenSans600',
-  textDecoration: 'none',
-
-  '& .icon': {
-    fill: '$primary',
-    marginLeft: '$4',
-  },
-});
-
-export { FeaturesStyle, StepRow, Left, Right, ButtonLink };
+export {
+  FeaturesSection,
+  FeaturesContainer,
+  FeaturesContainerHeader,
+  FeaturesContainerContent,
+  ComingSoonContainerContent,
+  Step,
+  StepContent,
+  StepBannerImage,
+};
