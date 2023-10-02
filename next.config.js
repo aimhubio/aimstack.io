@@ -1,3 +1,9 @@
+// @ts-check
+
+/**
+ * @type {import('next').NextConfig}
+ **/
+
 const { withContentlayer } = require('next-contentlayer');
 const withExportImages = require('next-export-optimize-images')
 

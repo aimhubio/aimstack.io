@@ -1,9 +1,9 @@
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const useLockedBody = (initialLocked = false) => {
   const [locked, setLocked] = useState<boolean>(initialLocked);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!locked) {
       return;
     }

@@ -23,9 +23,10 @@ const Slider = styled('div', {
 const SliderItem = styled('div', {
   display: 'flex',
   alignItems: 'center',
-  overflow: 'visible !important',
+  overflow: 'visible',
   img: {
-    width: '160px !important',
+    width: '100%',
+    height: 'auto',
   },
 });
 

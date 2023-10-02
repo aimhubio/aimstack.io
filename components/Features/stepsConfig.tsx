@@ -15,7 +15,8 @@ export const steps: Step[] = [
     title: 'Log anything from everywhere',
     description: 'Declare any python object as a loggable type',
     list: ['Metrics', 'Images', 'Text', 'Custom Objects', 'Remote logging'],
-    explorationLink: 'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
+    explorationLink:
+      'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
     bannerImgSrc: '/images/static/why-use-aim/build.png',
   },
   {
@@ -28,7 +29,8 @@ export const steps: Step[] = [
       'Full Data type compatibility',
       'Extensible and customizable',
     ],
-    explorationLink: 'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
+    explorationLink:
+      'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
     bannerImgSrc: '/images/static/why-use-aim/build.png',
   },
   {
@@ -40,11 +42,11 @@ export const steps: Step[] = [
       'Composable',
       'UI + Automations + Logging',
     ],
-    explorationLink: 'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
+    explorationLink:
+      'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
     bannerImgSrc: '/images/static/why-use-aim/build.png',
   },
 ];
-
 
 interface ComingSoonStep {
   key: string;

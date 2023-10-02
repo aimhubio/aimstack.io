@@ -10,6 +10,10 @@ const Culture = styled('section', {
   backgroundColor: '$darkBlue',
   position: 'relative',
 
+  '.bg-top': {
+    objectFit: "cover",
+    objectPosition: "top"
+  },
   '@bp1': {
     py: '44px',
   },

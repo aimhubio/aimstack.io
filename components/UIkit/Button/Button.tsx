@@ -1,4 +1,4 @@
-import { FC, ButtonHTMLAttributes, ReactNode, forwardRef } from 'react';
+import React, { ReactNode, forwardRef } from 'react';
 import { ButtonStyle } from './Button.style';
 import { CSS } from '@stitches/react';
 

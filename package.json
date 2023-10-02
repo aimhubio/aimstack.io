@@ -12,19 +12,18 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\""
   },
   "dependencies": {
-    "@next/font": "^13.0.4",
     "@stitches/react": "^1.2.8",
-    "@types/node": "^18.11.9",
-    "@types/react": "^17.0.52",
-    "@types/react-highlight": "^0.12.5",
-    "eslint-config-prettier": "^8.5.0",
+    "@types/node": "^20.8.0",
+    "@types/react": "^18.2.24",
+    "@types/react-highlight": "^0.12.6",
+    "eslint-config-prettier": "^9.0.0",
     "icomoon-react": "^3.0.0",
-    "keen-slider": "^6.8.3",
-    "markdown-to-jsx": "^7.1.8",
+    "keen-slider": "^6.8.6",
+    "markdown-to-jsx": "^7.3.2",
     "netlify-cms-app": "^2.15.72",
-    "next": "^13.0.3",
-    "next-export-optimize-images": "^2.0.0",
-    "next-share": "^0.19.0",
+    "next": "^13.5.3",
+    "next-export-optimize-images": "^3.2.0",
+    "next-share": "^0.27.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-github-btn": "^1.4.0",
@@ -32,13 +31,13 @@
     "react-lite-youtube-embed": "^2.3.52"
   },
   "devDependencies": {
-    "contentlayer": "^0.2.4",
-    "eslint": "7.32.0",
-    "eslint-config-next": "^13.0.3",
-    "next-contentlayer": "^0.2.4",
-    "next-seo": "^5.4.0",
-    "next-sitemap": "^2.5.20",
-    "prettier": "^2.8.0",
-    "typescript": "^4.9.3"
+    "contentlayer": "^0.3.4",
+    "eslint": "8.50.0",
+    "eslint-config-next": "^13.5.3",
+    "next-contentlayer": "^0.3.4",
+    "next-seo": "^6.1.0",
+    "next-sitemap": "^4.2.3",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
   }
 }

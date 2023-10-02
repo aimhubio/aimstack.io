@@ -1,6 +1,11 @@
 import { styled } from 'styles';
 
-const CardStyle = styled('div', {});
+const CardStyle = styled('div', {
+  'img': {
+    objectFit: "cover",
+    objectPosition: "top"
+  }
+});
 
 const ImageWrapper = styled('div', {
   position: 'relative',
