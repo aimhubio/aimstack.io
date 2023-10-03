@@ -72,7 +72,7 @@ export default function PostPage({ post, posts }) {
         image={post.image}
         path={path}
       />
-      <Container>
+      <Container style={{ paddingTop: '150px' }}>
         <Link href="/blog">
           <Flex align="center" css={{ marginTop: '$10' }}>
             <Icon name="back" size={20} />

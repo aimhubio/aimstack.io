@@ -73,7 +73,7 @@ export const socialList: Social[] = [
   },
   {
     name: 'linkedIn',
-    icon: '/images/static/social/linkedIn.svg',
+    icon: '/images/static/social/linkedin.svg',
     url: 'https://www.linkedin.com/company/aimstackio/',
   },
   {
