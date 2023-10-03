@@ -31,16 +31,16 @@ const FeaturesSection = styled('section', {
 
 const FeaturesContainer = styled(Container, {
   display: 'flex',
-  alignItems: 'center',
   flexDirection: 'column',
 });
 
 const FeaturesContainerHeader = styled('div', {
   display: 'flex',
   flexDirection: 'column',
-  maxWidth: '600px',
-  textAlign: 'center',
-  alignItems: 'center',
+  maxWidth: '500px',
+  '@bp2': {
+    maxWidth: '100%',
+  }
 });
 
 const FeaturesContainerContent = styled('div', {
