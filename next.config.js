@@ -1,3 +1,9 @@
+// @ts-check
+
+/**
+ * @type {import('next').NextConfig}
+ **/
+
 const { withContentlayer } = require('next-contentlayer');
 const withExportImages = require('next-export-optimize-images')
 
@@ -5,11 +11,11 @@ const nextConfig = withExportImages({
   async headers() {
     return [
       {
-        source: "/:path*",
+        source: '/:path*',
         headers: [
           {
-            key: "cache-control",
-            value: "public, max-age=31536000, immutable",
+            key: 'cache-control',
+            value: 'public, max-age=31536000, immutable',
           },
         ],
       },

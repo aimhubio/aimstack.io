@@ -3,7 +3,7 @@ import { BlogListStyle, BlogItem } from './BlogList.style';
 import Card from 'components/Card/Card';
 
 interface IBlog {
-  categories: string[]; //TODO change to string
+  categories: string[];
   date: Date;
   description: string;
   draft: boolean;

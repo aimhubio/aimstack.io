@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from 'next/image';
 import {
   IntegrationsContainer,
@@ -16,7 +17,7 @@ const Integrations = () => {
           <Text as="h2" className="integrations-title" size={9}>
             Aim connects and integrates with your favorite tools
           </Text>
-          <Text size={3} className="integrations-subtitle">
+          <Text size={3} className={'integrations-subtitle'}>
             The Aim standard package comes with all integrations. If you&apos;d
             like to modify the integration and make it custom, create a new
             integration package and share with others.
@@ -35,7 +36,6 @@ const Integrations = () => {
             alt="integrations image"
             width={200}
             height={150}
-            layout="responsive"
           />
         </IntegrationsList>
       </IntegrationsContainer>

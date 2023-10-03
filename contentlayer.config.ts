@@ -1,23 +1,9 @@
 import {
   defineDocumentType,
   makeSource,
-  defineNestedType,
 } from 'contentlayer/source-files';
 import { slugify } from './utils';
 
-const Tag = defineNestedType(() => ({
-  name: 'Tag',
-  fields: {
-    title: { type: 'string' },
-  },
-}));
-
-const Categories = defineNestedType(() => ({
-  name: 'Categories',
-  fields: {
-    title: { type: 'string' },
-  },
-}));
 
 const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -46,15 +32,15 @@ const Post = defineDocumentType(() => ({
       type: 'string',
     },
     draft: {
-      type: 'string',
+      type: 'boolean',
     },
     tags: {
       type: 'list',
-      of: Tag,
+      of: { type: 'string' },
     },
     categories: {
       type: 'list',
-      of: Categories,
+      of: { type: 'string' },
     },
   },
   computedFields: {
@@ -112,7 +98,7 @@ const Package = defineDocumentType(() => ({
   },
 }));
 export default makeSource({
-  contentDirPath: '.',
+  contentDirPath: './blogs',
   contentDirInclude: [],
   documentTypes: [Post, Package],
 });

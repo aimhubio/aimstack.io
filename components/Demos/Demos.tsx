@@ -36,7 +36,6 @@ const Demos = () => {
                     alt="AimStack"
                     width={100}
                     height={100}
-                    layout="responsive"
                   />
                   <div className="inner">
                     <Text

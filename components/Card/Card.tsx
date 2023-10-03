@@ -12,8 +12,8 @@ import { Icon } from 'components/UIkit';
 import Link from 'next/link';
 import { slugify } from 'utils';
 
-const Card = ({ categories, description, image, slug, title, views }) => {
-  const category = slugify(categories[0]);
+const Card = ({ categories, description, image, slug, title, views }: any) => {
+  const category = slugify(categories?.[0]);
   const blogUrl = `/blog/${category}/${slug}`;
   return (
     <CardStyle>
@@ -23,9 +23,7 @@ const Card = ({ categories, description, image, slug, title, views }) => {
             key={slug}
             src={image}
             alt={title}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="top"
+            fill={true}
           />
         </Link>
       </ImageWrapper>

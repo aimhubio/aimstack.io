@@ -3,7 +3,7 @@ import { LayoutStyle, Wrapper, Content } from './Layout.style';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import { useRouter } from 'next/router';
-import { Inter } from '@next/font/google';
+import { Inter } from 'next/font/google';
 
 interface ILayout {
   children: ReactNode;
@@ -21,17 +21,6 @@ const Layout: FC<ILayout> = ({ children }) => {
 
   return (
     <LayoutStyle className={inter.className}>
-      {/*{(!blog && !subpackage) && (*/}
-      {/*  <Image*/}
-      {/*    className='bg-top'*/}
-      {/*    layout='fill'*/}
-      {/*    objectFit={`${home ? 'contain' : 'fill'}`}*/}
-      {/*    objectPosition='top'*/}
-      {/*    src={'/images/static/main/main-bg.png'}*/}
-      {/*    priority*/}
-      {/*    alt={''}*/}
-      {/*  />*/}
-      {/*)}*/}
       {admin ? (
         children
       ) : (

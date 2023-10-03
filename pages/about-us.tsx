@@ -42,9 +42,7 @@ const About = () => {
       <Culture>
         <Image
           className="bg-top"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="top"
+          fill={true}
           src={'/images/static/about-us/bg.png'}
           priority
           alt='Our Cultural Values'

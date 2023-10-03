@@ -76,7 +76,6 @@ const TrustedCompanies = () => {
                   alt={name}
                   width={200}
                   height={150}
-                  layout="responsive"
                 />
               </SliderItem>
             );

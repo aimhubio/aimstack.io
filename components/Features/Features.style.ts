@@ -50,7 +50,7 @@ const FeaturesContainerContent = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
-  width: '100%'
+  width: '100%',
 });
 
 const ComingSoonContainerContent = styled('div', {
@@ -70,7 +70,7 @@ const ComingSoonContainerContent = styled('div', {
       paddingRight: 0,
       marginRight: 0,
     },
-  }
+  },
 });
 
 const Step = styled('div', {
@@ -80,7 +80,7 @@ const Step = styled('div', {
   padding: '60px 0',
   '@bp2': {
     flexDirection: 'column',
-  }
+  },
 });
 
 const StepContent = styled('div', {
@@ -100,7 +100,7 @@ const StepContent = styled('div', {
       background: '#5865F2',
       borderRadius: '4px',
       marginLeft: '$4',
-    }
+    },
   },
   '.step-description': {
     marginBottom: '$5',
@@ -142,9 +142,9 @@ const StepBannerImage = styled(Image, {
       margin: '0 auto',
       display: 'block',
       minWidth: 'unset',
-      width: '100%'
+      width: '100%',
     },
-  }
+  },
 });
 
 export {

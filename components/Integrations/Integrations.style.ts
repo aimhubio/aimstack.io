@@ -35,7 +35,7 @@ const IntegrationsContainerLeft = styled('div', {
   },
   '.integrations-title': {
     marginBottom: '$6',
-    fontWeight: 800
+    fontWeight: 800,
   },
   '.integrations-subtitle': {
     lineHeight: '30px',
@@ -59,8 +59,17 @@ const IntegrationsList = styled('div', {
     width: '80%',
   },
   '@bp4': {
-    display: 'none'
+    display: 'none',
+  },
+  img: {
+    width: '100%',
+    height: 'auto',
   },
 });
 
-export { IntegrationsSection, IntegrationsContainer, IntegrationsList, IntegrationsContainerLeft };
+export {
+  IntegrationsSection,
+  IntegrationsContainer,
+  IntegrationsList,
+  IntegrationsContainerLeft,
+};
