@@ -62,22 +62,22 @@ export const navList: INavList[] = [
 
 export const socialList: Social[] = [
   {
-    name: 'discord',
+    name: 'Discord',
     icon: '/images/static/social/discord.svg',
     url: 'https://community.aimstack.io/',
   },
   {
-    name: 'twitter',
+    name: 'X',
     icon: '/images/static/social/twitterx.svg',
     url: 'https://twitter.com/aimstackio',
   },
   {
-    name: 'linkedIn',
-    icon: '/images/static/social/linkedIn.svg',
+    name: 'LinkedIn',
+    icon: '/images/static/social/linkedin.svg',
     url: 'https://www.linkedin.com/company/aimstackio/',
   },
   {
-    name: 'fb',
+    name: 'FaceBook',
     icon: '/images/static/social/facebook.svg',
     url: 'https://www.facebook.com/aimstackio',
   },
