@@ -18,7 +18,6 @@ const ButtonStyle = styled('button', {
         lineHeight: '53px',
         fontSize: '$3',
         px: '$6',
-
         '@bp1': {
           height: '50px',
           lineHeight: '50px',

@@ -17,9 +17,9 @@ const Index = () => {
       <Hero />
       <TrustedCompanies />
       <Integrations />
-      <VideoGuide />
-      <QuickStart />
+      {/*<VideoGuide />*/}
       <Features />
+      <QuickStart />
       <Demos />
       <Subscribe />
     </>

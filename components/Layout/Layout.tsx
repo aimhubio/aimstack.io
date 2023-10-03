@@ -3,7 +3,6 @@ import { LayoutStyle, Wrapper, Content } from './Layout.style';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 import { Inter } from '@next/font/google';
 
 interface ILayout {
@@ -41,18 +40,6 @@ const Layout: FC<ILayout> = ({ children }) => {
           <Content>{children}</Content>
           <Footer />
         </Wrapper>
-      )}
-
-      {home && (
-        <Image
-          className="bg-bottom"
-          width={2000}
-          height={3000}
-          objectFit="contain"
-          objectPosition="center -240px"
-          src={'/images/static/main/lines-bg.png'}
-          alt={''}
-        />
       )}
     </LayoutStyle>
   );

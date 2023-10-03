@@ -2,8 +2,15 @@ import { styled } from 'styles';
 
 
 const TrustedCompaniesContainer = styled('div', {
-  paddingBlock: '80px',
+  padding: '80px 0',
+  '@bp1': {
+    padding: '60px 0',
+  },
+  '@bp2': {
+    padding: '60px 0 24px',
+  },
 });
+
 
 const TrustedCompaniesSection = styled('section', {
   height: '110px',

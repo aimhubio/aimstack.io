@@ -69,6 +69,8 @@ const theme: Theme = {
     10: '40px',
     11: '44px',
     12: '48px',
+    13: '52px',
+    14: '56px',
   },
   fontWeights: {
     1: '400',

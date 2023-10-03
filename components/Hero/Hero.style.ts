@@ -4,19 +4,18 @@ const HeroStyle = styled('section', {
   minHeight: '100vh',
   display: 'flex',
   alignItems: 'center',
-  padding: 'calc(80px + 72px) 0 80px',
   textAlign: 'center',
-  backgroundImage:
-    'url(/images/static/hero/dots.png), url(/images/static/hero/bg.png)',
+  backgroundImage: 'url(/images/static/hero/dots.png), url(/images/static/hero/bg.png)',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover, contain',
   backgroundPosition: 'center, right',
   overflow: 'hidden',
+  padding: '150px 0',
   '@bp1': {
-    padding: 'calc(44px + 72px) 0',
+    padding: '132px 0',
   },
   '@bp2': {
-    padding: 'calc(44px + 72px) 0 24px',
+    padding: '120px 0 24px',
   },
 });
 const HeroContentWrapper = styled('div', {
@@ -43,7 +42,6 @@ const HeroContentWrapper = styled('div', {
         marginBottom: '$4',
       },
     },
-
     '.hero-quick-start': {
       marginBottom: '$12',
       marginLeft: '$4',
@@ -52,8 +50,6 @@ const HeroContentWrapper = styled('div', {
       },
     },
   },
-
-
   '.hero-content': {
     maxWidth: 600,
     textAlign: 'left',
@@ -61,7 +57,6 @@ const HeroContentWrapper = styled('div', {
       textAlign: 'center',
     },
   },
-
   '.hero-banner': {
     height: 'auto',
     width: '72%',
@@ -74,6 +69,9 @@ const HeroContentWrapper = styled('div', {
     },
     '@bp2': {
       width: '100%',
+    },
+    '@bp4': {
+      display: 'none'
     },
   },
 });

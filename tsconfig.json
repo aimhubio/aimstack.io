@@ -5,7 +5,7 @@
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "target": "es5",
-    "lib": ["DOM", "dom.iterable", "esnext"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
