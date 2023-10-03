@@ -140,7 +140,7 @@ const HighlightWrapper = styled('div', {
     display: 'block',
     overflowX: 'auto',
     color: '#abb2bf',
-    background: '#282c34',
+    background: '#0c0d34',
     marginBottom: '20px',
     borderRadius: '$1',
     padding: '$4',

@@ -24,6 +24,7 @@ const Card = ({ categories, description, image, slug, title, views }: any) => {
             src={image}
             alt={title}
             fill={true}
+            quality={100}
           />
         </Link>
       </ImageWrapper>

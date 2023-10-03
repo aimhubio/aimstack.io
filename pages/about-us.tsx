@@ -60,7 +60,7 @@ const About = () => {
                   ({ image, title, description }: ICultureList, index) => {
                     return (
                       <CultureItem key={index}>
-                        <Image src={image} width={44} height={44} alt={title} />
+                        <Image src={image} quality={100} width={44} height={44} alt={title} />
                         <Text
                           as="h4"
                           size={3}
@@ -81,6 +81,7 @@ const About = () => {
                 width={695}
                 height={525}
                 alt={'AimSack team'}
+                quality={100}
               />
             </CultureRight>
           </Flex>

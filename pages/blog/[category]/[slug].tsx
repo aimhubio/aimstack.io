@@ -117,6 +117,7 @@ export default function PostPage({ post, posts }) {
             title={post.title}
             style={{ objectFit: 'contain' }}
             fill
+            quality={100}
           />
         </ImageWrapper>
       </Container>

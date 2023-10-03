@@ -14,10 +14,10 @@ const FooterSection = styled('footer', {
 });
 
 const FooterSectionInner = styled('div', {
-  minHeight: '200px',
+  minHeight: '150px',
   display: 'flex',
   flexDirection: 'column',
-  backgroundImage: 'linear-gradient(33deg, #00BCD4 -83.01%, #673AB7 65.72%)',
+  backgroundColor: '#673AB7'
 });
 
 const FooterSectionContainer = styled(Container, {

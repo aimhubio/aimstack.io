@@ -20,6 +20,7 @@ const QuickStart = () => {
         height={100}
         style={{ width: '100%', height: '100%' }}
         alt={'top-bg'}
+        quality={100}
       />
       <QuickStartSectionInner>
         <Container>
@@ -83,6 +84,7 @@ const QuickStart = () => {
         width={100}
         height={100}
         alt={'bottom-bg'}
+        quality={100}
       />
     </QuickStartSection>
   );

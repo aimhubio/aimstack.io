@@ -25,6 +25,7 @@ const Demos = () => {
                   alt="AimStack"
                   width={100}
                   height={100}
+                  quality={100}
                 />
                 <div className="demo-inner">
                   <Text size={4} css={{ marginBottom: '$2', fontWeight: '$4' }}>
