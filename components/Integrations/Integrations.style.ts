@@ -7,10 +7,7 @@ const IntegrationsSection = styled('section', {
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   overflow: 'hidden',
-  padding: '150px 0',
-  '@bp1': {
-    padding: '132px 0',
-  },
+  padding: '130px 0',
   '@bp2': {
     padding: '80px 0 24px',
   },
