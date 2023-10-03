@@ -5,7 +5,7 @@ import { Button } from 'components/UIkit';
 import { GITHUB_API } from 'config';
 import Image from 'next/image';
 // @ts-ignore
-import Banner from 'public/images/static/hero/banner.png';
+import Banner from 'public/images/static/hero/aim4.png';
 
 const Hero = () => {
   const [release, setRelease] = useState();
