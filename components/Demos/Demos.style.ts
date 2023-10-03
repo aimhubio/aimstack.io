@@ -1,64 +1,77 @@
 import { styled } from 'styles';
 
-const DemosStyle = styled('section', {
-  padding: '60px 0 100px',
-  backgroundColor: '$darkBlue',
-  color: '$white',
-
-  '@bp1': {
-    padding: '60px 0 26px',
+const DemosSection = styled('section', {
+  backgroundImage: 'url(/images/static/demos/dots-bg.png), linear-gradient(transparent, #d0cafe40, transparent)',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  overflow: 'hidden',
+  padding: '130px 0',
+  '@bp2': {
+    padding: '80px 0 24px',
   },
+  '.demos-title': {
+    textAlign: 'center',
+    marginBottom: '$6',
+  },
+  '.demos-subtitle': {
+    textAlign: 'center',
+    marginBottom: '$14',
+  }
 });
 
 const DemosList = styled('ul', {
-  display: 'flex',
-  flexWrap: 'wrap',
-  marginLeft: '-24px',
-
+  display: 'grid',
+  gridTemplateColumns: 'repeat(3,minmax(0,1fr))',
+  gap: '16px',
   '@bp1': {
-    marginLeft: '-54px',
+    gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
   },
-
+  '@bp2': {
+    gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
+  },
   '@bp3': {
-    marginLeft: '0',
+    gridTemplateColumns: 'repeat(1,minmax(0,1fr))',
   },
 });
 
 const DemosItem = styled('li', {
-  width: 'calc((100% / 4) - 24px)',
-  marginLeft: '24px',
-  marginBottom: '24px',
-
+  minWidth: '260px',
+  height: '340px',
+  display: 'inline-flex',
+  '@bp3': {
+    width: '100%',
+    maxWidth: '360px',
+    margin: '0 auto',
+  },
   '& a': {
-    backgroundColor: '$bigStone',
     display: 'block',
+    width: '100%',
     height: '100%',
     borderRadius: '$1',
     transition: '$main',
-
-    '& .inner': {
-      padding: '$6',
+    border: '1px solid #E2D7EB',
+    backgroundColor: '$white',
+    backdropFilter:' blur(20px)',
+    '& .demo-inner': {
+      padding: '$5 $6',
     },
-
     '&:hover': {
       backgroundColor: '$bigStoneHover',
+      '& .demo-inner': {
+        color: '$white',
+      },
     },
   },
-  '& img': {
+  '.demo-img': {
+    width: '100%',
+    height: '66%',
     display: 'block',
     borderRadius: '$1 $1 0 0',
-  },
-
-  '@bp1': {
-    width: 'calc((100% / 2) - 54px)',
-    marginLeft: '54px',
-    marginBottom: '54px',
-  },
-  '@bp3': {
-    width: '100%',
-    marginLeft: '0',
-    marginBottom: '24px',
+    objectFit: 'cover',
+    padding: "10px",
+    overflow: 'hidden',
   },
 });
 
-export { DemosStyle, DemosList, DemosItem };
+export { DemosSection, DemosList, DemosItem };

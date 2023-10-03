@@ -19,7 +19,7 @@ const Features = () => {
       <FeaturesContainer>
         <FeaturesContainerHeader>
           <Text as="h2" size={9} className="features-title">
-            Aim capabilities
+            Core Aim capabilities
           </Text>
           <Text size={3} className="features-subtitle">
             Aim comes with a set of fundamental features that allows to create

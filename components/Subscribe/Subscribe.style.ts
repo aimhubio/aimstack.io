@@ -36,7 +36,11 @@ const Left = styled('div', {
 
 const Right = styled('div', {
   flex: '1',
-
+  'img': {
+    maxWidth: '100%',
+    width: '100%',
+    height: 'auto',
+  },
   '@bp1': {
     display: 'none',
   },

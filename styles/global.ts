@@ -13,7 +13,10 @@ const global = {
   strong: {
     fontWeight: '$5',
   },
-
+  img: {
+    userDrag: 'none',
+    '-webkit-user-drag': 'none'
+  },
   a: {
     textDecoration: 'none',
     color: 'inherit',
