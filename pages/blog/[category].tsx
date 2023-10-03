@@ -24,24 +24,24 @@ export default function Category({ posts }) {
       'image',
       'categories',
       'new-releases',
-    ])
+    ]),
   );
   const totalPostCount = pageCount(posts.length);
 
   const totalPosts = useCallback(
     () => getTotalPosts(pickedPosts, page),
-    [page, pickedPosts]
+    [page, pickedPosts],
   );
 
   return (
     <>
       <Seo
         title={`${params.category} | AimStack`}
-        description='Access your category related articles'
+        description="Access your category related articles"
         image={`${ImageUrl('banner.png')}`}
         path={`blog/${params.category}`}
       />
-      <Container>
+      <Container style={{ paddingTop: '150px' }}>
         <Text
           as="h1"
           size={6}
