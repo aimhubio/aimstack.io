@@ -1,7 +1,10 @@
+import OpenSourceImage from '../public/images/static/pricing/open-source.svg';
+import EnterpriseImage from '../public/images/static/pricing/enterprise.svg';
+
 const pricingList = [
   {
     title: 'Open Source',
-    image: '/images/static/pricing/open-source.svg',
+    image: OpenSourceImage,
     description:
       'We are building with an open roadmap.\n' +
       'While working with companies we use their feedback constantly in improving core Aim and sometimes reprioritizing items in the roadmap.',
@@ -13,7 +16,7 @@ const pricingList = [
   },
   {
     title: 'Enterprise',
-    image: '/images/static/pricing/enterprise.svg',
+    image: EnterpriseImage,
     description:
       "AimStack also offers paid Enterprise support that's beyond core Aim - mainly involving help with additional plugins and specific Aim deployments.",
     list: [

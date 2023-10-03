@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Text } from 'styles/foundations';
 import { Button } from 'components/UIkit';
-import {steps, comingSoonSteps } from './stepsConfig';
+import { steps, comingSoonSteps } from './stepsConfig';
 import {
   FeaturesSection,
   Step,
@@ -10,7 +10,8 @@ import {
   FeaturesContainerHeader,
   FeaturesContainerContent,
   StepContent,
-  StepBannerImage, ComingSoonContainerContent,
+  StepBannerImage,
+  ComingSoonContainerContent,
 } from './Features.style';
 
 const Features = () => {
@@ -28,7 +29,15 @@ const Features = () => {
           </Text>
         </FeaturesContainerHeader>
         <FeaturesContainerContent>
-          {steps.map(({ key, title, description, list, explorationLink, bannerImgSrc }) => (
+          {steps.map(
+            ({
+              key,
+              title,
+              description,
+              list,
+              explorationLink,
+              bannerImgSrc,
+            }) => (
               <Step key={key}>
                 <StepContent>
                   <Text className="step-title" size={6}>
@@ -37,7 +46,7 @@ const Features = () => {
                   {bannerImgSrc ? (
                     <StepBannerImage
                       src={bannerImgSrc}
-                      className='step-banner-image-mobile'
+                      className="step-banner-image-mobile"
                       alt="AimStack"
                       width={600}
                       height={380}
@@ -57,7 +66,7 @@ const Features = () => {
                       as="a"
                       href={explorationLink}
                       target="_blank"
-                      variant='outline'
+                      variant="outline"
                       css={{ marginTop: '$6', fontWeight: '$3' }}
                     >
                       Get Started
@@ -74,13 +83,13 @@ const Features = () => {
                   />
                 ) : null}
               </Step>
-            )
+            ),
           )}
         </FeaturesContainerContent>
         <ComingSoonContainerContent>
           {comingSoonSteps.map(({ key, title, description, list }) => {
             return (
-              <Step key={key} className='step-coming-soon'>
+              <Step key={key} className="step-coming-soon">
                 <StepContent>
                   <Text className="step-title" size={6}>
                     {title}

@@ -5,6 +5,7 @@ import { Button, Input } from 'components/UIkit';
 import Image from 'next/image';
 import { SUBSCRIBE_API } from 'config';
 import { validateEmail } from 'utils';
+import SubscribeImage from '../../public/images/static/subscribe/subscribe.png';
 
 const Subscribe = () => {
   const [email, setEmail] = useState('');
@@ -70,10 +71,10 @@ const Subscribe = () => {
           </Left>
           <Right>
             <Image
-              src="/images/static/subscribe/subscribe.png"
+              src={SubscribeImage}
               alt="Subscribe"
-              width={100}
-              height={100}
+              width={1000}
+              height={600}
               quality={100}
             />
           </Right>

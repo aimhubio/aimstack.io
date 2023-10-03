@@ -68,11 +68,11 @@ const TrustedCompanies = () => {
           className="keen-slider"
           css={{ opacity: state ? 1 : 0, transition: '$main' }}
         >
-          {integrationsList.map(({ name }) => {
+          {integrationsList.map(({ name, imgSrc }) => {
             return (
               <SliderItem key={name} className="keen-slider__slide">
                 <Image
-                  src={`/images/static/trusted/${name}.png`}
+                  src={imgSrc}
                   alt={name}
                   width={200}
                   height={150}

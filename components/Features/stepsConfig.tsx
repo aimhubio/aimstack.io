@@ -1,4 +1,8 @@
 import { Text } from 'styles/foundations';
+import { StaticImageData } from 'next/image';
+import Logging from '../../public/images/static/why-use-aim/logging.png';
+import LowCode from '../../public/images/static/why-use-aim/low-code.png';
+import Ecosystem from '../../public/images/static/why-use-aim/ecosystem.png';
 
 interface Step {
   key: string;
@@ -6,7 +10,7 @@ interface Step {
   description: string | JSX.Element;
   list: Array<string>;
   explorationLink: string;
-  bannerImgSrc: string;
+  bannerImgSrc: StaticImageData;
 }
 
 export const steps: Step[] = [
@@ -17,7 +21,7 @@ export const steps: Step[] = [
     list: ['Metrics', 'Images', 'Text', 'Custom Objects', 'Remote logging'],
     explorationLink:
       'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
-    bannerImgSrc: '/images/static/why-use-aim/logging.png',
+    bannerImgSrc: Logging,
   },
   {
     key: 'low-code-ui',
@@ -31,7 +35,7 @@ export const steps: Step[] = [
     ],
     explorationLink:
       'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
-    bannerImgSrc: '/images/static/why-use-aim/low-code.png',
+    bannerImgSrc: LowCode,
   },
   {
     key: 'modular-ecosystem',
@@ -44,7 +48,7 @@ export const steps: Step[] = [
     ],
     explorationLink:
       'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
-    bannerImgSrc: '/images/static/why-use-aim/ecosystem.png',
+    bannerImgSrc: Ecosystem,
   },
 ];
 

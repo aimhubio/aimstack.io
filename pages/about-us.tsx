@@ -1,12 +1,9 @@
 import React from 'react';
 import { Text, Container, Flex } from 'styles/foundations';
-import { Icon, Button } from 'components/UIkit';
 import Team from 'components/Team/Team';
 import teamList from 'content/teamList';
 import {
   AboutHero,
-  JoinTeam,
-  JoinTeamButton,
   Culture,
   CultureLeft,
   CultureRight,
@@ -17,6 +14,8 @@ import { cultureList, ICultureList } from 'content/cultrureList';
 import Image from 'next/image';
 import aboutSeo from 'content/SeoData/about';
 import Seo from 'components/SEO/SEO';
+import BgTop from '../public/images/static/about-us/bg.png';
+import TeamImage from '../public/images/static/about-us/team.png';
 
 const About = () => {
 
@@ -43,12 +42,11 @@ const About = () => {
         <Image
           className="bg-top"
           fill={true}
-          src={'/images/static/about-us/bg.png'}
+          src={BgTop}
           priority
           alt='Our Cultural Values'
           quality={100}
         />
-
         <Container css={{ position: 'relative', zIndex: 2 }}>
           <Text as="h3" size={8} css={{ '@bp1': { textAlign: 'center' } }}>
             Our Cultural Values
@@ -77,7 +75,7 @@ const About = () => {
             </CultureLeft>
             <CultureRight>
               <Image
-                src={'/images/static/about-us/team.png'}
+                src={TeamImage}
                 width={695}
                 height={525}
                 alt={'AimSack team'}

@@ -5,35 +5,35 @@
  **/
 
 const { withContentlayer } = require('next-contentlayer');
-const withExportImages = require('next-export-optimize-images');
 
-const nextConfig = withExportImages({
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [
-          {
-            key: 'cache-control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-    ];
-  },
-  reactStrictMode: true,
-
-  // optimizeFonts: false,
-  // images: {
-  //   // remotePatterns: [
-  //   //   {
-  //   //     protocol: 'https',
-  //   //     hostname: 'aim-netlify-image.s3.amazonaws.com',
-  //   //     port: '',
-  //   //     // pathname: '/account123/**',
-  //   //   },
-  //   // ],
+const nextConfig = {
+  // async headers() {
+  //   return [
+  //     {
+  //       source: '/:path*',
+  //       headers: [
+  //         {
+  //           key: 'cache-control',
+  //           value: 'public, max-age=31536000, immutable',
+  //         },
+  //       ],
+  //     },
+  //   ];
   // },
-});
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'miro.medium.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'aim-netlify-image.s3.amazonaws.com',
+        port: '',
+        // pathname: '/account123/**',
+      },
+    ],
+  },
+};
 
 module.exports = withContentlayer(nextConfig);
