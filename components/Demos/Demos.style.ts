@@ -52,7 +52,6 @@ const DemosItem = styled('li', {
     transition: '$main',
     border: '1px solid #E2D7EB',
     backgroundColor: '$white',
-    backdropFilter:' blur(20px)',
     '& .demo-inner': {
       padding: '$5 $6',
     },
