@@ -1,11 +1,6 @@
-import Discord from 'public/images/static/social/discord.svg';
-import TwitterX from 'public/images/static/social/twitterx.svg';
-import LinkedIn from 'public/images/static/social/linkedIn.svg';
-import Facebook from 'public/images/static/social/facebook.svg';
-
 export interface Social {
   name: string;
-  icon: 'discord' | 'twitter' | 'linkedIn' | 'fb';
+  icon: string;
   url: string;
 }
 
@@ -68,22 +63,22 @@ export const navList: INavList[] = [
 export const socialList: Social[] = [
   {
     name: 'discord',
-    icon: Discord,
+    icon: '/images/static/social/discord.svg',
     url: 'https://community.aimstack.io/',
   },
   {
     name: 'twitter',
-    icon: TwitterX,
+    icon: '/images/static/social/twitterx.svg',
     url: 'https://twitter.com/aimstackio',
   },
   {
     name: 'linkedIn',
-    icon: LinkedIn,
+    icon: '/images/static/social/linkedIn.svg',
     url: 'https://www.linkedin.com/company/aimstackio/',
   },
   {
     name: 'fb',
-    icon: Facebook,
+    icon: '/images/static/social/facebook.svg',
     url: 'https://www.facebook.com/aimstackio',
   },
 ];
