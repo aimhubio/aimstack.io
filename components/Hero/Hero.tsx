@@ -4,8 +4,6 @@ import { Text, Container } from 'styles/foundations';
 import { Button } from 'components/UIkit';
 import { GITHUB_API } from 'config';
 import Image from 'next/image';
-// @ts-ignore
-import Banner from 'public/images/static/hero/aim4.png';
 
 const Hero = () => {
   const [release, setRelease] = useState();
@@ -51,7 +49,7 @@ const Hero = () => {
               Easily create full observability and automation layer for your AI
               Systems - from Data preprocessing to LLM monitoring.
             </Text>
-            <div className='hero-button-container'>
+            <div className="hero-button-container">
               <Button
                 variant="outline"
                 className={'hero-try-demo'}
@@ -70,7 +68,14 @@ const Hero = () => {
               </Button>
             </div>
           </div>
-          <Image src={Banner} alt="banner" className={'hero-banner'} />
+          <Image
+            src={'images/static/hero/aim4.png'}
+            alt="banner"
+            className={'hero-banner'}
+            quality={100}
+            width={1000}
+            height={600}
+          />
         </HeroContentWrapper>
       </Container>
     </HeroStyle>

@@ -98,7 +98,7 @@ const Package = defineDocumentType(() => ({
   },
 }));
 export default makeSource({
-  contentDirPath: './blogs',
+  contentDirPath: '.',
   contentDirInclude: [],
   documentTypes: [Post, Package],
 });

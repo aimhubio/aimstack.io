@@ -36,6 +36,7 @@ export default function PostPage({ post }) {
                 alt="AimStack"
                 width="72"
                 height="72"
+                quality={100}
               />
               <div className="org">
                 <div className="org-name">

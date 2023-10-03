@@ -22,8 +22,9 @@ const Footer = () => {
         className={'footer-bg'}
         src={'/images/static/footer/bg.png'}
         alt={'footer'}
-        width={100}
-        height={200}
+        width={1000}
+        height={600}
+        quality={100}
       />
       <FooterSectionInner>
         <FooterSectionContainer>
@@ -37,11 +38,12 @@ const Footer = () => {
                     media="(max-width: 1199px)"
                     srcSet="/images/static/main/aim-logo-resp.svg"
                   />
-                  <img
+                  <Image
                     height={26}
                     width={26}
                     src="/images/static/main/aim-logo.svg"
                     alt="Aimstack"
+                    quality={100}
                   />
                 </picture>
               </Link>
@@ -72,6 +74,7 @@ const Footer = () => {
                       alt={name}
                       width={24}
                       height={24}
+                      quality={100}
                     />
                   </a>
                 </li>

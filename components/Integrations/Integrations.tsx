@@ -36,6 +36,7 @@ const Integrations = () => {
             alt="integrations image"
             width={200}
             height={150}
+            quality={100}
           />
         </IntegrationsList>
       </IntegrationsContainer>

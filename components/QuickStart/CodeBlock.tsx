@@ -34,10 +34,7 @@ const CodeBlock = () => {
             Copied!
           </span>
         )}
-        <Highlight
-          ref={firstCode}
-          className={'bash'}
-        >{`pip install aim`}</Highlight>
+        <Highlight ref={firstCode} className={'bash'}>{`pip install aim`}</Highlight>
       </HighlightWrapper>
 
       <Text size={3} css={{ color: '$white' }}>

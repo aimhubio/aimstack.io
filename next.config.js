@@ -5,7 +5,7 @@
  **/
 
 const { withContentlayer } = require('next-contentlayer');
-const withExportImages = require('next-export-optimize-images')
+const withExportImages = require('next-export-optimize-images');
 
 const nextConfig = withExportImages({
   async headers() {

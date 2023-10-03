@@ -6,7 +6,7 @@ const FeaturesSection = styled('section', {
   backgroundImage: 'url(/images/static/features/dots.png)',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'contain',
-  backgroundPosition: 'top',
+  backgroundPosition: 'center',
   overflow: 'hidden',
   padding: '130px 0',
   '@bp2': {
@@ -74,7 +74,7 @@ const Step = styled('div', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  padding: '60px 0',
+  padding: '60px 0 120px 0',
   '@bp2': {
     flexDirection: 'column',
   },
