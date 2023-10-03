@@ -10,6 +10,8 @@ const FooterSection = styled('footer', {
   flexDirection: 'column',
   '.footer-bg': {
     width: '100%',
+    height: 'auto',
+    maxHeight: '200px'
   },
 });
 
