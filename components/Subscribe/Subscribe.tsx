@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SubscribeStyle, SubscribeInner, Left, Right } from './Subscribe.style';
+import { SubscribeSection, SubscribeInner, Left, Right } from './Subscribe.style';
 import { Container, Text } from 'styles/foundations';
 import { Button, Input } from 'components/UIkit';
 import Image from 'next/image';
@@ -20,7 +20,7 @@ const Subscribe = () => {
     headers: { 'Content-Type': 'application/json; charset=UTF-8' },
     body: JSON.stringify({
       email: email,
-    })
+    }),
   };
 
   const handleFetch = async () => {
@@ -31,6 +31,7 @@ const Subscribe = () => {
     setError('');
 
     try {
+      // @ts-ignore
       const response = await fetch(SUBSCRIBE_API, requestOptions);
       if (response.status === 200) {
         setEmail('');
@@ -43,11 +44,11 @@ const Subscribe = () => {
   };
 
   return (
-    <SubscribeStyle>
+    <SubscribeSection>
       <Container>
         <SubscribeInner>
           <Left>
-            <Text as='h2' size={9} css={{ marginBottom: '$4' }}>
+            <Text as="h2" size={9} css={{ marginBottom: '$4' }}>
               Subscribe to Our Newsletter
             </Text>
             <Text size={4} css={{ marginBottom: '$6' }}>
@@ -55,17 +56,22 @@ const Subscribe = () => {
               latest releases, tutorials and blog posts!
             </Text>
             <div>
-              <Input onChange={handleChange} value={email} errorMessage={error} placeholder='Enter Your Email Address'
-                     className='input' />
+              <Input
+                onChange={handleChange}
+                value={email}
+                errorMessage={error}
+                placeholder="Enter Your Email Address"
+                className="input"
+              />
             </div>
-            <Button onClick={handleFetch} css={{ marginTop: '$6' }}>
+            <Button onClick={handleFetch} css={{ marginTop: '$14' }}>
               Subscribe
             </Button>
           </Left>
           <Right>
             <Image
-              src='/images/static/subscribe/subscribe.png'
-              alt='Subscribe'
+              src="/images/static/subscribe/subscribe.png"
+              alt="Subscribe"
               width={100}
               height={100}
               quality={100}
@@ -73,7 +79,7 @@ const Subscribe = () => {
           </Right>
         </SubscribeInner>
       </Container>
-    </SubscribeStyle>
+    </SubscribeSection>
   );
 };
 

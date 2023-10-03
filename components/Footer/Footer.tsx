@@ -1,5 +1,8 @@
+import React from 'react';
 import {
-  FooterStyle,
+  FooterSection,
+  FooterSectionContainer,
+  FooterSectionInner,
   FooterTop,
   FooterBottom,
   FooterList,
@@ -7,73 +10,82 @@ import {
   FooterSocial,
 } from './Footer.style';
 import { Badge } from 'components/Header/Header.style';
-import { Container, Text } from 'styles/foundations';
+import { Text } from 'styles/foundations';
 import Link from 'next/link';
-import { Icon } from 'components/UIkit';
-import { navList, socialList, INavList, ISocialList } from '../Layout/config';
+import { navList, socialList, INavList, Social } from '../Layout/config';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <FooterStyle>
-      <Container>
-        <FooterTop>
-          <Logo>
-            <Link href="/" className="logo">
-              <picture>
-                <source
-                  height={26}
-                  width={109}
-                  media="(max-width: 1199px)"
-                  srcSet="/images/static/main/aim-logo-resp.svg"
-                />
-                <img
-                  height={26}
-                  width={26}
-                  src="/images/static/main/aim-logo.svg"
-                  alt="Aimstack"
-                />
-              </picture>
-            </Link>
-          </Logo>
-          <FooterList>
-            {navList.map(({ to, title, external, badge }: INavList) => {
-              return (
-                <li key={to}>
-                  <Link
-                    href={to}
-                    target={external ? '_blank' : '_self'}
-                  >
-                    <span className='text'>
-                      {title}
-                    </span>
-                    {!!badge && <Badge>{badge}</Badge>}
-                  </Link>
-                </li>
-              );
-            })}
-          </FooterList>
-          <FooterSocial>
-            {socialList.map(({ icon, url }: ISocialList) => {
-              return (
-                <li key={icon}>
+    <FooterSection>
+      <Image
+        className={'footer-bg'}
+        src={'/images/static/footer/bg.png'}
+        alt={'footer'}
+        width={100}
+        height={200}
+      />
+      <FooterSectionInner>
+        <FooterSectionContainer>
+          <FooterTop>
+            <Logo>
+              <Link href="/" className="logo">
+                <picture>
+                  <source
+                    height={26}
+                    width={109}
+                    media="(max-width: 1199px)"
+                    srcSet="/images/static/main/aim-logo-resp.svg"
+                  />
+                  <img
+                    height={26}
+                    width={26}
+                    src="/images/static/main/aim-logo.svg"
+                    alt="Aimstack"
+                  />
+                </picture>
+              </Link>
+            </Logo>
+            <FooterList>
+              {navList.map(({ to, title, external, badge }: INavList) => {
+                return (
+                  <li key={to}>
+                    <Link href={to} target={external ? '_blank' : '_self'}>
+                      <span className="text">{title}</span>
+                      {!!badge && <Badge>{badge}</Badge>}
+                    </Link>
+                  </li>
+                );
+              })}
+            </FooterList>
+            <FooterSocial>
+              {socialList.map(({ icon, url, name }: Social) => (
+                <li key={name}>
                   <a
                     href={url}
                     rel="noopener noreferrer"
                     target="_blank"
                     aria-label={icon}
                   >
-                    <Icon name={icon} color="white" />
+                    <Image
+                      src={icon}
+                      alt={name}
+                      width={24}
+                      height={24}
+                    />
                   </a>
                 </li>
-              );
-            })}
-          </FooterSocial>
-        </FooterTop>
-        <FooterBottom>
-          <Text size={1}>Copyright © {new Date().getFullYear()} Aimstack</Text>
-        </FooterBottom>
-      </Container>
-    </FooterStyle>
+              ))}
+            </FooterSocial>
+          </FooterTop>
+          <FooterBottom>
+            <Text size={1}>
+              Copyright © {new Date().getFullYear()} Aimstack
+            </Text>
+          </FooterBottom>
+        </FooterSectionContainer>
+      </FooterSectionInner>
+    </FooterSection>
   );
 };
 

@@ -1,5 +1,11 @@
-export interface ISocialList {
-  icon: 'slack' | 'twitter' | 'linkedIn' | 'fb';
+import Discord from 'public/images/static/social/discord.svg';
+import TwitterX from 'public/images/static/social/twitterx.svg';
+import LinkedIn from 'public/images/static/social/linkedIn.svg';
+import Facebook from 'public/images/static/social/facebook.svg';
+
+export interface Social {
+  name: string;
+  icon: 'discord' | 'twitter' | 'linkedIn' | 'fb';
   url: string;
 }
 
@@ -59,21 +65,25 @@ export const navList: INavList[] = [
   },
 ];
 
-export const socialList: ISocialList[] = [
+export const socialList: Social[] = [
   {
-    icon: 'slack',
-    url: 'https://aimstack.slack.com/ssb/redirect#/shared-invite/email',
+    name: 'discord',
+    icon: Discord,
+    url: 'https://community.aimstack.io/',
   },
   {
-    icon: 'twitter',
+    name: 'twitter',
+    icon: TwitterX,
     url: 'https://twitter.com/aimstackio',
   },
   {
-    icon: 'linkedIn',
+    name: 'linkedIn',
+    icon: LinkedIn,
     url: 'https://www.linkedin.com/company/aimstackio/',
   },
   {
-    icon: 'fb',
+    name: 'fb',
+    icon: Facebook,
     url: 'https://www.facebook.com/aimstackio',
   },
 ];

@@ -8,9 +8,9 @@ import pricingSeo from 'content/SeoData/pricing';
 const Pricing = () => {
   return (
     <>
-      <Seo {...pricingSeo}/>
-      <Container>
-        <Flex direction="column" className='text-center' css={{ py: '80px' }}>
+      <Seo {...pricingSeo} />
+      <Container style={{ paddingTop: '150px' }}>
+        <Flex direction="column" className="text-center" css={{ py: '80px' }}>
           <Text as="h1" size={10} css={{ marginBottom: '$6' }}>
             Aim support options
           </Text>

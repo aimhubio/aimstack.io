@@ -12,6 +12,7 @@ const CodeBlock = () => {
   const forthCode = useRef(null);
 
   const handleCopy = async (ref, number) => {
+    // @ts-ignore
     await navigator.clipboard.writeText(ref.current.props.children);
     setCopied(number);
   };
