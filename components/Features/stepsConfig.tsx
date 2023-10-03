@@ -17,7 +17,7 @@ export const steps: Step[] = [
     list: ['Metrics', 'Images', 'Text', 'Custom Objects', 'Remote logging'],
     explorationLink:
       'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
-    bannerImgSrc: '/images/static/why-use-aim/build.png',
+    bannerImgSrc: '/images/static/why-use-aim/logging.png',
   },
   {
     key: 'low-code-ui',
@@ -31,7 +31,7 @@ export const steps: Step[] = [
     ],
     explorationLink:
       'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
-    bannerImgSrc: '/images/static/why-use-aim/build.png',
+    bannerImgSrc: '/images/static/why-use-aim/low-code.png',
   },
   {
     key: 'modular-ecosystem',
@@ -44,7 +44,7 @@ export const steps: Step[] = [
     ],
     explorationLink:
       'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
-    bannerImgSrc: '/images/static/why-use-aim/build.png',
+    bannerImgSrc: '/images/static/why-use-aim/ecosystem.png',
   },
 ];
 
