@@ -12,7 +12,7 @@ import {
 } from './Header.style';
 import { Container } from 'styles/foundations';
 import Image from 'next/image';
-import { navList, socialList, INavList, ISocialList } from '../Layout/config';
+import { navList, socialList, INavList, Social } from '../Layout/config';
 import { useLockedBody } from 'hooks/useLockedBody';
 import { Icon } from 'components/UIkit';
 import { useRouter } from 'next/router';
@@ -100,7 +100,7 @@ const Header: FC<IHeader> = ({dark}) => {
               </HeaderButton>
             </div>
             <MobileSocial>
-              {socialList.map(({ icon, url }: ISocialList) => {
+              {socialList.map(({ icon, url }: Social) => {
                 return (
                   <li key={icon} onClick={() => {}}>
                     <a

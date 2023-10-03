@@ -23,7 +23,7 @@ const About = () => {
   return (
     <>
       <Seo {...aboutSeo} />
-      <AboutHero>
+      <AboutHero style={{ paddingTop: '150px' }}>
         <Container>
           <Text as="h1" size={10} css={{ marginBottom: '$6' }}>
             What You Do Is Who You Are

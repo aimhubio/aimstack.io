@@ -37,7 +37,7 @@ export default function Blog() {
   return (
     <>
       <Seo {...blogSeo} />
-      <Container>
+      <Container style={{ paddingTop: '150px' }}>
         <Text
           as="h1"
           size={6}
