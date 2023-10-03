@@ -21,6 +21,7 @@ const nextConfig = {
   //   ];
   // },
   images: {
+    domains: ['miro.medium.com'],
     remotePatterns: [
       {
         protocol: 'https',
