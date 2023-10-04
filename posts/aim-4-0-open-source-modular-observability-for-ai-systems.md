@@ -78,7 +78,7 @@ Aim runs logging applications that can easily be composed and extended to larger
 
 Within the context of Aim, logging applications are Python packages that Aim can run.
 
-#### There are many logging apps that need to exist
+## There are many logging apps that need to exist
 
 ![Aim logging app structure](/images/dynamic/555-1.png "Aim logging app structure")
 
@@ -95,9 +95,7 @@ Here are some examples of apps that need to be built:
 * connector and integration apps + automations,
 * lineage apps + automations.
 
-# Aim is simple first, then powerful
-
-
+## Aim is simple first, then powerful
 
 Users don’t have to know Aim in-depth to be able to use it. You don’t even need to know if it’s an operating system - it takes a few commands and built-in packages to start with.
 
@@ -117,9 +115,7 @@ We have published high-level roadmap about the next steps.
 
 The contributors to core Aim and package creators are very welcome to help us build out the future of logging infrastructure for AI Systems and beyond.
 
-# **Learn more**
-
-
+## **Learn more**
 
 [Aim is on a mission to democratize AI Systems logging tools.](https://aimstack.readthedocs.io/en/latest/overview.html) 🙌
 
