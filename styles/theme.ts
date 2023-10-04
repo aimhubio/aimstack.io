@@ -1,7 +1,4 @@
-import { ConfigType } from '@stitches/react/types/config';
-import Theme = ConfigType.Theme;
-
-const theme: Theme = {
+const theme = {
   fonts: {
     // OpenSans: "'Open Sans', sans-serif",
     // Lora: "'Lora', serif",
@@ -78,7 +75,7 @@ const theme: Theme = {
     3: '600',
     4: '700',
     5: '800',
-    6: '900'
+    6: '900',
   },
   shadows: {
     1: '0px 60px 66px -65px rgba(11, 47, 97, 0.2)',

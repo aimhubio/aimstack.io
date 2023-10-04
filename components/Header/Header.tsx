@@ -8,7 +8,8 @@ import {
   HeaderNav,
   HeaderButton,
   ButtonMenu,
-  MobileSocial, Badge
+  MobileSocial,
+  Badge,
 } from './Header.style';
 import { Container } from 'styles/foundations';
 import Image from 'next/image';
@@ -18,9 +19,9 @@ import { Icon } from 'components/UIkit';
 import { useRouter } from 'next/router';
 
 interface IHeader {
-  dark: boolean
+  dark: boolean;
 }
-const Header: FC<IHeader> = ({dark}) => {
+const Header: FC<IHeader> = ({ dark }) => {
   const [drawerOpened, setDrawerOpened] = useState<boolean>(false);
   const [locked, setLocked] = useLockedBody();
   const [fixedHeader, setFixedHeader] = useState(false);
@@ -37,32 +38,46 @@ const Header: FC<IHeader> = ({dark}) => {
   };
 
   useEffect(() => {
-    const fixedHeader = () => {
-      if (window.scrollY > 0) {
-        setFixedHeader(true)
-      } else {
-        setFixedHeader(false)
-      }
+    if (window.scrollY > 0) {
+      setFixedHeader(true);
+    } else {
+      setFixedHeader(false);
     }
-    window.addEventListener('scroll', fixedHeader)
+  }, []);
+
+  useEffect(() => {
+    const fixHeader = () => {
+      if (window.scrollY > 0) {
+        setFixedHeader(true);
+      } else {
+        setFixedHeader(false);
+      }
+    };
+    window.addEventListener('scroll', fixHeader);
+    return () => {
+      window.removeEventListener('scroll', fixHeader);
+    };
   }, [fixedHeader]);
 
-
-  const darkMode = dark && !drawerOpened && !fixedHeader
+  const darkMode = dark && !drawerOpened && !fixedHeader;
   return (
     <HeaderStyle
-      className={`${drawerOpened ? 'open fixed' : ''} ${fixedHeader ? 'fixed' : ''} ${dark && !drawerOpened ? 'dark' : ''}`}
+      className={`${drawerOpened ? 'open fixed' : ''} ${
+        fixedHeader ? 'fixed' : ''
+      } ${dark && !drawerOpened ? 'dark' : ''}`}
     >
       <Container css={{ height: '100%' }}>
         <HeaderContent>
           <Logo>
             <Link href="/" onClick={handleDrawerClose} className="logo">
               <Image
-                src={`/images/static/main/${darkMode ? 'logo-white' : 'logo'}.svg`}
+                src={`/images/static/main/${
+                  darkMode ? 'logo-white' : 'logo'
+                }.svg`}
                 alt="AimStack"
                 width="156"
                 height="37"
-                className='logo-image'
+                className="logo-image"
               />
             </Link>
           </Logo>
@@ -78,9 +93,7 @@ const Header: FC<IHeader> = ({dark}) => {
                         target={external ? '_blank' : '_self'}
                         className={currentRoute.includes(to) ? 'active' : ''}
                       >
-                        <span className='text'>
-                          {title}
-                        </span>
+                        <span className="text">{title}</span>
                         {!!badge && <Badge>{badge}</Badge>}
                       </Link>
                     </li>
@@ -88,32 +101,33 @@ const Header: FC<IHeader> = ({dark}) => {
                 })}
               </ul>
               <HeaderButton
-                css={{ display: 'none', '@bp1': { display: 'block', padding: '$5' } }}
+                css={{
+                  display: 'none',
+                  '@bp1': { display: 'block', padding: '$5' },
+                }}
               >
                 <GitHubButton
                   href="https://github.com/aimhubio/aim"
                   data-size="large"
                   data-show-count="true"
                   aria-label="Star aimhubio/aim on GitHub"
-                  data-text='Star'
+                  data-text="Star"
                 />
               </HeaderButton>
             </div>
             <MobileSocial>
-              {socialList.map(({ icon, url }: Social) => {
-                return (
-                  <li key={icon} onClick={() => {}}>
-                    <a
-                      href={url}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      aria-label={icon}
-                    >
-                      <Icon name={icon} />
-                    </a>
-                  </li>
-                );
-              })}
+              {socialList.map(({ name, icon, url }: Social) => (
+                <li key={name} onClick={() => {}}>
+                  <a
+                    href={url}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    aria-label={name}
+                  >
+                    <Image src={icon} alt={name} width={24} height={24} />
+                  </a>
+                </li>
+              ))}
             </MobileSocial>
           </HeaderNav>
           <HeaderButton
@@ -125,16 +139,20 @@ const Header: FC<IHeader> = ({dark}) => {
               data-size="large"
               data-show-count="true"
               aria-label="Star aimhubio/aim on GitHub"
-              data-text='Star'
+              data-text="Star"
             />
           </HeaderButton>
           <ButtonMenu
             css={{ marginLeft: 'auto', padding: '$3' }}
             type="button"
             onClick={handleDrawerToggle}
-            aria-label='menu'
+            aria-label="menu"
           >
-            <Icon color={darkMode ? 'white' :'black'} name={drawerOpened ? 'close' : 'burger'} size={20} />
+            <Icon
+              color={darkMode ? 'white' : 'black'}
+              name={drawerOpened ? 'close' : 'burger'}
+              size={20}
+            />
           </ButtonMenu>
         </HeaderContent>
       </Container>

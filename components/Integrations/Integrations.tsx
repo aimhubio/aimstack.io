@@ -9,6 +9,8 @@ import {
 import { Button } from 'components/UIkit';
 import { Text } from 'styles/foundations';
 
+import IntegrationsImg from '../../public/images/static/integrations/integrations.png';
+
 const Integrations = () => {
   return (
     <IntegrationsSection>
@@ -32,10 +34,10 @@ const Integrations = () => {
         </IntegrationsContainerLeft>
         <IntegrationsList>
           <Image
-            src={`/images/static/integrations/integrations.png`}
+            src={IntegrationsImg}
             alt="integrations image"
-            width={200}
-            height={150}
+            width={1000}
+            height={600}
             quality={100}
           />
         </IntegrationsList>

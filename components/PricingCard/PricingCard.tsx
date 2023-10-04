@@ -2,11 +2,11 @@ import React, { FC } from 'react';
 import { PricingCardStyle, PricingCardList } from './PricingCard.style';
 import { Text, Flex } from 'styles/foundations';
 import { Button } from 'components/UIkit';
-import Image from 'next/image';
+import Image, {StaticImageData} from 'next/image';
 
 interface IPricingCard {
   title: string;
-  image: string;
+  image: StaticImageData;
   description: string;
   list: string[];
   buttonVariant: string;

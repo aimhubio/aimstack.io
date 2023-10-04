@@ -11,13 +11,16 @@ import { Container, Text } from 'styles/foundations';
 import { Button } from '../UIkit';
 import Image from 'next/image';
 
+import TopBg from '../../public/images/static/quick-start/top-bg.png';
+import BottomBg from '../../public/images/static/quick-start/bottom-bg.png'
+
 const QuickStart = () => {
   return (
     <QuickStartSection id="quick-start">
       <Image
-        src={'/images/static/quick-start/top-bg.png'}
-        width={100}
-        height={100}
+        src={TopBg}
+        width={1000}
+        height={600}
         style={{ width: '100%', height: '100%' }}
         alt={'top-bg'}
         quality={100}
@@ -79,10 +82,10 @@ const QuickStart = () => {
         </Container>
       </QuickStartSectionInner>
       <Image
-        src={'/images/static/quick-start/bottom-bg.png'}
+        src={BottomBg}
         style={{ width: '100%', height: '100%' }}
-        width={100}
-        height={100}
+        width={1000}
+        height={600}
         alt={'bottom-bg'}
         quality={100}
       />

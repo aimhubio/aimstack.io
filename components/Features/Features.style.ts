@@ -63,6 +63,7 @@ const ComingSoonContainerContent = styled('div', {
     maxWidth: '360px',
     paddingRight: '40px',
     marginRight: '60px',
+    padding: '60px 0',
     '@bp2': {
       paddingRight: 0,
       marginRight: 0,
@@ -82,6 +83,7 @@ const Step = styled('div', {
 
 const StepContent = styled('div', {
   width: '400px',
+  minWidth: '300px',
   '@bp2': {
     width: '100%',
   },
@@ -127,16 +129,17 @@ const StepContent = styled('div', {
 
 const StepBannerImage = styled(Image, {
   maxWidth: '600px',
-  minWidth: '400px',
+  minWidth: '300px',
   height: 'auto',
   display: 'block',
+  marginLeft: '60px',
   '@bp2': {
     display: 'none',
   },
   '&.step-banner-image-mobile': {
     display: 'none',
     '@bp2': {
-      margin: '0 auto',
+      margin: '0 auto $10',
       display: 'block',
       minWidth: 'unset',
       width: '100%',

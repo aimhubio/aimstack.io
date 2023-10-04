@@ -14,13 +14,16 @@ import { Text } from 'styles/foundations';
 import Link from 'next/link';
 import { navList, socialList, INavList, Social } from '../Layout/config';
 import Image from 'next/image';
+import FooterBg from '../../public/images/static/footer/bg.png';
+import AimLogo from '../../public/images/static/main/aim-logo.svg';
+import AimLogoResp from '../../public/images/static/main/aim-logo-resp.svg';
 
 const Footer = () => {
   return (
     <FooterSection>
       <Image
         className={'footer-bg'}
-        src={'/images/static/footer/bg.png'}
+        src={FooterBg}
         alt={'footer'}
         width={1000}
         height={600}
@@ -36,12 +39,12 @@ const Footer = () => {
                     height={26}
                     width={109}
                     media="(max-width: 1199px)"
-                    srcSet="/images/static/main/aim-logo-resp.svg"
+                    srcSet={AimLogoResp}
                   />
                   <Image
                     height={26}
                     width={26}
-                    src="/images/static/main/aim-logo.svg"
+                    src={AimLogo}
                     alt="Aimstack"
                     quality={100}
                   />
@@ -67,7 +70,7 @@ const Footer = () => {
                     href={url}
                     rel="noopener noreferrer"
                     target="_blank"
-                    aria-label={icon}
+                    aria-label={name}
                   >
                     <Image
                       src={icon}

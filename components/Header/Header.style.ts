@@ -182,12 +182,10 @@ const ButtonMenu = styled('button', {
 
 const MobileSocial = styled('ul', {
   display: 'none',
-
   '@bp1': {
     display: 'flex',
     justifyContent: 'center',
     py: '$6',
-
     '> li': {
       marginRight: '$6'
     }

@@ -1,6 +1,12 @@
+import DiscordIcon from '../../public/images/static/social/discord.svg';
+import TwitterXIcon from '../../public/images/static/social/twitterx.svg';
+import LinkedInIcon from '../../public/images/static/social/linkedin.svg';
+import FacebookIcon from '../../public/images/static/social/facebook.svg';
+import { StaticImageData } from 'next/image';
+
 export interface Social {
   name: string;
-  icon: string;
+  icon: StaticImageData;
   url: string;
 }
 
@@ -8,7 +14,7 @@ export interface INavList {
   title: string;
   to: string;
   external: boolean;
-  badge?: string
+  badge?: string;
 }
 
 export const navList: INavList[] = [
@@ -56,29 +62,29 @@ export const navList: INavList[] = [
     title: 'Career',
     to: 'https://aimstack.notion.site/Working-at-AimStack-7f5d93e04f0645129dd314d5f077511b',
     external: true,
-    badge: 'Hiring'
+    badge: 'Hiring',
   },
 ];
 
 export const socialList: Social[] = [
   {
     name: 'Discord',
-    icon: '/images/static/social/discord.svg',
+    icon: DiscordIcon,
     url: 'https://community.aimstack.io/',
   },
   {
     name: 'X',
-    icon: '/images/static/social/twitterx.svg',
+    icon: TwitterXIcon,
     url: 'https://twitter.com/aimstackio',
   },
   {
     name: 'LinkedIn',
-    icon: '/images/static/social/linkedin.svg',
+    icon: LinkedInIcon,
     url: 'https://www.linkedin.com/company/aimstackio/',
   },
   {
     name: 'FaceBook',
-    icon: '/images/static/social/facebook.svg',
+    icon: FacebookIcon,
     url: 'https://www.facebook.com/aimstackio',
   },
 ];

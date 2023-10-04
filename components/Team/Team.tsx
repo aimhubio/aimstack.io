@@ -2,13 +2,13 @@ import React, { FC } from 'react';
 import { TeamStyle, TeamList, TeamItem, TeamImage } from './Team.style';
 import { Icon } from 'components/UIkit';
 import { Text, Container, Flex } from 'styles/foundations';
-import Image from 'next/image';
+import Image, {StaticImageData} from 'next/image';
 
 interface ITeamList {
   fullName: string;
   jobTitle: string;
   description: string;
-  image: string;
+  image: StaticImageData;
   shape: string;
 }
 

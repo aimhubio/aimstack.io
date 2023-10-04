@@ -4,6 +4,7 @@ import { Text, Container } from 'styles/foundations';
 import { Button } from 'components/UIkit';
 import { GITHUB_API } from 'config';
 import Image from 'next/image';
+import Aim4 from '../../public/images/static/hero/aim4.png';
 
 const Hero = () => {
   const [release, setRelease] = useState();
@@ -69,7 +70,7 @@ const Hero = () => {
             </div>
           </div>
           <Image
-            src={'images/static/hero/aim4.png'}
+            src={Aim4}
             alt="banner"
             className={'hero-banner'}
             quality={100}
