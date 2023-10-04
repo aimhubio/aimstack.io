@@ -38,14 +38,25 @@ const Header: FC<IHeader> = ({ dark }) => {
   };
 
   useEffect(() => {
-    const fixedHeader = () => {
+    if (window.scrollY > 0) {
+      setFixedHeader(true);
+    } else {
+      setFixedHeader(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    const fixHeader = () => {
       if (window.scrollY > 0) {
         setFixedHeader(true);
       } else {
         setFixedHeader(false);
       }
     };
-    window.addEventListener('scroll', fixedHeader);
+    window.addEventListener('scroll', fixHeader);
+    return () => {
+      window.removeEventListener('scroll', fixHeader);
+    };
   }, [fixedHeader]);
 
   const darkMode = dark && !drawerOpened && !fixedHeader;
