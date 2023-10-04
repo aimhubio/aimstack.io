@@ -8,7 +8,7 @@ image: /images/dynamic/medium-5-1-.png
 description: We're excited to announce Aim 4.0's release! 🚀 Originating as a
   single-node experiment tracker, now it's an Operating system for logging
   anything, anywhere!!
-draft: true
+draft: false
 ---
 ## The software lifecycle is broken
 
