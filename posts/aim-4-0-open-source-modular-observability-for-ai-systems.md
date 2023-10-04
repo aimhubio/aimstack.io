@@ -1,13 +1,13 @@
 ---
-author: Gev Soghomonian, Gor Arakelyan, Ben Lorica
+author: Gev Sogomonian, Gor Arakelyan, Ben Lorica
 categories:
   - New Releases
-date: 2023-10-03T15:05:29.790Z
+date: 2023-10-03T20:09:25.239Z
 title: "Aim 4.0: Open-source modular observability for AI Systems"
-image: /images/dynamic/medium-5.png
+image: /images/dynamic/medium-5-1-.png
 description: We're excited to announce Aim 4.0's release! 🚀 Originating as a
-  single-node experiment tracker, now it's an OS for logging anything,
-  anywhere!!
+  single-node experiment tracker, now it's an Operating system for logging
+  anything, anywhere!!
 draft: true
 ---
 ## The software lifecycle is broken
@@ -44,8 +44,6 @@ Altogether these form the observability and logging layer for AI Systems.
 
 ## What do developers need from the AI Systems observability layer?
 
-
-
 We need to log and observe at every step of building AI Systems.
 
 ![Basic AI system observability](/images/dynamic/222-1.png "Basic AI system observability")
@@ -68,8 +66,6 @@ Unfortunately, current mainstream observability tools are centralized, lack inte
 
 ## Introducing Aim 4.0 - Operating system for logs
 
-
-
 Aim began as a tool for tracking experiments, and it ran on a single node
 
 * Aim 2.0 - AI experiment logger for metrics and hyperparameters.
@@ -86,8 +82,6 @@ Within the context of Aim, logging applications are Python packages that Aim can
 
 ![Aim logging app structure](/images/dynamic/555-1.png "Aim logging app structure")
 
-
-
 There are many logging uses-cases for AI systems, which necessitates collaboration across the community. Many of these use-cases are at the intersection of different tools and frameworks used in development and production.
 
 Here are some examples of apps that need to be built:
@@ -103,15 +97,17 @@ Here are some examples of apps that need to be built:
 
 # Aim is simple first, then powerful
 
+
+
 Users don’t have to know Aim in-depth to be able to use it. You don’t even need to know if it’s an operating system - it takes a few commands and built-in packages to start with.
 
-![](/images/dynamic/666-1-.png)
+![Aim default apps](/images/dynamic/666-1-.png "Aim default apps")
 
-Using Aim means installing Aim and running an aim logging app. Aim comes with a number of pre-built apps that can go a long way
+Using Aim means installing Aim and running an Aim logging app. Aim comes with a number of built- apps that can go a long way:
 
-* Base app
-* Experiment tracking app
-* AI Systems tracing app
+* Base app,
+* Experiment tracking app,
+* AI Systems tracing app.
 
 It takes only a couple of commands to start with Aim.
 
