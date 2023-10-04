@@ -37,7 +37,9 @@ const FeaturesContainer = styled(Container, {
 const FeaturesContainerHeader = styled('div', {
   display: 'flex',
   flexDirection: 'column',
-  maxWidth: '500px',
+  maxWidth: '600px',
+  margin: '0 auto',
+  textAlign: 'center',
   '@bp2': {
     maxWidth: '100%',
   }
@@ -75,7 +77,7 @@ const Step = styled('div', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  padding: '60px 0 120px 0',
+  paddingBottom: '120px',
   '@bp2': {
     flexDirection: 'column',
   },

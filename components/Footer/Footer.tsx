@@ -14,7 +14,7 @@ import { Text } from 'styles/foundations';
 import Link from 'next/link';
 import { navList, socialList, INavList, Social } from '../Layout/config';
 import Image from 'next/image';
-import FooterBg from '../../public/images/static/footer/bg.png';
+import FooterBg from '../../public/images/static/footer/bg.svg';
 import AimLogo from '../../public/images/static/main/aim-logo.svg';
 import AimLogoResp from '../../public/images/static/main/aim-logo-resp.svg';
 
@@ -28,6 +28,7 @@ const Footer = () => {
         width={1000}
         height={600}
         quality={100}
+        style={{ objectFit: 'cover' }}
       />
       <FooterSectionInner>
         <FooterSectionContainer>

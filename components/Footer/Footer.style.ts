@@ -11,12 +11,11 @@ const FooterSection = styled('footer', {
   '.footer-bg': {
     width: '100%',
     height: 'auto',
-    maxHeight: '200px'
   },
 });
 
 const FooterSectionInner = styled('div', {
-  minHeight: '150px',
+  minHeight: '100px',
   display: 'flex',
   flexDirection: 'column',
   backgroundColor: '#673AB7'
