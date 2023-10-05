@@ -3,7 +3,7 @@ import { styled } from 'styles';
 import { Container } from '../../styles/foundations';
 
 const FeaturesSection = styled('section', {
-  backgroundImage: 'url(/images/static/features/dots.png)',
+  backgroundImage: 'url(/images/static/features/dots.svg)',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'contain',
   backgroundPosition: 'center',

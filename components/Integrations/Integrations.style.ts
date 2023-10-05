@@ -2,12 +2,12 @@ import { styled } from 'styles';
 import { Container } from 'styles/foundations';
 
 const IntegrationsSection = styled('section', {
-  backgroundImage: 'url(/images/static/integrations/dots.png)',
+  backgroundImage: 'url(/images/static/integrations/dots.svg)',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   overflow: 'hidden',
-  padding: '130px 0',
+  padding: '150px 0',
   '@bp2': {
     padding: '80px 0 24px',
   },
