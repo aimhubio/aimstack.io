@@ -76,6 +76,7 @@ const Hero = () => {
             quality={100}
             width={1000}
             height={600}
+            priority={true}
           />
         </HeroContentWrapper>
       </Container>
