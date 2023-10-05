@@ -1,12 +1,12 @@
 import { styled } from 'styles';
 
 const DemosSection = styled('section', {
-  backgroundImage: 'url(/images/static/demos/dots-bg.png), linear-gradient(transparent, #d0cafe40, transparent)',
+  backgroundImage: 'url(/images/static/demos/dots.svg), linear-gradient(transparent, #d0cafe40, transparent)',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   overflow: 'hidden',
-  padding: '130px 0',
+  padding: '150px 0',
   '@bp2': {
     padding: '80px 0 24px',
   },
