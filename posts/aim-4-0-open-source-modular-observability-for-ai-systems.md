@@ -117,7 +117,9 @@ The contributors to core Aim and package creators are very welcome to help us bu
 
 ## **Learn more**
 
-[Aim is on a mission to democratize AI Systems logging tools.](https://aimstack.readthedocs.io/en/latest/overview.html) 🙌
+
+
+[Aim is on a mission to democratize AI Systems logging tools.](https://aimstack.readthedocs.io/en/latest/index.html) 🙌
 
 Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](https://community.aimstack.io/), share your feedback, open issues for new features, bugs.
 
