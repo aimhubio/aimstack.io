@@ -143,6 +143,7 @@ const HighlightWrapper = styled('div', {
     background: '#0c0d34',
     marginBottom: '20px',
     borderRadius: '$1',
+    border: '1px solid #3D3D5D',
     padding: '$4',
   },
   '.hljs-comment,.hljs-quote': { color: '#5c6370', fontStyle: 'italic' },
