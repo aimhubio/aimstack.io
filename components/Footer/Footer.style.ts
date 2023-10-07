@@ -117,8 +117,9 @@ const FooterBottom = styled('div', {
 });
 
 const FooterBgImg = styled(Image, {
-    width: '100%',
-    height: 'auto',
+  width: '100%',
+  height: 'auto',
+  scale: 1.02
 });
 
 export {

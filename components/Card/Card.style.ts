@@ -6,6 +6,7 @@ const CardStyle = styled('div', {
   border: '1px solid #E2D7EB',
   borderRadius: '6px',
   transition: '$main',
+  height: '100%',
   '&:hover': {
     backgroundColor: '$bigStoneHover',
     color: '$white',
@@ -20,6 +21,7 @@ const CardImage = styled(Image, {
   width: '100%',
   objectFit: 'cover',
   height: '200px',
+  minHeight: '200px'
 });
 
 const CardContent = styled('div', {

@@ -180,9 +180,9 @@ const HighlightWrapper = styled('div', {
 });
 
 const QuickStartShapeImage = styled(Image, {
-  width: 'auto',
+  width: '100%',
   height: 'auto',
-  objectFit: 'cover'
+  scale: 1.02
 });
 
 export {

@@ -17,7 +17,7 @@ import BottomBg from 'public/images/static/quick-start/bottom-bg.svg';
 const QuickStart = () => {
   return (
     <QuickStartSection id="quick-start">
-      <QuickStartShapeImage src={TopBg} alt={'top-bg'} priority={true} />
+      <QuickStartShapeImage src={TopBg} alt={'top-bg'} priority={true}/>
       <QuickStartSectionInner>
         <Container>
           <QuickStartInner>
