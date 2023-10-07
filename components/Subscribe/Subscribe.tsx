@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
-import { SubscribeSection, SubscribeInner, Left, Right } from './Subscribe.style';
+import {
+  SubscribeSection,
+  SubscribeInner,
+  Left,
+  Right,
+} from './Subscribe.style';
 import { Container, Text } from 'styles/foundations';
 import { Button, Input } from 'components/UIkit';
 import Image from 'next/image';
 import { SUBSCRIBE_API } from 'config';
-import { validateEmail } from 'utils';
-import SubscribeImage from '../../public/images/static/subscribe/subscribe.png';
+import { ImagePlaceholder, validateEmail } from 'utils';
+import SubscribeImage from 'public/images/static/subscribe/subscribe.png';
 
 const Subscribe = () => {
   const [email, setEmail] = useState('');
@@ -75,7 +80,8 @@ const Subscribe = () => {
               alt="Subscribe"
               width={1000}
               height={600}
-              quality={100}
+              placeholder={'blur'}
+              blurDataURL={ImagePlaceholder}
             />
           </Right>
         </SubscribeInner>

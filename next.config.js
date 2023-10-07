@@ -8,12 +8,15 @@ const { withContentlayer } = require('next-contentlayer');
 
 const nextConfig = {
   images: {
-    unoptimized: true,
     domains: ['miro.medium.com'],
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'miro.medium.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'youtu.be',
       },
       {
         protocol: 'https',

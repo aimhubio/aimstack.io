@@ -1,14 +1,11 @@
 import Image from 'next/image';
 import { styled } from 'styles';
-import { Container } from '../../styles/foundations';
+import { Container } from 'styles/foundations';
 
 const FeaturesSection = styled('section', {
-  backgroundImage: 'url(/images/static/features/dots.svg)',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'contain',
-  backgroundPosition: 'center',
+  position: 'relative',
   overflow: 'hidden',
-  padding: '130px 0',
+  padding: '150px 0',
   '@bp2': {
     padding: '80px 0 24px',
     textAlign: 'center',
@@ -149,6 +146,11 @@ const StepBannerImage = styled(Image, {
   },
 });
 
+const FeaturesDotsImg = styled(Image, {
+  objectFit: 'contain',
+  zIndex: -1,
+});
+
 export {
   FeaturesSection,
   FeaturesContainer,
@@ -158,4 +160,5 @@ export {
   Step,
   StepContent,
   StepBannerImage,
+  FeaturesDotsImg,
 };

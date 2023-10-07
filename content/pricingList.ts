@@ -1,5 +1,5 @@
-import OpenSourceImage from '../public/images/static/pricing/open-source.svg';
-import EnterpriseImage from '../public/images/static/pricing/enterprise.svg';
+import OpenSourceImage from 'public/images/static/pricing/open-source.svg';
+import EnterpriseImage from 'public/images/static/pricing/enterprise.svg';
 
 const pricingList = [
   {

@@ -1,19 +1,25 @@
 import React from 'react';
-import Image from 'next/image';
 import {
   IntegrationsContainer,
-  IntegrationsList,
   IntegrationsContainerLeft,
   IntegrationsSection,
+  IntegrationsListImage,
+  IntegrationsDotsImg,
 } from './Integrations.style';
 import { Button } from 'components/UIkit';
 import { Text } from 'styles/foundations';
-
-import IntegrationsImg from '../../public/images/static/integrations/integrations.png';
+import IntegrationsImg from 'public/images/static/integrations/integrations.png';
+import IntegrationsDots from 'public/images/static/integrations/dots.svg';
 
 const Integrations = () => {
   return (
     <IntegrationsSection>
+      <IntegrationsDotsImg
+        src={IntegrationsDots}
+        alt="integrations dots"
+        loading={'lazy'}
+        fill
+      />
       <IntegrationsContainer>
         <IntegrationsContainerLeft>
           <Text as="h2" className="integrations-title" size={9}>
@@ -32,15 +38,14 @@ const Integrations = () => {
             Learn more
           </Button>
         </IntegrationsContainerLeft>
-        <IntegrationsList>
-          <Image
-            src={IntegrationsImg}
-            alt="integrations image"
-            width={1000}
-            height={600}
-            quality={100}
-          />
-        </IntegrationsList>
+        <IntegrationsListImage
+          width={540}
+          height={480}
+          src={IntegrationsImg}
+          alt="integrations image"
+          quality={50}
+          placeholder={'blur'}
+        />
       </IntegrationsContainer>
     </IntegrationsSection>
   );

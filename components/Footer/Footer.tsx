@@ -8,28 +8,21 @@ import {
   FooterList,
   Logo,
   FooterSocial,
+  FooterBgImg,
 } from './Footer.style';
 import { Badge } from 'components/Header/Header.style';
 import { Text } from 'styles/foundations';
 import Link from 'next/link';
 import { navList, socialList, INavList, Social } from '../Layout/config';
 import Image from 'next/image';
-import FooterBg from '../../public/images/static/footer/bg.svg';
-import AimLogo from '../../public/images/static/main/aim-logo.svg';
-import AimLogoResp from '../../public/images/static/main/aim-logo-resp.svg';
+import FooterBg from 'public/images/static/footer/bg.svg';
+import AimLogo from 'public/images/static/main/aim-logo.svg';
+import AimLogoResp from 'public/images/static/main/aim-logo-resp.svg';
 
 const Footer = () => {
   return (
     <FooterSection>
-      <Image
-        className={'footer-bg'}
-        src={FooterBg}
-        alt={'footer'}
-        width={1000}
-        height={600}
-        quality={100}
-        style={{ objectFit: 'cover' }}
-      />
+      <FooterBgImg src={FooterBg} alt={'footer'} priority={true}/>
       <FooterSectionInner>
         <FooterSectionContainer>
           <FooterTop>
@@ -47,7 +40,6 @@ const Footer = () => {
                     width={26}
                     src={AimLogo}
                     alt="Aimstack"
-                    quality={100}
                   />
                 </picture>
               </Link>
@@ -78,7 +70,6 @@ const Footer = () => {
                       alt={name}
                       width={24}
                       height={24}
-                      quality={100}
                     />
                   </a>
                 </li>

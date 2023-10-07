@@ -1,14 +1,12 @@
 import { styled } from 'styles';
+import Image from 'next/image';
 
-const HeroStyle = styled('section', {
+const HeroSection = styled('section', {
+  position: 'relative',
   minHeight: '100vh',
   display: 'flex',
   alignItems: 'center',
   textAlign: 'center',
-  backgroundImage: 'url(/images/static/hero/dots.png), url(/images/static/hero/bg.png)',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover, contain',
-  backgroundPosition: 'center, right',
   overflow: 'hidden',
   padding: '150px 0',
   '@bp1': {
@@ -22,12 +20,10 @@ const HeroContentWrapper = styled('div', {
   width: '100%',
   position: 'relative',
   display: 'flex',
-
   '@bp1': {
     flexDirection: 'column',
     alignItems: 'center',
   },
-
   '.hero-button-container': {
     display: 'flex',
     '@bp1': {
@@ -51,29 +47,44 @@ const HeroContentWrapper = styled('div', {
     },
   },
   '.hero-content': {
-    maxWidth: 600,
+    maxWidth: 550,
+    minWidth: 550,
     textAlign: 'left',
     '@bp1': {
       textAlign: 'center',
-    },
-  },
-  '.hero-banner': {
-    height: 'auto',
-    width: '72%',
-    aspectRatio: 'auto',
-    position: 'absolute',
-    right: '-36%',
-    '@bp1': {
-      position: 'unset',
-      width: '90%',
-    },
-    '@bp2': {
-      width: '100%',
-    },
-    '@bp4': {
-      display: 'none'
+      minWidth: 'unset',
     },
   },
 });
 
-export { HeroStyle, HeroContentWrapper };
+const HeroBg = styled(Image, {
+  objectFit: 'contain',
+  objectPosition: 'right'
+});
+
+const HeroBgDots = styled(Image, {
+  objectFit: 'cover'
+});
+
+const HeroBannerImg = styled(Image, {
+  position: 'absolute',
+  width: '72%',
+  minWidth: '72%',
+  height: 'auto',
+  right: '-30%',
+  borderRadius: '12px',
+  border: '1px solid #D8DADF',
+  aspectRatio: 'auto',
+  '@bp1': {
+    position: 'unset',
+    width: '90%',
+  },
+  '@bp2': {
+    width: '100%',
+  },
+  '@bp4': {
+    display: 'none'
+  },
+});
+
+export { HeroSection, HeroContentWrapper, HeroBannerImg, HeroBg, HeroBgDots };

@@ -1,30 +1,49 @@
-import React, { useEffect, useState } from 'react';
-import { HeroStyle, HeroContentWrapper } from './Hero.style';
+import React from 'react';
+import {
+  HeroSection,
+  HeroContentWrapper,
+  HeroBannerImg,
+  HeroBgDots,
+  HeroBg,
+} from './Hero.style';
 import { Text, Container } from 'styles/foundations';
 import { Button } from 'components/UIkit';
-import { GITHUB_API } from 'config';
-import Image from 'next/image';
-import Aim4 from '../../public/images/static/hero/aim4.png';
+import Aim4 from 'public/images/static/hero/aim4.png';
+import BgDots from 'public/images/static/hero/dots.png';
+import Bg from 'public/images/static/hero/bg.png';
+import { ImagePlaceholder } from 'utils';
 
 const Hero = () => {
-  const [release, setRelease] = useState();
-
-  const getRelease = () => {
-    fetch(`${GITHUB_API}releases/latest`)
-      .then((res) => res.json())
-      .then((res) => {
-        const releaseData = res.tag_name.substring(1);
-        setRelease(releaseData);
-      })
-      .catch((e) => console.log(e));
-  };
-
-  useEffect(() => {
-    getRelease();
-  }, []);
+  // const [release, setRelease] = useState();
+  //
+  // const getRelease = () => {
+  //   fetch(`${GITHUB_API}releases/latest`)
+  //     .then((res) => res.json())
+  //     .then((res) => {
+  //       const releaseData = res.tag_name.substring(1);
+  //       setRelease(releaseData);
+  //     })
+  //     .catch((e) => console.log(e));
+  // };
+  //
+  // useEffect(() => {
+  //   getRelease();
+  // }, []);
 
   return (
-    <HeroStyle>
+    <HeroSection>
+      <HeroBg
+        src={Bg}
+        alt="bg"
+        fill={true}
+        loading={'lazy'}
+      />
+      <HeroBgDots
+        src={BgDots}
+        alt="bgDots"
+        fill={true}
+        loading={'lazy'}
+      />
       <Container>
         <HeroContentWrapper>
           <div className={'hero-content'}>
@@ -69,18 +88,18 @@ const Hero = () => {
               </Button>
             </div>
           </div>
-          <Image
+          <HeroBannerImg
             src={Aim4}
             alt="banner"
-            className={'hero-banner'}
-            quality={100}
-            width={1000}
-            height={600}
+            width={866}
+            height={540}
             priority={true}
+            placeholder={'blur'}
+            blurDataURL={ImagePlaceholder}
           />
         </HeroContentWrapper>
       </Container>
-    </HeroStyle>
+    </HeroSection>
   );
 };
 

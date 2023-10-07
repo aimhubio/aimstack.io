@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import Highlight from 'react-highlight';
 import { Text, Container, Flex, InnerHTML } from 'styles/foundations';
 import Markdown from 'markdown-to-jsx';
 import { Icon } from 'components/UIkit';
@@ -10,10 +11,9 @@ import {
   MainContent,
   SideBar,
   Badges,
-} from '../styles/pages/Subpackages.style';
+} from 'styles/pages/Subpackages.style';
 import Image from 'next/image';
-import { HighlightWrapper } from '../components/QuickStart/QuickStart.style';
-import Highlight from 'react-highlight';
+import { HighlightWrapper } from 'components/QuickStart/QuickStart.style';
 
 export default function PostPage({ post }) {
   const [copied, setCopied] = useState(false);
@@ -36,7 +36,6 @@ export default function PostPage({ post }) {
                 alt="AimStack"
                 width="72"
                 height="72"
-                quality={100}
               />
               <div className="org">
                 <div className="org-name">

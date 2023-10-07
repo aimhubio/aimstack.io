@@ -14,11 +14,10 @@ import { cultureList, ICultureList } from 'content/cultrureList';
 import Image from 'next/image';
 import aboutSeo from 'content/SeoData/about';
 import Seo from 'components/SEO/SEO';
-import BgTop from '../public/images/static/about-us/bg.png';
-import TeamImage from '../public/images/static/about-us/team.png';
+import BgTop from 'public/images/static/about-us/bg.png';
+import TeamImage from 'public/images/static/about-us/team.png';
 
 const About = () => {
-
   return (
     <>
       <Seo {...aboutSeo} />
@@ -37,39 +36,41 @@ const About = () => {
           </Container>
         </Container>
       </AboutHero>
-
       <Culture>
         <Image
           className="bg-top"
           fill={true}
           src={BgTop}
           priority
-          alt='Our Cultural Values'
-          quality={100}
+          placeholder={'blur'}
+          alt="Our Cultural Values"
         />
         <Container css={{ position: 'relative', zIndex: 2 }}>
           <Text as="h3" size={8} css={{ '@bp1': { textAlign: 'center' } }}>
             Our Cultural Values
           </Text>
-          <Flex align='center' direction={{ '@bp1': 'columnReverse' }}>
+          <Flex align="center" direction={{ '@bp1': 'columnReverse' }}>
             <CultureLeft>
               <CultureList>
                 {cultureList.map(
-                  ({ image, title, description }: ICultureList, index) => {
-                    return (
-                      <CultureItem key={index}>
-                        <Image src={image} quality={100} width={44} height={44} alt={title} />
-                        <Text
-                          as="h4"
-                          size={3}
-                          css={{ fontWeight: '$3', padding: '$3 0 $2' }}
-                        >
-                          {title}
-                        </Text>
-                        <Text css={{color: '$white700'}}>{description}</Text>
-                      </CultureItem>
-                    );
-                  }
+                  ({ image, title, description }: ICultureList, index) => (
+                    <CultureItem key={index}>
+                      <Image
+                        src={image}
+                        width={44}
+                        height={44}
+                        alt={title}
+                      />
+                      <Text
+                        as="h4"
+                        size={3}
+                        css={{ fontWeight: '$3', padding: '$3 0 $2' }}
+                      >
+                        {title}
+                      </Text>
+                      <Text css={{ color: '$white700' }}>{description}</Text>
+                    </CultureItem>
+                  ),
                 )}
               </CultureList>
             </CultureLeft>
@@ -79,7 +80,7 @@ const About = () => {
                 width={695}
                 height={525}
                 alt={'AimSack team'}
-                quality={100}
+                placeholder={'blur'}
               />
             </CultureRight>
           </Flex>

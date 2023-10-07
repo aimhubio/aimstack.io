@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { PricingCardStyle, PricingCardList } from './PricingCard.style';
 import { Text, Flex } from 'styles/foundations';
 import { Button } from 'components/UIkit';
-import Image, {StaticImageData} from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 interface IPricingCard {
   title: string;
@@ -30,7 +30,7 @@ const PricingCard: FC<IPricingCard> = ({
       <Flex direction="column" justify="between">
         <div>
           <Flex align="center" css={{ marginBottom: '$4' }}>
-            <Image src={image} alt={title} height={44} width={44} quality={100}/>
+            <Image src={image} alt={title} height={44} width={44} />
             <Text as="h2" css={{ fontWeight: '$4', marginLeft: '$4' }} size={6}>
               {title}
             </Text>
@@ -55,7 +55,7 @@ const PricingCard: FC<IPricingCard> = ({
             variant={buttonVariant}
             href={buttonURL}
             target="_blank"
-            css={{fontSize: '$2'}}
+            css={{ fontSize: '$2' }}
           >
             {buttonText}
           </Button>

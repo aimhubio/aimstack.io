@@ -1,7 +1,7 @@
-import {StaticImageData} from "next/image";
-import LangChainChatbot from "../../public/images/static/demos/LangChain-based-chatbot.png";
-import LlamaIndex from "../../public/images/static/demos/LlamaIndex-query.png";
-import CNN from "../../public/images/static/demos/CNN-Training.png";
+import { StaticImageData } from 'next/image';
+import LangChainChatbot from 'public/images/static/demos/LangChain-based-chatbot.png';
+import LlamaIndex from 'public/images/static/demos/LlamaIndex-query.png';
+import CNN from 'public/images/static/demos/CNN-Training.png';
 
 interface Demo {
   name: string;
@@ -14,14 +14,14 @@ const demosList: Demo[] = [
   {
     name: 'LangChain-based-chatbot',
     title: 'LangChain-based chatbot ',
-    description: "Tracing LangChain-based chatbot executions",
+    description: 'Tracing LangChain-based chatbot executions',
     url: 'https://play-v4.aimstack.io/langchain-chatbot-ui/apps/langchain_debugger/traces.py',
     imageSrc: LangChainChatbot,
   },
   {
     name: 'LlamaIndex-query',
     title: 'LlamaIndex-query',
-    description: "Tracing LlamaIndex query executions",
+    description: 'Tracing LlamaIndex query executions',
     url: 'https://play-v4.aimstack.io/llamaindex-retriever-ui/apps/llamaindex_observer/traces.py',
     imageSrc: LlamaIndex,
   },
