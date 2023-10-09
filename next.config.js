@@ -8,19 +8,6 @@ const { withContentlayer } = require('next-contentlayer');
 
 const nextConfig = {
   trailingSlash: true,
-  async headers() {
-    return [
-      {
-        source: "/:path*",
-        headers: [
-          {
-            key: "cache-control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-    ];
-  },
   images: {
     remotePatterns: [
       {
