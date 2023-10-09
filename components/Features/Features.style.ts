@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import { styled } from 'styles';
 import { Container } from 'styles/foundations';
 
@@ -126,7 +126,7 @@ const StepContent = styled('div', {
   },
 });
 
-const StepBannerImage = styled(Image, {
+const StepBannerImage = styled(ExportedImage, {
   maxWidth: '600px',
   minWidth: '300px',
   height: 'auto',
@@ -146,7 +146,7 @@ const StepBannerImage = styled(Image, {
   },
 });
 
-const FeaturesDotsImg = styled(Image, {
+const FeaturesDotsImg = styled(ExportedImage, {
   objectFit: 'contain',
   zIndex: -1,
 });

@@ -1,4 +1,3 @@
-import { StaticImageData } from 'next/image';
 
 import ShieldImage from 'public/images/static/about-us/shield.svg';
 import MessageImage from 'public/images/static/about-us/message.svg';
@@ -6,7 +5,7 @@ import RunImage from 'public/images/static/about-us/run.svg';
 import SmileImage from 'public/images/static/about-us/smile.svg';
 
 export interface ICultureList {
-  image: StaticImageData;
+  image: any;
   title: string;
   description: string;
 }

@@ -7,7 +7,7 @@ import {
 } from './Subscribe.style';
 import { Container, Text } from 'styles/foundations';
 import { Button, Input } from 'components/UIkit';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import { SUBSCRIBE_API } from 'config';
 import { ImagePlaceholder, validateEmail } from 'utils';
 import SubscribeImage from 'public/images/static/subscribe/subscribe.png';
@@ -75,7 +75,7 @@ const Subscribe = () => {
             </Button>
           </Left>
           <Right>
-            <Image
+            <ExportedImage
               src={SubscribeImage}
               alt="Subscribe"
               width={1000}

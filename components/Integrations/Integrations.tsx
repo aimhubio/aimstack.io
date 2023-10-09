@@ -43,7 +43,6 @@ const Integrations = () => {
           height={480}
           src={IntegrationsImg}
           alt="integrations image"
-          quality={50}
           placeholder={'blur'}
         />
       </IntegrationsContainer>

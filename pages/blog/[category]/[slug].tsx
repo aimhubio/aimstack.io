@@ -22,7 +22,7 @@ import { formattedDate, ImagePlaceholder, slugify } from 'utils';
 import { useRouter } from 'next/router';
 import { Icon } from 'components/UIkit';
 import { allPosts } from 'contentlayer/generated';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import Seo from 'components/SEO/SEO';
 import { Category } from 'components/Card/Card.style';
 import SITE_URL from 'config';
@@ -125,7 +125,7 @@ export default function PostPage({ post, posts }) {
             options={{
               overrides: {
                 img: {
-                  component: Image,
+                  component: ExportedImage,
                   props: {
                     fill: true,
                     alt: 'blog image',

@@ -1,6 +1,7 @@
 import { styled } from 'styles';
 import { Container } from 'styles/foundations';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
+
 
 const FooterSection = styled('footer', {
   overflow: 'hidden',
@@ -116,7 +117,7 @@ const FooterBottom = styled('div', {
   textAlign: 'center',
 });
 
-const FooterBgImg = styled(Image, {
+const FooterBgImg = styled(ExportedImage, {
   width: '100%',
   height: 'auto',
   scale: 1.02

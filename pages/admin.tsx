@@ -12,7 +12,7 @@ const Loading = () => {
 
 const CMS = dynamic(
   () =>
-    import('netlify-cms-app').then((cms) => {
+    import('decap-cms-app').then((cms) => {
       // @ts-ignore
       cms.init({ config });
     }) as any,

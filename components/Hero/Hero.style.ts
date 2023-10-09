@@ -1,5 +1,5 @@
 import { styled } from 'styles';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 const HeroSection = styled('section', {
   position: 'relative',
@@ -57,16 +57,16 @@ const HeroContentWrapper = styled('div', {
   },
 });
 
-const HeroBg = styled(Image, {
+const HeroBg = styled(ExportedImage, {
   objectFit: 'contain',
   objectPosition: 'right'
 });
 
-const HeroBgDots = styled(Image, {
+const HeroBgDots = styled(ExportedImage, {
   objectFit: 'cover'
 });
 
-const HeroBannerImg = styled(Image, {
+const HeroBannerImg = styled(ExportedImage, {
   position: 'absolute',
   width: '72%',
   minWidth: '72%',

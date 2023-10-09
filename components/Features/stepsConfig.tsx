@@ -1,5 +1,4 @@
 import { Text } from 'styles/foundations';
-import { StaticImageData } from 'next/image';
 import Logging from 'public/images/static/why-use-aim/logging.png';
 import LowCode from 'public/images/static/why-use-aim/low-code.png';
 import Ecosystem from 'public/images/static/why-use-aim/ecosystem.png';
@@ -10,7 +9,7 @@ interface Step {
   description: string | JSX.Element;
   list: Array<string>;
   explorationLink: string;
-  bannerImgSrc: StaticImageData;
+  bannerImgSrc: any;
 }
 
 export const steps: Step[] = [

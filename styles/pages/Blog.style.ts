@@ -1,5 +1,5 @@
 import { styled } from 'styles';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 const BlogSingleStyle = styled('div', {});
 
@@ -7,7 +7,7 @@ const ImageWrapper = styled('div', {
   position: 'relative',
 });
 
-const BlogImage = styled(Image, {
+const BlogImage = styled(ExportedImage, {
   objectFit: 'contain',
   minWidth: '100%',
   minHeight: '100%',

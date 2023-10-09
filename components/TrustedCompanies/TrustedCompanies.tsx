@@ -5,7 +5,7 @@ import {
   TrustedCompaniesSection,
 } from './TrustedCompanies.style';
 import { useKeenSlider } from 'keen-slider/react';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import 'keen-slider/keen-slider.min.css';
 import integrationsList from './TrustedCompaniesList';
 import { Text } from 'styles/foundations';
@@ -70,7 +70,7 @@ const TrustedCompanies = () => {
         >
           {integrationsList.map(({ name, imgSrc }) => (
             <SliderItem key={name} className="keen-slider__slide">
-              <Image
+              <ExportedImage
                 src={imgSrc}
                 alt={name}
                 width={200}

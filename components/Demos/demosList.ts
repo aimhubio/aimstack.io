@@ -1,4 +1,3 @@
-import { StaticImageData } from 'next/image';
 import LangChainChatbot from 'public/images/static/demos/LangChain-based-chatbot.png';
 import LlamaIndex from 'public/images/static/demos/LlamaIndex-query.png';
 import CNN from 'public/images/static/demos/CNN-Training.png';
@@ -8,7 +7,7 @@ interface Demo {
   title: string;
   description: string;
   url: string;
-  imageSrc: StaticImageData;
+  imageSrc: any;
 }
 const demosList: Demo[] = [
   {

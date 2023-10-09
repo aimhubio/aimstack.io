@@ -12,7 +12,7 @@ import {
   SideBar,
   Badges,
 } from 'styles/pages/Subpackages.style';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import { HighlightWrapper } from 'components/QuickStart/QuickStart.style';
 
 export default function PostPage({ post }) {
@@ -30,7 +30,7 @@ export default function PostPage({ post }) {
         <Container style={{ paddingTop: '150px' }}>
           <Flex justify="between" direction={{ '@bp1': 'column' }}>
             <Flex align="center">
-              <Image
+              <ExportedImage
                 className="logo"
                 src={post.logo}
                 alt="AimStack"

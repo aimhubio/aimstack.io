@@ -14,7 +14,7 @@ import { Badge } from 'components/Header/Header.style';
 import { Text } from 'styles/foundations';
 import Link from 'next/link';
 import { navList, socialList, INavList, Social } from '../Layout/config';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import FooterBg from 'public/images/static/footer/bg.svg';
 import AimLogo from 'public/images/static/main/aim-logo.svg';
 import AimLogoResp from 'public/images/static/main/aim-logo-resp.svg';
@@ -35,7 +35,7 @@ const Footer = () => {
                     media="(max-width: 1199px)"
                     srcSet={AimLogoResp}
                   />
-                  <Image
+                  <ExportedImage
                     height={26}
                     width={26}
                     src={AimLogo}
@@ -65,7 +65,7 @@ const Footer = () => {
                     target="_blank"
                     aria-label={name}
                   >
-                    <Image
+                    <ExportedImage
                       src={icon}
                       alt={name}
                       width={24}

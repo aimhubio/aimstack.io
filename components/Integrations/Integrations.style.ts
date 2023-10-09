@@ -1,6 +1,6 @@
 import { styled } from 'styles';
 import { Container } from 'styles/foundations';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 const IntegrationsSection = styled('section', {
   position: 'relative',
@@ -46,7 +46,7 @@ const IntegrationsContainerLeft = styled('div', {
     },
   },
 });
-const IntegrationsListImage = styled(Image, {
+const IntegrationsListImage = styled(ExportedImage, {
   width: '50%',
   maxWidth: '540px',
   height: 'auto',
@@ -59,7 +59,7 @@ const IntegrationsListImage = styled(Image, {
   },
 });
 
-const IntegrationsDotsImg = styled(Image, {
+const IntegrationsDotsImg = styled(ExportedImage, {
   objectFit: 'cover',
   zIndex: -1,
 });

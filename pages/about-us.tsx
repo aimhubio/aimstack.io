@@ -11,7 +11,7 @@ import {
   CultureItem,
 } from 'styles/pages/About.style';
 import { cultureList, ICultureList } from 'content/cultrureList';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import aboutSeo from 'content/SeoData/about';
 import Seo from 'components/SEO/SEO';
 import BgTop from 'public/images/static/about-us/bg.png';
@@ -37,7 +37,7 @@ const About = () => {
         </Container>
       </AboutHero>
       <Culture>
-        <Image
+        <ExportedImage
           className="bg-top"
           fill={true}
           src={BgTop}
@@ -55,7 +55,7 @@ const About = () => {
                 {cultureList.map(
                   ({ image, title, description }: ICultureList, index) => (
                     <CultureItem key={index}>
-                      <Image
+                      <ExportedImage
                         src={image}
                         width={44}
                         height={44}
@@ -75,7 +75,7 @@ const About = () => {
               </CultureList>
             </CultureLeft>
             <CultureRight>
-              <Image
+              <ExportedImage
                 src={TeamImage}
                 width={695}
                 height={525}
