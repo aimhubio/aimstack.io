@@ -3,15 +3,13 @@ import {
   HeroSection,
   HeroContentWrapper,
   HeroBannerImg,
-  HeroBgDots,
-  HeroBg,
 } from './Hero.style';
 import { Text, Container } from 'styles/foundations';
 import { Button } from 'components/UIkit';
 import Aim4 from 'public/images/static/hero/aim4.png';
 import BgDots from 'public/images/static/hero/dots.svg';
 import Bg from 'public/images/static/hero/bg.svg';
-import { ImagePlaceholder } from 'utils';
+import ExportedImage from 'next-image-export-optimizer';
 
 const Hero = () => {
   // const [release, setRelease] = useState();
@@ -32,17 +30,19 @@ const Hero = () => {
 
   return (
     <HeroSection>
-      <HeroBg
+      <ExportedImage
         src={Bg}
         alt="bg"
         fill={true}
-        loading={'lazy'}
+        priority={true}
+        style={{ objectPosition: 'right', objectFit: 'contain' }}
       />
-      <HeroBgDots
+      <ExportedImage
         src={BgDots}
         alt="bgDots"
         fill={true}
-        loading={'lazy'}
+        priority={true}
+        style={{ objectFit: 'cover' }}
       />
       <Container>
         <HeroContentWrapper>
@@ -91,11 +91,7 @@ const Hero = () => {
           <HeroBannerImg
             src={Aim4}
             alt="banner"
-            width={866}
-            height={540}
             priority={true}
-            placeholder={'blur'}
-            blurDataURL={ImagePlaceholder}
           />
         </HeroContentWrapper>
       </Container>

@@ -17,7 +17,6 @@ const Integrations = () => {
       <IntegrationsDotsImg
         src={IntegrationsDots}
         alt="integrations dots"
-        loading={'lazy'}
         fill
       />
       <IntegrationsContainer>

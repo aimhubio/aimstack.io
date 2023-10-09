@@ -9,7 +9,7 @@ import { Container, Text } from 'styles/foundations';
 import { Button, Input } from 'components/UIkit';
 import ExportedImage from 'next-image-export-optimizer';
 import { SUBSCRIBE_API } from 'config';
-import { ImagePlaceholder, validateEmail } from 'utils';
+import { validateEmail } from 'utils';
 import SubscribeImage from 'public/images/static/subscribe/subscribe.png';
 
 const Subscribe = () => {
@@ -81,7 +81,6 @@ const Subscribe = () => {
               width={1000}
               height={600}
               placeholder={'blur'}
-              blurDataURL={ImagePlaceholder}
             />
           </Right>
         </SubscribeInner>

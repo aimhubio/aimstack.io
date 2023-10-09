@@ -23,7 +23,6 @@ const Features = () => {
       <FeaturesDotsImg
         src={FeaturesDots}
         alt={'features dots'}
-        loading={'lazy'}
         fill
       />
       <FeaturesContainer>

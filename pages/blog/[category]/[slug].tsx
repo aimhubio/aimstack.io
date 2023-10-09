@@ -17,7 +17,7 @@ import {
   ShareSocial,
   BlogImage,
 } from 'styles/pages/Blog.style';
-import { formattedDate, ImagePlaceholder, slugify } from 'utils';
+import { formattedDate, slugify } from 'utils';
 
 import { useRouter } from 'next/router';
 import { Icon } from 'components/UIkit';
@@ -115,7 +115,6 @@ export default function PostPage({ post, posts }) {
             width={1200}
             height={600}
             placeholder={'blur'}
-            blurDataURL={ImagePlaceholder}
           />
         </ImageWrapper>
       </Container>
@@ -133,7 +132,6 @@ export default function PostPage({ post, posts }) {
                     className: 'blog-image',
                     key: slug,
                     placeholder: 'blur',
-                    blurDataURL: ImagePlaceholder,
                   },
                 },
               },

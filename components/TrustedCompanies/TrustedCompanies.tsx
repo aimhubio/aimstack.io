@@ -76,7 +76,6 @@ const TrustedCompanies = () => {
                 width={200}
                 height={150}
                 placeholder={'blur'}
-                loading={'lazy'}
               />
             </SliderItem>
           ))}

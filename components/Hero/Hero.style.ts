@@ -3,14 +3,13 @@ import ExportedImage from 'next-image-export-optimizer';
 
 const HeroSection = styled('section', {
   position: 'relative',
-  minHeight: '100vh',
+  height: '100vh',
   display: 'flex',
-  alignItems: 'center',
   textAlign: 'center',
   overflow: 'hidden',
-  padding: '200px 0',
+  padding: '150px 0',
   '@bp1': {
-    padding: '132px 0',
+    padding: '120px 0',
   },
   '@bp2': {
     padding: '120px 0 24px',
@@ -23,6 +22,7 @@ const HeroContentWrapper = styled('div', {
   '@bp1': {
     flexDirection: 'column',
     alignItems: 'center',
+    height: '100%'
   },
   '.hero-button-container': {
     display: 'flex',
@@ -57,34 +57,26 @@ const HeroContentWrapper = styled('div', {
   },
 });
 
-const HeroBg = styled(ExportedImage, {
-  objectFit: 'contain',
-  objectPosition: 'right'
-});
-
-const HeroBgDots = styled(ExportedImage, {
-  objectFit: 'cover'
-});
-
 const HeroBannerImg = styled(ExportedImage, {
   position: 'absolute',
-  width: '72%',
-  minWidth: '72%',
-  height: 'auto',
-  right: '-30%',
+  right: '-300px',
   borderRadius: '12px',
   border: '1px solid #D8DADF',
-  aspectRatio: 'auto',
+  width: '866px',
+  height: 'auto',
+  '@bp0': {
+    width: '700px',
+  },
   '@bp1': {
     position: 'unset',
-    width: '90%',
+    width: '500px',
   },
   '@bp2': {
-    width: '100%',
+    width: '90%',
   },
   '@bp4': {
     display: 'none'
   },
 });
 
-export { HeroSection, HeroContentWrapper, HeroBannerImg, HeroBg, HeroBgDots };
+export { HeroSection, HeroContentWrapper, HeroBannerImg };

@@ -15,7 +15,7 @@ import DemosDots from 'public/images/static/demos/dots.svg';
 const Demos = () => {
   return (
     <DemosSection id="demos">
-      <DemosDotsImg src={DemosDots} alt={'demos dots'} loading={'lazy'} fill />
+      <DemosDotsImg src={DemosDots} alt={'demos dots'} fill />
       <Container>
         <Text as="h2" size={9} className="demos-title">
           Try Aim in action with live demos
