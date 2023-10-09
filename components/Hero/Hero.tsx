@@ -9,8 +9,8 @@ import {
 import { Text, Container } from 'styles/foundations';
 import { Button } from 'components/UIkit';
 import Aim4 from 'public/images/static/hero/aim4.png';
-import BgDots from 'public/images/static/hero/dots.png';
-import Bg from 'public/images/static/hero/bg.png';
+import BgDots from 'public/images/static/hero/dots.svg';
+import Bg from 'public/images/static/hero/bg.svg';
 import { ImagePlaceholder } from 'utils';
 
 const Hero = () => {

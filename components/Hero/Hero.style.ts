@@ -8,7 +8,7 @@ const HeroSection = styled('section', {
   alignItems: 'center',
   textAlign: 'center',
   overflow: 'hidden',
-  padding: '150px 0',
+  padding: '200px 0',
   '@bp1': {
     padding: '132px 0',
   },
