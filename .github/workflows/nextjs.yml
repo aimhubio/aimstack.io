@@ -68,8 +68,8 @@ jobs:
         run: npm install --legacy-peer-deps
       - name: Build with Next.js
         run: npm run build
-      - name: Start
-        run: npm start
+      - name: Export
+        run: npm run export
       - run: touch ./out/.nojekyll
       - run: echo 'aimstack.io' > ./out/CNAME
 
