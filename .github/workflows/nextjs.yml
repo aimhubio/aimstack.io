@@ -69,7 +69,7 @@ jobs:
       - name: Build with Next.js
         run: npm run build
       - name: Start
-        run: next start
+        run: npm start
       - run: touch ./out/.nojekyll
       - run: echo 'aimstack.io' > ./out/CNAME
 
