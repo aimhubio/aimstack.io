@@ -1,14 +1,12 @@
 import { styled } from 'styles';
 import { Container } from 'styles/foundations';
+import Image from 'next/image';
 
 const IntegrationsSection = styled('section', {
-  backgroundImage: 'url(/images/static/integrations/dots.svg)',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
+  position: 'relative',
   overflow: 'hidden',
   padding: '150px 0',
-  '@bp2': {
+  '@bp1': {
     padding: '80px 0 24px',
   },
 });
@@ -17,7 +15,7 @@ const IntegrationsContainer = styled(Container, {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  '@bp2': {
+  '@bp1': {
     flexDirection: 'column',
   },
 });
@@ -26,7 +24,7 @@ const IntegrationsContainerLeft = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   maxWidth: '500px',
-  '@bp2': {
+  '@bp1': {
     textAlign: 'center',
     alignItems: 'center',
   },
@@ -37,7 +35,7 @@ const IntegrationsContainerLeft = styled('div', {
   '.integrations-subtitle': {
     lineHeight: '30px',
     marginBottom: '$14',
-    '@bp2': {
+    '@bp1': {
       marginBottom: '$11',
     },
   },
@@ -48,25 +46,28 @@ const IntegrationsContainerLeft = styled('div', {
     },
   },
 });
-const IntegrationsList = styled('div', {
+const IntegrationsListImage = styled(Image, {
+  width: '50%',
   maxWidth: '540px',
-  '@bp2': {
+  height: 'auto',
+  '@bp1': {
     marginTop: '$7',
-    maxWidth: '100%',
-    width: '80%',
+    width: '100%',
   },
   '@bp4': {
     display: 'none',
   },
-  img: {
-    width: '100%',
-    height: 'auto',
-  },
+});
+
+const IntegrationsDotsImg = styled(Image, {
+  objectFit: 'cover',
+  zIndex: -1,
 });
 
 export {
   IntegrationsSection,
   IntegrationsContainer,
-  IntegrationsList,
+  IntegrationsListImage,
   IntegrationsContainerLeft,
+  IntegrationsDotsImg,
 };

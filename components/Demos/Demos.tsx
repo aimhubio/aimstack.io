@@ -1,13 +1,21 @@
-import { DemosSection, DemosList, DemosItem } from './Demos.style';
-import { Text, Container } from 'styles/foundations';
 import React from 'react';
+import {
+  DemosSection,
+  DemosList,
+  DemosItem,
+  DemosDotsImg,
+  DemoImg,
+} from './Demos.style';
+import { Text, Container } from 'styles/foundations';
 import demosList from './demosList';
-import Image from 'next/image';
 import Link from 'next/link';
+
+import DemosDots from 'public/images/static/demos/dots.svg';
 
 const Demos = () => {
   return (
     <DemosSection id="demos">
+      <DemosDotsImg src={DemosDots} alt={'demos dots'} loading={'lazy'} fill />
       <Container>
         <Text as="h2" size={9} className="demos-title">
           Try Aim in action with live demos
@@ -19,13 +27,10 @@ const Demos = () => {
           {demosList.map(({ title, description, name, url, imageSrc }) => (
             <DemosItem key={name}>
               <Link href={url} target="_blank">
-                <Image
-                  className="demo-img"
+                <DemoImg
                   src={imageSrc}
                   alt="AimStack"
-                  width={1000}
-                  height={600}
-                  quality={100}
+                  placeholder={'blur'}
                 />
                 <div className="demo-inner">
                   <Text size={4} css={{ marginBottom: '$2', fontWeight: '$4' }}>

@@ -1,44 +1,36 @@
 import { styled } from 'styles';
 
-const Subpackages = styled('div', {
-
-});
+const Subpackages = styled('div', {});
 const SubpackagesHeader = styled('section', {
   color: '$white',
   backgroundColor: '$darkBlue',
   py: '60px',
-
   '@bp2': {
     py: '40px',
   },
-
   '.logo': {
     minWidth: '45px',
     width: '45px',
     height: 'auto',
   },
-
   '.org': {
-    paddingLeft: '24px'
+    paddingLeft: '24px',
   },
   '.org-name': {
     display: 'flex',
     alignItems: 'center',
     fontSize: '40px',
-
     '@bp2': {
       'p, span': {
         fontSize: '$5',
       },
     },
-
     ':not(span)': {
-      color: '$primary'
+      color: '$primary',
     },
-
     span: {
-      padding: '0 8px'
-    }
+      padding: '0 8px',
+    },
   },
 
   '.highlight': {
@@ -46,13 +38,13 @@ const SubpackagesHeader = styled('section', {
     width: '100%',
 
     '@bp1': {
-      marginTop: '30px'
+      marginTop: '30px',
     },
 
     '.hljs': {
-      marginBottom: '0'
-    }
-  }
+      marginBottom: '0',
+    },
+  },
 });
 
 const MainContent = styled('section', {
@@ -60,28 +52,25 @@ const MainContent = styled('section', {
   padding: '0 30px',
   borderLeft: '1px solid $grey',
   borderRight: '1px solid $grey',
-
   '.inner': {
     margin: '30px auto',
   },
-
   '@bp1': {
     width: '100%',
     border: 'none',
-    padding: '0px'
-  }
+    padding: '0px',
+  },
 });
 
 const SideBar = styled('aside', {
   width: '286px',
   padding: '30px',
   borderRight: '1px solid $grey',
-
   '@bp1': {
     width: '100%',
     border: 'none',
-    padding: '30px 0 0'
-  }
+    padding: '30px 0 0',
+  },
 });
 
 const Badges = styled('div', {
@@ -89,11 +78,9 @@ const Badges = styled('div', {
   marginTop: '24px',
   paddingTop: '24px',
   paddingBottom: '24px',
-
   '@bp1': {
-
-    borderBottom: '1px solid $grey'
-  }
+    borderBottom: '1px solid $grey',
+  },
 });
 
 export { Subpackages, SubpackagesHeader, MainContent, SideBar, Badges };

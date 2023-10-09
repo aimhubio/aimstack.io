@@ -7,13 +7,33 @@
 const { withContentlayer } = require('next-contentlayer');
 
 const nextConfig = {
+  trailingSlash: true,
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "cache-control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+    ];
+  },
   images: {
-    unoptimized: true,
-    domains: ['miro.medium.com'],
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'miro.medium.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.netlify.app',
+      },
+      {
+        protocol: 'https',
+        hostname: 'youtu.be',
       },
       {
         protocol: 'https',

@@ -1,37 +1,17 @@
 import { styled } from 'styles';
 
 const BlogListStyle = styled('ul', {
-  display: 'flex',
-  flexWrap: 'wrap',
-  marginLeft: '-40px',
-
+  display: 'grid',
+  gridTemplateColumns: 'repeat(3,minmax(0,1fr))',
+  gap: '40px 20px',
   '@bp1': {
-    marginLeft: '-54px',
+    gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
   },
-
-  '@bp3': {
-    marginLeft: '0',
-  },
+  '@bp2': {
+    gap: '40px 10px',
+    gridTemplateColumns: 'repeat(1,minmax(0,1fr))',
+  }
 });
-const BlogItem = styled('li', {
-  width: 'calc((100% / 3) - 40px)',
-  marginLeft: '40px',
-  marginBottom: '40px',
-
-  // '&:first-child': {
-  //   width: '100%',
-  // },
-
-  '@bp1': {
-    width: 'calc((100% / 2) - 54px)',
-    marginLeft: '54px',
-    marginBottom: '54px',
-  },
-  '@bp3': {
-    width: '100%',
-    marginLeft: '0',
-    marginBottom: '48px',
-  },
-});
+const BlogItem = styled('li', {});
 
 export { BlogListStyle, BlogItem };

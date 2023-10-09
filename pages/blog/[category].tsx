@@ -6,7 +6,7 @@ import { allPosts } from 'contentlayer/generated';
 import BlogList from 'components/BlogList/BlogList';
 import Pagination from 'components/Pagination/Pagnation';
 import { useRouter } from 'next/router';
-import Seo from '../../components/SEO/SEO';
+import Seo from 'components/SEO/SEO';
 
 export default function Category({ posts }) {
   const router = useRouter();
@@ -50,7 +50,6 @@ export default function Category({ posts }) {
         >
           Category: {titleCase(params.category)}
         </Text>
-
         <BlogList blogList={totalPosts()} />
         <Pagination
           currentPage={page}

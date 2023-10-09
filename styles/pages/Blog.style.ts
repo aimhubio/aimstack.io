@@ -1,20 +1,24 @@
 import { styled } from 'styles';
+import Image from 'next/image';
 
 const BlogSingleStyle = styled('div', {});
 
 const ImageWrapper = styled('div', {
   position: 'relative',
+});
 
-  img: {
-    position: 'static !important',
-  },
+const BlogImage = styled(Image, {
+  objectFit: 'contain',
+  minWidth: '100%',
+  minHeight: '100%',
+  width: '100%',
+  height: '100%',
 });
 
 const ShareSocial = styled('div', {
   display: 'flex',
   justifyContent: 'flex-end',
   marginBottom: '$10',
-
   button: {
     height: '40px',
     width: '40px',
@@ -104,4 +108,4 @@ const Next = styled('div', {
   },
 });
 
-export { BlogSingleStyle, ImageWrapper, PostNavigation, Prev, Next, ShareSocial };
+export { BlogSingleStyle, ImageWrapper, PostNavigation, Prev, Next, ShareSocial, BlogImage };

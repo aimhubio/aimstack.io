@@ -1,20 +1,31 @@
 import { styled } from 'styles';
+import Image from 'next/image';
 
 const CardStyle = styled('div', {
-  'img': {
-    objectFit: "cover",
-    objectPosition: "top"
+  padding: '10px',
+  border: '1px solid #E2D7EB',
+  borderRadius: '6px',
+  transition: '$main',
+  height: '100%',
+  '&:hover': {
+    backgroundColor: '$bigStoneHover',
+    color: '$white',
   }
 });
 
 const ImageWrapper = styled('div', {
   position: 'relative',
-  height: '0',
-  paddingBottom: '65%',
+});
+
+const CardImage = styled(Image, {
+  width: '100%',
+  objectFit: 'cover',
+  height: '200px',
+  minHeight: '200px'
 });
 
 const CardContent = styled('div', {
-  paddingTop: '50px',
+  padding: '20px 10px 0px 10px',
   position: 'relative',
 });
 
@@ -36,7 +47,7 @@ const Category = styled('div', {
     '.icon': {
       fill: '$darkGray',
     },
-  }
+  },
 });
 
 const CardFooter = styled('div', {
@@ -50,4 +61,11 @@ const CardFooter = styled('div', {
   },
 });
 
-export { CardStyle, CardContent, Category, CardFooter, ImageWrapper };
+export {
+  CardStyle,
+  CardContent,
+  Category,
+  CardFooter,
+  ImageWrapper,
+  CardImage,
+};

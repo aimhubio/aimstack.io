@@ -1,8 +1,8 @@
-import DiscordIcon from '../../public/images/static/social/discord.svg';
-import TwitterXIcon from '../../public/images/static/social/twitterx.svg';
-import LinkedInIcon from '../../public/images/static/social/linkedin.svg';
-import FacebookIcon from '../../public/images/static/social/facebook.svg';
 import { StaticImageData } from 'next/image';
+import DiscordIcon from 'public/images/static/social/discord.svg';
+import TwitterXIcon from 'public/images/static/social/twitterx.svg';
+import LinkedInIcon from 'public/images/static/social/linkedin.svg';
+import FacebookIcon from 'public/images/static/social/facebook.svg';
 
 export interface Social {
   name: string;

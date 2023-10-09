@@ -5,12 +5,12 @@ import {
   Category,
   CardFooter,
   ImageWrapper,
+  CardImage,
 } from './Card.style';
 import { Text } from 'styles/foundations';
-import Image from 'next/image';
 import { Icon } from 'components/UIkit';
 import Link from 'next/link';
-import { slugify } from 'utils';
+import {ImagePlaceholder, slugify} from 'utils';
 
 const Card = ({ categories, description, image, slug, title, views }: any) => {
   const category = slugify(categories?.[0]);
@@ -19,16 +19,17 @@ const Card = ({ categories, description, image, slug, title, views }: any) => {
     <CardStyle>
       <ImageWrapper>
         <Link href={blogUrl}>
-          <Image
+          <CardImage
             key={slug}
             src={image}
             alt={title}
-            fill={true}
-            quality={100}
+            width={300}
+            height={220}
+            placeholder={'blur'}
+            blurDataURL={ImagePlaceholder}
           />
         </Link>
       </ImageWrapper>
-
       <CardContent>
         {Array.isArray(categories) && (
           <Category>
@@ -40,9 +41,10 @@ const Card = ({ categories, description, image, slug, title, views }: any) => {
             </Link>
           </Category>
         )}
-
         <Text as="h3" size={6} className="title" truncate>
-          <Link href={blogUrl} rel='canonical'>{title}</Link>
+          <Link href={blogUrl} rel="canonical">
+            {title}
+          </Link>
         </Text>
         <Text
           size={2}

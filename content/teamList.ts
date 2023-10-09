@@ -1,21 +1,13 @@
-import Shape1 from '../public/images/static/about-us/shapes/1.svg';
-import Shape2 from '../public/images/static/about-us/shapes/2.svg';
-import Shape3 from '../public/images/static/about-us/shapes/3.svg';
-import Shape4 from '../public/images/static/about-us/shapes/4.svg';
-import Shape5 from '../public/images/static/about-us/shapes/5.svg';
-import Shape6 from '../public/images/static/about-us/shapes/6.svg';
-import Shape7 from '../public/images/static/about-us/shapes/7.svg';
-
-import GevImage from '../public/images/static/about-us/team/Gev_Sogomonian.jpg';
-import GorImage from '../public/images/static/about-us/team/Gor_Arakelyan.jpg';
-import AlbertImage from '../public/images/static/about-us/team/Albert_Torosyan.jpg';
-import RubenImage from '../public/images/static/about-us/team/Ruben_Karapetyan.jpg';
-import KarenImage from '../public/images/static/about-us/team/Karen_Hambardzumyan.jpg';
-import KristinaImage from '../public/images/static/about-us/team/Kristina_Hovsepyan.jpg';
-import ArsenImage from '../public/images/static/about-us/team/Arsen_Alkamyan.jpg';
-import KaroImage from '../public/images/static/about-us/team/Karo_Mouradyan.jpg';
-import MihranImage from '../public/images/static/about-us/team/Mihran_Vanyan.jpg';
-import TatyanaImage from '../public/images/static/about-us/team/Tatyana_Manaseryan.jpg';
+import GevImage from 'public/images/static/about-us/team/Gev_Sogomonian.jpg';
+import GorImage from 'public/images/static/about-us/team/Gor_Arakelyan.jpg';
+import AlbertImage from 'public/images/static/about-us/team/Albert_Torosyan.jpg';
+import RubenImage from 'public/images/static/about-us/team/Ruben_Karapetyan.jpg';
+import KarenImage from 'public/images/static/about-us/team/Karen_Hambardzumyan.jpg';
+import KristinaImage from 'public/images/static/about-us/team/Kristina_Hovsepyan.jpg';
+import ArsenImage from 'public/images/static/about-us/team/Arsen_Alkamyan.jpg';
+import KaroImage from 'public/images/static/about-us/team/Karo_Mouradyan.jpg';
+import MihranImage from 'public/images/static/about-us/team/Mihran_Vanyan.jpg';
+import TatyanaImage from 'public/images/static/about-us/team/Tatyana_Manaseryan.jpg';
 
 const teamList = [
   {

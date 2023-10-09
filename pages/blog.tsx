@@ -5,7 +5,7 @@ import Seo from 'components/SEO/SEO';
 import { pageCount, getTotalPosts } from 'utils';
 import { allPosts } from 'contentlayer/generated';
 import { pick } from '@contentlayer/client';
-import Pagination from '../components/Pagination/Pagnation';
+import Pagination from 'components/Pagination/Pagnation';
 import { useRouter } from 'next/router';
 import blogSeo from '../content/SeoData/blog';
 

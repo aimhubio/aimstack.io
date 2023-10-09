@@ -1,10 +1,9 @@
 import { styled } from 'styles';
+import Image from 'next/image';
 
 const DemosSection = styled('section', {
-  backgroundImage: 'url(/images/static/demos/dots.svg), linear-gradient(transparent, #d0cafe40, transparent)',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
+  backgroundImage: 'linear-gradient(transparent, #d0cafe40, transparent)',
+  position: 'relative',
   overflow: 'hidden',
   padding: '150px 0',
   '@bp2': {
@@ -62,15 +61,21 @@ const DemosItem = styled('li', {
       },
     },
   },
-  '.demo-img': {
-    width: '100%',
-    height: '66%',
-    display: 'block',
-    borderRadius: '$1 $1 0 0',
-    objectFit: 'cover',
-    padding: "10px",
-    overflow: 'hidden',
-  },
 });
 
-export { DemosSection, DemosList, DemosItem };
+const DemoImg = styled(Image, {
+  width: '100%',
+  height: '66%',
+  display: 'block',
+  borderRadius: '$1 $1 0 0',
+  objectFit: 'cover',
+  padding: "10px",
+  overflow: 'hidden',
+});
+
+const DemosDotsImg = styled(Image, {
+  objectFit: 'cover',
+  zIndex: -1,
+});
+
+export { DemosSection, DemosList, DemosItem, DemosDotsImg, DemoImg};

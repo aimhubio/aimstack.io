@@ -1,5 +1,6 @@
 import { styled } from 'styles';
-import { Container } from '../../styles/foundations';
+import { Container } from 'styles/foundations';
+import Image from 'next/image';
 
 const FooterSection = styled('footer', {
   overflow: 'hidden',
@@ -8,10 +9,6 @@ const FooterSection = styled('footer', {
   paddingTop: '100px',
   display: 'flex',
   flexDirection: 'column',
-  '.footer-bg': {
-    width: '100%',
-    height: 'auto',
-  },
 });
 
 const FooterSectionInner = styled('div', {
@@ -119,6 +116,12 @@ const FooterBottom = styled('div', {
   textAlign: 'center',
 });
 
+const FooterBgImg = styled(Image, {
+  width: '100%',
+  height: 'auto',
+  scale: 1.02
+});
+
 export {
   FooterSection,
   FooterSectionContainer,
@@ -128,4 +131,5 @@ export {
   FooterList,
   Logo,
   FooterSocial,
+  FooterBgImg,
 };

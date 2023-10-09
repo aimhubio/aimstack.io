@@ -12,11 +12,20 @@ import {
   StepContent,
   StepBannerImage,
   ComingSoonContainerContent,
+  FeaturesDotsImg,
 } from './Features.style';
+
+import FeaturesDots from 'public/images/static/features/dots.svg';
 
 const Features = () => {
   return (
     <FeaturesSection id="features">
+      <FeaturesDotsImg
+        src={FeaturesDots}
+        alt={'features dots'}
+        loading={'lazy'}
+        fill
+      />
       <FeaturesContainer>
         <FeaturesContainerHeader>
           <Text as="h2" size={9} className="features-title">
@@ -50,7 +59,7 @@ const Features = () => {
                       alt="AimStack"
                       width={600}
                       height={380}
-                      quality={100}
+                      placeholder={'blur'}
                     />
                   ) : null}
                   <Text className="step-description" size={3}>
@@ -79,7 +88,7 @@ const Features = () => {
                     alt="AimStack"
                     width={600}
                     height={380}
-                    quality={100}
+                    placeholder={'blur'}
                   />
                 ) : null}
               </Step>

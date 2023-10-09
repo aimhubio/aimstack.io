@@ -15,15 +15,16 @@ import {
   Prev,
   Next,
   ShareSocial,
+  BlogImage,
 } from 'styles/pages/Blog.style';
-import { formattedDate, slugify } from 'utils';
+import { formattedDate, ImagePlaceholder, slugify } from 'utils';
 
 import { useRouter } from 'next/router';
 import { Icon } from 'components/UIkit';
 import { allPosts } from 'contentlayer/generated';
 import Image from 'next/image';
-import Seo from '../../../components/SEO/SEO';
-import { Category } from '../../../components/Card/Card.style';
+import Seo from 'components/SEO/SEO';
+import { Category } from 'components/Card/Card.style';
 import SITE_URL from 'config';
 
 import Head from 'next/head';
@@ -39,9 +40,7 @@ export default function PostPage({ post, posts }) {
   const router = useRouter();
   const params = router.query;
   const { slug, category } = params;
-  const index = posts.findIndex((object) => {
-    return object.slug === slug;
-  });
+  const index = posts.findIndex((object) => object.slug === slug);
   const baseURL = getBaseURL();
   const path = `blog/${category}/${post.slug}`;
   const url = `${baseURL}/${path}`;
@@ -97,7 +96,6 @@ export default function PostPage({ post, posts }) {
             <Text size={1}>{formattedDate(post.date)}</Text>
           </Flex>
         </Flex>
-
         <Text
           as="h1"
           size={7}
@@ -109,15 +107,15 @@ export default function PostPage({ post, posts }) {
       </Container>
       <Container>
         <ImageWrapper>
-          <Image
+          <BlogImage
             src={post.image}
             key={path}
-            className="card-img-top"
             alt={post.title}
             title={post.title}
-            style={{ objectFit: 'contain' }}
-            fill
-            quality={100}
+            width={1200}
+            height={600}
+            placeholder={'blur'}
+            blurDataURL={ImagePlaceholder}
           />
         </ImageWrapper>
       </Container>
@@ -131,9 +129,11 @@ export default function PostPage({ post, posts }) {
                   props: {
                     fill: true,
                     alt: 'blog image',
-                    style: { objectFit: 'contain' },
+                    style: { objectFit: 'contain', aspectRatio: 'auto' },
                     className: 'blog-image',
                     key: slug,
+                    placeholder: 'blur',
+                    blurDataURL: ImagePlaceholder,
                   },
                 },
               },
@@ -162,7 +162,7 @@ export default function PostPage({ post, posts }) {
           <Flex>
             <Prev>
               {!!index && (
-                <Link rel='prev' href={getNeighborPostUrl(index - 1)}>
+                <Link rel="prev" href={getNeighborPostUrl(index - 1)}>
                   <Flex align="center">
                     <Icon name="chevron-left" />
                     <Text
@@ -186,7 +186,7 @@ export default function PostPage({ post, posts }) {
             </Prev>
             <Next>
               {index < posts.length - 1 && (
-                <Link rel='next' href={getNeighborPostUrl(index + 1)} >
+                <Link rel="next" href={getNeighborPostUrl(index + 1)}>
                   <Flex align="center" justify="end">
                     <Text
                       className="chevron-text"

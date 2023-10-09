@@ -68,19 +68,18 @@ const TrustedCompanies = () => {
           className="keen-slider"
           css={{ opacity: state ? 1 : 0, transition: '$main' }}
         >
-          {integrationsList.map(({ name, imgSrc }) => {
-            return (
-              <SliderItem key={name} className="keen-slider__slide">
-                <Image
-                  src={imgSrc}
-                  alt={name}
-                  width={200}
-                  height={150}
-                  quality={100}
-                />
-              </SliderItem>
-            );
-          })}
+          {integrationsList.map(({ name, imgSrc }) => (
+            <SliderItem key={name} className="keen-slider__slide">
+              <Image
+                src={imgSrc}
+                alt={name}
+                width={200}
+                height={150}
+                placeholder={'blur'}
+                loading={'lazy'}
+              />
+            </SliderItem>
+          ))}
         </Slider>
       </TrustedCompaniesSection>
     </TrustedCompaniesContainer>

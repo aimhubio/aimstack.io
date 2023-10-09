@@ -18,13 +18,11 @@ interface IBlogList {
 const BlogList = ({ blogList }: IBlogList) => {
   return (
     <BlogListStyle>
-      {blogList.map((blog: IBlog) => {
-        return (
-          <BlogItem key={blog.slug}>
-            <Card key={blog.slug} {...blog} />
-          </BlogItem>
-        );
-      })}
+      {blogList.map((blog: IBlog) => (
+        <BlogItem key={blog.slug}>
+          <Card key={blog.slug} {...blog} />
+        </BlogItem>
+      ))}
     </BlogListStyle>
   );
 };

@@ -84,21 +84,19 @@ const Header: FC<IHeader> = ({ dark }) => {
           <HeaderNav>
             <div className="nav-inner">
               <ul className="nav-list">
-                {navList.map(({ to, title, external, badge }: INavList) => {
-                  return (
-                    <li key={to}>
-                      <Link
-                        onClick={handleDrawerClose}
-                        href={to}
-                        target={external ? '_blank' : '_self'}
-                        className={currentRoute.includes(to) ? 'active' : ''}
-                      >
-                        <span className="text">{title}</span>
-                        {!!badge && <Badge>{badge}</Badge>}
-                      </Link>
-                    </li>
-                  );
-                })}
+                {navList.map(({ to, title, external, badge }: INavList) => (
+                  <li key={to}>
+                    <Link
+                      onClick={handleDrawerClose}
+                      href={to}
+                      target={external ? '_blank' : '_self'}
+                      className={currentRoute.includes(to) ? 'active' : ''}
+                    >
+                      <span className="text">{title}</span>
+                      {!!badge && <Badge>{badge}</Badge>}
+                    </Link>
+                  </li>
+                ))}
               </ul>
               <HeaderButton
                 css={{

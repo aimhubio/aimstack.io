@@ -16,15 +16,12 @@ const Pricing = () => {
           </Text>
           <Text size={4}>Aim is free, open-source and self-hosted. </Text>
         </Flex>
-
         <Flex
           css={{ paddingBottom: '104px' }}
           direction={{ '@bp2': 'column' }}
           gap={12}
         >
-          {pricingList.map((card) => {
-            return <PricingCard key={card.title} {...card} />;
-          })}
+          {pricingList.map((card) => <PricingCard key={card.title} {...card} />)}
         </Flex>
       </Container>
     </>

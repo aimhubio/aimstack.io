@@ -1,4 +1,5 @@
 import { styled, keyframes } from 'styles';
+import Image from 'next/image';
 
 const copyAnimation = keyframes({
   '0%': { opacity: '0' },
@@ -16,6 +17,12 @@ const QuickStartSection = styled('section', {
   '@bp2': {
     padding: '80px 0 24px',
   },
+  '.top-bg': {
+    objectFit: 'cover'
+  },
+  '.bottom-bg': {
+    objectFit: 'cover'
+  }
 });
 
 const QuickStartSectionInner = styled('div', {
@@ -172,6 +179,12 @@ const HighlightWrapper = styled('div', {
   //end highlighter plugin code
 });
 
+const QuickStartShapeImage = styled(Image, {
+  width: '100%',
+  height: 'auto',
+  scale: 1.02
+});
+
 export {
   QuickStartSection,
   QuickStartSectionInner,
@@ -180,4 +193,5 @@ export {
   Right,
   HighlightWrapper,
   CodeBlockStyle,
+  QuickStartShapeImage,
 };
