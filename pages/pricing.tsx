@@ -21,7 +21,9 @@ const Pricing = () => {
           direction={{ '@bp2': 'column' }}
           gap={12}
         >
-          {pricingList.map((card) => <PricingCard key={card.title} {...card} />)}
+          {pricingList.map((card) => (
+            <PricingCard key={card.title} {...card} />
+          ))}
         </Flex>
       </Container>
     </>

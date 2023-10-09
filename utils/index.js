@@ -64,7 +64,7 @@ export function getTotalPosts(posts, page) {
   if (page > 2) {
     totalPosts = publish.slice(
       show_per_page * page - show_per_page,
-      show_per_page * page
+      show_per_page * page,
     );
   }
 

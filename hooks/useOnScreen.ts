@@ -7,7 +7,7 @@ export const useOnScreen = (ref, threshold = [0.2, 0.8]) => {
     ([entry]) => setIntersecting(entry.isIntersecting),
     {
       threshold: threshold,
-    }
+    },
   );
 
   useEffect(() => {

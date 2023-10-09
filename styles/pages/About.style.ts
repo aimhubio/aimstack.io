@@ -11,8 +11,8 @@ const Culture = styled('section', {
   position: 'relative',
 
   '.bg-top': {
-    objectFit: "cover",
-    objectPosition: "top"
+    objectFit: 'cover',
+    objectPosition: 'top',
   },
   '@bp1': {
     py: '44px',

@@ -7,7 +7,6 @@ import AMD from 'public/images/static/trusted/amd.png';
 import Mila from 'public/images/static/trusted/mila.png';
 import MIT from 'public/images/static/trusted/mit.png';
 
-
 type TrustedCompanyType = {
   name: string;
   imgSrc: any;

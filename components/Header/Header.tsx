@@ -122,7 +122,12 @@ const Header: FC<IHeader> = ({ dark }) => {
                     target="_blank"
                     aria-label={name}
                   >
-                    <ExportedImage src={icon} alt={name} width={24} height={24} />
+                    <ExportedImage
+                      src={icon}
+                      alt={name}
+                      width={24}
+                      height={24}
+                    />
                   </a>
                 </li>
               ))}

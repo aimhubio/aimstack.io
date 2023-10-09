@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "contentlayer build && next build",
+    "build": "contentlayer build && next build && next-image-export-optimizer",
     "start": "next start",
-    "export": "next export && next-image-export-optimizer",
+    "export": "next export",
     "postbuild": "next-sitemap",
     "lint": "next lint",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\""

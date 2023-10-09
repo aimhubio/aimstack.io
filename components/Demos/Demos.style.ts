@@ -16,7 +16,7 @@ const DemosSection = styled('section', {
   '.demos-subtitle': {
     textAlign: 'center',
     marginBottom: '$14',
-  }
+  },
 });
 
 const DemosList = styled('ul', {
@@ -69,7 +69,7 @@ const DemoImg = styled(ExportedImage, {
   display: 'block',
   borderRadius: '$1 $1 0 0',
   objectFit: 'cover',
-  padding: "10px",
+  padding: '10px',
   overflow: 'hidden',
 });
 
@@ -78,4 +78,4 @@ const DemosDotsImg = styled(ExportedImage, {
   zIndex: -1,
 });
 
-export { DemosSection, DemosList, DemosItem, DemosDotsImg, DemoImg};
+export { DemosSection, DemosList, DemosItem, DemosDotsImg, DemoImg };

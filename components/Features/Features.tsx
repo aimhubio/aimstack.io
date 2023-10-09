@@ -20,11 +20,7 @@ import FeaturesDots from 'public/images/static/features/dots.svg';
 const Features = () => {
   return (
     <FeaturesSection id="features">
-      <FeaturesDotsImg
-        src={FeaturesDots}
-        alt={'features dots'}
-        fill
-      />
+      <FeaturesDotsImg src={FeaturesDots} alt={'features dots'} fill />
       <FeaturesContainer>
         <FeaturesContainerHeader>
           <Text as="h2" size={9} className="features-title">

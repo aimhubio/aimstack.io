@@ -10,7 +10,7 @@ const BlogListStyle = styled('ul', {
   '@bp2': {
     gap: '40px 10px',
     gridTemplateColumns: 'repeat(1,minmax(0,1fr))',
-  }
+  },
 });
 const BlogItem = styled('li', {});
 

@@ -39,7 +39,7 @@ const FeaturesContainerHeader = styled('div', {
   textAlign: 'center',
   '@bp2': {
     maxWidth: '100%',
-  }
+  },
 });
 
 const FeaturesContainerContent = styled('div', {

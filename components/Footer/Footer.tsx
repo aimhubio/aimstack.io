@@ -22,7 +22,7 @@ import AimLogoResp from 'public/images/static/main/aim-logo-resp.svg';
 const Footer = () => {
   return (
     <FooterSection>
-      <FooterBgImg src={FooterBg} alt={'footer'} priority={true}/>
+      <FooterBgImg src={FooterBg} alt={'footer'} priority={true} />
       <FooterSectionInner>
         <FooterSectionContainer>
           <FooterTop>

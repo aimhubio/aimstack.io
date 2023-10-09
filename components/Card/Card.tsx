@@ -10,7 +10,7 @@ import {
 import { Text } from 'styles/foundations';
 import { Icon } from 'components/UIkit';
 import Link from 'next/link';
-import {slugify} from 'utils';
+import { slugify } from 'utils';
 
 const Card = ({ categories, description, image, slug, title, views }: any) => {
   const category = slugify(categories?.[0]);

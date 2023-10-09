@@ -1,15 +1,8 @@
 import React from 'react';
-import {
-  HeroSection,
-  HeroContentWrapper,
-  HeroBannerImg,
-} from './Hero.style';
+import { HeroSection, HeroContentWrapper, HeroBannerImg } from './Hero.style';
 import { Text, Container } from 'styles/foundations';
 import { Button } from 'components/UIkit';
 import Aim4 from 'public/images/static/hero/aim4.png';
-import BgDots from 'public/images/static/hero/dots.svg';
-import Bg from 'public/images/static/hero/bg.svg';
-import ExportedImage from 'next-image-export-optimizer';
 
 const Hero = () => {
   // const [release, setRelease] = useState();
@@ -30,20 +23,6 @@ const Hero = () => {
 
   return (
     <HeroSection>
-      <ExportedImage
-        src={Bg}
-        alt="bg"
-        fill={true}
-        priority={true}
-        style={{ objectPosition: 'right', objectFit: 'contain' }}
-      />
-      <ExportedImage
-        src={BgDots}
-        alt="bgDots"
-        fill={true}
-        priority={true}
-        style={{ objectFit: 'cover' }}
-      />
       <Container>
         <HeroContentWrapper>
           <div className={'hero-content'}>
@@ -88,11 +67,7 @@ const Hero = () => {
               </Button>
             </div>
           </div>
-          <HeroBannerImg
-            src={Aim4}
-            alt="banner"
-            priority={true}
-          />
+          <HeroBannerImg src={Aim4} alt="banner" placeholder={'blur'} />
         </HeroContentWrapper>
       </Container>
     </HeroSection>

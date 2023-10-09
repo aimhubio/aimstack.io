@@ -2,7 +2,6 @@ import { styled } from 'styles';
 import { Container } from 'styles/foundations';
 import ExportedImage from 'next-image-export-optimizer';
 
-
 const FooterSection = styled('footer', {
   overflow: 'hidden',
   width: '100%',
@@ -16,7 +15,7 @@ const FooterSectionInner = styled('div', {
   minHeight: '100px',
   display: 'flex',
   flexDirection: 'column',
-  backgroundColor: '#673AB7'
+  backgroundColor: '#673AB7',
 });
 
 const FooterSectionContainer = styled(Container, {
@@ -120,7 +119,7 @@ const FooterBottom = styled('div', {
 const FooterBgImg = styled(ExportedImage, {
   width: '100%',
   height: 'auto',
-  scale: 1.02
+  scale: 1.02,
 });
 
 export {

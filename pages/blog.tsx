@@ -23,7 +23,7 @@ export default function Blog() {
       'draft',
       'image',
       'categories',
-    ])
+    ]),
   );
 
   // count how many pages
@@ -31,7 +31,7 @@ export default function Blog() {
 
   const totalPosts = useCallback(
     () => getTotalPosts(posts, page),
-    [page, posts]
+    [page, posts],
   );
 
   return (

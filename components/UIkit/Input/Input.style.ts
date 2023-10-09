@@ -27,7 +27,7 @@ const InputStyle = styled('div', {
           fontSize: '$2',
           backgroundColor: '$lightGrey',
           '&:hover': {
-            backgroundColor: "$lightGreyHover"
+            backgroundColor: '$lightGreyHover',
           },
         },
       },

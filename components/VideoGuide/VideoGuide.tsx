@@ -2,7 +2,7 @@ import React from 'react';
 import { VideoGuideStyle, VideoWrapper } from './VideoGuide.style';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import { Container } from 'styles/foundations';
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 /*EC2j2sudxOc*/
 /*An easy-to-use & supercharged open-source experiment tracker*/
@@ -14,9 +14,9 @@ const VideoGuide = () => {
           <LiteYouTubeEmbed
             id="EC2j2sudxOc"
             title="An easy-to-use & supercharged open-source experiment tracker"
-            aspectHeight = {9}
-            aspectWidth = {16}
-            thumbnail='/images/static/main/video-thumbnail.webp'
+            aspectHeight={9}
+            aspectWidth={16}
+            thumbnail="/images/static/main/video-thumbnail.webp"
             webp={true}
           />
           {/*<iframe*/}

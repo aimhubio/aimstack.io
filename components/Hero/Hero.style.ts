@@ -2,6 +2,11 @@ import { styled } from 'styles';
 import ExportedImage from 'next-image-export-optimizer';
 
 const HeroSection = styled('section', {
+  backgroundImage:
+    'url(/images/static/hero/dots.svg), url(/images/static/hero/bg.svg)',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover, contain',
+  backgroundPosition: 'center, right',
   position: 'relative',
   height: '100vh',
   display: 'flex',
@@ -22,7 +27,7 @@ const HeroContentWrapper = styled('div', {
   '@bp1': {
     flexDirection: 'column',
     alignItems: 'center',
-    height: '100%'
+    height: '100%',
   },
   '.hero-button-container': {
     display: 'flex',
@@ -59,13 +64,16 @@ const HeroContentWrapper = styled('div', {
 
 const HeroBannerImg = styled(ExportedImage, {
   position: 'absolute',
+  top: 0,
   right: '-300px',
   borderRadius: '12px',
   border: '1px solid #D8DADF',
   width: '866px',
-  height: 'auto',
+  height: '540px',
+  aspectRatio: '866 / 540',
   '@bp0': {
     width: '700px',
+    height: 'auto',
   },
   '@bp1': {
     position: 'unset',
@@ -75,7 +83,7 @@ const HeroBannerImg = styled(ExportedImage, {
     width: '90%',
   },
   '@bp4': {
-    display: 'none'
+    display: 'none',
   },
 });
 

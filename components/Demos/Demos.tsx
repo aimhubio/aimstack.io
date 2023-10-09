@@ -27,11 +27,7 @@ const Demos = () => {
           {demosList.map(({ title, description, name, url, imageSrc }) => (
             <DemosItem key={name}>
               <Link href={url} target="_blank">
-                <DemoImg
-                  src={imageSrc}
-                  alt="AimStack"
-                  placeholder={'blur'}
-                />
+                <DemoImg src={imageSrc} alt="AimStack" placeholder={'blur'} />
                 <div className="demo-inner">
                   <Text size={4} css={{ marginBottom: '$2', fontWeight: '$4' }}>
                     {title}
