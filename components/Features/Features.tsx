@@ -16,7 +16,6 @@ import {
 } from './Features.style';
 
 import FeaturesDots from 'public/images/static/features/dots.svg';
-import { IconArrowLeft } from '@tabler/icons-react';
 
 const Features = () => {
   return (

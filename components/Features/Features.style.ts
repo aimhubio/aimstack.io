@@ -152,6 +152,13 @@ const FeaturesDotsImg = styled(ExportedImage, {
   zIndex: -1,
 });
 
+const FeaturesIcon = styled('div', {
+  padding: 12,
+  display: 'inline-flex',
+  borderRadius: 8,
+  marginBottom: 24,
+});
+
 export {
   FeaturesSection,
   FeaturesContainer,
@@ -162,4 +169,5 @@ export {
   StepContent,
   StepBannerImage,
   FeaturesDotsImg,
+  FeaturesIcon,
 };

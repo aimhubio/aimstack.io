@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Text } from 'styles/foundations';
+import { Text } from 'styles/foundations';
 import Logging from 'public/images/static/why-use-aim/logging.png';
 import LowCode from 'public/images/static/why-use-aim/low-code.png';
 import Ecosystem from 'public/images/static/why-use-aim/ecosystem.png';
@@ -9,6 +9,7 @@ import {
   IconPackages,
   TablerIconsProps,
 } from '@tabler/icons-react';
+import { FeaturesIcon } from './Features.style';
 
 interface Step {
   key: string;
@@ -30,17 +31,9 @@ export const steps: Step[] = [
       'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
     bannerImgSrc: Logging,
     IconComponent: (props) => (
-      <div
-        style={{
-          background: '#DBEEFE',
-          padding: 12,
-          display: 'inline-flex',
-          borderRadius: 8,
-          marginBottom: 24,
-        }}
-      >
+      <FeaturesIcon css={{ background: '#DBEEFE' }}>
         <IconChartDots3 size={36} {...props} />
-      </div>
+      </FeaturesIcon>
     ),
   },
   {
@@ -57,17 +50,9 @@ export const steps: Step[] = [
       'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
     bannerImgSrc: LowCode,
     IconComponent: (props) => (
-      <div
-        style={{
-          background: '#E1DCFE',
-          padding: 12,
-          display: 'inline-flex',
-          borderRadius: 8,
-          marginBottom: 24,
-        }}
-      >
+      <FeaturesIcon css={{ background: '#E1DCFE' }}>
         <IconCode size={36} {...props} />
-      </div>
+      </FeaturesIcon>
     ),
   },
   {
@@ -83,17 +68,9 @@ export const steps: Step[] = [
       'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
     bannerImgSrc: Ecosystem,
     IconComponent: (props) => (
-      <div
-        style={{
-          background: '#FADAFE',
-          padding: 12,
-          display: 'inline-flex',
-          borderRadius: 8,
-          marginBottom: 24,
-        }}
-      >
+      <FeaturesIcon css={{ background: '#FADAFE' }}>
         <IconPackages size={36} {...props} />
-      </div>
+      </FeaturesIcon>
     ),
   },
 ];
