@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
+    "@tabler/icons-react": "^2.38.0",
     "@types/node": "^20.8.2",
     "@types/react": "^18.2.24",
     "@types/react-highlight": "^0.12.6",

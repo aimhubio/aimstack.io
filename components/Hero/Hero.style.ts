@@ -39,13 +39,11 @@ const HeroContentWrapper = styled('div', {
       flexDirection: 'column',
     },
     '.hero-try-demo': {
-      marginBottom: '$12',
       '@bp4': {
         marginBottom: '$4',
       },
     },
     '.hero-quick-start': {
-      marginBottom: '$12',
       marginLeft: '$4',
       '@bp4': {
         marginLeft: 0,
@@ -65,20 +63,22 @@ const HeroContentWrapper = styled('div', {
 
 const HeroBannerImg = styled(ExportedImage, {
   position: 'absolute',
-  top: 0,
+  top: '50%',
+  transform: 'translateY(-50%)',
   right: '-300px',
   borderRadius: '12px',
   border: '1px solid #D8DADF',
   width: '866px',
-  height: '540px',
-  aspectRatio: '866 / 540',
+  height: 'auto',
+  aspectRatio: 'auto',
   '@bp0': {
     width: '700px',
-    height: 'auto',
   },
   '@bp1': {
     position: 'unset',
+    transform: 'unset',
     width: '500px',
+    marginTop: '$12',
   },
   '@bp2': {
     width: '90%',

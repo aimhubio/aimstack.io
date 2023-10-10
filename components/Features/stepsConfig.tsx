@@ -1,7 +1,14 @@
-import { Text } from 'styles/foundations';
+import React from 'react';
+import { Flex, Text } from 'styles/foundations';
 import Logging from 'public/images/static/why-use-aim/logging.png';
 import LowCode from 'public/images/static/why-use-aim/low-code.png';
 import Ecosystem from 'public/images/static/why-use-aim/ecosystem.png';
+import {
+  IconChartDots3,
+  IconCode,
+  IconPackages,
+  TablerIconsProps,
+} from '@tabler/icons-react';
 
 interface Step {
   key: string;
@@ -10,6 +17,7 @@ interface Step {
   list: Array<string>;
   explorationLink: string;
   bannerImgSrc: any;
+  IconComponent: React.FC<TablerIconsProps>;
 }
 
 export const steps: Step[] = [
@@ -21,6 +29,19 @@ export const steps: Step[] = [
     explorationLink:
       'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
     bannerImgSrc: Logging,
+    IconComponent: (props) => (
+      <div
+        style={{
+          background: '#DBEEFE',
+          padding: 12,
+          display: 'inline-flex',
+          borderRadius: 8,
+          marginBottom: 24,
+        }}
+      >
+        <IconChartDots3 size={36} {...props} />
+      </div>
+    ),
   },
   {
     key: 'low-code-ui',
@@ -35,6 +56,19 @@ export const steps: Step[] = [
     explorationLink:
       'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
     bannerImgSrc: LowCode,
+    IconComponent: (props) => (
+      <div
+        style={{
+          background: '#E1DCFE',
+          padding: 12,
+          display: 'inline-flex',
+          borderRadius: 8,
+          marginBottom: 24,
+        }}
+      >
+        <IconCode size={36} {...props} />
+      </div>
+    ),
   },
   {
     key: 'modular-ecosystem',
@@ -48,6 +82,19 @@ export const steps: Step[] = [
     explorationLink:
       'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
     bannerImgSrc: Ecosystem,
+    IconComponent: (props) => (
+      <div
+        style={{
+          background: '#FADAFE',
+          padding: 12,
+          display: 'inline-flex',
+          borderRadius: 8,
+          marginBottom: 24,
+        }}
+      >
+        <IconPackages size={36} {...props} />
+      </div>
+    ),
   },
 ];
 

@@ -6,7 +6,7 @@ const FooterSection = styled('footer', {
   overflow: 'hidden',
   width: '100%',
   height: 'auto',
-  paddingTop: '100px',
+  paddingTop: '4px',
   display: 'flex',
   flexDirection: 'column',
 });

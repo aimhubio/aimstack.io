@@ -16,6 +16,7 @@ import {
 } from './Features.style';
 
 import FeaturesDots from 'public/images/static/features/dots.svg';
+import { IconArrowLeft } from '@tabler/icons-react';
 
 const Features = () => {
   return (
@@ -41,9 +42,11 @@ const Features = () => {
               list,
               explorationLink,
               bannerImgSrc,
+              IconComponent,
             }) => (
               <Step key={key}>
                 <StepContent>
+                  <IconComponent color="#000" size={36} />
                   <Text className="step-title" size={6}>
                     {title}
                   </Text>
@@ -52,8 +55,6 @@ const Features = () => {
                       src={bannerImgSrc}
                       className="step-banner-image-mobile"
                       alt="AimStack"
-                      width={600}
-                      height={380}
                       placeholder={'blur'}
                     />
                   ) : null}
@@ -81,8 +82,6 @@ const Features = () => {
                   <StepBannerImage
                     src={bannerImgSrc}
                     alt="AimStack"
-                    width={600}
-                    height={380}
                     placeholder={'blur'}
                   />
                 ) : null}
@@ -91,25 +90,23 @@ const Features = () => {
           )}
         </FeaturesContainerContent>
         <ComingSoonContainerContent>
-          {comingSoonSteps.map(({ key, title, description, list }) => {
-            return (
-              <Step key={key} className="step-coming-soon">
-                <StepContent>
-                  <Text className="step-title" size={6}>
-                    {title}
-                  </Text>
-                  <Text className="step-description" size={3}>
-                    {description}
-                  </Text>
-                  <ul>
-                    {list.map((item, index) => (
-                      <li key={index}>{item}</li>
-                    ))}
-                  </ul>
-                </StepContent>
-              </Step>
-            );
-          })}
+          {comingSoonSteps.map(({ key, title, description, list }) => (
+            <Step key={key} className="step-coming-soon">
+              <StepContent>
+                <Text className="step-title" size={6}>
+                  {title}
+                </Text>
+                <Text className="step-description" size={3}>
+                  {description}
+                </Text>
+                <ul>
+                  {list.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </StepContent>
+            </Step>
+          ))}
         </ComingSoonContainerContent>
       </FeaturesContainer>
     </FeaturesSection>

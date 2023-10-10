@@ -81,6 +81,7 @@ const Step = styled('div', {
 });
 
 const StepContent = styled('div', {
+  textAlign: 'left',
   width: '400px',
   minWidth: '300px',
   '@bp2': {
@@ -127,8 +128,8 @@ const StepContent = styled('div', {
 });
 
 const StepBannerImage = styled(ExportedImage, {
-  maxWidth: '600px',
-  minWidth: '300px',
+  maxWidth: '800px',
+  minWidth: '380px',
   height: 'auto',
   display: 'block',
   marginLeft: '60px',

@@ -4,12 +4,11 @@ import ExportedImage from 'next-image-export-optimizer';
 const CardStyle = styled('div', {
   padding: '10px',
   border: '1px solid #E2D7EB',
-  borderRadius: '6px',
+  borderRadius: '$2',
   transition: '$main',
   height: '100%',
   '&:hover': {
-    backgroundColor: '$bigStoneHover',
-    color: '$white',
+    backgroundColor: '#F3F5F9',
   },
 });
 

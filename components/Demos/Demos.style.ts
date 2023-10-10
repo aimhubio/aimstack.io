@@ -47,7 +47,7 @@ const DemosItem = styled('li', {
     display: 'block',
     width: '100%',
     height: '100%',
-    borderRadius: '$1',
+    borderRadius: '$2',
     transition: '$main',
     border: '1px solid #E2D7EB',
     backgroundColor: '$white',
@@ -55,10 +55,7 @@ const DemosItem = styled('li', {
       padding: '$5 $6',
     },
     '&:hover': {
-      backgroundColor: '$bigStoneHover',
-      '& .demo-inner': {
-        color: '$white',
-      },
+      backgroundColor: '#F3F5F9',
     },
   },
 });
