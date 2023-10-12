@@ -25,8 +25,6 @@ Here is how to do that on [Aim](https://github.com/aimhubio/aim)
 
 # Using context to track for different subsets?
 
-
-
 Use the [aim.track](https://github.com/aimhubio/aim#track) context arguments to pass additional information about the metrics. All context parameters can be used to query, group and do other operations on top of the metrics.
 
 ```
@@ -77,9 +75,9 @@ Not it’s easy and straightforward to simultaneously compare both 4 metrics and
 
 # Summary
 
-Here is a full summary video on how to do it on the UI.
 
-![](https://youtu.be/jPNZ7JVkA-c)
+
+Here is a full summary [video](https://youtu.be/DGI8S7SUfEk) on how to do it on the UI.
 
 # Learn More
 
