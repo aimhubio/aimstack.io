@@ -4,7 +4,7 @@ categories:
   - New Releases
 date: 2023-10-13T20:01:12.714Z
 title: Aim 4.0 to a new repo AimOS. Here is why?
-image: /images/dynamic/aimos.png
+image: /images/dynamic/aimos-banner-1-.png
 description: We have moved the Aim 4.0 to a new repo AimOS and reinstated Aim to
   its previous version.
 draft: false
