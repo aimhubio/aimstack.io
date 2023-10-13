@@ -9,7 +9,7 @@ interface IDemos {
 }
 import MachineTranslation from 'public/images/static/demos/machine-translation.png';
 import LightweightGan from 'public/images/static/demos/lightweight-gan.png';
-import FastSpeech from 'public/images/static/demos/fastspeech.png';
+import FastSpeech from 'public/images/static/demos/fastSpeech.png';
 import SimpleMnist from 'public/images/static/demos/simple-mnist.png';
 
 const demosList: IDemos[] = [
