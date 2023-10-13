@@ -1,78 +1,66 @@
 import { styled } from 'styles';
-import ExportedImage from 'next-image-export-optimizer';
 
-const DemosSection = styled('section', {
-  backgroundImage: 'linear-gradient(transparent, #d0cafe40, transparent)',
-  position: 'relative',
-  overflow: 'hidden',
-  padding: '150px 0',
-  '@bp2': {
-    padding: '80px 0 24px',
-  },
-  '.demos-title': {
-    textAlign: 'center',
-    marginBottom: '$6',
-  },
-  '.demos-subtitle': {
-    textAlign: 'center',
-    marginBottom: '$14',
+const DemosStyle = styled('section', {
+  padding: '60px 0 100px',
+  backgroundColor: '$darkBlue',
+  color: '$white',
+
+  '@bp1': {
+    padding: '60px 0 26px',
   },
 });
 
 const DemosList = styled('ul', {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(3,minmax(0,1fr))',
-  gap: '16px',
+  display: 'flex',
+  flexWrap: 'wrap',
+  marginLeft: '-24px',
+
   '@bp1': {
-    gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
+    marginLeft: '-54px',
   },
-  '@bp2': {
-    gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
-  },
+
   '@bp3': {
-    gridTemplateColumns: 'repeat(1,minmax(0,1fr))',
+    marginLeft: '0',
   },
 });
 
 const DemosItem = styled('li', {
-  minWidth: '260px',
-  height: '340px',
-  display: 'inline-flex',
+  width: 'calc((100% / 4) - 24px)',
+  marginLeft: '24px',
+  marginBottom: '24px',
+
+  '& a': {
+    backgroundColor: '$bigStone',
+    display: 'block',
+    height: '100%',
+    borderRadius: '$1',
+    transition: '$main',
+
+    '& .inner': {
+      padding: '$6',
+    },
+
+    '&:hover': {
+      backgroundColor: '$bigStoneHover',
+    },
+  },
+  '& img': {
+    display: 'block',
+    borderRadius: '$1 $1 0 0',
+    width: '100%',
+    height: 'auto',
+  },
+
+  '@bp1': {
+    width: 'calc((100% / 2) - 54px)',
+    marginLeft: '54px',
+    marginBottom: '54px',
+  },
   '@bp3': {
     width: '100%',
-    maxWidth: '360px',
-    margin: '0 auto',
-  },
-  '& a': {
-    display: 'block',
-    width: '100%',
-    height: '100%',
-    borderRadius: '$2',
-    transition: '$main',
-    border: '1px solid #E2D7EB',
-    backgroundColor: '$white',
-    '& .demo-inner': {
-      padding: '$5 $6',
-    },
-    '&:hover': {
-      backgroundColor: '#F3F5F9',
-    },
+    marginLeft: '0',
+    marginBottom: '24px',
   },
 });
 
-const DemoImg = styled(ExportedImage, {
-  width: '100%',
-  height: '66%',
-  display: 'block',
-  borderRadius: '$1 $1 0 0',
-  objectFit: 'cover',
-  padding: '10px',
-  overflow: 'hidden',
-});
-
-const DemosDotsImg = styled(ExportedImage, {
-  objectFit: 'cover',
-  zIndex: -1,
-});
-
-export { DemosSection, DemosList, DemosItem, DemosDotsImg, DemoImg };
+export { DemosStyle, DemosList, DemosItem };

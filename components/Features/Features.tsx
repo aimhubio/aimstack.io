@@ -1,114 +1,80 @@
 import React from 'react';
-
-import { Text } from 'styles/foundations';
-import { Button } from 'components/UIkit';
-import { steps, comingSoonSteps } from './stepsConfig';
 import {
-  FeaturesSection,
-  Step,
-  FeaturesContainer,
-  FeaturesContainerHeader,
-  FeaturesContainerContent,
-  StepContent,
-  StepBannerImage,
-  ComingSoonContainerContent,
-  FeaturesDotsImg,
+  FeaturesStyle,
+  StepRow,
+  Left,
+  Right,
+  ButtonLink,
 } from './Features.style';
-
-import FeaturesDots from 'public/images/static/features/dots.svg';
+import { Text, Container } from 'styles/foundations';
+import { Icon } from 'components/UIkit';
+import stepsList from './stepsConfig';
+import ExportedImage from 'next-image-export-optimizer';
 
 const Features = () => {
   return (
-    <FeaturesSection id="features">
-      <FeaturesDotsImg src={FeaturesDots} alt={'features dots'} fill />
-      <FeaturesContainer>
-        <FeaturesContainerHeader>
-          <Text as="h2" size={9} className="features-title">
-            Core Aim capabilities
-          </Text>
-          <Text size={3} className="features-subtitle">
-            Aim comes with a set of fundamental features that allows to create
-            complete logging apps for any kind of software - specifically AI
-            Systems: LLM apps, AI pipelines etc.
-          </Text>
-        </FeaturesContainerHeader>
-        <FeaturesContainerContent>
-          {steps.map(
-            ({
-              key,
-              title,
-              description,
-              list,
-              explorationLink,
-              bannerImgSrc,
-              IconComponent,
-            }) => (
-              <Step key={key}>
-                <StepContent>
-                  <IconComponent color="#000" size={36} />
-                  <Text className="step-title" size={6}>
-                    {title}
-                  </Text>
-                  {bannerImgSrc ? (
-                    <StepBannerImage
-                      src={bannerImgSrc}
-                      className="step-banner-image-mobile"
-                      alt="AimStack"
-                      placeholder={'blur'}
-                    />
-                  ) : null}
-                  <Text className="step-description" size={3}>
-                    {description}
-                  </Text>
-                  <ul>
-                    {list.map((item, index) => (
-                      <li key={index}>{item}</li>
-                    ))}
-                  </ul>
-                  {explorationLink ? (
-                    <Button
-                      as="a"
-                      href={explorationLink}
-                      target="_blank"
-                      variant="outline"
-                      css={{ marginTop: '$6', fontWeight: '$3' }}
-                    >
-                      Get Started
-                    </Button>
-                  ) : null}
-                </StepContent>
-                {bannerImgSrc ? (
-                  <StepBannerImage
-                    src={bannerImgSrc}
-                    alt="AimStack"
-                    placeholder={'blur'}
-                  />
-                ) : null}
-              </Step>
-            ),
-          )}
-        </FeaturesContainerContent>
-        <ComingSoonContainerContent>
-          {comingSoonSteps.map(({ key, title, description, list }) => (
-            <Step key={key} className="step-coming-soon">
-              <StepContent>
-                <Text className="step-title" size={6}>
-                  {title}
-                </Text>
-                <Text className="step-description" size={3}>
-                  {description}
-                </Text>
+    <FeaturesStyle id="features">
+      <Container>
+        <Text as="h2" size={9} className="title">
+          Why use Aim?
+        </Text>
+        <Text as="p" css={{ textAlign: 'center' }}>
+          Aim is an open-source, self-hosted AI Metadata tracking tool designed
+          to handle 100,000s of tracked metadata sequences.
+        </Text>
+        <Text as="p" css={{ margin: '12px 0', textAlign: 'center' }}>
+          Two most famous AI metadata applications are: experiment tracking and
+          prompt engineering.
+        </Text>
+        <Text as="p" css={{ marginBottom: '24px', textAlign: 'center' }}>
+          Aim provides a performant and beautiful UI for exploring and comparing
+          training runs, prompt sessions.
+        </Text>
+        {stepsList.map(({ name, title, list }) => {
+          return (
+            <StepRow key={name}>
+              <Text
+                className="title-mobile"
+                as="h4"
+                size={6}
+                css={{ marginBottom: '$6', '& strong': { fontWeight: '$5' } }}
+                dangerouslySetInnerHTML={{ __html: title }}
+              />
+              <Left>
+                <Text
+                  className="title-desktop"
+                  as="h4"
+                  size={6}
+                  css={{ marginBottom: '$6', '& strong': { fontWeight: '$5' } }}
+                  dangerouslySetInnerHTML={{ __html: title }}
+                />
                 <ul>
-                  {list.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
+                  {list.map((item, index) => {
+                    return <li key={index}>{item}</li>;
+                  })}
                 </ul>
-              </StepContent>
-            </Step>
-          ))}
-        </ComingSoonContainerContent>
-      </FeaturesContainer>
-    </FeaturesSection>
+                <ButtonLink
+                  href="https://github.com/aimhubio/aim"
+                  target="_blank"
+                  css={{ marginTop: '$6', fontWeight: '$3' }}
+                >
+                  Check out our Github
+                  <Icon name="arrow" size={24} />
+                </ButtonLink>
+              </Left>
+              <Right>
+                <ExportedImage
+                  src={`/images/static/why-use-aim/${name}.png`}
+                  alt="AimStack"
+                  width={605}
+                  height={360}
+                />
+              </Right>
+            </StepRow>
+          );
+        })}
+      </Container>
+    </FeaturesStyle>
   );
 };
 
