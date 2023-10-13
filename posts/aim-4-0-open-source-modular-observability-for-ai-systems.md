@@ -2,12 +2,12 @@
 author: Gev Sogomonian, Gor Arakelyan, Ben Lorica
 categories:
   - New Releases
-date: 2023-10-03T20:09:25.239Z
-title: "Aim 4.0: Open-source modular observability for AI Systems"
-image: /images/dynamic/medium-5-1-.png
-description: We're excited to announce Aim 4.0's release! 🚀 Originating as a
-  single-node experiment tracker, now it's an Operating system for logging
-  anything, anywhere!!
+date: 2023-10-12T20:09:25.239Z
+title: "AimOS: Open-source modular observability for AI Systems"
+image: /images/dynamic/medium8.png
+description: "Discover AimOS: Open-source modular observability for AI systems.
+  Easily log, connect and observe any parts of your AI Systems from experiments
+  to production to prompts to AI system monitoring"
 draft: false
 ---
 ## The software lifecycle is broken
@@ -44,6 +44,8 @@ Altogether these form the observability and logging layer for AI Systems.
 
 ## What do developers need from the AI Systems observability layer?
 
+
+
 We need to log and observe at every step of building AI Systems.
 
 ![Basic AI system observability](/images/dynamic/222-1.png "Basic AI system observability")
@@ -64,23 +66,25 @@ Logs are now essential for overcoming the fundamental challenges of AI adoption.
 
 Unfortunately, current mainstream observability tools are centralized, lack interoperability, and mostly run on closed-source platforms. These tools are not inherently scalable and often only address a fraction of the overall observability requirements.
 
-## Introducing Aim 4.0 - Operating system for logs
+## Introducing AimOS - Operating system for logs
+
+
 
 Aim began as a tool for tracking experiments, and it ran on a single node
 
 * Aim 2.0 - AI experiment logger for metrics and hyperparameters.
-* Aim 3.0 - AI experiment logger for any kind of Python objects.
-* **Aim 4.0 - Operating system for logs.** 💫
+* [Aim 3.0 ](https://aimstack.io/blog/new-releases/aims-foundations-why-were-building-a-tensorboard-alternative)- AI experiment logger for any kind of Python objects.
+* **AimOS - Operating system for logs.** 💫
 
-Aim runs logging applications that can easily be composed and extended to larger ones encompassing both the main and long-tail use-cases.
+AimOS runs logging applications that can easily be composed and extended to larger ones encompassing both the main and long-tail use-cases.
 
 ![Modular observability for AI Systems](/images/dynamic/333-1.png "Modular observability for AI Systems")
 
-Within the context of Aim, logging applications are Python packages that Aim can run.
+Within the context of AimOS, logging applications are Python packages that AimOS can run.
 
 ## There are many logging apps that need to exist
 
-![Aim logging app structure](/images/dynamic/555-1.png "Aim logging app structure")
+![AimOS logging app structure](/images/dynamic/555-1.png "AimOS logging app structure")
 
 There are many logging uses-cases for AI systems, which necessitates collaboration across the community. Many of these use-cases are at the intersection of different tools and frameworks used in development and production.
 
@@ -95,30 +99,34 @@ Here are some examples of apps that need to be built:
 * connector and integration apps + automations,
 * lineage apps + automations.
 
-## Aim is simple first, then powerful
+## AimOS is simple first, then powerful
 
-Users don’t have to know Aim in-depth to be able to use it. You don’t even need to know if it’s an operating system - it takes a few commands and built-in packages to start with.
 
-![Aim default apps](/images/dynamic/666-1-.png "Aim default apps")
 
-Using Aim means installing Aim and running an Aim logging app. Aim comes with a number of built- apps that can go a long way:
+Users don’t have to know AimOS in-depth to be able to use it. You don’t even need to know if it’s an operating system - it takes a few commands and built-in packages to start with.
+
+![AimOS default apps](/images/dynamic/666-1-.png "AimOS default apps")
+
+Using AimOS means installing AimOS and running an AimOS logging app. It comes with a number of built- apps that can go a long way:
 
 * Base app,
 * Experiment tracking app,
 * AI Systems tracing app.
 
-It takes only a couple of commands to start with Aim.
+It takes only a couple of commands to start with AimOS.
 
 We have published high-level roadmap about the next steps. 
 
-> Checkout the Aim 4.0 documentation [here](https://aimstack.readthedocs.io/en/latest/).
+> Checkout the AimOS documentation [here](https://aimos.readthedocs.io/en/latest/#).
 
 The contributors to core Aim and package creators are very welcome to help us build out the future of logging infrastructure for AI Systems and beyond.
 
 ## **Learn more**
 
-[Aim is on a mission to democratize AI Systems logging tools.](https://aimstack.readthedocs.io/en/latest/apps/overview.html) 🙌
 
-Try out [Aim](https://github.com/aimhubio/aim), join the [Aim community](https://community.aimstack.io/), share your feedback, open issues for new features, bugs.
 
-Don’t forget to leave us a star on [GitHub](https://github.com/aimhubio/aim) if you think Aim is useful. ⭐️
+[AimOS is on a mission to democratize AI Systems logging tools.](https://aimos.readthedocs.io/en/latest/apps/overview.html) 🙌
+
+Try out [AimOS](https://github.com/aimhubio/aimos), join the [Aim community](https://community.aimstack.io/), share your feedback, open issues for new features, bugs.
+
+Don’t forget to leave us a star on [GitHub](https://github.com/aimhubio/aimos/tree/main) if you think AimOS is useful, and here is the link to [Aim,](https://github.com/aimhubio/aim) an easy-to-use & supercharged open-source experiment tracker.⭐️
