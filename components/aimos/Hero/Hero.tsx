@@ -53,14 +53,14 @@ const Hero = () => {
                 variant="outline"
                 className={'hero-try-demo'}
                 as="a"
-                href="#demos"
+                href="/aimos#demos"
               >
                 Try Demo Now
               </Button>
               <Button
                 className={'hero-quick-start'}
                 as="a"
-                href="https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html"
+                href="https://aimos.readthedocs.io/en/latest/getting_started/quick_start.html"
                 target="_blank"
               >
                 Quick Start

@@ -31,7 +31,7 @@ const Integrations = () => {
           </Text>
           <Button
             as="a"
-            href="https://aimstack.readthedocs.io/en/latest/apps/overview.html#out-of-the-box-aim-apps"
+            href="https://aimos.readthedocs.io/en/latest/apps/overview.html#out-of-the-box-aimos-apps"
             target="_blank"
           >
             Learn more

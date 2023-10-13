@@ -3,10 +3,11 @@ import { PricingCardStyle, PricingCardList } from './PricingCard.style';
 import { Text, Flex } from 'styles/foundations';
 import { Button } from 'components/UIkit';
 import ExportedImage from 'next-image-export-optimizer';
+import { StaticImageData } from 'next/image';
 
 interface IPricingCard {
   title: string;
-  image: any;
+  image: StaticImageData;
   description: string;
   list: string[];
   buttonVariant: string;

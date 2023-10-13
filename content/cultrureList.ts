@@ -2,9 +2,10 @@ import ShieldImage from 'public/images/static/about-us/shield.svg';
 import MessageImage from 'public/images/static/about-us/message.svg';
 import RunImage from 'public/images/static/about-us/run.svg';
 import SmileImage from 'public/images/static/about-us/smile.svg';
+import { StaticImageData } from 'next/image';
 
 export interface ICultureList {
-  image: any;
+  image: StaticImageData;
   title: string;
   description: string;
 }
