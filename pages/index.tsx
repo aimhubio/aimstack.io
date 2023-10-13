@@ -8,6 +8,7 @@ import Subscribe from 'components/Subscribe/Subscribe';
 import homeSeo from 'content/SeoData/homepage';
 import Seo from 'components/SEO/SEO';
 import TrustedCompanies from 'components/TrustedCompanies';
+import VideoGuide from 'components/VideoGuide/VideoGuide';
 
 const Index = () => {
   return (
@@ -16,9 +17,9 @@ const Index = () => {
       <Hero />
       <TrustedCompanies />
       <Integrations />
-      {/*<VideoGuide />*/}
-      <Features />
+      <VideoGuide />
       <QuickStart />
+      <Features />
       <Demos />
       <Subscribe />
     </>

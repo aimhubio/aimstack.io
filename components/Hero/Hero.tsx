@@ -1,76 +1,64 @@
-import React from 'react';
-import { HeroSection, HeroContentWrapper, HeroBannerImg } from './Hero.style';
+import React, { useEffect, useState } from 'react';
+import { HeroStyle, HeroContent } from './Hero.style';
 import { Text, Container } from 'styles/foundations';
 import { Button } from 'components/UIkit';
-import Aim4 from 'public/images/static/hero/aim4.png';
+import { GITHUB_API } from 'config';
 
 const Hero = () => {
-  // const [release, setRelease] = useState();
-  //
-  // const getRelease = () => {
-  //   fetch(`${GITHUB_API}releases/latest`)
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       const releaseData = res.tag_name.substring(1);
-  //       setRelease(releaseData);
-  //     })
-  //     .catch((e) => console.log(e));
-  // };
-  //
-  // useEffect(() => {
-  //   getRelease();
-  // }, []);
+  const [release, setRelease] = useState();
+
+  const getRelease = () => {
+    fetch(`${GITHUB_API}releases/latest`)
+      .then((res) => res.json())
+      .then((res) => {
+        const releaseData = res.tag_name.substring(1);
+        setRelease(releaseData);
+      })
+      .catch((e) => console.log(e));
+  };
+
+  useEffect(() => {
+    getRelease();
+  }, []);
 
   return (
-    <HeroSection>
+    <HeroStyle>
       <Container>
-        <HeroContentWrapper>
-          <div className={'hero-content'}>
-            <Text
-              as="h1"
-              size={9}
-              css={{
-                marginBottom: '$6',
-                width: '100%',
-              }}
-            >
-              An easy-to-use open-source developer framework for end-to-end AI
-              observability.
+        <HeroContent>
+          <Text as="h1" size={10} css={{ marginBottom: '$6' }}>
+            An easy-to-use & supercharged open-source AI metadata tracker
+          </Text>
+          <Text as="p" size={4} css={{ marginBottom: '48px' }}>
+            Aim logs all your AI metadata (
+            <Text as="span" css={{ fontWeight: 700 }}>
+              experiments, prompts, etc
             </Text>
-            <Text
-              as="p"
-              size={3}
-              css={{
-                marginBottom: '56px',
-                width: '100%',
-              }}
+            ) enables a UI to compare & observe them and SDK to query them
+            programmatically.
+          </Text>
+          <Button
+            css={{ marginBottom: '$12' }}
+            as="a"
+            href="https://github.com/aimhubio/aim"
+            target="_blank"
+          >
+            Check out our Github
+          </Button>
+          {release && (
+            <Button
+              className="github-btn"
+              as="a"
+              variant="outline"
+              size={2}
+              href="https://github.com/aimhubio/aim/releases"
+              target="_blank"
             >
-              Easily create full observability and automation layer for your AI
-              Systems - from Data preprocessing to LLM monitoring.
-            </Text>
-            <div className="hero-button-container">
-              <Button
-                variant="outline"
-                className={'hero-try-demo'}
-                as="a"
-                href="#demos"
-              >
-                Try Demo Now
-              </Button>
-              <Button
-                className={'hero-quick-start'}
-                as="a"
-                href="https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html"
-                target="_blank"
-              >
-                Quick Start
-              </Button>
-            </div>
-          </div>
-          <HeroBannerImg src={Aim4} alt="banner" placeholder={'blur'} />
-        </HeroContentWrapper>
+              Aim release <strong>{release}</strong>
+            </Button>
+          )}
+        </HeroContent>
       </Container>
-    </HeroSection>
+    </HeroStyle>
   );
 };
 

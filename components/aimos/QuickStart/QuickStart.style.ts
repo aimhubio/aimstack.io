@@ -1,4 +1,5 @@
 import { styled, keyframes } from 'styles';
+import ExportedImage from 'next-image-export-optimizer';
 
 const copyAnimation = keyframes({
   '0%': { opacity: '0' },
@@ -7,41 +8,85 @@ const copyAnimation = keyframes({
   '100%': { opacity: '0' },
 });
 
-const QuickStartStyle = styled('section', {
+const QuickStartSection = styled('section', {
+  display: 'flex',
+  flexDirection: 'column',
+  overflow: 'hidden',
   position: 'relative',
+  paddingBottom: '100px',
+  '@bp2': {
+    padding: '80px 0 24px',
+  },
+  '.top-bg': {
+    objectFit: 'cover',
+  },
+  '.bottom-bg': {
+    objectFit: 'cover',
+  },
+});
 
-  '.float-text': {
-    float: 'left',
-    width: '45%',
-
+const QuickStartSectionInner = styled('div', {
+  backgroundColor: '#04062E',
+  padding: '100px 0',
+  '.quickstart-button': {
+    marginTop: '$14',
+    fontWeight: '$3',
     '@bp1': {
-      width: '100%',
+      display: 'none',
+    },
+  },
+  '.quickstart-button-mobile': {
+    display: 'none',
+    textAlign: 'center',
+    marginTop: '$6',
+    '@bp1': {
+      display: 'inline-block',
+      marginInline: 'auto',
     },
   },
 });
+
 const QuickStartInner = styled('div', {
   overflow: 'hidden',
+  display: 'flex',
+  justifyContent: 'space-between',
+  '@bp1': {
+    flexDirection: 'column',
+    margin: '0 auto',
+  },
 });
 
 const Left = styled('div', {
-  width: '47%',
-  paddingTop: '80px',
-  paddingBottom: '$9',
-  float: 'left',
-
+  maxWidth: '480px',
   '@bp1': {
-    width: '100%',
-    float: 'none',
-    textAlign: 'center',
+    marginBottom: '$14',
+  },
+  '.quickstart-title': {
+    color: '$white',
+    marginBottom: '$6',
+  },
+  '.quickstart-subtitle': {
+    color: '$white',
+    '& li': {
+      marginBottom: '$3',
+      position: 'relative',
+      paddingLeft: '24px',
+      lineHeight: '26px',
+      '&:before': {
+        content: '•',
+        position: 'absolute',
+        left: '0',
+        top: '-5px',
+        fontSize: '24px',
+        color: '#1093F2',
+      },
+    },
   },
 });
 
 const Right = styled('div', {
-  float: 'right',
   marginLeft: '80px',
-
   '@bp1': {
-    float: 'none',
     marginLeft: '0',
   },
 });
@@ -102,9 +147,10 @@ const HighlightWrapper = styled('div', {
     display: 'block',
     overflowX: 'auto',
     color: '#abb2bf',
-    background: '#282c34',
+    background: '#0c0d34',
     marginBottom: '20px',
     borderRadius: '$1',
+    border: '1px solid #3D3D5D',
     padding: '$4',
   },
   '.hljs-comment,.hljs-quote': { color: '#5c6370', fontStyle: 'italic' },
@@ -133,11 +179,19 @@ const HighlightWrapper = styled('div', {
   //end highlighter plugin code
 });
 
+const QuickStartShapeImage = styled(ExportedImage, {
+  width: '100%',
+  height: 'auto',
+  scale: 1.02,
+});
+
 export {
-  QuickStartStyle,
+  QuickStartSection,
+  QuickStartSectionInner,
   QuickStartInner,
   Left,
   Right,
   HighlightWrapper,
   CodeBlockStyle,
+  QuickStartShapeImage,
 };

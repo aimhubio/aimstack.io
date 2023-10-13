@@ -1,21 +1,16 @@
 import { styled } from 'styles';
 import { Container } from 'styles/foundations';
-import ExportedImage from 'next-image-export-optimizer';
-
-const IntegrationsSection = styled('section', {
-  position: 'relative',
-  overflow: 'hidden',
-  padding: '150px 0',
-  '@bp1': {
-    padding: '80px 0 24px',
-  },
-});
 
 const IntegrationsContainer = styled(Container, {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
+  py: '150px',
   '@bp1': {
+    py: '80px',
+  },
+  '@bp2': {
+    py: '60px',
     flexDirection: 'column',
   },
 });
@@ -24,50 +19,36 @@ const IntegrationsContainerLeft = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   maxWidth: '500px',
-  '@bp1': {
-    textAlign: 'center',
+  '& .Text_highlight': {
+    backgroundColor: 'white',
+    boxShadow: '0px 2px 4px 0px rgba(11, 47, 97, 0.2)',
+    borderRadius: '4px',
+    height: '24px',
+    padding: '0 4px',
+    color: '#D02F61',
+    display: 'inline-flex',
     alignItems: 'center',
-  },
-  '.integrations-title': {
-    marginBottom: '$6',
-    fontWeight: 800,
-  },
-  '.integrations-subtitle': {
-    lineHeight: '30px',
-    marginBottom: '$14',
-    '@bp1': {
-      marginBottom: '$11',
-    },
+    justifyContent: 'center',
   },
   '& a': {
     width: 'fit-content',
-    '@bp4': {
-      width: '100%',
+  },
+  '@bp2': {
+    '& h3, a': {
+      textAlign: 'center',
+    },
+    '& a': {
+      margin: '$7 auto 0',
     },
   },
 });
-const IntegrationsListImage = styled(ExportedImage, {
-  width: '50%',
+const IntegrationsList = styled('div', {
   maxWidth: '540px',
-  height: 'auto',
-  '@bp1': {
+  '@bp2': {
     marginTop: '$7',
-    width: '100%',
-  },
-  '@bp4': {
-    display: 'none',
+    maxWidth: '100%',
+    width: '80%',
   },
 });
 
-const IntegrationsDotsImg = styled(ExportedImage, {
-  objectFit: 'cover',
-  zIndex: -1,
-});
-
-export {
-  IntegrationsSection,
-  IntegrationsContainer,
-  IntegrationsListImage,
-  IntegrationsContainerLeft,
-  IntegrationsDotsImg,
-};
+export { IntegrationsContainer, IntegrationsList, IntegrationsContainerLeft };

@@ -1,45 +1,57 @@
-import React from 'react';
-import {
-  DemosSection,
-  DemosList,
-  DemosItem,
-  DemosDotsImg,
-  DemoImg,
-} from './Demos.style';
+import { DemosStyle, DemosList, DemosItem } from './Demos.style';
 import { Text, Container } from 'styles/foundations';
+import React from 'react';
 import demosList from './demosList';
+import ExportedImage from 'next-image-export-optimizer';
 import Link from 'next/link';
-
-import DemosDots from 'public/images/static/demos/dots.svg';
 
 const Demos = () => {
   return (
-    <DemosSection id="demos">
-      <DemosDotsImg src={DemosDots} alt={'demos dots'} fill />
+    <DemosStyle id="demos">
       <Container>
-        <Text as="h2" size={9} className="demos-title">
-          Try Aim in action with live demos
+        <Text as="h2" size={9}  css={{ textAlign: 'center', marginBottom: '$5' }}>
+          Demos
         </Text>
-        <Text size={3} className="demos-subtitle">
-          Check out live Aim demos NOW to see it in action.
+        <Text
+          as="p"
+          size={4}
+          css={{
+            margin: '0 auto 60px',
+            textAlign: 'center',
+            maxWidth: '560px',
+            '@bp1': { marginBottom: '44px' },
+          }}
+        >
+          Play with Aim before installing it! Check out our demos to see the
+          full functionality
         </Text>
         <DemosList>
-          {demosList.map(({ title, description, name, url, imageSrc }) => (
-            <DemosItem key={name}>
-              <Link href={url} target="_blank" rel="external">
-                <DemoImg src={imageSrc} alt="AimStack" placeholder={'blur'} />
-                <div className="demo-inner">
-                  <Text size={4} css={{ marginBottom: '$2', fontWeight: '$4' }}>
-                    {title}
-                  </Text>
-                  <Text size={2}>{description}</Text>
-                </div>
-              </Link>
-            </DemosItem>
-          ))}
+          {demosList.map(({ title, description, name, url, imgSrc }) => {
+            return (
+              <DemosItem key={name}>
+                <Link href={url} target="_blank">
+                  <ExportedImage
+                    className="img"
+                    src={imgSrc}
+                    alt="AimStack"
+                  />
+                  <div className="inner">
+                    <Text
+                      as="h4"
+                      size={4}
+                      css={{ marginBottom: '$2', fontWeight: '$4' }}
+                    >
+                      {title}
+                    </Text>
+                    <Text size={2}>{description}</Text>
+                  </div>
+                </Link>
+              </DemosItem>
+            );
+          })}
         </DemosList>
       </Container>
-    </DemosSection>
+    </DemosStyle>
   );
 };
 
