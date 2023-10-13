@@ -44,8 +44,6 @@ Altogether these form the observability and logging layer for AI Systems.
 
 ## What do developers need from the AI Systems observability layer?
 
-
-
 We need to log and observe at every step of building AI Systems.
 
 ![Basic AI system observability](/images/dynamic/222-1.png "Basic AI system observability")
@@ -68,8 +66,6 @@ Unfortunately, current mainstream observability tools are centralized, lack inte
 
 ## Introducing AimOS - Operating system for logs
 
-
-
 Aim began as a tool for tracking experiments, and it ran on a single node
 
 * Aim 2.0 - AI experiment logger for metrics and hyperparameters.
@@ -78,13 +74,13 @@ Aim began as a tool for tracking experiments, and it ran on a single node
 
 AimOS runs logging applications that can easily be composed and extended to larger ones encompassing both the main and long-tail use-cases.
 
-![Modular observability for AI Systems](/images/dynamic/333-1.png "Modular observability for AI Systems")
+![Modular observability for AI Systems](/images/dynamic/aimstack2.png "Modular observability for AI Systems")
 
 Within the context of AimOS, logging applications are Python packages that AimOS can run.
 
 ## There are many logging apps that need to exist
 
-![AimOS logging app structure](/images/dynamic/555-1.png "AimOS logging app structure")
+![AimOS logging app structure](/images/dynamic/aim-logging-app-structure.png "AimOS logging app structure")
 
 There are many logging uses-cases for AI systems, which necessitates collaboration across the community. Many of these use-cases are at the intersection of different tools and frameworks used in development and production.
 
@@ -100,8 +96,6 @@ Here are some examples of apps that need to be built:
 * lineage apps + automations.
 
 ## AimOS is simple first, then powerful
-
-
 
 Users don’t have to know AimOS in-depth to be able to use it. You don’t even need to know if it’s an operating system - it takes a few commands and built-in packages to start with.
 
@@ -122,8 +116,6 @@ We have published high-level roadmap about the next steps.
 The contributors to core Aim and package creators are very welcome to help us build out the future of logging infrastructure for AI Systems and beyond.
 
 ## **Learn more**
-
-
 
 [AimOS is on a mission to democratize AI Systems logging tools.](https://aimos.readthedocs.io/en/latest/apps/overview.html) 🙌
 
