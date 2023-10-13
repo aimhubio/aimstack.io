@@ -22,7 +22,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         {errorMessage && <p className="error-message">{errorMessage}</p>}
       </InputStyle>
     );
-  }
+  },
 );
 Input.displayName = 'Input';
 export default Input;

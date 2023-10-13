@@ -2,7 +2,7 @@ const aboutSeo = {
   title: 'About-us | AimStack',
   description: 'AimStack',
   image: '',
-  path: 'about-us'
-}
+  path: 'about-us',
+};
 
-export default aboutSeo
+export default aboutSeo;

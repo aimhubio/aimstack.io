@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import { styled } from 'styles';
 import { Container } from 'styles/foundations';
 
@@ -39,7 +39,7 @@ const FeaturesContainerHeader = styled('div', {
   textAlign: 'center',
   '@bp2': {
     maxWidth: '100%',
-  }
+  },
 });
 
 const FeaturesContainerContent = styled('div', {
@@ -81,6 +81,7 @@ const Step = styled('div', {
 });
 
 const StepContent = styled('div', {
+  textAlign: 'left',
   width: '400px',
   minWidth: '300px',
   '@bp2': {
@@ -126,9 +127,9 @@ const StepContent = styled('div', {
   },
 });
 
-const StepBannerImage = styled(Image, {
-  maxWidth: '600px',
-  minWidth: '300px',
+const StepBannerImage = styled(ExportedImage, {
+  maxWidth: '800px',
+  minWidth: '380px',
   height: 'auto',
   display: 'block',
   marginLeft: '60px',
@@ -146,9 +147,16 @@ const StepBannerImage = styled(Image, {
   },
 });
 
-const FeaturesDotsImg = styled(Image, {
+const FeaturesDotsImg = styled(ExportedImage, {
   objectFit: 'contain',
   zIndex: -1,
+});
+
+const FeaturesIcon = styled('div', {
+  padding: 12,
+  display: 'inline-flex',
+  borderRadius: 8,
+  marginBottom: 24,
 });
 
 export {
@@ -161,4 +169,5 @@ export {
   StepContent,
   StepBannerImage,
   FeaturesDotsImg,
+  FeaturesIcon,
 };

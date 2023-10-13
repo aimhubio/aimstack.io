@@ -7,11 +7,9 @@ import AMD from 'public/images/static/trusted/amd.png';
 import Mila from 'public/images/static/trusted/mila.png';
 import MIT from 'public/images/static/trusted/mit.png';
 
-import { StaticImageData } from 'next/image';
-
 type TrustedCompanyType = {
   name: string;
-  imgSrc: StaticImageData;
+  imgSrc: any;
 };
 const trustedCompaniesList: TrustedCompanyType[] = [
   {

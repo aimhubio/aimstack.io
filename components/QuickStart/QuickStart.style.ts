@@ -1,5 +1,5 @@
 import { styled, keyframes } from 'styles';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 const copyAnimation = keyframes({
   '0%': { opacity: '0' },
@@ -18,11 +18,11 @@ const QuickStartSection = styled('section', {
     padding: '80px 0 24px',
   },
   '.top-bg': {
-    objectFit: 'cover'
+    objectFit: 'cover',
   },
   '.bottom-bg': {
-    objectFit: 'cover'
-  }
+    objectFit: 'cover',
+  },
 });
 
 const QuickStartSectionInner = styled('div', {
@@ -33,7 +33,7 @@ const QuickStartSectionInner = styled('div', {
     fontWeight: '$3',
     '@bp1': {
       display: 'none',
-    }
+    },
   },
   '.quickstart-button-mobile': {
     display: 'none',
@@ -41,9 +41,9 @@ const QuickStartSectionInner = styled('div', {
     marginTop: '$6',
     '@bp1': {
       display: 'inline-block',
-      marginInline: 'auto'
-    }
-  }
+      marginInline: 'auto',
+    },
+  },
 });
 
 const QuickStartInner = styled('div', {
@@ -179,10 +179,10 @@ const HighlightWrapper = styled('div', {
   //end highlighter plugin code
 });
 
-const QuickStartShapeImage = styled(Image, {
+const QuickStartShapeImage = styled(ExportedImage, {
   width: '100%',
   height: 'auto',
-  scale: 1.02
+  scale: 1.02,
 });
 
 export {

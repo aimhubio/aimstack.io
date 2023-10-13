@@ -3,6 +3,7 @@ import { styled } from 'styles';
 export const InnerHTML = styled('div', {
   margin: '$10 auto',
   lineHeight: '1.7',
+  overflowWrap: 'break-word',
 
   'h1, h2, h3, h4, h5, h6': {
     marginTop: '$8',

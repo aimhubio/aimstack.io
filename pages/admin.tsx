@@ -4,19 +4,24 @@ import { Flex } from 'styles/foundations';
 
 const Loading = () => {
   return (
-    <Flex css={{height: '100vh'}} direction='column' justify='center' align='center'>
+    <Flex
+      css={{ height: '100vh' }}
+      direction="column"
+      justify="center"
+      align="center"
+    >
       <p>Loading...</p>
     </Flex>
-  )
-}
+  );
+};
 
 const CMS = dynamic(
   () =>
-    import('netlify-cms-app').then((cms) => {
+    import('decap-cms-app').then((cms) => {
       // @ts-ignore
       cms.init({ config });
     }) as any,
-  { ssr: false, loading: () => <Loading /> }
+  { ssr: false, loading: () => <Loading /> },
 );
 
 const AdminPage = () => {

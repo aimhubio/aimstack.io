@@ -1,17 +1,8 @@
 import React from 'react';
-import {
-  HeroSection,
-  HeroContentWrapper,
-  HeroBannerImg,
-  HeroBgDots,
-  HeroBg,
-} from './Hero.style';
+import { HeroSection, HeroContentWrapper, HeroBannerImg } from './Hero.style';
 import { Text, Container } from 'styles/foundations';
 import { Button } from 'components/UIkit';
 import Aim4 from 'public/images/static/hero/aim4.png';
-import BgDots from 'public/images/static/hero/dots.svg';
-import Bg from 'public/images/static/hero/bg.svg';
-import { ImagePlaceholder } from 'utils';
 
 const Hero = () => {
   // const [release, setRelease] = useState();
@@ -32,18 +23,6 @@ const Hero = () => {
 
   return (
     <HeroSection>
-      <HeroBg
-        src={Bg}
-        alt="bg"
-        fill={true}
-        loading={'lazy'}
-      />
-      <HeroBgDots
-        src={BgDots}
-        alt="bgDots"
-        fill={true}
-        loading={'lazy'}
-      />
       <Container>
         <HeroContentWrapper>
           <div className={'hero-content'}>
@@ -88,15 +67,7 @@ const Hero = () => {
               </Button>
             </div>
           </div>
-          <HeroBannerImg
-            src={Aim4}
-            alt="banner"
-            width={866}
-            height={540}
-            priority={true}
-            placeholder={'blur'}
-            blurDataURL={ImagePlaceholder}
-          />
+          <HeroBannerImg src={Aim4} alt="banner" placeholder={'blur'} />
         </HeroContentWrapper>
       </Container>
     </HeroSection>

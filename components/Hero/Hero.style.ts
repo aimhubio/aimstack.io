@@ -1,16 +1,21 @@
 import { styled } from 'styles';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 const HeroSection = styled('section', {
+  backgroundImage:
+    'url(/images/static/hero/dots.svg), url(/images/static/hero/bg.svg)',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover, contain',
+  backgroundPosition: 'center, right',
   position: 'relative',
+  height: '100%',
   minHeight: '100vh',
   display: 'flex',
-  alignItems: 'center',
   textAlign: 'center',
   overflow: 'hidden',
-  padding: '200px 0',
+  padding: '150px 0',
   '@bp1': {
-    padding: '132px 0',
+    padding: '120px 0',
   },
   '@bp2': {
     padding: '120px 0 24px',
@@ -23,6 +28,7 @@ const HeroContentWrapper = styled('div', {
   '@bp1': {
     flexDirection: 'column',
     alignItems: 'center',
+    height: '100%',
   },
   '.hero-button-container': {
     display: 'flex',
@@ -33,13 +39,11 @@ const HeroContentWrapper = styled('div', {
       flexDirection: 'column',
     },
     '.hero-try-demo': {
-      marginBottom: '$12',
       '@bp4': {
         marginBottom: '$4',
       },
     },
     '.hero-quick-start': {
-      marginBottom: '$12',
       marginLeft: '$4',
       '@bp4': {
         marginLeft: 0,
@@ -57,34 +61,31 @@ const HeroContentWrapper = styled('div', {
   },
 });
 
-const HeroBg = styled(Image, {
-  objectFit: 'contain',
-  objectPosition: 'right'
-});
-
-const HeroBgDots = styled(Image, {
-  objectFit: 'cover'
-});
-
-const HeroBannerImg = styled(Image, {
+const HeroBannerImg = styled(ExportedImage, {
   position: 'absolute',
-  width: '72%',
-  minWidth: '72%',
-  height: 'auto',
-  right: '-30%',
+  top: '50%',
+  transform: 'translateY(-50%)',
+  right: '-300px',
   borderRadius: '12px',
   border: '1px solid #D8DADF',
+  width: '866px',
+  height: 'auto',
   aspectRatio: 'auto',
+  '@bp0': {
+    width: '700px',
+  },
   '@bp1': {
     position: 'unset',
-    width: '90%',
+    transform: 'unset',
+    width: '500px',
+    marginTop: '$12',
   },
   '@bp2': {
-    width: '100%',
+    width: '90%',
   },
   '@bp4': {
-    display: 'none'
+    display: 'none',
   },
 });
 
-export { HeroSection, HeroContentWrapper, HeroBannerImg, HeroBg, HeroBgDots };
+export { HeroSection, HeroContentWrapper, HeroBannerImg };

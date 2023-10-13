@@ -17,12 +17,12 @@ import {
   ShareSocial,
   BlogImage,
 } from 'styles/pages/Blog.style';
-import { formattedDate, ImagePlaceholder, slugify } from 'utils';
+import { formattedDate, slugify } from 'utils';
 
 import { useRouter } from 'next/router';
 import { Icon } from 'components/UIkit';
 import { allPosts } from 'contentlayer/generated';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import Seo from 'components/SEO/SEO';
 import { Category } from 'components/Card/Card.style';
 import SITE_URL from 'config';
@@ -71,7 +71,7 @@ export default function PostPage({ post, posts }) {
         image={post.image}
         path={path}
       />
-      <Container style={{ paddingTop: '150px' }}>
+      <Container style={{ paddingTop: '100px' }}>
         <Link href="/blog">
           <Flex align="center" css={{ marginTop: '$10' }}>
             <Icon name="back" size={20} />
@@ -115,7 +115,6 @@ export default function PostPage({ post, posts }) {
             width={1200}
             height={600}
             placeholder={'blur'}
-            blurDataURL={ImagePlaceholder}
           />
         </ImageWrapper>
       </Container>
@@ -125,7 +124,7 @@ export default function PostPage({ post, posts }) {
             options={{
               overrides: {
                 img: {
-                  component: Image,
+                  component: ExportedImage,
                   props: {
                     fill: true,
                     alt: 'blog image',
@@ -133,7 +132,6 @@ export default function PostPage({ post, posts }) {
                     className: 'blog-image',
                     key: slug,
                     placeholder: 'blur',
-                    blurDataURL: ImagePlaceholder,
                   },
                 },
               },

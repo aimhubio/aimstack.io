@@ -1,5 +1,5 @@
 import { styled } from 'styles';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 const BlogSingleStyle = styled('div', {});
 
@@ -7,7 +7,7 @@ const ImageWrapper = styled('div', {
   position: 'relative',
 });
 
-const BlogImage = styled(Image, {
+const BlogImage = styled(ExportedImage, {
   objectFit: 'contain',
   minWidth: '100%',
   minHeight: '100%',
@@ -29,26 +29,24 @@ const ShareSocial = styled('div', {
 
     '&:hover': {
       '&[aria-label=twitter]': {
-        backgroundColor: '#43b1ff !important'
+        backgroundColor: '#43b1ff !important',
       },
       '&[aria-label=linkedin]': {
-        backgroundColor: '#0A66C2 !important'
+        backgroundColor: '#0A66C2 !important',
       },
       '&[aria-label=facebook]': {
-        backgroundColor: '#6e8dd0 !important'
+        backgroundColor: '#6e8dd0 !important',
       },
       '&[aria-label=reddit]': {
-        backgroundColor: '#fb411c !important'
+        backgroundColor: '#fb411c !important',
       },
 
       '.icon': {
-        fill: '$white'
-      }
-    }
-  }
+        fill: '$white',
+      },
+    },
+  },
 });
-
-
 
 const PostNavigation = styled('div', {
   padding: '50px 0',
@@ -108,4 +106,12 @@ const Next = styled('div', {
   },
 });
 
-export { BlogSingleStyle, ImageWrapper, PostNavigation, Prev, Next, ShareSocial, BlogImage };
+export {
+  BlogSingleStyle,
+  ImageWrapper,
+  PostNavigation,
+  Prev,
+  Next,
+  ShareSocial,
+  BlogImage,
+};

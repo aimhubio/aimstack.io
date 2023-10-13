@@ -35,14 +35,14 @@ const ButtonStyle = styled('button', {
         backgroundColor: '$primary',
         color: '$white',
         '&:hover': {
-          backgroundColor: "$primaryHover"
+          backgroundColor: '$primaryHover',
         },
       },
       secondary: {
         backgroundColor: '$primaryLight',
         color: '$primary',
         '&:hover': {
-          backgroundColor: "$primaryLightHover"
+          backgroundColor: '$primaryLightHover',
         },
       },
       outline: {
@@ -51,7 +51,7 @@ const ButtonStyle = styled('button', {
         border: '1px solid #5865F2',
         '&:hover': {
           backgroundColor: '#DEE0FC',
-          borderColor: "$primaryHover"
+          borderColor: '$primaryHover',
         },
       },
       ghost: {

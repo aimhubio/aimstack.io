@@ -22,8 +22,8 @@ const VideoWrapper = styled('div', {
       width: '68px',
       height: '48px',
       border: 'none',
-      borderRadius: '25%'
-    }
+      borderRadius: '25%',
+    },
   },
 
   '& iframe': {

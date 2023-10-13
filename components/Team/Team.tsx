@@ -2,13 +2,13 @@ import React, { FC } from 'react';
 import { TeamStyle, TeamList, TeamItem, TeamImage } from './Team.style';
 import { Icon } from 'components/UIkit';
 import { Text, Container, Flex } from 'styles/foundations';
-import Image, { StaticImageData } from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 interface ITeamList {
   fullName: string;
   jobTitle: string;
   description: string;
-  image: StaticImageData;
+  image: any;
   shape: string;
 }
 
@@ -39,7 +39,7 @@ const Team = ({ team }: ITeam) => {
                   className="card"
                 >
                   <TeamImage css={{ maskImage: `url(${shape})` }}>
-                    <Image
+                    <ExportedImage
                       src={image}
                       alt={fullName}
                       height={200}

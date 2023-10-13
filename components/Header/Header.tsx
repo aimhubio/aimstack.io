@@ -12,7 +12,7 @@ import {
   Badge,
 } from './Header.style';
 import { Container } from 'styles/foundations';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import { navList, socialList, INavList, Social } from '../Layout/config';
 import { useLockedBody } from 'hooks/useLockedBody';
 import { Icon } from 'components/UIkit';
@@ -70,7 +70,7 @@ const Header: FC<IHeader> = ({ dark }) => {
         <HeaderContent>
           <Logo>
             <Link href="/" onClick={handleDrawerClose} className="logo">
-              <Image
+              <ExportedImage
                 src={`/images/static/main/${
                   darkMode ? 'logo-white' : 'logo'
                 }.svg`}
@@ -122,7 +122,12 @@ const Header: FC<IHeader> = ({ dark }) => {
                     target="_blank"
                     aria-label={name}
                   >
-                    <Image src={icon} alt={name} width={24} height={24} />
+                    <ExportedImage
+                      src={icon}
+                      alt={name}
+                      width={24}
+                      height={24}
+                    />
                   </a>
                 </li>
               ))}

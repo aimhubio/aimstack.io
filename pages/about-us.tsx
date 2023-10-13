@@ -11,7 +11,7 @@ import {
   CultureItem,
 } from 'styles/pages/About.style';
 import { cultureList, ICultureList } from 'content/cultrureList';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import aboutSeo from 'content/SeoData/about';
 import Seo from 'components/SEO/SEO';
 import BgTop from 'public/images/static/about-us/bg.png';
@@ -21,23 +21,27 @@ const About = () => {
   return (
     <>
       <Seo {...aboutSeo} />
-      <AboutHero style={{ paddingTop: '150px' }}>
+      <AboutHero style={{ paddingTop: '100px' }}>
         <Container>
-          <Text as="h1" size={10} css={{ marginBottom: '$6' }}>
-            What You Do Is Who You Are
-          </Text>
-          <Container css={{ maxWidth: '848px' }}>
-            <Text size={4}>
+          <Flex
+            direction="column"
+            align="center"
+            css={{ py: '80px' }}
+          >
+            <Text as="h1" size={10} css={{ marginBottom: '$6' }}>
+              What You Do Is Who You Are
+            </Text>
+            <Text size={4} css={{ maxWidth: '848px' }}>
               We are a group of engineers and designers deeply passionate about
               the problem of building AI Metadata Infrastructure. AI Metadata is
               A LOT, it’s multidimensional and heterogeneous. We Aim to help
               build world’s best AI Metadata systems.
             </Text>
-          </Container>
+          </Flex>
         </Container>
       </AboutHero>
       <Culture>
-        <Image
+        <ExportedImage
           className="bg-top"
           fill={true}
           src={BgTop}
@@ -55,7 +59,7 @@ const About = () => {
                 {cultureList.map(
                   ({ image, title, description }: ICultureList, index) => (
                     <CultureItem key={index}>
-                      <Image
+                      <ExportedImage
                         src={image}
                         width={44}
                         height={44}
@@ -75,7 +79,7 @@ const About = () => {
               </CultureList>
             </CultureLeft>
             <CultureRight>
-              <Image
+              <ExportedImage
                 src={TeamImage}
                 width={695}
                 height={525}

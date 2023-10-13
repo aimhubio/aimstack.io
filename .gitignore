@@ -11,6 +11,12 @@
 # next.js
 /.next/
 /out/
+public/**/nextImageExportOptimizer*
+public/**/next-image-export-optimizer-hashes*
+
+public/robots.txt
+public/sitemap.xml
+public/sitemap-0.xml
 
 # production
 /build
@@ -38,3 +44,4 @@ yarn-error.log*
 .contentlayer
 
 .idea
+

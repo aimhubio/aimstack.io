@@ -15,7 +15,7 @@ import DemosDots from 'public/images/static/demos/dots.svg';
 const Demos = () => {
   return (
     <DemosSection id="demos">
-      <DemosDotsImg src={DemosDots} alt={'demos dots'} loading={'lazy'} fill />
+      <DemosDotsImg src={DemosDots} alt={'demos dots'} fill />
       <Container>
         <Text as="h2" size={9} className="demos-title">
           Try Aim in action with live demos
@@ -26,12 +26,8 @@ const Demos = () => {
         <DemosList>
           {demosList.map(({ title, description, name, url, imageSrc }) => (
             <DemosItem key={name}>
-              <Link href={url} target="_blank">
-                <DemoImg
-                  src={imageSrc}
-                  alt="AimStack"
-                  placeholder={'blur'}
-                />
+              <Link href={url} target="_blank" rel="external">
+                <DemoImg src={imageSrc} alt="AimStack" placeholder={'blur'} />
                 <div className="demo-inner">
                   <Text size={4} css={{ marginBottom: '$2', fontWeight: '$4' }}>
                     {title}

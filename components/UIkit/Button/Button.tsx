@@ -22,7 +22,7 @@ const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, ButtonProps>(
         {children}
       </ButtonStyle>
     );
-  }
+  },
 );
 Button.displayName = 'Button';
 export default Button;

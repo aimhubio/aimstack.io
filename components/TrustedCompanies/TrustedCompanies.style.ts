@@ -1,6 +1,5 @@
 import { styled } from 'styles';
 
-
 const TrustedCompaniesContainer = styled('div', {
   padding: '80px 0',
   '@bp1': {
@@ -10,7 +9,6 @@ const TrustedCompaniesContainer = styled('div', {
     padding: '60px 0 24px',
   },
 });
-
 
 const TrustedCompaniesSection = styled('section', {
   height: '110px',
@@ -30,4 +28,9 @@ const SliderItem = styled('div', {
   },
 });
 
-export { TrustedCompaniesContainer, Slider, SliderItem, TrustedCompaniesSection };
+export {
+  TrustedCompaniesContainer,
+  Slider,
+  SliderItem,
+  TrustedCompaniesSection,
+};

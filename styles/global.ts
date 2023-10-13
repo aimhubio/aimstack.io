@@ -15,7 +15,7 @@ const global = {
   },
   img: {
     userDrag: 'none',
-    '-webkit-user-drag': 'none'
+    '-webkit-user-drag': 'none',
   },
   a: {
     textDecoration: 'none',
@@ -26,13 +26,13 @@ const global = {
       transition: '$main',
 
       '&:hover': {
-        color: '$primaryHover'
-      }
+        color: '$primaryHover',
+      },
     },
   },
   '.text-center': {
-    textAlign: 'center'
-  }
+    textAlign: 'center',
+  },
 };
 
 export default global;

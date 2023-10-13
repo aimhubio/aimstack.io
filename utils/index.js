@@ -64,7 +64,7 @@ export function getTotalPosts(posts, page) {
   if (page > 2) {
     totalPosts = publish.slice(
       show_per_page * page - show_per_page,
-      show_per_page * page
+      show_per_page * page,
     );
   }
 
@@ -76,5 +76,3 @@ export const validateEmail = (email) => {
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 };
-
-export const ImagePlaceholder = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8bwEAAhwBKazUf9EAAAAASUVORK5CYII=';

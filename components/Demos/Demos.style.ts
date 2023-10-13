@@ -1,5 +1,5 @@
 import { styled } from 'styles';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 const DemosSection = styled('section', {
   backgroundImage: 'linear-gradient(transparent, #d0cafe40, transparent)',
@@ -16,7 +16,7 @@ const DemosSection = styled('section', {
   '.demos-subtitle': {
     textAlign: 'center',
     marginBottom: '$14',
-  }
+  },
 });
 
 const DemosList = styled('ul', {
@@ -47,7 +47,7 @@ const DemosItem = styled('li', {
     display: 'block',
     width: '100%',
     height: '100%',
-    borderRadius: '$1',
+    borderRadius: '$2',
     transition: '$main',
     border: '1px solid #E2D7EB',
     backgroundColor: '$white',
@@ -55,27 +55,24 @@ const DemosItem = styled('li', {
       padding: '$5 $6',
     },
     '&:hover': {
-      backgroundColor: '$bigStoneHover',
-      '& .demo-inner': {
-        color: '$white',
-      },
+      backgroundColor: '#F3F5F9',
     },
   },
 });
 
-const DemoImg = styled(Image, {
+const DemoImg = styled(ExportedImage, {
   width: '100%',
   height: '66%',
   display: 'block',
   borderRadius: '$1 $1 0 0',
   objectFit: 'cover',
-  padding: "10px",
+  padding: '10px',
   overflow: 'hidden',
 });
 
-const DemosDotsImg = styled(Image, {
+const DemosDotsImg = styled(ExportedImage, {
   objectFit: 'cover',
   zIndex: -1,
 });
 
-export { DemosSection, DemosList, DemosItem, DemosDotsImg, DemoImg};
+export { DemosSection, DemosList, DemosItem, DemosDotsImg, DemoImg };

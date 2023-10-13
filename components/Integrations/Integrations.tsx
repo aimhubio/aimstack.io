@@ -17,7 +17,6 @@ const Integrations = () => {
       <IntegrationsDotsImg
         src={IntegrationsDots}
         alt="integrations dots"
-        loading={'lazy'}
         fill
       />
       <IntegrationsContainer>
@@ -43,7 +42,6 @@ const Integrations = () => {
           height={480}
           src={IntegrationsImg}
           alt="integrations image"
-          quality={50}
           placeholder={'blur'}
         />
       </IntegrationsContainer>

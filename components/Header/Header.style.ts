@@ -20,18 +20,18 @@ const HeaderStyle = styled('header', {
       a: {
         color: '$textColor',
       },
-    }
+    },
   },
 
   '&.fixed': {
     boxShadow: '$3',
-    backgroundColor: '$white'
-  }
+    backgroundColor: '$white',
+  },
 });
 const HeaderContent = styled('div', {
   display: 'flex',
   alignItems: 'center',
-  height: '100%'
+  height: '100%',
 });
 const HeaderNav = styled('nav', {
   display: 'flex',
@@ -45,8 +45,8 @@ const HeaderNav = styled('nav', {
         marginRight: '$6',
 
         '@bp0': {
-          marginRight: '$4'
-        }
+          marginRight: '$4',
+        },
       },
 
       a: {
@@ -59,11 +59,11 @@ const HeaderNav = styled('nav', {
 
         '&:hover': {
           '.text': {
-            opacity: '.6'
+            opacity: '.6',
           },
-        }
-      }
-    }
+        },
+      },
+    },
   },
 
   '@bp1': {
@@ -81,14 +81,14 @@ const HeaderNav = styled('nav', {
     justifyContent: 'space-between',
 
     '.open &': {
-      height: 'calc(100% - 72px)'
+      height: 'calc(100% - 72px)',
     },
     '.nav-inner': {
       width: '100%',
       flexDirection: 'column',
       alignItems: 'inherit',
       justifyContent: 'space-between',
-      paddingTop: '16px'
+      paddingTop: '16px',
     },
     '.nav-list': {
       flexDirection: 'column',
@@ -104,16 +104,16 @@ const HeaderNav = styled('nav', {
           padding: '$3 $5',
 
           '&:active': {
-            backgroundColor: '$primaryLight'
-          }
+            backgroundColor: '$primaryLight',
+          },
         },
 
         '&:not(:last-child)': {
-          marginRight: '0'
-        }
-      }
-    }
-  }
+          marginRight: '0',
+        },
+      },
+    },
+  },
 });
 const Logo = styled('div', {
   marginRight: '50px',
@@ -121,17 +121,17 @@ const Logo = styled('div', {
   '& .logo': {
     maxWidth: '158px',
     width: '100%',
-    display: 'block'
+    display: 'block',
   },
 
   '& .logo-image': {
-    display: 'block'
+    display: 'block',
   },
 
   '@bp1': {
     position: 'relative',
-    zIndex: 11
-  }
+    zIndex: 11,
+  },
 });
 
 const HeaderButton = styled('div', {
@@ -140,16 +140,16 @@ const HeaderButton = styled('div', {
   span: {
     span: {
       display: 'flex',
-      alignItems: 'center'
-    }
+      alignItems: 'center',
+    },
   },
   '&.desktop-btn': {
     span: {
       span: {
-        justifyContent: 'flex-end'
-      }
-    }
-  }
+        justifyContent: 'flex-end',
+      },
+    },
+  },
 });
 
 const Badge = styled('span', {
@@ -162,7 +162,7 @@ const Badge = styled('span', {
   color: '$white',
   fontWeight: '700',
   fontSize: '10px',
-  marginLeft: '6px'
+  marginLeft: '6px',
 });
 
 const ButtonMenu = styled('button', {
@@ -176,8 +176,8 @@ const ButtonMenu = styled('button', {
     border: 'none',
     backgroundColor: 'transparent',
     lineHeight: 1,
-    cursor: 'pointer'
-  }
+    cursor: 'pointer',
+  },
 });
 
 const MobileSocial = styled('ul', {
@@ -187,9 +187,9 @@ const MobileSocial = styled('ul', {
     justifyContent: 'center',
     py: '$6',
     '> li': {
-      marginRight: '$6'
-    }
-  }
+      marginRight: '$6',
+    },
+  },
 });
 
 export {
@@ -200,5 +200,5 @@ export {
   HeaderButton,
   ButtonMenu,
   MobileSocial,
-  Badge
+  Badge,
 };

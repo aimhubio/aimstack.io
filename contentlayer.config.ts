@@ -1,9 +1,5 @@
-import {
-  defineDocumentType,
-  makeSource,
-} from 'contentlayer/source-files';
+import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 import { slugify } from './utils';
-
 
 const Post = defineDocumentType(() => ({
   name: 'Post',

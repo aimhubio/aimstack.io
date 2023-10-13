@@ -1,8 +1,15 @@
+import React from 'react';
 import { Text } from 'styles/foundations';
-import { StaticImageData } from 'next/image';
 import Logging from 'public/images/static/why-use-aim/logging.png';
 import LowCode from 'public/images/static/why-use-aim/low-code.png';
 import Ecosystem from 'public/images/static/why-use-aim/ecosystem.png';
+import {
+  IconChartDots3,
+  IconCode,
+  IconPackages,
+  TablerIconsProps,
+} from '@tabler/icons-react';
+import { FeaturesIcon } from './Features.style';
 
 interface Step {
   key: string;
@@ -10,7 +17,8 @@ interface Step {
   description: string | JSX.Element;
   list: Array<string>;
   explorationLink: string;
-  bannerImgSrc: StaticImageData;
+  bannerImgSrc: any;
+  IconComponent: React.FC<TablerIconsProps>;
 }
 
 export const steps: Step[] = [
@@ -22,6 +30,11 @@ export const steps: Step[] = [
     explorationLink:
       'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
     bannerImgSrc: Logging,
+    IconComponent: (props) => (
+      <FeaturesIcon css={{ background: '#DBEEFE' }}>
+        <IconChartDots3 size={36} {...props} />
+      </FeaturesIcon>
+    ),
   },
   {
     key: 'low-code-ui',
@@ -36,6 +49,11 @@ export const steps: Step[] = [
     explorationLink:
       'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
     bannerImgSrc: LowCode,
+    IconComponent: (props) => (
+      <FeaturesIcon css={{ background: '#E1DCFE' }}>
+        <IconCode size={36} {...props} />
+      </FeaturesIcon>
+    ),
   },
   {
     key: 'modular-ecosystem',
@@ -49,6 +67,11 @@ export const steps: Step[] = [
     explorationLink:
       'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
     bannerImgSrc: Ecosystem,
+    IconComponent: (props) => (
+      <FeaturesIcon css={{ background: '#FADAFE' }}>
+        <IconPackages size={36} {...props} />
+      </FeaturesIcon>
+    ),
   },
 ];
 
