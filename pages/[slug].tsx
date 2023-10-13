@@ -27,7 +27,7 @@ export default function PostPage({ post }) {
   return (
     <Subpackages>
       <SubpackagesHeader>
-        <Container style={{ paddingTop: '150px' }}>
+        <Container style={{ paddingTop: '100px' }}>
           <Flex justify="between" direction={{ '@bp1': 'column' }}>
             <Flex align="center">
               <ExportedImage

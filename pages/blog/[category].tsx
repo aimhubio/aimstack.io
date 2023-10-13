@@ -41,7 +41,7 @@ export default function Category({ posts }) {
         image={`${ImageUrl('banner.png')}`}
         path={`blog/${params.category}`}
       />
-      <Container style={{ paddingTop: '150px' }}>
+      <Container style={{ paddingBlock: '100px' }}>
         <Text
           as="h1"
           size={6}

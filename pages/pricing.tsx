@@ -1,15 +1,16 @@
 import React from 'react';
 import PricingCard from 'components/PricingCard/PricingCard';
-import { Text, Flex, Container } from 'styles/foundations';
+import { Text, Flex } from 'styles/foundations';
 import pricingList from 'content/pricingList';
 import Seo from 'components/SEO/SEO';
 import pricingSeo from 'content/SeoData/pricing';
+import { PricingContainer } from 'styles/pages/Pricing.style';
 
 const Pricing = () => {
   return (
     <>
       <Seo {...pricingSeo} />
-      <Container style={{ paddingTop: '150px' }}>
+      <PricingContainer>
         <Flex direction="column" className="text-center" css={{ py: '80px' }}>
           <Text as="h1" size={10} css={{ marginBottom: '$6' }}>
             Aim support options
@@ -25,7 +26,7 @@ const Pricing = () => {
             <PricingCard key={card.title} {...card} />
           ))}
         </Flex>
-      </Container>
+      </PricingContainer>
     </>
   );
 };

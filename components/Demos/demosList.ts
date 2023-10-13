@@ -1,6 +1,6 @@
-import LangChainChatbot from 'public/images/static/demos/LangChain-based-chatbot.png';
-import LlamaIndex from 'public/images/static/demos/LlamaIndex-query.png';
-import CNN from 'public/images/static/demos/CNN-Training.png';
+import LangChainChatbot from 'public/images/static/demos/LangChain.png';
+import LlamaIndex from 'public/images/static/demos/LlamaIndex.png';
+import PytorchCNN from 'public/images/static/demos/PyTorch.png';
 
 interface Demo {
   name: string;
@@ -29,7 +29,7 @@ const demosList: Demo[] = [
     title: 'CNN Training',
     description: 'Tracking PyTorch-based CNN trainings',
     url: 'https://play-v4.aimstack.io/mnist-training-ui/apps/experiment_tracker/runs.py',
-    imageSrc: CNN,
+    imageSrc: PytorchCNN,
   },
 ];
 

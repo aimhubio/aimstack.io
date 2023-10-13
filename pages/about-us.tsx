@@ -21,19 +21,23 @@ const About = () => {
   return (
     <>
       <Seo {...aboutSeo} />
-      <AboutHero style={{ paddingTop: '150px' }}>
+      <AboutHero style={{ paddingTop: '100px' }}>
         <Container>
-          <Text as="h1" size={10} css={{ marginBottom: '$6' }}>
-            What You Do Is Who You Are
-          </Text>
-          <Container css={{ maxWidth: '848px' }}>
-            <Text size={4}>
+          <Flex
+            direction="column"
+            align="center"
+            css={{ py: '80px' }}
+          >
+            <Text as="h1" size={10} css={{ marginBottom: '$6' }}>
+              What You Do Is Who You Are
+            </Text>
+            <Text size={4} css={{ maxWidth: '848px' }}>
               We are a group of engineers and designers deeply passionate about
               the problem of building AI Metadata Infrastructure. AI Metadata is
               A LOT, it’s multidimensional and heterogeneous. We Aim to help
               build world’s best AI Metadata systems.
             </Text>
-          </Container>
+          </Flex>
         </Container>
       </AboutHero>
       <Culture>
