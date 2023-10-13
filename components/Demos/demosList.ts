@@ -1,4 +1,4 @@
-import {StaticImageData} from "next/image";
+import { StaticImageData } from 'next/image';
 
 interface IDemos {
   name: string;
@@ -41,7 +41,7 @@ const demosList: IDemos[] = [
     title: 'Simple MNIST',
     description: 'Simple MNIST training logs.',
     url: 'http://play.aimstack.io:10003/runs/7f083da898624a2c98e0f363/distributions',
-    imgSrc: SimpleMnist
+    imgSrc: SimpleMnist,
   },
 ];
 

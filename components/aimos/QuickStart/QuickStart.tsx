@@ -51,7 +51,7 @@ const QuickStart = () => {
                 as="a"
                 className={'quickstart-button'}
                 href={
-                  'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html'
+                  'https://aimos.readthedocs.io/en/latest/getting_started/quick_start.html'
                 }
                 target="_blank"
               >
@@ -65,7 +65,7 @@ const QuickStart = () => {
               as="a"
               className={'quickstart-button-mobile'}
               href={
-                'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html'
+                'https://aimos.readthedocs.io/en/latest/getting_started/quick_start.html'
               }
               target="_blank"
             >

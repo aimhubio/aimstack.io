@@ -1,14 +1,14 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { TeamStyle, TeamList, TeamItem, TeamImage } from './Team.style';
-import { Icon } from 'components/UIkit';
 import { Text, Container, Flex } from 'styles/foundations';
 import ExportedImage from 'next-image-export-optimizer';
+import { StaticImageData } from 'next/image';
 
 interface ITeamList {
   fullName: string;
   jobTitle: string;
   description: string;
-  image: any;
+  image: StaticImageData;
   shape: string;
 }
 

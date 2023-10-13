@@ -28,7 +28,7 @@ export const steps: Step[] = [
     description: 'Declare any python object as a loggable type',
     list: ['Metrics', 'Images', 'Text', 'Custom Objects', 'Remote logging'],
     explorationLink:
-      'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
+      'https://aimos.readthedocs.io/en/latest/getting_started/quick_start.html',
     bannerImgSrc: Logging,
     IconComponent: (props) => (
       <FeaturesIcon css={{ background: '#DBEEFE' }}>
@@ -47,7 +47,7 @@ export const steps: Step[] = [
       'Extensible and customizable',
     ],
     explorationLink:
-      'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
+      'https://aimos.readthedocs.io/en/latest/getting_started/quick_start.html',
     bannerImgSrc: LowCode,
     IconComponent: (props) => (
       <FeaturesIcon css={{ background: '#E1DCFE' }}>
@@ -65,7 +65,7 @@ export const steps: Step[] = [
       'UI + Automations + Logging',
     ],
     explorationLink:
-      'https://aimstack.readthedocs.io/en/latest/getting_started/quick_start.html',
+      'https://aimos.readthedocs.io/en/latest/getting_started/quick_start.html',
     bannerImgSrc: Ecosystem,
     IconComponent: (props) => (
       <FeaturesIcon css={{ background: '#FADAFE' }}>
