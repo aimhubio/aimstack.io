@@ -7,12 +7,12 @@ import {
   ImageWrapper,
   CardImage,
 } from './Card.style';
-import { Text } from 'styles/foundations';
+import {Flex, Text} from 'styles/foundations';
 import { Icon } from 'components/UIkit';
 import Link from 'next/link';
-import { slugify } from 'utils';
+import {DynamicImgLoader, ImgPlaceholder, slugify} from '../../utils';
 
-const Card = ({ categories, description, image, slug, title, views }: any) => {
+const Card = ({ categories, description, image, slug, title, views, author }: any) => {
   const category = slugify(categories?.[0]);
   const blogUrl = `/blog/${category}/${slug}`;
   return (
@@ -26,6 +26,8 @@ const Card = ({ categories, description, image, slug, title, views }: any) => {
             width={300}
             height={220}
             placeholder={'blur'}
+            loader={DynamicImgLoader}
+            blurDataURL={ImgPlaceholder}
           />
         </Link>
       </ImageWrapper>
@@ -49,7 +51,7 @@ const Card = ({ categories, description, image, slug, title, views }: any) => {
           size={2}
           className="title"
           lineClamp
-          css={{ my: '$6', $$lineClamp: 3, fontFamily: '$Lora' }}
+          css={{ my: '$4', $$lineClamp: 3, fontFamily: '$Lora' }}
         >
           <Link href={blogUrl}>{description}</Link>
         </Text>

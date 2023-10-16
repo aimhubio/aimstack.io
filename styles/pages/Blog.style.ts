@@ -1,18 +1,20 @@
 import { styled } from 'styles';
-import ExportedImage from 'next-image-export-optimizer';
+import Image from 'next/image';
 
 const BlogSingleStyle = styled('div', {});
 
 const ImageWrapper = styled('div', {
   position: 'relative',
+  display: 'flex'
 });
 
-const BlogImage = styled(ExportedImage, {
+const BlogImage = styled(Image, {
   objectFit: 'contain',
-  minWidth: '100%',
   minHeight: '100%',
   width: '100%',
   height: '100%',
+  maxWidth: '75%',
+  marginInline: 'auto'
 });
 
 const ShareSocial = styled('div', {
