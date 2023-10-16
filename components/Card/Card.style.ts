@@ -1,5 +1,5 @@
 import { styled } from 'styles';
-import ExportedImage from 'next-image-export-optimizer';
+import Image from 'next/image';
 
 const CardStyle = styled('div', {
   padding: '10px',
@@ -16,7 +16,7 @@ const ImageWrapper = styled('div', {
   position: 'relative',
 });
 
-const CardImage = styled(ExportedImage, {
+const CardImage = styled(Image, {
   width: '100%',
   objectFit: 'cover',
   height: '200px',

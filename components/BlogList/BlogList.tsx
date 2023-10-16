@@ -10,6 +10,8 @@ interface IBlog {
   image: string;
   slug: string;
   title: string;
+  views: number;
+  author: string;
 }
 
 interface IBlogList {

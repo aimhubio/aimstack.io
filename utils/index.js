@@ -76,3 +76,14 @@ export const validateEmail = (email) => {
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 };
+
+export function DynamicImgLoader({ src, width, quality}) {
+  if(src.startsWith('https://miro.medium.com/v2')) {
+    return `https://miro.medium.com/v2/resize:fit:${width || 1200}/format:webp/quality:${quality || 75}/${src.split('/').at(-1)}`;
+  }
+  if(src.startsWith('https://miro.medium.com/max')) {
+    return `https://miro.medium.com/max/${width || 1200}/${src.split('/').at(-1)}`;
+  }
+  return src;
+}
+export const ImgPlaceholder = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO8bQwAAe8BEAdB0H4AAAAASUVORK5CYII=';

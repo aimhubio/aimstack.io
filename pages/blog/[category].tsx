@@ -24,6 +24,7 @@ export default function Category({ posts }) {
       'image',
       'categories',
       'new-releases',
+      'author',
     ]),
   );
   const totalPostCount = pageCount(posts.length);

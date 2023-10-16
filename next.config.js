@@ -39,6 +39,10 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: '**.youtube.com',
+      },
+      {
+        protocol: 'https',
         hostname: 'aim-netlify-image.s3.amazonaws.com',
         port: '',
         // pathname: '/account123/**',

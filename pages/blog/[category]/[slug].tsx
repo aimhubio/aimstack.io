@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Markdown from 'markdown-to-jsx';
 import {
   TwitterShareButton,
@@ -17,12 +18,11 @@ import {
   ShareSocial,
   BlogImage,
 } from 'styles/pages/Blog.style';
-import { formattedDate, slugify } from 'utils';
+import {formattedDate, DynamicImgLoader, ImgPlaceholder, slugify} from 'utils/index';
 
 import { useRouter } from 'next/router';
 import { Icon } from 'components/UIkit';
 import { allPosts } from 'contentlayer/generated';
-import ExportedImage from 'next-image-export-optimizer';
 import Seo from 'components/SEO/SEO';
 import { Category } from 'components/Card/Card.style';
 import SITE_URL from 'config';
@@ -104,34 +104,56 @@ export default function PostPage({ post, posts }) {
         >
           {post.title}
         </Text>
+        <Flex gap={2} align="center" css={{ marginBottom: '$6' }}>
+          <Text as="span" size={2}>
+            {post.author.split(',').length > 1 ? 'Authors:' : 'Author:'}
+          </Text>
+          <Text
+            as="span"
+            size={2}
+            className="author"
+            css={{ fontWeight: '$2' }}
+          >
+            {post.author}
+          </Text>
+        </Flex>
       </Container>
-      <Container>
-        <ImageWrapper>
-          <BlogImage
-            src={post.image}
-            key={path}
-            alt={post.title}
-            title={post.title}
-            width={1200}
-            height={600}
-            placeholder={'blur'}
-          />
-        </ImageWrapper>
-      </Container>
+      <ImageWrapper>
+        <BlogImage
+          src={post.image}
+          key={path}
+          alt={post.title}
+          title={post.title}
+          width={1200}
+          height={600}
+          placeholder={'blur'}
+          loader={DynamicImgLoader}
+          blurDataURL={ImgPlaceholder}
+        />
+      </ImageWrapper>
       <Container css={{ maxWidth: '848px' }}>
         <InnerHTML className="blog-inner">
           <Markdown
             options={{
               overrides: {
                 img: {
-                  component: ExportedImage,
+                  component: Image,
                   props: {
-                    fill: true,
                     alt: 'blog image',
-                    style: { objectFit: 'contain', aspectRatio: 'auto' },
+                    style: {
+                      objectFit: 'contain',
+                      aspectRatio: 'auto',
+                      width: '100%',
+                      height: '100%',
+                    },
                     className: 'blog-image',
                     key: slug,
                     placeholder: 'blur',
+                    blurDataURL: ImgPlaceholder,
+                    width: 1200,
+                    height: 600,
+                    quality: 75,
+                    loader: DynamicImgLoader,
                   },
                 },
               },
