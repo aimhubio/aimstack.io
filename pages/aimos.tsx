@@ -7,7 +7,7 @@ import QuickStart from 'components/aimos/QuickStart/QuickStart';
 import Demos from 'components/aimos/Demos/Demos';
 import Subscribe from 'components/aimos/Subscribe/Subscribe';
 
-import aimOsSeo from 'content/SeoData/homepage';
+import aimOsSeo from 'content/SeoData/aimos';
 import Seo from 'components/SEO/SEO';
 
 const Index = () => {
