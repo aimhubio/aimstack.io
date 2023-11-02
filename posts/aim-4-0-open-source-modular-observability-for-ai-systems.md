@@ -12,6 +12,8 @@ draft: false
 ---
 ## The software lifecycle is broken
 
+
+
 AI is changing how software is built and deployed. AI Systems are not deterministic, so observability is a key layer in the AI Systems development stack.
 
 Changing the code is no longer enough to change the behavior of the AI system - a kind of systems that are inherently unreliable and hard to iterate on.
