@@ -26,15 +26,11 @@ Now, let’s see how it works with an example!
 
 ## Putting LlamaIndex Observer into Action: A Step-by-Step Guide
 
-
-
 We'll now look at a hands-on example. We'll use a Python script to interact with LlamaIndex and observe how LlamaIndex Tracker records each action. This example demonstrates the smooth interaction between AimOS and LlamaIndex.
 
 Before starting with the script, ensure AimOS is installed and set up. If you need to install it, visit [AimOS repository](https://github.com/aimhubio/aimos) for the guidelines.
 
 ## Sample Script
-
-
 
 ### 1. Importing Required Modules
 
@@ -75,8 +71,6 @@ The script reads the downloaded document using LlamaIndex's **`SimpleDirectoryRe
 ```
 documents = SimpleDirectoryReader(output_dir).load_data()
 ```
-
-
 
 ### 4. Setting Up AimOS Callback for LlamaIndex Observer
 
@@ -123,7 +117,7 @@ aimos ui
 
 😊 Enjoy this preview of what you'll see once you visit the provided URL:
 
-![AimOS Overview](/images/dynamic/screenshot-llamaindex-insights.png "AimOS Overview")
+![AimOS Overview](/images/dynamic/1-.png "AimOS Overview")
 
 Navigate to the **`llamaindex_observer`** package under AI Systems Debugging.
 
@@ -133,7 +127,7 @@ Now, we will delve into the tracked information.
 
 Once you’ve run the script, go to the Traces page in AimOS. There, you'll find a  new trace corresponding to each query in the script. You can get valuable information by checking the Overview, Steps, and Cost tabs. These will show you details about the script’s execution, token use, and the costs involved.
 
-![AimOS Traces](/images/dynamic/screenshot-llamaindex-insights-1-..png "AimOS Traces")
+![AimOS Traces](/images/dynamic/llamaindex-insights-2-.png "AimOS Traces")
 
 ### Overview Tab: A Quick Summary
 
@@ -149,7 +143,7 @@ The Overview tab in AimOS gives you a snapshot of what happened. Here are the ma
 
 **Cost:** A critical factor in resource management, the cost breakdown helps you make informed decisions.
 
-![Trace ID](/images/dynamic/screenshot-llamaindex-insights-2-..png "Trace ID")
+![Trace ID](/images/dynamic/llamaindex-insights-3.png "Trace ID")
 
 ## Understanding the Process
 
@@ -159,29 +153,27 @@ At the top of the Steps tab, you'll find a slider labeled "Select the step," ena
 
 In the initial step, the provided essay document undergoes a chunking process, dividing it into multiple segments. Simultaneously, embeddings are extracted for each chunk, forming a foundational representation of the document's content.
 
-![LlamaIndex Observer insights](/images/dynamic/screenshot-llamaindex-insights-3-..png "LlamaIndex Observer insights")
+![LlamaIndex Observer insights](/images/dynamic/llamaindex-insights-4.png "LlamaIndex Observer insights")
 
 ### Step 2: Query Processing
 
 **Question Formulation:** A specific question is asked about the document, such as "How does Graham address the topic of competition and the importance of being the first mover in a market?"
 
-![LlamaIndex Observer question formulation](/images/dynamic/screenshot-llamaindex-insights-4-..png "LlamaIndex Observer question formulation")
+![LlamaIndex Observer question formulation](/images/dynamic/llamaindex-insights-5.png "LlamaIndex Observer question formulation")
 
 **Query Initiation:** LlamaIndex initiates a query, retrieving the most relevant chunks from the previously embedded document.
 
-![LlamaIndex Observer query initiation](/images/dynamic/screenshot-2023-11-15-at-12.12.02 pm-1-.png "LlamaIndex Observer query initiation")
+![LlamaIndex Observer query initiation](/images/dynamic/6.png "LlamaIndex Observer query initiation")
 
 **Prompt Generation:** A prompt for the language model is crafted. This involves combining the context strings (document chunks) and the question to create an input for the language model.
 
-![LlamaIndex Observer prompt generation](/images/dynamic/screenshot-2023-11-15-at-12.10.51 pm.png "LlamaIndex Observer prompt generation")
+![LlamaIndex Observer prompt generation](/images/dynamic/7.png "LlamaIndex Observer prompt generation")
 
 **Language Model Response:** The language model processes the prompt, generating a response that addresses the asked question.
 
-![LlamaIndex Observer - Language model response](/images/dynamic/screenshot-2023-11-15-at-12.09.20 pm.png "LlamaIndex Observer - Language model response")
+![LlamaIndex Observer - Language model response](/images/dynamic/8.png "LlamaIndex Observer - Language model response")
 
 ### Step 3: Iterative Questioning
-
-
 
 While Step 1 is a one-time occurrence, our example involves asking three distinct questions. The process for generating responses to the second and third questions aligns with the methodology outlined in Step 2, utilizing the previously embedded chunks of the document.
 
@@ -189,44 +181,36 @@ The additional questions asked are:
 
 * "What are Paul Graham's notable projects or companies?" 
 
-![Prompt](/images/dynamic/screenshot-llamaindex-insights-5-..png "Prompt")
+![Prompt](/images/dynamic/9.png "Prompt")
 
 Generated response:
 
-![Generated response](/images/dynamic/screenshot-2023-11-15-at-12.12.22 pm-1-.png "Generated response")
+![Generated response](/images/dynamic/10.png "Generated response")
 
 * "What problems did the author encounter with the early AI programs?"
 
-![Prompt](/images/dynamic/screenshot-llamaindex-insights-6-..png "Prompt")
+![Prompt](/images/dynamic/11.png "Prompt")
 
 Generated response:
 
-![Generated response](/images/dynamic/screenshot-2023-11-15-at-12.12.35 pm-1-.png)
+![Generated response](/images/dynamic/12.png)
 
 ## Cost: Evaluating Resource Usage
-
-
 
 In the Cost tab, you can examine three graphs showing token-usage, token-usage-input, and token-usage-output, providing a detailed breakdown of the computational costs associated with your LlamaIndex activities.
 
 * On the x-axis, you can see the steps, which represent the number of times the system made an API request to an LLM (Language Model).
+* On the y-axis, you can see the number of tokens sent or received.
 
-
-*  On the y-axis, you can see the number of tokens sent or received.
-
-![Token-usage](/images/dynamic/screenshot-llamaindex-insights-7-..png "Cost tab")
+![Token-usage](/images/dynamic/13.png "Cost tab")
 
 ## Wrapping up
 
 The “LlamaIndex Observer” in AimOS is a powerful tool for deepening your understanding of how your LlamaIndex models operate. It's great for both experienced users and beginners, offering a comprehensive observability of model performance.
 
-
-
 For further insights into AI system monitoring and observability of software lifecycle, check out our latest article on the [AimStack blog](https://aimstack.io/blog/new-releases/aim-4-0-open-source-modular-observability-for-ai-systems). 
 
 ## Learn more
-
-
 
 [AimOS is on a mission to democratize AI Systems logging tools. ](https://aimos.readthedocs.io/en/latest/apps/overview.html)🙌
 
