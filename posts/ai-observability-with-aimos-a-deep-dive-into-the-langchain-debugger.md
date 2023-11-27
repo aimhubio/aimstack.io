@@ -16,11 +16,11 @@ Imagine being able to track and visualize every part of your LangChain script in
 
 We'll look at a sample script to see how well LangChain Debugger and the scripts work together. It will highlight the main features of LangChain Debugger which logs LLMs prompts and generations, tools inputs/outputs, and chains metadata.
 
+In this guide, we will prompt "What are the number of parameters in OpenAI’s GPT5 (based on rumors) and GPT4? What is the logarithm (base e) of the difference between the number of parameters?
+
 > [AimOS 🔍 ](https://github.com/aimhubio/aimos)— A user-friendly observability platform for AI systems. It's adaptable, scalable, and versatile.
 
 ## Executing LangChain Debugger: A Step-by-Step Guide
-
-
 
 Let's do a practical example using a script to interact with LangChain to show how well it works with AimOS and LangChain Debugger.
 
@@ -108,21 +108,15 @@ Here you'll find a new trace corresponding to each query in the script. You can 
 
 ## Overview: Key Elements
 
-
-
 Navigate through the Overview tab to grasp essential information:
 
+* Trace: A unique identifier for each trace, allowing you to easily reference and analyze specific interactions. 
 
+* Total Steps: The number of actions or queries performed in a trace, providing a quick measure of complexity
 
-* Trace ID: A unique identifier for each trace, allowing you to easily reference and analyze specific interactions.
+* Total Tokens: The total number of tokens is represented to understand the computational load of your queries, ensuring optimal performance.
 
-
-* Date and Time: Timestamps help you understand when actions took place, facilitating a chronological understanding of your LlamaIndex usage.
-* Used Tools: The list of deterministic tools being used
-* Executed Chains: The name of the executed chain
-* Total Steps: The number of actions or queries performed in a trace, providing a quick measure of complexity.
-* Total Tokens: Understand the computational load of your queries, ensuring optimal performance.
-* Cost: A critical factor in resource management, the cost breakdown helps you make informed decisions.
+* Cost: This represents the total cost of the trace which is a critical factor in resource management, the cost breakdown helps you make informed decisions.
 
 ![Overview tab](/images/dynamic/screenshot-2023-11-23-at-11.58.15 pm-1-.png "Overview tab")
 
@@ -132,16 +126,11 @@ The Steps tab provides a detailed walkthrough of the sequence of actions underta
 
 Here's a breakdown of the pivotal actions:
 
-1. LLM Response:vThe Language Model (LLM) initially determines that, for the given question, it needs to utilize the Search tool to identify the person in question.
-
+1. LLM Response: The Language Model (LLM) initially determines that, for the given question, it needs to utilize the Search tool to identify the person in question.
 2. Search Tool Execution: The LLM activates the Search tool to acquire the necessary information, successfully obtaining the desired output.
-
-3. LLM Decision: Subsequently, the LLM decides to employ the Search tool once again to retrieve additional details, such as the the number of parameters in GPT 5 and GPT4.
-
+3. LLM Decision: Subsequently, the LLM decides to employ the Search tool once again to retrieve additional details, such as the the number of parameters in GPT5 (based on rumors) and GPT4.
 4. Search Tool Execution: The Agent, following the LLM's decision, triggers the Search tool once more, fetching the required information.
-
 5. Calculator Tool Usage: With the obtained number, the Agent employs the Calculator tool to calculate the logarithm (base e) of the difference between the number of parameters.
-
 6. Final Answer: Lastly, armed with all the necessary information, the LLM crafts the complete answer to the original question and returns it.
 
 ![Steps tab](/images/dynamic/screenshot-2023-11-23-at-11.58.42 pm-1-.png "Steps tab")
@@ -164,8 +153,6 @@ The LangChain Debugger in AimOS is a powerful tool for deepening your understand
 For further insights into AI system monitoring and observability of software lifecycle, check out our latest article on the [AimStack blog.](https://aimstack.io/blog/new-releases/aim-4-0-open-source-modular-observability-for-ai-systems)
 
 ## Learn more
-
-
 
 [AimOS is on a mission to democratize AI Systems logging tools. ](https://aimos.readthedocs.io/en/latest/apps/overview.html)🙌
 
