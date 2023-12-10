@@ -1,0 +1,39 @@
+import React from 'react';
+import Markdown from 'react-markdown'
+
+import { Text, Flex } from 'styles/foundations';
+import termsContent from 'content/termsContent';
+import { TermsContainer } from 'styles/pages/Terms.style';
+import Accordion from 'components/Accordion/Accordion';
+
+
+const Terms = () => {
+  return (
+    <>
+      <TermsContainer>
+        <Flex direction="column" className="text-center" css={{ py: '80px' }}>
+          <Text as="h1" size={10} css={{ marginBottom: '$6' }}>
+            Terms
+          </Text>
+          <Text size={4}>AimHub is a registered trademark of AimHub, Inc.</Text>
+        </Flex>
+        <Flex
+          css={{ paddingBottom: '104px' }}
+          direction='column'
+          gap={0}
+        >
+          {termsContent.map((term) => (
+            <Accordion title={term.header}>
+              <Markdown>
+                {term.content}
+              </Markdown>
+            </Accordion>
+          ))}
+
+        </Flex>
+      </TermsContainer>
+    </>
+  );
+};
+
+export default Terms;
