@@ -22,14 +22,13 @@ const Terms = () => {
           direction='column'
           gap={0}
         >
-          {termsContent.map((term) => (
-            <Accordion title={term.header}>
+          {termsContent.map((term, i) => (
+            <Accordion title={term.header} key={i}>
               <Markdown>
                 {term.content}
               </Markdown>
             </Accordion>
           ))}
-
         </Flex>
       </TermsContainer>
     </>
