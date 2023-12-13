@@ -20,7 +20,7 @@ const Terms = () => {
         <Flex
           css={{ paddingBottom: '104px' }}
           direction='column'
-          gap={0}
+          gap='0'
         >
           {termsContent.map((term, i) => (
             <Accordion title={term.header} key={i}>
