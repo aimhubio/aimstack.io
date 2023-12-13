@@ -1,5 +1,9 @@
 import { useState } from 'react';
-import { AccordionContainer, AccordionHeader, AccordionContent } from './Accordion.style';
+import {
+  AccordionContainer,
+  AccordionHeader,
+  AccordionContent,
+} from './Accordion.style';
 
 const Accordion = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,12 +14,8 @@ const Accordion = ({ title, children }) => {
 
   return (
     <AccordionContainer>
-      <AccordionHeader onClick={toggleAccordion}>
-        {title}
-      </AccordionHeader>
-      <AccordionContent open={isOpen}>
-        {children}
-      </AccordionContent>
+      <AccordionHeader onClick={toggleAccordion}>{title}</AccordionHeader>
+      <AccordionContent open={isOpen}>{children}</AccordionContent>
     </AccordionContainer>
   );
 };

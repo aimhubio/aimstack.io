@@ -32,8 +32,4 @@ const AccordionContent = styled('div', {
   },
 });
 
-export {
-  AccordionContainer,
-  AccordionHeader,
-  AccordionContent,
-};
+export { AccordionContainer, AccordionHeader, AccordionContent };
