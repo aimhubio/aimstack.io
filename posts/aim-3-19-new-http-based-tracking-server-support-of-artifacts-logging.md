@@ -3,7 +3,7 @@ author: Tatyana Manaseryan
 categories:
   - NewReleases
 date: 2024-03-14T19:09:56.893Z
-title: Aim 3.19 -- New HTTP-based tracking server, Support of Artifacts logging
+title: Aim 3.19 - New HTTP-based tracking server, Support of Artifacts logging
 image: /images/dynamic/twitter1-2-.png
 description: Hey community, Aim 3.19 is out!! It's packed with new enhancements,
   such as Artifacts support, New HTTP-based tracking server.
