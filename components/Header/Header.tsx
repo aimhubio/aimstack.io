@@ -4,6 +4,7 @@ import Link from 'next/link';
 import {
   HeaderStyle,
   HeaderContent,
+  ButtonContent,
   Logo,
   HeaderNav,
   HeaderButton,
@@ -113,7 +114,7 @@ const Header: FC<IHeader> = ({ dark }) => {
                   size={2}
                   href="https://community.aimstack.io"
                 >
-                  <HeaderContent>
+                  <ButtonContent>
                     <ExportedImage
                       src={DiscordIcon}
                       alt={'Discord'}
@@ -121,7 +122,7 @@ const Header: FC<IHeader> = ({ dark }) => {
                       height={24}
                     />
                     Join Community
-                  </HeaderContent>
+                  </ButtonContent>
                 </Button>
               </HeaderButton>
               <HeaderButton
@@ -171,7 +172,7 @@ const Header: FC<IHeader> = ({ dark }) => {
               size={2}
               href="https://community.aimstack.io"
             >
-              <HeaderContent>
+              <ButtonContent>
                 <ExportedImage
                   src={DiscordIcon}
                   alt={'Discord'}
@@ -179,7 +180,7 @@ const Header: FC<IHeader> = ({ dark }) => {
                   height={24}
                 />
                 Join Community
-              </HeaderContent>
+              </ButtonContent>
             </Button>
           </HeaderButton>
           <HeaderButton
