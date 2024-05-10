@@ -33,6 +33,14 @@ const HeaderContent = styled('div', {
   alignItems: 'center',
   height: '100%',
 });
+const ButtonContent = styled('div', {
+  display: 'flex',
+  gap: '10px',
+  alignItems: 'center',
+  height: '100%',
+  marginRight: '2px',
+  marginLeft: '2px',
+});
 const HeaderNav = styled('nav', {
   display: 'flex',
   justifyContent: 'center',
@@ -195,6 +203,7 @@ const MobileSocial = styled('ul', {
 export {
   HeaderStyle,
   HeaderContent,
+  ButtonContent,
   Logo,
   HeaderNav,
   HeaderButton,
