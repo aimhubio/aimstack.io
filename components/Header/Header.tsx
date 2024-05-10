@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import GitHubButton from 'react-github-btn';
 import Link from 'next/link';
 import {
@@ -17,6 +17,8 @@ import { navList, socialList, INavList, Social } from '../Layout/config';
 import { useLockedBody } from 'hooks/useLockedBody';
 import { Icon, Button } from 'components/UIkit';
 import { useRouter } from 'next/router';
+import DiscordIcon from 'public/images/static/social/discord.svg';
+
 
 interface IHeader {
   dark: boolean;
@@ -104,6 +106,30 @@ const Header: FC<IHeader> = ({ dark }) => {
                   '@bp1': { display: 'block', padding: '$5' },
                 }}
               >
+                <Button
+                  className="community-btn"
+                  variant="community"
+                  as="a"
+                  size={2}
+                  href="https://community.aimstack.io"
+                >
+                  <HeaderContent>
+                    <ExportedImage
+                      src={DiscordIcon}
+                      alt={'Discord'}
+                      width={24}
+                      height={24}
+                    />
+                    Join Community
+                  </HeaderContent>
+                </Button>
+              </HeaderButton>
+              <HeaderButton
+                css={{
+                  display: 'none',
+                  '@bp1': { display: 'block', padding: '$5' },
+                }}
+              >
                 <GitHubButton
                   href="https://github.com/aimhubio/aim"
                   data-size="large"
@@ -145,7 +171,15 @@ const Header: FC<IHeader> = ({ dark }) => {
               size={2}
               href="https://community.aimstack.io"
             >
-              Join Community
+              <HeaderContent>
+                <ExportedImage
+                  src={DiscordIcon}
+                  alt={'Discord'}
+                  width={24}
+                  height={24}
+                />
+                Join Community
+              </HeaderContent>
             </Button>
           </HeaderButton>
           <HeaderButton
