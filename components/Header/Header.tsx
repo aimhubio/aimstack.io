@@ -15,7 +15,7 @@ import { Container } from 'styles/foundations';
 import ExportedImage from 'next-image-export-optimizer';
 import { navList, socialList, INavList, Social } from '../Layout/config';
 import { useLockedBody } from 'hooks/useLockedBody';
-import { Icon } from 'components/UIkit';
+import { Icon, Button } from 'components/UIkit';
 import { useRouter } from 'next/router';
 
 interface IHeader {
@@ -133,6 +133,21 @@ const Header: FC<IHeader> = ({ dark }) => {
               ))}
             </MobileSocial>
           </HeaderNav>
+          <HeaderButton
+            className="desktop-btn"
+            css={{ flex: '1', '@bp1': { display: 'none' } }}
+          >
+            <Button
+              css={{ float: 'right'}}
+              className="community-btn"
+              variant="community"
+              as="a"
+              size={2}
+              href="https://community.aimstack.io"
+            >
+              Join Community
+            </Button>
+          </HeaderButton>
           <HeaderButton
             className="desktop-btn"
             css={{ flex: '1', '@bp1': { display: 'none' } }}
