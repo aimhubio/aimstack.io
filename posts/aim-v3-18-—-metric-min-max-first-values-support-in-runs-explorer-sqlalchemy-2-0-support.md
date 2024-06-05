@@ -1,9 +1,9 @@
 ---
 author: Tatyana Manaseryan
 categories:
-  - NewReleases
+  - New Releases
 date: 2024-02-07T16:19:10.950Z
-title: Aim v3.18 — Metric min/max/first values support in Runs Explorer,
+title: Aim 3.18 — Metric min/max/first values support in Runs Explorer,
   SQLAlchemy 2.0 Support
 image: /images/dynamic/twitter.png
 description: "Hey team, Aim 3.18 is now available! Discover what's new: Metric

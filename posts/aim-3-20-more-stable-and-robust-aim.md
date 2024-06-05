@@ -4,8 +4,7 @@ categories:
   - New Releases
 date: 2024-06-05T10:07:45.324Z
 title: Aim 3.20 - More stable and robust Aim
-image:
-  - /images/dynamic/release.png
+image: /images/dynamic/release.png
 description: "Hey team, Aim 3.20 is out! What's new? Most of our focus have been
   on Aim robustness and stability. "
 draft: false
