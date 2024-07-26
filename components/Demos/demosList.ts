@@ -40,7 +40,7 @@ const demosList: IDemos[] = [
     name: 'simple-mnist',
     title: 'Simple MNIST',
     description: 'Simple MNIST training logs.',
-    url: 'https://play.aimstack.io/digit-recognition/runs/7f083da898624a2c98e0f363/distributions',
+    url: 'https://play.aimstack.io/digit-recognition/runs/426032ad2d7e4b0385bc6c51/distributions',
     imgSrc: SimpleMnist,
   },
 ];
