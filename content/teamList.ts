@@ -80,8 +80,8 @@ const teamList = [
   },
   {
     fullName: 'Tatyana Manaseryan',
-    jobTitle: 'Operations manager',
-    description: 'AI Enthusiast and Operations',
+    jobTitle: 'Growth & Operations',
+    description: 'AI Enthusiast',
     image: TatyanaImage,
     shape: '/images/static/about-us/shapes/5.svg',
   },
