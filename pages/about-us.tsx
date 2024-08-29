@@ -36,6 +36,8 @@ const About = () => {
               the problem of building AI Metadata Infrastructure. AI Metadata is
               A LOT, it’s multidimensional and heterogeneous. We Aim to help
               build world’s best AI Metadata systems.
+              <img referrerPolicy="no-referrer-when-downgrade"
+               src="https://static.scarf.sh/a.png?x-pxid=8b1927ba-96ec-4c48-9ee9-6037a9b3dbe5"/>
             </Text>
           </Flex>
         </Container>
