@@ -1,34 +1,18 @@
-import OpenSourceImage from 'public/images/static/pricing/open-source.svg';
-import EnterpriseImage from 'public/images/static/pricing/enterprise.svg';
+const PricingTableRows = [
+  ['Users', '1 user', 'Unlimited users', 'Unlimited users'],
+  ['Projects', '1 project', 'Multiple projects', 'Multiple projects'],
+  ['Experiment Tracking', 'Yes', 'Yes', 'Yes'],
+  ['Model Versioning', 'Yes', 'Yes', 'Yes'],
+  ['Hyperparameter Tuning', 'Yes', 'Yes', 'Yes'],
+  ['Collaboration', 'No', 'Team collaboration', 'Full team & enterprise collaboration collaboration'],
+  ['Scalability', 'No', 'Limited to teams', 'Enterprise grade scalability'],
+  ['Data Privacy', 'Self-hosted', 'Self-hosted or managed', 'Full enterprise security'],
+  ['Premium Support', 'No', 'No', 'Dedicated 24/7 support'],
+  ['Integration with External Tools', 'Limited', 'Full integration support', 'Extensive integrations & APIs'],
+  ['Role-Based Access Control', 'No', 'No', 'Advanced role-based access control'],
+  ['Custom Deployment Options', 'Basic (self-managed)', 'Managed or self-hosted options', 'Custom deployment & managed services'],
+  ['Automated Backups', 'No', 'Limited', 'Advanced automated backups'],
+  ['Custom Support and Onboarding', 'Community Support Only', 'No', 'Dedicated onboarding and training'],
+]
 
-const pricingList = [
-  {
-    title: 'Open Source',
-    image: OpenSourceImage,
-    description:
-      'We are building with an open roadmap.\n' +
-      'While working with companies we use their feedback constantly in improving core Aim and sometimes reprioritizing items in the roadmap.',
-    list: ['Core Aim support', 'Open roadmap'],
-    plan: 'Free',
-    buttonVariant: 'secondary',
-    buttonText: 'Learn More',
-    buttonURL: 'https://github.com/aimhubio/aim',
-  },
-  {
-    title: 'Enterprise',
-    image: EnterpriseImage,
-    description:
-      "AimStack also offers paid Enterprise support that's beyond core Aim - mainly involving help with additional plugins and specific Aim deployments.",
-    list: [
-      'Multi-user deployment',
-      'Custom plugins',
-      'Support outside core Aim',
-    ],
-    plan: 'Paid',
-    buttonVariant: 'primary',
-    buttonText: 'Contact us',
-    buttonURL: 'mailto:hello@aimstack.io',
-  },
-];
-
-export default pricingList;
+export default PricingTableRows;
