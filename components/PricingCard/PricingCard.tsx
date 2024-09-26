@@ -32,7 +32,7 @@ const PricingCard: FC<IPricingCard> = ({
             variant="secondary_outline"
             as="a"
             size={2}
-            href="https://community.aimstack.io"
+            href="https://github.com/aimhubio/aim"
             css={{marginTop: '$4'}}
           >
             Start for free
@@ -54,7 +54,7 @@ const PricingCard: FC<IPricingCard> = ({
             variant="primary"
             as="a"
             size={2}
-            href="https://community.aimstack.io"
+            href="https://docs.aimhub.io/quick-start/installation/docker"
             css={{marginTop: '$4'}}
           >
             Subscribe
@@ -72,9 +72,9 @@ const PricingCard: FC<IPricingCard> = ({
               variant="primary"
               as="a"
               size={2}
-              href="https://community.aimstack.io"
+              href="mailto:hello@aimstack.io"
             >
-              Request For demo
+              Request for demo
             </Button>
         </th>
       </tr>
