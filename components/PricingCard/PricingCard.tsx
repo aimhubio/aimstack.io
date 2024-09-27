@@ -18,7 +18,11 @@ const PricingCard: FC<IPricingCard> = ({
       {/* headers*/}
       <tr>
         {/**/}
-        <th> <Text as='h2' size={5} css={{ marginBottom: '$6' }}>Plans & Features</Text></th>
+        <th>
+          <Text as='h2' size={5} css={{ marginBottom: '$6' }}>Plans & Features</Text>
+          <img referrerPolicy="no-referrer-when-downgrade"
+           src="https://static.scarf.sh/a.png?x-pxid=8b1927ba-96ec-4c48-9ee9-6037a9b3dbe5"/>
+        </th>
         {/*free plan*/}
         <th>
           <Text as='h2' size={5} css={{ marginBottom: '$6'}}>
