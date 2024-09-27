@@ -45,6 +45,14 @@ const ButtonStyle = styled('button', {
           backgroundColor: '$primaryLightHover',
         },
       },
+      secondary_outline: {
+        backgroundColor: '$white',
+        color: '$primary',
+        border: '1px solid $primary',
+        '&:hover': {
+          backgroundColor: '$primaryLightHover',
+        },
+      },
       community: {
         backgroundColor: '#5865F2',
         color: '$white',

@@ -1,68 +1,115 @@
 import React, { FC } from 'react';
-import { PricingCardStyle, PricingCardList } from './PricingCard.style';
-import { Text, Flex } from 'styles/foundations';
+import { PricingTable } from './PricingCard.style';
+import PricingTableRows from 'content/pricingList';
+import {
+  IconCheck,
+  IconX,
+} from '@tabler/icons-react';
+import { Text } from 'styles/foundations';
 import { Button } from 'components/UIkit';
-import ExportedImage from 'next-image-export-optimizer';
-import { StaticImageData } from 'next/image';
 
 interface IPricingCard {
-  title: string;
-  image: StaticImageData;
-  description: string;
-  list: string[];
-  buttonVariant: string;
-  buttonText: string;
-  buttonURL: string;
-  plan: string;
 }
 
 const PricingCard: FC<IPricingCard> = ({
-  title,
-  buttonURL,
-  buttonText,
-  buttonVariant,
-  image,
-  list,
-  description,
-  plan,
 }) => {
   return (
-    <PricingCardStyle>
-      <Flex direction="column" justify="between">
-        <div>
-          <Flex align="center" css={{ marginBottom: '$4' }}>
-            <ExportedImage src={image} alt={title} height={44} width={44} />
-            <Text as="h2" css={{ fontWeight: '$4', marginLeft: '$4' }} size={6}>
-              {title}
-            </Text>
-          </Flex>
-          <Text size={2} css={{ marginBottom: '$5', color: '$black700' }}>
-            {description}
+    <PricingTable>
+      {/* headers*/}
+      <tr>
+        {/**/}
+        <th>
+          <Text as='h2' size={5} css={{ marginBottom: '$6' }}>Plans & Features</Text>
+          <img referrerPolicy="no-referrer-when-downgrade"
+           src="https://static.scarf.sh/a.png?x-pxid=8b1927ba-96ec-4c48-9ee9-6037a9b3dbe5"/>
+        </th>
+        {/*free plan*/}
+        <th>
+          <Text as='h2' size={5} css={{ marginBottom: '$6'}}>
+            Free and Open Source
           </Text>
-          <PricingCardList>
-            {list.map((item, index) => (
-              <li key={index}>
-                <span>{item}</span>
-              </li>
-            ))}
-          </PricingCardList>
-        </div>
-        <div>
-          <Text size={3} css={{ marginBottom: '$6', fontWeight: '$3' }}>
-            {plan}
+          <Text as='h2' size={5} css={{ marginBottom: '$9'}}>
+            $0 / month
           </Text>
+          <Text size={1}> Per user </Text>
           <Button
+            variant="secondary_outline"
             as="a"
-            variant={buttonVariant}
-            href={buttonURL}
-            target="_blank"
-            css={{ fontSize: '$2' }}
+            size={2}
+            href="https://github.com/aimhubio/aim"
+            css={{marginTop: '$4'}}
           >
-            {buttonText}
+            Start for free
           </Button>
-        </div>
-      </Flex>
-    </PricingCardStyle>
+        </th>
+        {/*team plan*/}
+        <th>
+          <Text as='h2' size={5} css={{ marginBottom: '$6'}}>
+            Team Tier
+          </Text>
+          <Text as='h2' size={5} >
+            $11 / month
+          </Text>
+          <Text as='h1' size={1} css={{ marginBottom: '$4'}}>
+            $120 / year
+          </Text>
+          <Text size={1}> Per user </Text>
+          <Button
+            variant="primary"
+            as="a"
+            size={2}
+            href="https://docs.aimhub.io/quick-start/installation/docker"
+            css={{marginTop: '$4'}}
+          >
+            Install now
+          </Button>
+        </th>
+        {/*enterprise plan*/}
+        <th>
+            <Text as='h2' size={5} css={{ marginBottom: '$12'}}>
+              Enterprise
+            </Text>
+            <Text as='h2' size={5} css={{ marginBottom: '$12'}}>
+              Contact Us
+            </Text>
+            <Button
+              variant="primary"
+              as="a"
+              size={2}
+              href="mailto:hello@aimstack.io"
+            >
+              Request for demo
+            </Button>
+        </th>
+      </tr>
+      {/*rest of the table*/}
+      {PricingTableRows.map((item, index) => (
+        <tr key={index}>
+          <td>{item[0]}</td>
+          {
+            item[1] === 'Yes' ?
+              <td><IconCheck color={'green'}/></td>:
+            item[1] === 'No' ?
+              <td><IconX color={'grey'}/></td>:
+              <td>{item[1]}</td>
+          }
+          {
+            item[2] === 'Yes' ?
+              <td><IconCheck color={'green'}/></td>:
+            item[2] === 'No' ?
+              <td><IconX color={'grey'}/></td>:
+              <td>{item[2]}</td>
+          }
+          {
+            item[3] === 'Yes' ?
+              <td><IconCheck color={'green'}/></td>:
+            item[3] === 'No' ?
+              <td><IconX color={'grey'}/></td>:
+              <td>{item[3]}</td>
+          }
+        </tr>
+      ))}
+    </PricingTable>
   );
 };
 
