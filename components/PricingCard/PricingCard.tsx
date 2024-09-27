@@ -57,7 +57,7 @@ const PricingCard: FC<IPricingCard> = ({
             href="https://docs.aimhub.io/quick-start/installation/docker"
             css={{marginTop: '$4'}}
           >
-            Install
+            Install now
           </Button>
         </th>
         {/*enterprise plan*/}
