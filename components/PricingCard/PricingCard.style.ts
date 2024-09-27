@@ -36,11 +36,11 @@ const PricingTable = styled('table', {
   },
 
   // shadows
-  'td:last-child': {
+  'td:nth-child(3)': {
     boxShadow: '0 0 24px 0px #0B2F6133',
     clipPath: 'inset(0px -15px 0px -15px)',
   },
-  'th:last-child': {
+  'th:nth-child(3)': {
     boxShadow: '0 0 24px 0px #0B2F6133',
     clipPath: 'inset(0px -15px 0px -15px)',
   },

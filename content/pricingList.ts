@@ -4,15 +4,12 @@ const PricingTableRows = [
   ['Experiment Tracking', 'Yes', 'Yes', 'Yes'],
   ['Model Versioning', 'Yes', 'Yes', 'Yes'],
   ['Hyperparameter Tuning', 'Yes', 'Yes', 'Yes'],
-  ['Collaboration', 'No', 'Team collaboration', 'Full team & enterprise collaboration collaboration'],
-  ['Scalability', 'No', 'Limited to teams', 'Enterprise grade scalability'],
+  ['Collaboration', 'No', 'Team collaboration', 'Collaboration across teams and across organizations'],
   ['Data Privacy', 'Self-hosted', 'Self-hosted or managed', 'Full enterprise security'],
-  ['Premium Support', 'No', 'No', 'Dedicated 24/7 support'],
-  ['Integration with External Tools', 'Limited', 'Full integration support', 'Extensive integrations & APIs'],
-  ['Role-Based Access Control', 'No', 'No', 'Advanced role-based access control'],
+  ['Premium Support', 'Community support and Github', 'Community support and Github', 'Dedicated 24/7 support'],
+  ['Role-Based Access Control', 'No', 'Yes', 'Yes'],
   ['Custom Deployment Options', 'Basic (self-managed)', 'Managed or self-hosted options', 'Custom deployment & managed services'],
-  ['Automated Backups', 'No', 'Limited', 'Advanced automated backups'],
-  ['Custom Support and Onboarding', 'Community Support Only', 'No', 'Dedicated onboarding and training'],
+  ['Automated Backups', 'No', 'Yes', 'Yes'],
 ]
 
 export default PricingTableRows;

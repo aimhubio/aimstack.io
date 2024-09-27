@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
-import { PricingCardStyle, PricingCardList, PricingCardStyleShadow, PricingTable} from './PricingCard.style';
+import { PricingTable } from './PricingCard.style';
 import PricingTableRows from 'content/pricingList';
 import {
   IconCheck,
   IconX,
 } from '@tabler/icons-react';
-import {Text, Container} from "../../styles/foundations";
-import {Button} from "../UIkit";
+import { Text } from 'styles/foundations';
+import { Button } from 'components/UIkit';
 
 interface IPricingCard {
 }
@@ -22,7 +22,7 @@ const PricingCard: FC<IPricingCard> = ({
         {/*free plan*/}
         <th>
           <Text as='h2' size={5} css={{ marginBottom: '$6'}}>
-            Free
+            Free and Open Source
           </Text>
           <Text as='h2' size={5} css={{ marginBottom: '$9'}}>
             $0 / month
@@ -57,7 +57,7 @@ const PricingCard: FC<IPricingCard> = ({
             href="https://docs.aimhub.io/quick-start/installation/docker"
             css={{marginTop: '$4'}}
           >
-            Subscribe
+            Install
           </Button>
         </th>
         {/*enterprise plan*/}
