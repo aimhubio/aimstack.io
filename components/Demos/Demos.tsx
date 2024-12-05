@@ -24,8 +24,6 @@ const Demos = () => {
         >
           Play with Aim before installing it! Check out our demos to see the
           full functionality
-          <img referrerPolicy="no-referrer-when-downgrade"
-           src="https://static.scarf.sh/a.png?x-pxid=8b1927ba-96ec-4c48-9ee9-6037a9b3dbe5"/>
         </Text>
         <DemosList>
           {demosList.map(({ title, description, name, url, imgSrc }) => {
