@@ -2,7 +2,7 @@ import Layout from 'components/Layout/Layout';
 
 import { useEffect } from 'react';
 
-function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
   useEffect(() => {
     // Directly adding your script content here
     (function () {
@@ -43,6 +43,6 @@ function App({ Component, pageProps }) {
       <Component {...pageProps} />
     </Layout>
   );
-}
+};
 
 export default App;
