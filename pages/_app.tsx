@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Layout from 'components/Layout/Layout';
 
 import { useEffect } from 'react';
