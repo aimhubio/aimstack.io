@@ -35,8 +35,6 @@ const Hero = () => {
             </Text>
             ) enables a UI to compare & observe them and SDK to query them
             programmatically.
-            <img referrerPolicy="no-referrer-when-downgrade"
-               src="https://static.scarf.sh/a.png?x-pxid=8b1927ba-96ec-4c48-9ee9-6037a9b3dbe5"/>
           </Text>
           <Button
             css={{ marginBottom: '$12' }}
