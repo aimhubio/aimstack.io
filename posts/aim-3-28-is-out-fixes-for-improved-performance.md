@@ -3,7 +3,7 @@ author: Tatyana Manaseryan
 categories:
   - New Releases
 date: 2025-03-25T17:37:26.107Z
-title: Aim 3.28 is Out! Fixes for improved performance
+title: Aim 3.28 — Performance improvements & Key fixes
 image: /images/dynamic/medium1.png
 description: Aim v3.28 is out - Improved performance by removing redundant
   checks and bypassing runs known to yield false results, new AimCallback for
@@ -14,7 +14,7 @@ We just dropped Aim 3.28!! This release is full of performance improvements and 
 
 > *We are on a mission to democratize AI dev tools and are incredibly lucky to have the support of the community. Every question and every issue makes Aim better!*
 
-Big shoutout to[ @bluenote10](https://github.com/bluenote10), [@qzed](https://github.com/qzed),  [@VassilisVassiliadis](https://github.com/VassilisVassiliadis), [@sbatchelder](https://github.com/sbatchelder) and [@guspan-tanadi](https://github.com/guspan-tanadi) for their contributions! 🙌
+Big shoutout to [@bluenote10](https://github.com/bluenote10), [@qzed](https://github.com/qzed),  [@VassilisVassiliadis](https://github.com/VassilisVassiliadis), [@sbatchelder](https://github.com/sbatchelder) and [@guspan-tanadi](https://github.com/guspan-tanadi) for their contributions! 🙌
 
 ## ⚡ What’s New?
 
@@ -55,7 +55,8 @@ So glad to have you on board!
 
 ## Learn More
 
-\
+
+
 [Aim is on a mission to democratize AI dev tools. 🙌](https://aimstack.readthedocs.io/en/latest/overview.html)[](https://aimstack.readthedocs.io/en/latest/overview.html)
 
 We have been incredibly lucky to get help and contributions from the amazing Aim community. It’s humbling and inspiring.
