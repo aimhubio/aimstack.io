@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import { useRouter } from 'next/router';
 import { Inter } from 'next/font/google';
+import { PostHogProvider } from 'providers/posthog';
 
 interface ILayout {
   children: ReactNode;
@@ -26,7 +27,11 @@ const Layout: FC<ILayout> = ({ children }) => {
       ) : (
         <Wrapper>
           <Header dark={subpackage} />
-          <Content>{children}</Content>
+          <Content>
+            <PostHogProvider>
+              {children}
+            </PostHogProvider>
+          </Content>
           <Footer />
         </Wrapper>
       )}
