@@ -103,7 +103,7 @@ const PricingIntro: FC<IPricingIntro> = ({
           Compare plans and features.
         </Text>
         <Text as="p" css={{marginTop: '12px', textAlign: 'center'}}>
-          Overview of what's included in each plan.
+          Overview of what is included in each plan.
         </Text>
       </Container>
     </PricingIntroStyle>

@@ -23,7 +23,7 @@ const FAQItem = ({ question, answer }) => {
         {question}
         {isOpen ? <IconChevronUp size={20} /> : <IconChevronDown size={20} />}
       </summary>
-      <p className="p">{answer}</p>
+      <p className="p" dangerouslySetInnerHTML={{ __html: answer }}></p>
     </details>
   );
 };
@@ -32,27 +32,27 @@ const FrequentlyAsked = () => {
   const faqItems = [
     {
       question: "What's the difference between Aim and AimHub?",
-      answer: "Aim is the open-source experiment tracker... (etc)"
+      answer: "Aim is the open-source experiment tracker designed for individuals. AimHub builds on top of Aim with team collaboration features, user management, and analytics designed for professional ML teams."
     },
     {
       question: "Can I self-host AimHub?",
-      answer: "Yes, you can self-host AimHub on your own infrastructure."
+      answer: "Yes! AimHub is built to be self-hosted on any infrastructure — whether it's bare metal, AWS, GCP, or Kubernetes. You keep full control over your data and environment."
     },
     {
       question: "What happens if I stop using a paid plan?",
-      answer: "Yes, you can self-host AimHub on your own infrastructure."
+      answer: "You won't lose access to your experiments. All your data stays with you, and you can continue using the open-source version of Aim anytime, without vendor lock-in."
     },
     {
       question: "Is there a free plan for teams?",
-      answer: "Yes, you can self-host AimHub on your own infrastructure."
+      answer: "Yes — teams can get started with the open-source version of Aim. To unlock collaboration, dashboards, and user management, we recommend the <strong>Team plan</strong> at $11/user/month."
     },
-      {
+    {
       question: "Is AimHub secure for enterprise use?",
-      answer: "Yes, you can self-host AimHub on your own infrastructure."
+      answer: "Yes. AimHub is designed with enterprise-grade privacy and control in mind. You deploy it on your own infrastructure, behind your own firewalls, no data ever leaves your environment unless you choose to share it."
     },
     {
       question: "Can we migrate from tools like W&B or MLflow?",
-      answer: "Yes, you can self-host AimHub on your own infrastructure."
+      answer: "Absolutely. Many teams switch to AimHub from other trackers. We support custom migration scripts and our team can assist with setup during onboarding to make the transition smooth."
     },
   ];
 
