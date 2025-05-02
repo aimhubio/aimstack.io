@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { PricingTable } from './PricingCard.style';
+import { PricingTableStyle } from './PricingTable.style';
 import PricingTableRows from 'content/pricingList';
 import {
   IconCheck,
@@ -8,13 +8,13 @@ import {
 import { Text } from 'styles/foundations';
 import { Button } from 'components/UIkit';
 
-interface IPricingCard {
+interface IPricingTable {
 }
 
-const PricingCard: FC<IPricingCard> = ({
+const PricingTable: FC<IPricingTable> = ({
 }) => {
   return (
-    <PricingTable>
+    <PricingTableStyle>
       {/* headers*/}
       <tr>
         {/**/}
@@ -31,13 +31,13 @@ const PricingCard: FC<IPricingCard> = ({
           </Text>
           <Text size={1}> Per user </Text>
           <Button
-            variant="secondary_outline"
+            variant="outline"
             as="a"
             size={2}
             href="https://github.com/aimhubio/aim"
             css={{marginTop: '$4'}}
           >
-            Start for free
+            Get Started
           </Button>
         </th>
         {/*team plan*/}
@@ -53,13 +53,13 @@ const PricingCard: FC<IPricingCard> = ({
           </Text>
           <Text size={1}> Per user </Text>
           <Button
-            variant="primary"
+            variant="outline"
             as="a"
             size={2}
             href="https://docs.aimhub.io/quick-start/installation/docker"
             css={{marginTop: '$4'}}
           >
-            Install now
+            Install Now
           </Button>
         </th>
         {/*enterprise plan*/}
@@ -71,12 +71,12 @@ const PricingCard: FC<IPricingCard> = ({
               Contact Us
             </Text>
             <Button
-              variant="primary"
+              variant="community"
               as="a"
               size={2}
               href="mailto:hello@aimstack.io"
             >
-              Request for demo
+              Contact Us
             </Button>
         </th>
       </tr>
@@ -93,7 +93,7 @@ const PricingCard: FC<IPricingCard> = ({
           }
           {
             item[2] === 'Yes' ?
-              <td><IconCheck color={'green'}/></td>:
+              <td><IconCheck color={'white'}/></td>:
             item[2] === 'No' ?
               <td><IconX color={'grey'}/></td>:
               <td>{item[2]}</td>
@@ -107,8 +107,8 @@ const PricingCard: FC<IPricingCard> = ({
           }
         </tr>
       ))}
-    </PricingTable>
+    </PricingTableStyle>
   );
 };
 
-export default PricingCard;
+export default PricingTable;
