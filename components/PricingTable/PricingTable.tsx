@@ -96,7 +96,7 @@ const PricingTable: FC<IPricingTable> = ({
                 size={3}
                 href="https://github.com/aimhubio/aim"
                 css={{
-                  width: '80%',
+                  width: '70%',
                   textAlign: 'center',
                   fontWeight: '500',
                 }}
@@ -132,7 +132,7 @@ const PricingTable: FC<IPricingTable> = ({
                 size={3}
                 href="https://docs.aimhub.io/quick-start/installation/docker"
                 css={{
-                  width: '80%',
+                  width: '70%',
                   textAlign: 'center',
                   fontWeight: '500',
                 }}
@@ -147,10 +147,10 @@ const PricingTable: FC<IPricingTable> = ({
         <th>
           <HeaderContent>
             <PricingInfo>
-              <Text as='h2' size={5} css={{ marginBottom: '$6'}}>
+              <Text as='h2' size={5} css={{ marginBottom: '$10'}}>
                 Enterprise
               </Text>
-              <Text as='h2' size={5} css={{ marginBottom: '$6'}}>
+              <Text as='h2' css={{ fontSize: '24px', fontWeight:'bold', marginBottom: '$6'}}>
                 Contact Us
               </Text>
             </PricingInfo>
@@ -161,7 +161,7 @@ const PricingTable: FC<IPricingTable> = ({
                 size={3}
                 href="/contact"
                 css={{
-                  width: '80%',
+                  width: '70%',
                   textAlign: 'center',
                   fontWeight: '500',
                 }}
