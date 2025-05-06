@@ -1,9 +1,6 @@
+
 import React, { FC } from 'react';
 import { PricingIntroStyle } from './PricingIntro.style';
-import {
-  IconCheck,
-  IconX,
-} from '@tabler/icons-react';
 import { Text, Container } from 'styles/foundations';
 import { Button } from 'components/UIkit';
 
@@ -35,7 +32,11 @@ const PricingIntro: FC<IPricingIntro> = ({
 
             <div className="priceContainer">
               <div className="annualPrice">
-                <div className="priceAmount">$0 / year</div>
+                <div className="priceAmount">
+                  <span className="currency">$</span>
+                  <span className="digits">0</span>
+                  <span className="text"> / year</span>
+                </div>
               </div>
               <div className="monthlyPrice">
                 <div className="priceAmount">$0 / month</div>
@@ -45,7 +46,7 @@ const PricingIntro: FC<IPricingIntro> = ({
             <Button
               variant="outline"
               as="a"
-              size={2}
+              size={3}
               href="https://github.com/aimhubio/aim"
             >
               Get Started
@@ -62,7 +63,11 @@ const PricingIntro: FC<IPricingIntro> = ({
 
             <div className="priceContainer">
               <div className="annualPrice">
-                <div className="priceAmount">$120 / year</div>
+                <div className="priceAmount">
+                  <span className="currency">$</span>
+                  <span className="digits">120</span>
+                  <span className="text"> / year</span>
+                </div>
               </div>
               <div className="monthlyPrice">
                 <div className="priceAmount">$11 / month</div>
@@ -73,7 +78,7 @@ const PricingIntro: FC<IPricingIntro> = ({
             <Button
               variant="outline"
               as="a"
-              size={2}
+              size={3}
               href="https://docs.aimhub.io/quick-start/installation/docker"
             >
               Install Now
@@ -91,8 +96,8 @@ const PricingIntro: FC<IPricingIntro> = ({
             <Button
               variant="community"
               as="a"
-              size={2}
-              href="mailto:hello@aimstack.io"
+              size={3}
+              href="/contact"
             >
               Contact Us
             </Button>

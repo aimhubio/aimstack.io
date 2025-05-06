@@ -33,9 +33,12 @@ const PricingTable: FC<IPricingTable> = ({
           <Button
             variant="outline"
             as="a"
-            size={2}
+            size={3}
             href="https://github.com/aimhubio/aim"
-            css={{marginTop: '$4'}}
+            css={{marginTop: '$4',
+                  width: '80%',
+                  textAlign: 'center',
+                  fontWeight: '500',}}
           >
             Get Started
           </Button>
@@ -55,9 +58,12 @@ const PricingTable: FC<IPricingTable> = ({
           <Button
             variant="outline"
             as="a"
-            size={2}
+            size={3}
             href="https://docs.aimhub.io/quick-start/installation/docker"
-            css={{marginTop: '$4'}}
+            css={{marginTop: '$4',
+                  width: '80%',
+                  textAlign: 'center',
+                  fontWeight: '500',}}
           >
             Install Now
           </Button>
@@ -73,8 +79,11 @@ const PricingTable: FC<IPricingTable> = ({
             <Button
               variant="community"
               as="a"
-              size={2}
-              href="mailto:hello@aimstack.io"
+              size={3}
+              href="/contact"
+              css={{width: '80%',
+                  textAlign: 'center',
+                  fontWeight: '500',}}
             >
               Contact Us
             </Button>

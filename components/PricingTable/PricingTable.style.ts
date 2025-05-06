@@ -3,6 +3,10 @@ import { styled } from 'styles';
 const PricingTableStyle = styled('table', {
   flex: '1',
   boxShadow: '$4',
+  width: '1160px', // Set explicit width
+  maxWidth: '100%', // For responsiveness
+  margin: '0 auto', // Center the table
+
   table: {
     borderCollapse: 'collapse',
     borderRadius: '$2',
@@ -25,6 +29,12 @@ const PricingTableStyle = styled('table', {
      height: '100px',
      textAlign: 'center',
      padding: '20px',
+  },
+
+  'th:first-child': {
+     textAlign: 'left',
+     paddingLeft: '50px',
+     paddingRight: '50px',
   },
 
   // background on even rows

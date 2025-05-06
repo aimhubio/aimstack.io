@@ -6,14 +6,14 @@ const PricingIntroStyle = styled('section', {
   '.pricing': {
     display: 'flex',
     justifyContent: 'center',
-    gap: '1rem',
-    padding: '1rem',
+    gap: '16px',
+    padding: '16px',
   },
 
   '.tier, .tierHighlighted': {
     flex: 1,
-    borderRadius: '0.75rem',
-    padding: '1.5rem 1.5rem',
+    borderRadius: '12px',
+    padding: '24px 34px',
     display: 'flex',
     flexDirection: 'column',
     boxShadow: '0 2px 6px rgba(0,0,0,0.05)',
@@ -34,54 +34,75 @@ const PricingIntroStyle = styled('section', {
   },
 
   '.tier h2:first-of-type, .tierHighlighted h2:first-of-type': {
-    marginBottom: '0.5rem',
-    fontSize: '1.4rem',
+    marginBottom: '8px',
+    fontSize: '24px',
     fontWeight: 'bold',
   },
 
   '.tier p:first-of-type, .tierHighlighted p:first-of-type': {
-    marginBottom: '1rem',
-    fontSize: '0.9rem',
+    marginBottom: '16px',
+    fontSize: '14px',
     lineHeight: '1.3',
-    minHeight: '2.5rem',
+    minHeight: '40px',
   },
 
   '.priceContainer': {
     display: 'flex',
     flexDirection: 'column',
-    marginTop: '0.75rem',
-    marginBottom: '0.75rem',
+    marginTop: '12px',
+    marginBottom: '12px',
   },
 
   '.annualPrice .priceAmount': {
-    fontSize: '1.7rem',
     fontWeight: 'bold',
-    marginBottom: '0.1rem',
+    marginBottom: '1.6px',
+    display: 'flex',
+    alignItems: 'baseline',
+    position: 'relative',
+    paddingLeft: '16px',
+
+    '& .digits': {
+      fontSize: '48px',
+      lineHeight: 1,
+    },
+
+    '& .text': {
+      fontSize: '24px',
+      alignSelf: 'flex-end',
+    },
+
+    '& .currency': {
+      fontSize: '24px',
+      marginRight: '2px',
+      marginTop: '4px',
+      position: 'absolute',
+      top: '0',
+      left: '0',
+    },
   },
 
   '.monthlyPrice .priceAmount': {
-    fontSize: '0.85rem',
+    fontSize: '14px',
     fontWeight: '500',
-    marginBottom: '0.1rem',
+    marginBottom: '1.6px',
     opacity: 0.9,
   },
 
   '.priceDesc': {
-    fontSize: '0.85rem',
+    fontSize: '14px',
   },
 
   '.tier a, .tierHighlighted a': {
     width: '100%',
     marginTop: 'auto',
     textAlign: 'center',
-    fontSize: '0.9rem',
     fontWeight: '500',
   },
 
   '.price': {
-    fontSize: '1.7rem',
+    fontSize: '27px',
     fontWeight: 'bold',
-    margin: '1rem 0',
+    margin: '16px 0',
     opacity: 0.8,
   },
 
@@ -89,11 +110,11 @@ const PricingIntroStyle = styled('section', {
     py: '60px',
     '.pricing': {
       flexDirection: 'column',
-      gap: '1rem',
+      gap: '16px',
     },
     '.tier, .tierHighlighted': {
       minHeight: 'auto',
-      padding: '1.5rem 1.25rem',
+      padding: '24px 20px',
     }
   },
 });

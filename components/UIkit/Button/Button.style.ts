@@ -29,6 +29,12 @@ const ButtonStyle = styled('button', {
         fontSize: '$1',
         px: '$2',
       },
+      3: {
+        height: '46px',
+        lineHeight: '46px',
+        fontSize: '$3',
+        px: '$4',
+      },
     },
     variant: {
       primary: {
