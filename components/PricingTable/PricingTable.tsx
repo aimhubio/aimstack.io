@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import { PricingTableStyle, PricingInfo, PriceLabel, Switch, BillingToggle, ToggleRow, SavingsBadge, ButtonContainer, HeaderContent } from './PricingTable.style';
+import { PricingTableStyle, PricingInfo, PriceLabel, Switch, BillingToggle, ToggleRow, SavingsBadge, ButtonContainer, HeaderContent, PriceDisplay } from './PricingTable.style';
 import PricingTableRows from 'content/pricingList';
 import {
   IconCheck,
@@ -79,10 +79,15 @@ const PricingTable: FC<IPricingTable> = ({
               <Text as='h2' size={5} css={{ marginBottom: '$6'}}>
                 Free and Open Source
               </Text>
-              <Text as='h2' size={5} css={{ marginBottom: '$6'}}>
-                {isAnnual ? pricingData.free.annual.price : pricingData.free.monthly.price} / {isAnnual ? pricingData.free.annual.period : pricingData.free.monthly.period}
-              </Text>
-              <Text size={1}> Per user </Text>
+              <PriceDisplay>
+                <span className="currency">
+                  {isAnnual ? pricingData.free.annual.price.charAt(0) : pricingData.free.monthly.price.charAt(0)}
+                </span>
+                <span className="digits">
+                  {isAnnual ? pricingData.free.annual.price.substring(1) : pricingData.free.monthly.price.substring(1)}
+                </span>
+                <span className="text"> / {isAnnual ? pricingData.free.annual.period : pricingData.free.monthly.period}</span>
+              </PriceDisplay>
             </PricingInfo>
             <ButtonContainer>
               <Button
@@ -109,9 +114,15 @@ const PricingTable: FC<IPricingTable> = ({
               <Text as='h2' size={5} css={{ marginBottom: '$6'}}>
                 Team Tier
               </Text>
-              <Text as='h2' size={5} css={{ marginBottom: '$6'}}>
-                {isAnnual ? pricingData.team.annual.price : pricingData.team.monthly.price} / {isAnnual ? pricingData.team.annual.period : pricingData.team.monthly.period}
-              </Text>
+              <PriceDisplay>
+                <span className="currency">
+                  {isAnnual ? pricingData.team.annual.price.charAt(0) : pricingData.team.monthly.price.charAt(0)}
+                </span>
+                <span className="digits">
+                  {isAnnual ? pricingData.team.annual.price.substring(1) : pricingData.team.monthly.price.substring(1)}
+                </span>
+                <span className="text"> / {isAnnual ? pricingData.team.annual.period : pricingData.team.monthly.period}</span>
+              </PriceDisplay>
               <Text size={1}> Per user </Text>
             </PricingInfo>
             <ButtonContainer>

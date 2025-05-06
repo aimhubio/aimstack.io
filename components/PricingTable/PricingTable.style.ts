@@ -162,6 +162,37 @@ const PricingInfo = styled('div', {
   }
 });
 
+// Price display component with styled elements and vertical alignment
+const PriceDisplay = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  marginBottom: '$4',
+  fontWeight: 'bold',
+  
+  '.currency': {
+    fontSize: '24px',
+    alignSelf: 'flex-start',
+  },
+  '.digits': {
+    fontSize: '48px',
+    lineHeight: '48px',
+  },
+  '.text': {
+    fontSize: '24px',
+    alignSelf: 'flex-end',
+  },
+  
+  // Add variant for left alignment if needed
+  variants: {
+    align: {
+      left: {
+        justifyContent: 'flex-start',
+      }
+    }
+  }
+});
+
 // Button container to align buttons at the bottom
 const ButtonContainer = styled('div', {
   marginTop: 'auto',
@@ -245,4 +276,4 @@ const PricingTableStyle = styled('table', {
   },
 });
 
-export { PricingTableStyle, Switch, BillingToggle, ToggleRow, PriceLabel, SavingsBadge, HeaderContent, PricingInfo, ButtonContainer };
+export { PricingTableStyle, Switch, BillingToggle, ToggleRow, PriceLabel, SavingsBadge, HeaderContent, PricingInfo, ButtonContainer, PriceDisplay };
