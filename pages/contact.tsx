@@ -5,6 +5,10 @@ import { Button } from 'components/UIkit';
 import contactSeo from 'content/SeoData/contact';
 import { styled } from '@stitches/react';
 
+// Create styled versions of HTML elements
+const StyledForm = styled('form', {});
+const StyledDiv = styled('div', {});
+
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -15,8 +19,17 @@ const ContactUs = () => {
     interestedIn: '',
     comments: ''
   });
+  const [formErrors, setFormErrors] = useState({
+    name: false,
+    surname: false,
+    company: false,
+    role: false,
+    email: false,
+    interestedIn: false
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [showValidation, setShowValidation] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,12 +37,57 @@ const ContactUs = () => {
       ...formData,
       [name]: value
     });
+
+    // Clear error for this field when user starts typing
+    if (showValidation && formErrors[name]) {
+      setFormErrors({
+        ...formErrors,
+        [name]: false
+      });
+    }
+  };
+
+  const validateForm = () => {
+    const requiredFields = ['name', 'surname', 'company', 'role', 'email', 'interestedIn'];
+    const errors: typeof formErrors = {
+    name: false,
+    surname: false,
+    company: false,
+    role: false,
+    email: false,
+    interestedIn: false
+  };
+
+    let isValid = true;
+
+    requiredFields.forEach(field => {
+      if (!formData[field]) {
+        errors[field] = true;
+        isValid = false;
+      } else {
+        errors[field] = false;
+      }
+    });
+
+    // Additional email validation if needed
+    if (formData.email && !/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = true;
+      isValid = false;
+    }
+
+    setFormErrors(errors);
+    return isValid;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setShowValidation(true);
+
+    const isValid = validateForm();
+    if (!isValid) return;
+
     setIsSubmitting(true);
-    
+
     // Here you would normally send the data to your API
     // For now we'll just simulate a submission
     setTimeout(() => {
@@ -45,14 +103,15 @@ const ContactUs = () => {
   ];
 
   // Common styles for inputs and selects
-  const inputStyles = {
+  const getInputStyles = (fieldName) => ({
     width: '100%',
     padding: '12px',
     borderRadius: '4px',
-    border: 'none',
+    border: formErrors[fieldName] ? '2px solid #ff5555' : 'none',
     fontSize: '16px',
-    backgroundColor: 'white'
-  };
+    backgroundColor: 'white',
+    outline: formErrors[fieldName] ? 'none' : undefined
+  });
 
   // Label style
   const labelStyle = {
@@ -68,44 +127,51 @@ const ContactUs = () => {
     padding: '24px',
   };
 
-  const StyledForm = styled('form', {});
-  const StyledDiv = styled('div', {});
+  // Error message style
+  const errorMessageStyle = {
+    color: '#ff5555',
+    fontSize: '14px',
+    marginTop: '4px'
+  };
 
   return (
     <>
       <Seo {...contactSeo} />
       <Container css={{ paddingTop: '120px'}}>
-        <Text as="h1" size={8} css={{ marginBottom: '32px', textAlign: 'center' }}>
-          Hello, how can we help you?
-        </Text>
-
         <Flex direction="column" gap={6} css={{ maxWidth: '800px', margin: '0 auto' }}>
-          <Text as="p" size={3} css={{ textAlign: 'center', marginBottom: '24px' }}>
-            Choose the plan that fits your team — from personal projects to enterprise ML workflows.
-            All plans include fast experiment tracking and a powerful UI.
-          </Text>
+          {!submitted && (
+            <>
+            <Text as="h1" size={8} css={{ marginBottom: '24px', textAlign: 'center' }}>
+              Hello, how can we help you?
+            </Text>
 
+            <Text as="p" size={3} css={{ textAlign: 'center', marginBottom: '24px'}}>
+              Choose the plan that fits your team — from personal projects to enterprise ML workflows.
+              All plans include fast experiment tracking and a powerful UI.
+            </Text>
+          </>
+          )}
           {submitted ? (
             <StyledDiv css={{ textAlign: 'center', padding: '40px 0' }}>
-              <Text as="h3" size={6} css={{ marginBottom: '16px', color: '$green800' }}>
+              <Text as="h1" size={8} css={{ marginBottom: '16px', color: '$green800' }}>
                 Thanks for reaching out!
               </Text>
               <Text as="p" size={3}>
-                 We are looking forward to chatting soon. Someone from our team will reach out to you shortly.
+                We are looking forward to chatting soon. Someone from our team will reach out to you shortly.
               </Text>
               <Flex css={{ justifyContent: 'center', marginTop: '24px' }}>
                 <Button
                   as="a"
                   variant="community"
-                  size={2}
+                  size={3}
                   href="/blog"
                 >
                   Check out our blog
                 </Button>
-                </Flex>
+              </Flex>
             </StyledDiv>
           ) : (
-            <div style={formAreaStyle}>
+            <StyledDiv style={formAreaStyle}>
               <StyledForm onSubmit={handleSubmit} css={{ width: '100%' }}>
                 <Flex direction="column" gap={5}>
                   {/* Two-column layout */}
@@ -118,7 +184,7 @@ const ContactUs = () => {
                   }}>
                     {/* Left Column */}
                     <Flex direction="column" gap={4} css={{ flex: 1 }}>
-                      <div >
+                      <StyledDiv>
                         <label htmlFor="name" style={labelStyle}>
                           <Text size={2}>Name</Text>
                         </label>
@@ -126,15 +192,17 @@ const ContactUs = () => {
                           id="name"
                           name="name"
                           type="text"
-                          // required
                           placeholder="Enter your name"
                           value={formData.name}
                           onChange={handleChange}
-                          style={inputStyles}
+                          style={getInputStyles('name')}
                         />
-                      </div>
+                        {formErrors.name && (
+                          <div style={errorMessageStyle}>Please enter your name</div>
+                        )}
+                      </StyledDiv>
 
-                      <div >
+                      <StyledDiv>
                         <label htmlFor="company" style={labelStyle}>
                           <Text size={2}>Company</Text>
                         </label>
@@ -142,15 +210,17 @@ const ContactUs = () => {
                           id="company"
                           name="company"
                           type="text"
-                          // required
                           placeholder="Enter where do you work"
                           value={formData.company}
                           onChange={handleChange}
-                          style={inputStyles}
+                          style={getInputStyles('company')}
                         />
-                      </div>
+                        {formErrors.company && (
+                          <div style={errorMessageStyle}>Please enter your company</div>
+                        )}
+                      </StyledDiv>
 
-                      <div >
+                      <StyledDiv>
                         <label htmlFor="email" style={labelStyle}>
                           <Text size={2}>Email</Text>
                         </label>
@@ -158,18 +228,20 @@ const ContactUs = () => {
                           id="email"
                           name="email"
                           type="email"
-                          // required
                           placeholder="Enter your email address"
                           value={formData.email}
                           onChange={handleChange}
-                          style={inputStyles}
+                          style={getInputStyles('email')}
                         />
-                      </div>
+                        {formErrors.email && (
+                          <div style={errorMessageStyle}>Please enter a valid email</div>
+                        )}
+                      </StyledDiv>
                     </Flex>
 
                     {/* Right Column */}
                     <Flex direction="column" gap={4} css={{ flex: 1 }}>
-                      <div >
+                      <StyledDiv>
                         <label htmlFor="surname" style={labelStyle}>
                           <Text size={2}>Surname</Text>
                         </label>
@@ -177,15 +249,17 @@ const ContactUs = () => {
                           id="surname"
                           name="surname"
                           type="text"
-                          // required
                           placeholder="Enter your surname"
                           value={formData.surname}
                           onChange={handleChange}
-                          style={inputStyles}
+                          style={getInputStyles('surname')}
                         />
-                      </div>
+                        {formErrors.surname && (
+                          <div style={errorMessageStyle}>Please enter your surname</div>
+                        )}
+                      </StyledDiv>
 
-                      <div >
+                      <StyledDiv>
                         <label htmlFor="role" style={labelStyle}>
                           <Text size={2}>Role</Text>
                         </label>
@@ -193,37 +267,41 @@ const ContactUs = () => {
                           id="role"
                           name="role"
                           type="text"
-                          // required
                           placeholder="Enter your role"
                           value={formData.role}
                           onChange={handleChange}
-                          style={inputStyles}
+                          style={getInputStyles('role')}
                         />
-                      </div>
+                        {formErrors.role && (
+                          <div style={errorMessageStyle}>Please enter your role</div>
+                        )}
+                      </StyledDiv>
 
-                      <div >
+                      <StyledDiv>
                         <label htmlFor="interestedIn" style={labelStyle}>
                           <Text size={2}>Interested In</Text>
                         </label>
                         <select
                           id="interestedIn"
                           name="interestedIn"
-                          // required
                           value={formData.interestedIn}
                           onChange={handleChange}
-                          style={inputStyles}
+                          style={getInputStyles('interestedIn')}
                         >
                           <option value="" disabled>Choose the option</option>
                           {interestOptions.map(option => (
                             <option key={option} value={option}>{option}</option>
                           ))}
                         </select>
-                      </div>
+                        {formErrors.interestedIn && (
+                          <div style={errorMessageStyle}>Please select an option</div>
+                        )}
+                      </StyledDiv>
                     </Flex>
                   </Flex>
 
                   {/* Comments field - spans full width */}
-                  <div >
+                  <StyledDiv>
                     <label htmlFor="comments" style={labelStyle}>
                       <Text size={2}>Comments</Text>
                     </label>
@@ -234,9 +312,9 @@ const ContactUs = () => {
                       value={formData.comments}
                       onChange={handleChange}
                       rows={5}
-                      style={{...inputStyles, resize: 'vertical'}}
+                      style={{...getInputStyles('comments'), resize: 'vertical'}}
                     />
-                  </div>
+                  </StyledDiv>
 
                   {/* Submit button - centered */}
                   <Flex css={{ justifyContent: 'center', marginTop: '8px' }}>
@@ -244,7 +322,7 @@ const ContactUs = () => {
                       as="button"
                       type="submit"
                       variant="community"
-                      size={2}
+                      size={3}
                       disabled={isSubmitting}
                       css={{
                         paddingLeft: '36px',
@@ -257,7 +335,7 @@ const ContactUs = () => {
                   </Flex>
                 </Flex>
               </StyledForm>
-            </div>
+            </StyledDiv>
           )}
         </Flex>
       </Container>
