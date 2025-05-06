@@ -28,7 +28,7 @@ const Pricing = () => {
             Get started today or schedule a demo for your personal onboarding
           </Text>
           <Button
-            variant="community"
+            variant="gradient"
             as="a"
             size={3}
             css={{textAlign: 'center', marginBottom: '$6', paddingLeft:'34px', paddingRight:'34px'}}

@@ -162,7 +162,7 @@ const ContactUs = () => {
               <Flex css={{ justifyContent: 'center', marginTop: '24px' }}>
                 <Button
                   as="a"
-                  variant="community"
+                  variant="gradient"
                   size={3}
                   href="/blog"
                 >
@@ -321,7 +321,7 @@ const ContactUs = () => {
                     <Button
                       as="button"
                       type="submit"
-                      variant="community"
+                      variant="gradient"
                       size={3}
                       disabled={isSubmitting}
                       css={{
