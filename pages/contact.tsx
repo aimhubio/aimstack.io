@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Text, Container, Flex } from 'styles/foundations';
 import Seo from 'components/SEO/SEO';
 import { Button } from 'components/UIkit';
+import contactSeo from 'content/SeoData/contact';
+import { styled } from '@stitches/react';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -66,12 +68,12 @@ const ContactUs = () => {
     padding: '24px',
   };
 
+  const StyledForm = styled('form', {});
+  const StyledDiv = styled('div', {});
+
   return (
     <>
-      <Seo
-        title="Contact Us | AimStack"
-        description="Get in touch with the AimStack team. We're here to help with your ML experiment tracking needs."
-      />
+      <Seo {...contactSeo} />
       <Container css={{ paddingTop: '120px'}}>
         <Text as="h1" size={8} css={{ marginBottom: '32px', textAlign: 'center' }}>
           Hello, how can we help you?
@@ -84,7 +86,7 @@ const ContactUs = () => {
           </Text>
 
           {submitted ? (
-            <div css={{ textAlign: 'center', padding: '40px 0' }}>
+            <StyledDiv css={{ textAlign: 'center', padding: '40px 0' }}>
               <Text as="h3" size={6} css={{ marginBottom: '16px', color: '$green800' }}>
                 Thanks for reaching out!
               </Text>
@@ -101,10 +103,10 @@ const ContactUs = () => {
                   Check out our blog
                 </Button>
                 </Flex>
-            </div>
+            </StyledDiv>
           ) : (
             <div style={formAreaStyle}>
-              <form onSubmit={handleSubmit} css={{ width: '100%' }}>
+              <StyledForm onSubmit={handleSubmit} css={{ width: '100%' }}>
                 <Flex direction="column" gap={5}>
                   {/* Two-column layout */}
                   <Flex css={{
@@ -254,7 +256,7 @@ const ContactUs = () => {
                     </Button>
                   </Flex>
                 </Flex>
-              </form>
+              </StyledForm>
             </div>
           )}
         </Flex>

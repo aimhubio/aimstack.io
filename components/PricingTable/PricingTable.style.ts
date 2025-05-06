@@ -141,9 +141,6 @@ const HeaderContent = styled('div', {
         alignItems: 'center', // Keeps center alignment as an option
       }
     },
-    defaultVariants: {
-      align: 'center', // Set center as default for backward compatibility
-    }
   }
 });
 
