@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { PricingTableStyle } from './PricingTable.style';
+import React, { FC, useState } from 'react';
+import { PricingTableStyle, PricingInfo, PriceLabel, Switch, BillingToggle, ToggleRow, SavingsBadge, ButtonContainer, HeaderContent } from './PricingTable.style';
 import PricingTableRows from 'content/pricingList';
 import {
   IconCheck,
@@ -13,83 +13,156 @@ interface IPricingTable {
 
 const PricingTable: FC<IPricingTable> = ({
 }) => {
+  // State to track if annual billing is selected
+  const [isAnnual, setIsAnnual] = useState(true);
+
+  // Pricing data
+  const pricingData = {
+    free: {
+      monthly: {
+        price: '$0',
+        period: 'month'
+      },
+      annual: {
+        price: '$0',
+        period: 'year'
+      }
+    },
+    team: {
+      monthly: {
+        price: '$11',
+        period: 'month'
+      },
+      annual: {
+        price: '$120',
+        period: 'year',
+      }
+    }
+  };
+
   return (
     <PricingTableStyle>
       {/* headers*/}
       <tr>
-        {/**/}
+        {/* Features column - now with left alignment */}
         <th>
-          <Text as='h2' size={5} css={{ marginBottom: '$6' }}>Plans & Features</Text>
+          <HeaderContent align="left">
+            <PricingInfo align="left">
+              <Text as='h2' size={5} css={{ marginBottom: '$6' }}>Plans & Features</Text>
+              <BillingToggle align="left">
+                <ToggleRow align="left">
+                  <PriceLabel active={!isAnnual}>Monthly</PriceLabel>
+                  <Switch>
+                    <input
+                      type="checkbox"
+                      checked={isAnnual}
+                      onChange={() => setIsAnnual(!isAnnual)}
+                    />
+                    <span className="slider"></span>
+                  </Switch>
+                  <PriceLabel active={isAnnual}>Yearly</PriceLabel>
+                </ToggleRow>
+                {isAnnual && (
+                  <SavingsBadge align="left">BILLED YEARLY SAVE UP TO 10%</SavingsBadge>
+                )}
+              </BillingToggle>
+            </PricingInfo>
+            {/* Empty ButtonContainer to maintain consistent spacing */}
+            <ButtonContainer />
+          </HeaderContent>
         </th>
-        {/*free plan*/}
+
+        {/* Free plan - keeping center alignment */}
         <th>
-          <Text as='h2' size={5} css={{ marginBottom: '$6'}}>
-            Free and Open Source
-          </Text>
-          <Text as='h2' size={5} css={{ marginBottom: '$9'}}>
-            $0 / month
-          </Text>
-          <Text size={1}> Per user </Text>
-          <Button
-            variant="outline"
-            as="a"
-            size={3}
-            href="https://github.com/aimhubio/aim"
-            css={{marginTop: '$4',
+          <HeaderContent>
+            <PricingInfo>
+              <Text as='h2' size={5} css={{ marginBottom: '$6'}}>
+                Free and Open Source
+              </Text>
+              <Text as='h2' size={5} css={{ marginBottom: '$6'}}>
+                {isAnnual ? pricingData.free.annual.price : pricingData.free.monthly.price} / {isAnnual ? pricingData.free.annual.period : pricingData.free.monthly.period}
+              </Text>
+              <Text size={1}> Per user </Text>
+            </PricingInfo>
+            <ButtonContainer>
+              <Button
+                variant="outline"
+                as="a"
+                size={3}
+                href="https://github.com/aimhubio/aim"
+                css={{
                   width: '80%',
                   textAlign: 'center',
-                  fontWeight: '500',}}
-          >
-            Get Started
-          </Button>
+                  fontWeight: '500',
+                }}
+              >
+                Get Started
+              </Button>
+            </ButtonContainer>
+          </HeaderContent>
         </th>
-        {/*team plan*/}
+
+        {/* Team plan - keeping center alignment */}
         <th>
-          <Text as='h2' size={5} css={{ marginBottom: '$6'}}>
-            Team Tier
-          </Text>
-          <Text as='h2' size={5} >
-            $11 / month
-          </Text>
-          <Text as='h1' size={1} css={{ marginBottom: '$4'}}>
-            $120 / year
-          </Text>
-          <Text size={1}> Per user </Text>
-          <Button
-            variant="outline"
-            as="a"
-            size={3}
-            href="https://docs.aimhub.io/quick-start/installation/docker"
-            css={{marginTop: '$4',
+          <HeaderContent>
+            <PricingInfo>
+              <Text as='h2' size={5} css={{ marginBottom: '$6'}}>
+                Team Tier
+              </Text>
+              <Text as='h2' size={5} css={{ marginBottom: '$6'}}>
+                {isAnnual ? pricingData.team.annual.price : pricingData.team.monthly.price} / {isAnnual ? pricingData.team.annual.period : pricingData.team.monthly.period}
+              </Text>
+              <Text size={1}> Per user </Text>
+            </PricingInfo>
+            <ButtonContainer>
+              <Button
+                variant="outline"
+                as="a"
+                size={3}
+                href="https://docs.aimhub.io/quick-start/installation/docker"
+                css={{
                   width: '80%',
                   textAlign: 'center',
-                  fontWeight: '500',}}
-          >
-            Install Now
-          </Button>
+                  fontWeight: '500',
+                }}
+              >
+                Install Now
+              </Button>
+            </ButtonContainer>
+          </HeaderContent>
         </th>
-        {/*enterprise plan*/}
+
+        {/* Enterprise plan - keeping center alignment */}
         <th>
-            <Text as='h2' size={5} css={{ marginBottom: '$12'}}>
-              Enterprise
-            </Text>
-            <Text as='h2' size={5} css={{ marginBottom: '$12'}}>
-              Contact Us
-            </Text>
-            <Button
-              variant="community"
-              as="a"
-              size={3}
-              href="/contact"
-              css={{width: '80%',
+          <HeaderContent>
+            <PricingInfo>
+              <Text as='h2' size={5} css={{ marginBottom: '$6'}}>
+                Enterprise
+              </Text>
+              <Text as='h2' size={5} css={{ marginBottom: '$6'}}>
+                Contact Us
+              </Text>
+            </PricingInfo>
+            <ButtonContainer>
+              <Button
+                variant="community"
+                as="a"
+                size={3}
+                href="/contact"
+                css={{
+                  width: '80%',
                   textAlign: 'center',
-                  fontWeight: '500',}}
-            >
-              Contact Us
-            </Button>
+                  fontWeight: '500',
+                }}
+              >
+                Contact Us
+              </Button>
+            </ButtonContainer>
+          </HeaderContent>
         </th>
       </tr>
-      {/*rest of the table*/}
+      
+      {/* Rest of the table */}
       {PricingTableRows.map((item, index) => (
         <tr key={index}>
           <td>{item[0]}</td>
