@@ -30,6 +30,7 @@ const ContactUs = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [showValidation, setShowValidation] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -82,18 +83,36 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setShowValidation(true);
+    setErrorMessage('');
 
     const isValid = validateForm();
     if (!isValid) return;
 
     setIsSubmitting(true);
 
-    // Here you would normally send the data to your API
-    // For now we'll just simulate a submission
-    setTimeout(() => {
+    try {
+      // Send form data to API route
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMessage(data.message || 'Failed to send your message. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setErrorMessage('An unexpected error occurred. Please try again later.');
+    } finally {
       setIsSubmitting(false);
-      setSubmitted(true);
-    }, 1500);
+    }
   };
 
   const interestOptions = [
@@ -172,6 +191,17 @@ const ContactUs = () => {
             </StyledDiv>
           ) : (
             <StyledDiv style={formAreaStyle}>
+              {errorMessage && (
+                <StyledDiv css={{
+                  backgroundColor: '#ffeeee',
+                  padding: '12px',
+                  marginBottom: '16px',
+                  borderRadius: '4px',
+                  border: '1px solid #ffcccc'
+                }}>
+                  <Text size={2} css={{ color: '#ff5555' }}>{errorMessage}</Text>
+                </StyledDiv>
+              )}
               <StyledForm onSubmit={handleSubmit} css={{ width: '100%' }}>
                 <Flex direction="column" gap={5}>
                   {/* Two-column layout */}
