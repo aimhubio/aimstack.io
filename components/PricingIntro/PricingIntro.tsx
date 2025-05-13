@@ -1,6 +1,5 @@
-
-import React, { FC } from 'react';
-import { PricingIntroStyle } from './PricingIntro.style';
+import React, { FC, useState } from 'react';
+import { PricingIntroStyle, PricingSwitch } from './PricingIntro.style';
 import { Text, Container } from 'styles/foundations';
 import { Button } from 'components/UIkit';
 
@@ -9,6 +8,12 @@ interface IPricingIntro {
 
 const PricingIntro: FC<IPricingIntro> = ({
 }) => {
+  const [isYearly, setIsYearly] = useState(true);
+
+  const togglePricingPeriod = () => {
+    setIsYearly(!isYearly);
+  };
+
   return (
     <PricingIntroStyle>
       <Container>
@@ -21,6 +26,19 @@ const PricingIntro: FC<IPricingIntro> = ({
         <Text as="p" css={{margin: '12px 0 40px', textAlign: 'center'}}>
           All plans include fast experiment tracking and a powerful UI.
         </Text>
+
+        <PricingSwitch>
+          <div className="toggle" onClick={togglePricingPeriod}>
+            <span className={`toggle-option ${!isYearly ? 'active' : ''}`}>
+              Monthly
+            </span>
+            <span className={`toggle-option ${isYearly ? 'active' : ''}`}>
+              Yearly
+              {isYearly && <span className="save-text">SAVE UP TO 10%</span>}
+            </span>
+          </div>
+        </PricingSwitch>
+
         <div className="pricing">
           <div className="tier">
             <Text as='h2' size={5}>
@@ -31,16 +49,24 @@ const PricingIntro: FC<IPricingIntro> = ({
             </Text>
 
             <div className="priceContainer">
-              <div className="annualPrice">
-                <div className="priceAmount">
-                  <span className="currency">$</span>
-                  <span className="digits">0</span>
-                  <span className="text"> / year</span>
+              {isYearly ? (
+                <div className="annualPrice">
+                  <div className="priceAmount">
+                    <span className="currency">$</span>
+                    <span className="digits">0</span>
+                    <span className="text"> / year</span>
+                  </div>
                 </div>
-              </div>
-              <div className="monthlyPrice">
-                <div className="priceAmount">$0 / month</div>
-              </div>
+              ) : (
+                <div className="annualPrice">
+                  <div className="priceAmount">
+                    <span className="currency">$</span>
+                    <span className="digits">0</span>
+                    <span className="text"> / month</span>
+                  </div>
+                </div>
+              )}
+              <div className="priceDesc">&nbsp;</div>
             </div>
 
             <Button
@@ -62,16 +88,23 @@ const PricingIntro: FC<IPricingIntro> = ({
             </Text>
 
             <div className="priceContainer">
-              <div className="annualPrice">
-                <div className="priceAmount">
-                  <span className="currency">$</span>
-                  <span className="digits">120</span>
-                  <span className="text"> / year</span>
+              {isYearly ? (
+                <div className="annualPrice">
+                  <div className="priceAmount">
+                    <span className="currency">$</span>
+                    <span className="digits">120</span>
+                    <span className="text"> / year</span>
+                  </div>
                 </div>
-              </div>
-              <div className="monthlyPrice">
-                <div className="priceAmount">$11 / month</div>
-              </div>
+              ) : (
+                <div className="annualPrice">
+                  <div className="priceAmount">
+                    <span className="currency">$</span>
+                    <span className="digits">11</span>
+                    <span className="text"> / month</span>
+                  </div>
+                </div>
+              )}
               <div className="priceDesc">Per user</div>
             </div>
 
@@ -79,7 +112,7 @@ const PricingIntro: FC<IPricingIntro> = ({
               variant="outline"
               as="a"
               size={3}
-              href="https://docs.aimhub.io/quick-start/installation/docker"
+              href={isYearly? "https://buy.stripe.com/cN203R9Rh2Us71S8wy": "https://buy.stripe.com/aEUbMzaVlfHe3PG6oo"}
             >
               Install Now
             </Button>

@@ -119,4 +119,59 @@ const PricingIntroStyle = styled('section', {
   },
 });
 
-export { PricingIntroStyle };
+// Create a Switch component for toggling between monthly and yearly pricing
+const PricingSwitch = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  margin: '0 auto 40px',
+
+  '.toggle': {
+    display: 'flex',
+    alignItems: 'center',
+    borderRadius: '30px',
+    padding: '0px',
+    position: 'relative',
+    cursor: 'pointer',
+    border: '1px solid #E0E0E0',
+    backgroundColor: '#F5F5F5',
+  },
+
+  '.toggle-option': {
+    position: 'relative',
+    zIndex: 1,
+    padding: '10px 24px',
+    fontSize: '14px',
+    fontWeight: 500,
+    color: '#666',
+    transition: 'color 0.3s ease',
+    textAlign: 'center',
+    width: '160px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '8px',
+    borderRadius: '30px',
+
+    '&.active': {
+      color: '#000000',
+      fontWeight: 600,
+      backgroundColor: 'white',
+      border: '1px solid #5865F2',
+    }
+  },
+
+  '.save-text': {
+    padding: '2px 5px',
+    borderRadius: '10px',
+    fontSize: '10px',
+    color: '#5865F2',
+    backgroundColor: 'rgba(104, 139, 221, 0.2)',
+    fontWeight: 'bold',
+    display: 'inline-block',
+    whiteSpace: 'nowrap',
+  }
+});
+
+
+export { PricingIntroStyle, PricingSwitch };

@@ -130,7 +130,7 @@ const PricingTable: FC<IPricingTable> = ({
                 variant="outline"
                 as="a"
                 size={3}
-                href="https://docs.aimhub.io/quick-start/installation/docker"
+                href={isAnnual? "https://buy.stripe.com/cN203R9Rh2Us71S8wy": "https://buy.stripe.com/aEUbMzaVlfHe3PG6oo"}
                 css={{
                   width: '70%',
                   textAlign: 'center',

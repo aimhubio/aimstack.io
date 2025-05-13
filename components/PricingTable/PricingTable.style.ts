@@ -168,6 +168,8 @@ const PriceDisplay = styled('div', {
   fontWeight: 'bold',
   
   '.currency': {
+    marginRight: '2px',
+    marginTop: '4px',
     fontSize: '24px',
     alignSelf: 'flex-start',
   },
