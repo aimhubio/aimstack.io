@@ -141,6 +141,11 @@ const HeaderContent = styled('div', {
         alignItems: 'center', // Keeps center alignment as an option
       }
     },
+  },
+
+  // Fix for mobile view - ensure consistent padding
+  '@media (max-width: 768px)': {
+    padding: '20px 15px',
   }
 });
 
@@ -148,7 +153,8 @@ const HeaderContent = styled('div', {
 // Title and pricing container
 const PricingInfo = styled('div', {
   textAlign: 'center',
-  
+  width: '100%',  // Ensure full width to contain all content
+
   // Add variant for left alignment
   variants: {
     align: {
@@ -156,6 +162,11 @@ const PricingInfo = styled('div', {
         textAlign: 'left',
       }
     }
+  },
+
+  // Fix for mobile view
+  '@media (max-width: 768px)': {
+    minHeight: '150px', // Ensure consistent height for pricing info on mobile
   }
 });
 
@@ -166,7 +177,7 @@ const PriceDisplay = styled('div', {
   justifyContent: 'center',
   marginBottom: '$4',
   fontWeight: 'bold',
-  
+
   '.currency': {
     marginRight: '2px',
     marginTop: '4px',
@@ -181,13 +192,24 @@ const PriceDisplay = styled('div', {
     fontSize: '24px',
     alignSelf: 'flex-end',
   },
-  
+
   // Add variant for left alignment if needed
   variants: {
     align: {
       left: {
         justifyContent: 'flex-start',
       }
+    }
+  },
+
+  // Fix for mobile view
+  '@media (max-width: 768px)': {
+    '.digits': {
+      fontSize: '40px',
+      lineHeight: '40px',
+    },
+    '.currency, .text': {
+      fontSize: '20px',
     }
   }
 });
@@ -197,6 +219,19 @@ const ButtonContainer = styled('div', {
   marginTop: 'auto',
   display: 'flex',
   justifyContent: 'center',
+  width: '100%',
+
+  // Fix for mobile view
+  '@media (max-width: 768px)': {
+    '& a, & button': {
+      width: '100% !important',  // Override inline styles
+      whiteSpace: 'nowrap',      // Prevent text wrapping
+      overflow: 'hidden',        // Hide overflow
+      textOverflow: 'ellipsis',  // Add ellipsis if needed
+      padding: '0 10px !important', // Ensure consistent padding
+      fontSize: '14px !important', // Slightly smaller font size
+    }
+  }
 });
 
 const PricingTableStyle = styled('table', {
@@ -205,6 +240,31 @@ const PricingTableStyle = styled('table', {
   width: '1160px', // Set explicit width
   maxWidth: '100%', // For responsiveness
   margin: '0 auto', // Center the table
+
+  // Add overflow properties for mobile horizontal scrolling
+  '@media (max-width: 768px)': {
+    display: 'block',
+    overflowX: 'auto',
+    WebkitOverflowScrolling: 'touch', // Smooth scrolling on iOS
+    scrollbarWidth: 'thin',
+    '&::-webkit-scrollbar': {
+      height: '8px',
+    },
+    '&::-webkit-scrollbar-thumb': {
+      backgroundColor: 'rgba(0, 0, 0, 0.2)',
+      borderRadius: '4px',
+    },
+
+    // Fix cell widths for mobile
+    'th, td': {
+      minWidth: '220px', // Ensure minimum width
+      boxSizing: 'border-box', // Include padding in width calculation
+    },
+
+    'tr:nth-child(even) td:first-child': {
+      backgroundColor: '#FAFAFA',
+    }
+  },
 
   table: {
     borderCollapse: 'collapse',
