@@ -62,9 +62,7 @@ const PricingTable: FC<IPricingTable> = ({
                   </Switch>
                   <PriceLabel active={isAnnual}>Yearly</PriceLabel>
                 </ToggleRow>
-                {isAnnual && (
-                  <SavingsBadge align="left">BILLED YEARLY SAVE UP TO 10%</SavingsBadge>
-                )}
+                <SavingsBadge align="left">BILLED YEARLY SAVE UP TO 10%</SavingsBadge>
               </BillingToggle>
             </PricingInfo>
             {/* Empty ButtonContainer to maintain consistent spacing */}
