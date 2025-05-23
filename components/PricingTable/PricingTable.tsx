@@ -128,14 +128,14 @@ const PricingTable: FC<IPricingTable> = ({
                 variant="outline"
                 as="a"
                 size={3}
-                href={isAnnual? "https://buy.stripe.com/cN203R9Rh2Us71S8wy": "https://buy.stripe.com/aEUbMzaVlfHe3PG6oo"}
+                href="/get-started"
                 css={{
                   width: '70%',
                   textAlign: 'center',
                   fontWeight: '500',
                 }}
               >
-                Install Now
+                Get Started
               </Button>
             </ButtonContainer>
           </HeaderContent>

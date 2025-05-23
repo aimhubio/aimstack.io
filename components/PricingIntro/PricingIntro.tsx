@@ -112,9 +112,9 @@ const PricingIntro: FC<IPricingIntro> = ({
               variant="outline"
               as="a"
               size={3}
-              href={isYearly? "https://buy.stripe.com/cN203R9Rh2Us71S8wy": "https://buy.stripe.com/aEUbMzaVlfHe3PG6oo"}
+              href="/get-started"
             >
-              Install Now
+              Get Started
             </Button>
           </div>
 
