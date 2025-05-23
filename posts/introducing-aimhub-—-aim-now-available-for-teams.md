@@ -75,7 +75,6 @@ After creating your organization, you can build teams, invite members, and manag
 
 Here are two examples of using AimHub and its benefits.
 
-\
 **Faster Model Development**
 
 A Fintech company running hyperparameter sweeps for their internal models.
@@ -109,7 +108,7 @@ Biotech startup training models on medical datasets.
 
 ### How to Set up and Use AimHub
 
-Using AimHub is simple and streamlined:
+Using AimHub is simple and streamlined,
 
 **1. Visit the Docs:**
 
@@ -145,7 +144,6 @@ We believe that:
 
 * Experiment tracking should be simple.
 * Teams should own their data and infra.
-* Collaboration should be native, not hacked in.
 * ML infrastructure should never be a bottleneck.
 
 ## Get Started with AimHub today!
@@ -156,8 +154,8 @@ AimHub is now available with flexible plans:
 * **Team:** Best for growing teams needing better collaboration and analytics.
 * **Enterprise:** Custom plans designed for organizations needing extensive integrations, strong security, and dedicated support.
 
-For more information, check out the **Pricing.**
+For more information, check out the **[Pricing.](https://aimstack.io/pricing)**
 
 We can't wait to see how AimHub helps your team succeed with your ML projects.
 
-Ready to see it in action? Book a demo or [join our Discord](https://community.aimstack.io/) to chat with the team.
+Ready to see it in action? [Book a demo](https://aimstack.io/contact) or [join our Discord](https://community.aimstack.io/) to chat with the team.
