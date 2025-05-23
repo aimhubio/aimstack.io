@@ -32,7 +32,7 @@ const Pricing = () => {
             as="a"
             size={3}
             css={{textAlign: 'center', marginBottom: '$6', paddingLeft:'34px', paddingRight:'34px'}}
-            href="https://buy.stripe.com/aEUbMzaVlfHe3PG6oo"
+            href="https://docs.aimhub.io/quick-start/installation/docker"
           >
             Start Free Trial
           </Button>
