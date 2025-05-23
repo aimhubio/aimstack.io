@@ -29,6 +29,12 @@ const ButtonStyle = styled('button', {
         fontSize: '$1',
         px: '$2',
       },
+      3: {
+        height: '46px',
+        lineHeight: '46px',
+        fontSize: '$3',
+        px: '$4',
+      },
     },
     variant: {
       primary: {
@@ -55,6 +61,11 @@ const ButtonStyle = styled('button', {
       },
       community: {
         backgroundColor: '#5865F2',
+        color: '$white',
+        border: '1px solid #5865F2',
+      },
+      gradient: {
+        background: 'linear-gradient(90deg, #673AB7 0%, #5865F2 100%)',
         color: '$white',
         border: '1px solid #5865F2',
       },
